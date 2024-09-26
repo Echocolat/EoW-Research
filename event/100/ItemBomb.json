@@ -1,0 +1,173 @@
+{
+  "FileName": "ItemBomb",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "ItemBomb": {
+      "Name": "ItemBomb",
+      "Actors": [
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Show"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericItemGetSequence",
+            "AddItem"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:Bomb"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Bomb"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "Zelda",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Bomb"
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "Zelda",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Ev_LinkBombGet"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_BombLv2"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_BombLv3"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event9",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Get": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 1
+        },
+        "Message": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 0
+        },
+        "MessageLv2": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 4
+        },
+        "MessageLv3": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 5
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

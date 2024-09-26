@@ -1,0 +1,799 @@
+{
+  "FileName": "QuestCatKakariko001",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "QuestCatKakariko001": {
+      "Name": "QuestCatKakariko001",
+      "Actors": [
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetProgress"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CheckOutfit"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestCatKakariko001",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericTalkSequence",
+            "Talk",
+            "Destroy",
+            "GenericTalkSequenceWithDialog",
+            "CatDoAcitonWait",
+            "SetFacialExpression",
+            "PlayAnimation",
+            "PlayAnimationEx"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "wait02"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event29",
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Animal_HyrulePlains080_020"
+            }
+          },
+          "NextEventName": "Event11",
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Animal_HyrulePlains080_030"
+            }
+          },
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 4,
+          "ForkEventIndicies": [
+            29,
+            28
+          ],
+          "Name": "Event11",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 5,
+          "NextEventName": "Event13",
+          "Name": "Event12",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Animal_HyrulePlains080_040"
+            }
+          },
+          "NextEventName": "Event17",
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event18",
+          "ActorName": "Fade",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event19",
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event20",
+          "ActorName": "Timer",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "NextEventName": "Event21",
+          "ActorName": "Fade",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Animal_HyrulePlains010:3528446707"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "outfit": {
+              "String": "Animal"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 0
+            },
+            {
+              "Value": 0,
+              "EventIndex": 12
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event2",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "outfit": {
+              "String": "AnimalAnother"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 0
+            },
+            {
+              "Value": 0,
+              "EventIndex": 13
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event23",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "talk",
+          "Name": "Event10",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "outfit": {
+              "String": "Animal"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 17
+            },
+            {
+              "Value": 0,
+              "EventIndex": 15
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event14",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "outfit": {
+              "String": "AnimalAnother"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 17
+            },
+            {
+              "Value": 0,
+              "EventIndex": 16
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event25",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "talk",
+          "Name": "Event27",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkAnimal:KakarikoVillage004_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.5
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 3,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event1",
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 23,
+          "ActorIndex": 3,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "NextEventName": "Event31",
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 22,
+          "ForkEventIndicies": [
+            26,
+            25
+          ],
+          "Name": "Event29",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 1,
+          "NextEventName": "Event5",
+          "Name": "Event30",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Animal_HyrulePlains080_010"
+            }
+          },
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 3,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "reaction02"
+            },
+            "restart": {
+              "Bool": false
+            },
+            "time": {
+              "Float": 3
+            }
+          },
+          "NextEventName": "Event26",
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 24,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.5
+            }
+          },
+          "NextEventName": "Event32",
+          "ActorName": "Timer",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 27,
+          "ActorIndex": 3,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "reaction02"
+            },
+            "restart": {
+              "Bool": false
+            },
+            "time": {
+              "Float": 3
+            }
+          },
+          "NextEventName": "Event39",
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.5
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "Timer",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": false
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "QuestCatKakariko001",
+          "Name": "Event7",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Animal_HyrulePlains010_080": {
+          "SubFlowEventIndices": [
+            13
+          ],
+          "EventIndex": 11
+        },
+        "Animal_HyrulePlains010_end": {
+          "SubFlowEventIndices": [
+            16
+          ],
+          "EventIndex": 14
+        },
+        "talk": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 30
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

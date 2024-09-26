@@ -1,0 +1,103 @@
+{
+  "FileName": "ImpactSwitch",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "ImpactSwitch": {
+      "Name": "ImpactSwitch",
+      "Actors": [
+        {
+          "Name": "ImpactSwitch",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtGimmick"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.7
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "ImpactSwitch",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Timer",
+          "Name": "Event3",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "LockOn": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 2
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

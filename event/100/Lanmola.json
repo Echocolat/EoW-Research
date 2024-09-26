@@ -1,0 +1,636 @@
+{
+  "FileName": "Lanmola",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "Lanmola": {
+      "Name": "Lanmola",
+      "Actors": [
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MiniMapOnOff"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayZoneBGM",
+            "StopAllBGM",
+            "PlayBGM",
+            "PlayOneshotSystemSE"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "EndInnerScroll",
+            "Quake",
+            "Reset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetCanSkip"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ResetFloorAbyss",
+            "RequestAutoSave",
+            "UnforbidSave",
+            "ForbidSave"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetProgress"
+          ],
+          "Queries": [
+            "CheckProgress"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Lanmola",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartBattle",
+            "Destroy",
+            "CameraLockoff",
+            "SetActorSwitch",
+            "ForceBreakRock"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "SandCover",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartSink",
+            "SetPassThrough",
+            "StartFloat"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 34,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event4",
+          "ActorName": "Lanmola",
+          "Name": "Event292",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event19",
+          "ActorName": "Lanmola",
+          "Name": "Event307",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event35",
+          "ActorName": "Timer",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 4,
+          "ForkEventIndicies": [
+            8,
+            7,
+            18,
+            15
+          ],
+          "Name": "Event8",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 2,
+          "NextEventName": "Event1",
+          "Name": "Event9",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 23,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "stopbgm": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event27",
+          "ActorName": "Audio",
+          "Name": "Event44",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event11",
+          "ActorName": "Camera",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "ActorName": "SandCover",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_MIDDLE_BOSS1"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event41",
+          "ActorName": "Audio",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 7,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event44",
+          "ActorName": "Lanmola",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "isPassThrough": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event6",
+          "ActorName": "SandCover",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "switchIndex": {
+              "Int": 2
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event307",
+          "ActorName": "Lanmola",
+          "Name": "Event47",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Lanmola_Desert010:2015589749"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 14
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event3",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Lanmola_Desert010:1393436342"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            },
+            "initPower": {
+              "Int": 1
+            },
+            "targetPower": {
+              "Int": 2
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 0
+            },
+            "initPower": {
+              "Int": 0
+            },
+            "targetPower": {
+              "Int": 0
+            }
+          },
+          "NextEventName": "Event292",
+          "ActorName": "Camera",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 16,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event40",
+          "ActorName": "Camera",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "label": {
+              "String": "SE_OBJ_SAND_RUNOUT2_LDUNG"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "PreMiniBoss",
+          "Name": "Event21",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 26,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "Lanmola",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "HitStopBigBoss",
+          "NextEventName": "Event29",
+          "Name": "Event24",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "Lanmola",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "LanmolaExtinction",
+          "Name": "Event26",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 4,
+          "ActorName": "Lanmola",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 32,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isOn": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event43",
+          "ActorName": "Hud",
+          "Name": "Event27",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 12,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "isPassThrough": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event47",
+          "ActorName": "SandCover",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 24,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event2",
+          "ActorName": "SandCover",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 27,
+          "ForkEventIndicies": [
+            21,
+            22
+          ],
+          "Name": "Event29",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 25,
+          "NextEventName": "Event25",
+          "Name": "Event31",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "ActorName": "GameControl",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 30,
+          "ForkEventIndicies": [
+            19,
+            28,
+            36
+          ],
+          "Name": "Event34",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 3,
+          "NextEventName": "Event8",
+          "Name": "Event37",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 33,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "immediate": {
+              "Bool": true
+            },
+            "name": {
+              "String": "Lanmola"
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event46",
+          "ActorName": "GameControl",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 35,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event14",
+          "ActorName": "GameControl",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 29,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isOn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event34",
+          "ActorName": "Hud",
+          "Name": "Event46",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3,
+          "ActorName": "GameControl",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "GameControl",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "ActorName": "FlowControl",
+          "Name": "Event15",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "LanmolaEnd": {
+          "SubFlowEventIndices": [
+            20,
+            21
+          ],
+          "EventIndex": 20
+        },
+        "LanmolaStart": {
+          "SubFlowEventIndices": [
+            19
+          ],
+          "EventIndex": 31
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

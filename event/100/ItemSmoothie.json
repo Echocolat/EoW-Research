@@ -1,0 +1,110 @@
+{
+  "FileName": "ItemSmoothie",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "ItemSmoothie": {
+      "Name": "ItemSmoothie",
+      "Actors": [
+        {
+          "Name": "SmoothieUI",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowSmoothieGainDialog"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowOpenDrinkMenuGuide",
+            "PlayOutAnim"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "ActorName": "SmoothieUI",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 3,
+          "ForkEventIndicies": [
+            0,
+            2
+          ],
+          "Name": "Event77",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.033
+            }
+          },
+          "NextEventName": "Event80",
+          "ActorName": "Timer",
+          "Name": "Event78",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event79",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event1",
+          "ActorName": "Hud",
+          "Name": "Event80",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "ActorName": "Hud",
+          "Name": "Event1",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Message00": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 1
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

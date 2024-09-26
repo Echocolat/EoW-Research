@@ -1,0 +1,216 @@
+{
+  "FileName": "PuzzlePanel",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "PuzzlePanel": {
+      "Name": "PuzzlePanel",
+      "Actors": [
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayJingle"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "DoorCloseGerudo",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "DoorOpen",
+            "GenericGimmickSequence"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FloorPuzzlePanel",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayMaterialAnimation",
+            "PlayOneshotSE"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event4",
+          "ActorName": "DoorCloseGerudo",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "DoorCloseGerudo",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.5
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "Timer",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_NAZOTOKI_SEIKAI"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "Timer",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "Timer",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "on"
+            }
+          },
+          "NextEventName": "Event6",
+          "ActorName": "FloorPuzzlePanel",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "label": {
+              "String": "SE_OBJ_ORB_PANEL_ON"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "FloorPuzzlePanel",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 9,
+          "ForkEventIndicies": [
+            6,
+            7
+          ],
+          "Name": "Event9",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event10",
+          "Type": "Join"
+        }
+      ],
+      "EntryPoints": {
+        "SuccessEvent": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 4
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

@@ -1,0 +1,3089 @@
+{
+  "FileName": "HylianM000",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "HylianM000": {
+      "Name": "HylianM000",
+      "Actors": [
+        {
+          "Name": "HylianM000",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Talk",
+            "SetFacialExpression",
+            "GenericTalkSequenceWithDialog",
+            "LookAtTalker",
+            "AimPlayer",
+            "Destroy",
+            "PlayAnimationNoWait",
+            "PlayAnimation",
+            "SetTalkerName",
+            "SetInterestIkEnabled"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [
+            "CheckFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CheckOutfit"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericItemGetSequence",
+            "AddItem",
+            "WarpToActorLinkedPoint",
+            "AimActor",
+            "PlayAnimationNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToDefaultPosition",
+            "WarpToDefaultPosition"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetProgress"
+          ],
+          "Queries": [
+            "GetStatus"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAt2ActorsCenterAsTalker",
+            "Reset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor",
+            "MoveToTargetLinkedPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianM000Talk01_020"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "HylianM000",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "surprise"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianM000Talk01_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk02"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event8",
+          "ActorName": "HylianM000",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 103,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianM000Talk02_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "yes01,talk01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event111",
+          "ActorName": "HylianM000",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianM000Talk02_020"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianM000TalkLink_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Link_HyrulePlains010:1418181504"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "RupeeRed"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "Player",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 114,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "RupeeRed"
+            }
+          },
+          "NextEventName": "Event48",
+          "ActorName": "Player",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event25",
+          "ActorName": "HylianM000",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "outfit": {
+              "String": "Adventure1"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 74
+            },
+            {
+              "Value": 0,
+              "EventIndex": 75
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event25",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "outfit": {
+              "String": "Adventure1"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 26
+            },
+            {
+              "Value": 0,
+              "EventIndex": 78
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event28",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 110,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutSlowB"
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "Fade",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 16,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianM000",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event36",
+          "ActorName": "Player",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 85,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInSlow"
+            }
+          },
+          "NextEventName": "Event67",
+          "ActorName": "Fade",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "HylianM000",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event37",
+          "ActorName": "Camera",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 138,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianM000",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event123",
+          "ActorName": "Player",
+          "Name": "Event37",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 96,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event126",
+          "ActorName": "HylianM000",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 15,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event35",
+          "ActorName": "Timer",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 124,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutSlowB"
+            }
+          },
+          "NextEventName": "Event137",
+          "ActorName": "Fade",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInSlow"
+            }
+          },
+          "NextEventName": "Event22",
+          "ActorName": "Fade",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 23,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "NextEventName": "Event45",
+          "ActorName": "HylianM000",
+          "Name": "Event44",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event43",
+          "ActorName": "Timer",
+          "Name": "Event45",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": false
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains020_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": false
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event47",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 12,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": false
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "normal"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "look"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event28",
+          "ActorName": "HylianM000",
+          "Name": "Event50",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 29,
+          "ForkEventIndicies": [
+            27,
+            28,
+            131
+          ],
+          "Name": "Event31",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_022"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event51",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_st01_F,surprised_lp01_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event52",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 87,
+          "NextEventName": "Event88",
+          "Name": "Event54",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -2
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no01_F,talk01_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 34,
+          "ForkEventIndicies": [
+            32,
+            33,
+            132
+          ],
+          "Name": "Event56",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_040"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event57",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk03_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 77,
+          "NextEventName": "Event71",
+          "Name": "Event60",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 38,
+          "ForkEventIndicies": [
+            36,
+            37,
+            89
+          ],
+          "Name": "Event62",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_050"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event63",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think02_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event64",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 39,
+          "NextEventName": "Event68",
+          "Name": "Event66",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 42,
+          "ForkEventIndicies": [
+            40,
+            41,
+            90
+          ],
+          "Name": "Event68",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_060"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event69",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no01_F,happy02_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event70",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 43,
+          "NextEventName": "Event74",
+          "Name": "Event72",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 45,
+          "ForkEventIndicies": [
+            44,
+            95,
+            133
+          ],
+          "Name": "Event74",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_070"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event75",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 46,
+          "NextEventName": "Event80",
+          "Name": "Event78",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 49,
+          "ForkEventIndicies": [
+            47,
+            48,
+            91
+          ],
+          "Name": "Event80",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_080"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event81",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes01_F,talk03_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event82",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 135,
+          "NextEventName": "Event152",
+          "Name": "Event84",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event85",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "normal"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_090"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk01_F"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event92",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 55,
+          "ForkEventIndicies": [
+            53,
+            54,
+            81
+          ],
+          "Name": "Event94",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_100"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event95",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk03_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event96",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 56,
+          "NextEventName": "Event101",
+          "Name": "Event98",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 60,
+          "ForkEventIndicies": [
+            57,
+            58,
+            59
+          ],
+          "Name": "Event101",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_110"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event102",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no01_F,wait04_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event103",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event104",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 61,
+          "NextEventName": "Event108",
+          "Name": "Event105",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 64,
+          "ForkEventIndicies": [
+            62,
+            92,
+            63
+          ],
+          "Name": "Event108",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_120"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event110",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event112",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 65,
+          "NextEventName": "Event107",
+          "Name": "Event113",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 69,
+          "ForkEventIndicies": [
+            66,
+            67,
+            68
+          ],
+          "Name": "Event107",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_130"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event115",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk02_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event116",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event117",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 70,
+          "NextEventName": "Event120",
+          "Name": "Event118",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 73,
+          "ForkEventIndicies": [
+            71,
+            72,
+            93
+          ],
+          "Name": "Event120",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_140"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event121",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes01_F,talk03_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event122",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 76,
+          "NextEventName": "Event29",
+          "Name": "Event124",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 82,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": false
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "sleep"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains010_012"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": false
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event83",
+          "ActorName": "HylianM000",
+          "Name": "Event53",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 82,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": false
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "sleep"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains010_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": false
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event83",
+          "ActorName": "HylianM000",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 94,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event125",
+          "ActorName": "HylianM000",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 35,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:HylianM000"
+            }
+          },
+          "NextEventName": "Event62",
+          "ActorName": "HylianM000",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 80,
+          "ForkEventIndicies": [
+            79,
+            97,
+            130
+          ],
+          "Name": "Event6",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_020"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 87,
+          "NextEventName": "Event88",
+          "Name": "Event41",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event65",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 121,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains010_100"
+            }
+          },
+          "NextEventName": "Event134",
+          "ActorName": "HylianM000",
+          "Name": "Event83",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Link_HyrulePlains030_030"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event86",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 127,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event143",
+          "ActorName": "Timer",
+          "Name": "Event67",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 129,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "NextEventName": "Event146",
+          "ActorName": "HylianM000",
+          "Name": "Event87",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 98,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event131",
+          "ActorName": "HylianM000",
+          "Name": "Event88",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event89",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event91",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event93",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event100",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think01_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event106",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event114",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event42",
+          "ActorName": "Timer",
+          "Name": "Event125",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "sad_st01_F,sad_lp01_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event76",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 86,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event87",
+          "ActorName": "HylianM000",
+          "Name": "Event126",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_st01_F,surprised_lp01_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event97",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 99,
+          "ForkEventIndicies": [
+            88,
+            30,
+            83
+          ],
+          "Name": "Event131",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 31,
+          "NextEventName": "Event56",
+          "Name": "Event132",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 101,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event139",
+          "ActorName": "Timer",
+          "Name": "Event138",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no01_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event38",
+          "ActorName": "HylianM000",
+          "Name": "Event139",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianM000Talk02_030"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 104,
+          "ForkEventIndicies": [
+            4,
+            105,
+            5
+          ],
+          "Name": "Event111",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 106,
+          "NextEventName": "Event16",
+          "Name": "Event119",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk03_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 107,
+          "ForkEventIndicies": [
+            102,
+            109,
+            108
+          ],
+          "Name": "Event16",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event127",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event129",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes01_F,talk02_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event130",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 14,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event34",
+          "Name": "Event4",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 137,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event77",
+          "Name": "Event9",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "HylianM000",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianM000",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 115,
+          "ForkEventIndicies": [
+            117,
+            51
+          ],
+          "Name": "Event48",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 52,
+          "NextEventName": "Event94",
+          "Name": "Event49",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 22,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event44",
+          "ActorName": "Camera",
+          "Name": "Event61",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 113,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "avoidPlayer": {
+              "Bool": false
+            },
+            "avoidWall": {
+              "Bool": false
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "position": {
+              "Int": 3
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event30",
+          "ActorName": "Partner",
+          "Name": "Event90",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "questKey": {
+              "String": "Link_HyrulePlains010"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 119
+            },
+            {
+              "Value": 1,
+              "EventIndex": 120
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event3",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Mc001EnemyDead"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event128",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Quest_Link_HyrulePlains010_030",
+          "Name": "Event133",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Mc001EnemyDead"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 122
+            },
+            {
+              "Value": 1,
+              "EventIndex": 123
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event134",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Link_HyrulePlains010:1876263853"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event135",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Quest_Link_HyrulePlains010_030",
+          "Name": "Event136",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Mc001EnemyDead"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 116
+            },
+            {
+              "Value": 1,
+              "EventIndex": 125
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event137",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 116,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Link_HyrulePlains010:1876263853"
+            }
+          },
+          "NextEventName": "Event61",
+          "ActorName": "QuestSystem",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event140",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 128,
+          "ForkEventIndicies": [
+            84,
+            126
+          ],
+          "Name": "Event143",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 100,
+          "NextEventName": "Event138",
+          "Name": "Event144",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 25,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes01_F"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event50",
+          "ActorName": "HylianM000",
+          "Name": "Event146",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event147",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event148",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event149",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event150",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianM000",
+          "Name": "Event151",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 136,
+          "ForkEventIndicies": [
+            50,
+            134
+          ],
+          "Name": "Event152",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 8,
+          "NextEventName": "Event23",
+          "Name": "Event153",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 5,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -2
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event26",
+          "ActorName": "Player",
+          "Name": "Event77",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 140,
+          "ActorIndex": 5,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -2
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event156",
+          "ActorName": "Player",
+          "Name": "Event123",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianM000",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event39",
+          "ActorName": "Partner",
+          "Name": "Event145",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 141,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event158",
+          "ActorName": "Timer",
+          "Name": "Event156",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 142,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "avoidPlayer": {
+              "Bool": false
+            },
+            "avoidWall": {
+              "Bool": false
+            },
+            "position": {
+              "Int": 2
+            }
+          },
+          "NextEventName": "Event159",
+          "ActorName": "Partner",
+          "Name": "Event158",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 139,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianM000",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "index": {
+              "Int": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0.7
+            },
+            "offsetY": {
+              "Float": 1
+            },
+            "offsetZ": {
+              "Float": 0.3
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event145",
+          "ActorName": "Partner",
+          "Name": "Event159",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "_talkLink": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 6
+        },
+        "Quest_Liin_HyrulePlains010_EnemyDead": {
+          "SubFlowEventIndices": [
+            120
+          ],
+          "EventIndex": 118
+        },
+        "Quest_Link_HyrulePlains010_010": {
+          "SubFlowEventIndices": [
+            111,
+            123
+          ],
+          "EventIndex": 111
+        },
+        "Quest_Link_HyrulePlains010_020": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 24
+        },
+        "Quest_Link_HyrulePlains010_030": {
+          "SubFlowEventIndices": [
+            110
+          ],
+          "EventIndex": 13
+        },
+        "talk": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 112
+        },
+        "talk020": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 3
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

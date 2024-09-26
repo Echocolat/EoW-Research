@@ -1,0 +1,1873 @@
+{
+  "FileName": "HylianF021",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "HylianF021": {
+      "Name": "HylianF021",
+      "Actors": [
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "GetLastResult"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "HylianF021",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Talk",
+            "GenericTalkSequenceWithDialog",
+            "PlayAnimationNoWait",
+            "SetFacialExpression",
+            "SkipAutoTurn",
+            "AimPlayer",
+            "LookAtTalker",
+            "PlayAnimation",
+            "SetInterestIkEnabled"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CheckMessgaeFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CheckProgress"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor",
+            "MorphEnd"
+          ],
+          "Queries": [
+            "CheckMorph",
+            "CheckOutfit"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayOneshotSystemSE"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk010_010"
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "HylianF021",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "sad"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk010_020"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "no01,wait01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk010_010"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 23
+            },
+            {
+              "Value": 1,
+              "EventIndex": 57
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event2",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk010_020"
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "HylianF021",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no01,wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "HylianF021",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "HylianF021",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "sad"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk020_Q1"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event18",
+          "ActorName": "HylianF021",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "ActorName": "HylianF021",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "ActorName": "HylianF021",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk020_Q1_A1_010"
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "HylianF021",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Coast_River:4211698231"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 12
+            },
+            {
+              "Value": 0,
+              "EventIndex": 59
+            },
+            {
+              "Value": 1,
+              "EventIndex": 59
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event10",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "surprise"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk020_Q1_A1_020"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "sad"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk020_Q1_A2_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk020_Q1_A1_020"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 6
+            },
+            {
+              "Value": 1,
+              "EventIndex": 14
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event13",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk025_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk030_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021Talk040_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF021TalkSecretlyClothes_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 9
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event18",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "NextEventName": "Event21",
+          "ActorName": "HylianF021",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_st01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "HylianF021",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 24,
+          "ForkEventIndicies": [
+            19,
+            22,
+            25
+          ],
+          "Name": "Event23",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 20,
+          "NextEventName": "Event20",
+          "Name": "Event24",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianF021",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 34,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Bring_Forest065_Q1_A2_010"
+            }
+          },
+          "NextEventName": "Event35",
+          "ActorName": "HylianF021",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Bring_Forest065_160"
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event27",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Bring_Forest065_170"
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 40,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Bring_Forest065_145"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "yes01,wait03"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event46",
+          "ActorName": "HylianF021",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 33,
+          "ForkEventIndicies": [
+            27,
+            31,
+            32
+          ],
+          "Name": "Event28",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes01,talk03"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 35,
+          "NextEventName": "Event37",
+          "Name": "Event34",
+          "Type": "Join"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 30
+            },
+            {
+              "Value": 1,
+              "EventIndex": 45
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event35",
+          "Type": "Switch"
+        },
+        {
+          "JoinEventIndex": 37,
+          "ForkEventIndicies": [
+            28,
+            36,
+            38
+          ],
+          "Name": "Event37",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event40",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Bring_Forest065_150"
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 42,
+          "ForkEventIndicies": [
+            39,
+            41,
+            43
+          ],
+          "Name": "Event46",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event48",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 49,
+          "NextEventName": "Event59",
+          "Name": "Event49",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no01,wait02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event50",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Bring_Forest065_180"
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 48,
+          "ForkEventIndicies": [
+            44,
+            46,
+            47
+          ],
+          "Name": "Event53",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event54",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no01,talk03"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF021",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event56",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 26,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event26",
+          "ActorName": "HylianF021",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 55,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event64",
+          "ActorName": "HylianF021",
+          "Name": "Event57",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "morphKind": {
+              "Int": 0
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 50
+            },
+            {
+              "Value": 0,
+              "EventIndex": 52
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event58",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 50,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event57",
+          "ActorName": "Player",
+          "Name": "Event60",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 40,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaA:Bring_Forest065_140"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "yes01,wait03"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event46",
+          "ActorName": "HylianF021",
+          "Name": "Event62",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 11,
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "ZeldaTalkMotion",
+          "NextEventName": "Event12",
+          "Name": "Event63",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "outfit": {
+              "String": "Adventure1"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 53
+            },
+            {
+              "Value": 0,
+              "EventIndex": 29
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event64",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "VO_HYL_W003_1_001"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 58,
+          "ForkEventIndicies": [
+            1,
+            56
+          ],
+          "Name": "Event41",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 8,
+          "NextEventName": "Event8",
+          "Name": "Event42",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 54,
+          "ActorIndex": 1,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event63",
+          "ActorName": "HylianF021",
+          "Name": "Event44",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "talk010": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 2
+        },
+        "talk020": {
+          "SubFlowEventIndices": [
+            54
+          ],
+          "EventIndex": 13
+        },
+        "talk030": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 15
+        },
+        "talk040": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 16
+        },
+        "talkSec": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 17
+        },
+        "ZolQuest": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 51
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

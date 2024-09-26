@@ -1,0 +1,3149 @@
+{
+  "FileName": "ZoraSea006",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "ZoraSea006": {
+      "Name": "ZoraSea006",
+      "Actors": [
+        {
+          "Name": "ZoraSea006",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Talk",
+            "GenericTalkSequenceWithDialog",
+            "PlayAnimationNoWait",
+            "SetInstanceVariableBool",
+            "AimActor",
+            "SetFacialExpression",
+            "PlayAnimation",
+            "PlayAnimationEx",
+            "AimCompassPoint"
+          ],
+          "Queries": [
+            "GetInstanceVariableBool"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "ZoraRiverChief",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtTalker",
+            "PlayAnimationNoWait",
+            "Talk",
+            "AimPlayer",
+            "AimActor",
+            "SetFacialExpression",
+            "AimDegreeAngle",
+            "SetInterestIkEnabled",
+            "PlayAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetProgress"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActor",
+            "AimActor",
+            "PlayAnimationNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAt2ActorsCenterAsTalker"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MorphEnd"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActor",
+            "AimActor",
+            "Talk",
+            "PlayAnimationNoWait",
+            "MoveToBesideTargetActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayOneshotSystemSE"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvB_CalamityByJabuJabu_Coast"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "EventFlags",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvB_GetInfo_Coast"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event41",
+          "ActorName": "EventFlags",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkZoraSea:ZoraSea006Talk010_020"
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkZoraSea:ZoraSea006Talk040_020"
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event57",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event80",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkZoraSea:ZoraSea006Talk010_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "think01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event46",
+          "ActorName": "ZoraSea006",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkZoraSea:ZoraSea006Talk030_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "ZoraSea006",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkZoraSea:ZoraSea006Talk040_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "happy01,wait01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event57",
+          "ActorName": "ZoraSea006",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkZoraSea:ZoraSea006Talk030_020"
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Calamity_Coast:2290931515"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "sad01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "ZoraSea006",
+          "Name": "Event46",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 41,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutSlowB"
+            }
+          },
+          "NextEventName": "Event22",
+          "ActorName": "Fade",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 14,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraRiverChief",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": -1
+            },
+            "offsetX": {
+              "Float": -2
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event29",
+          "ActorName": "Zelda",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 126,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraRiverChief",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 2
+            },
+            "offsetX": {
+              "Float": -1.5
+            },
+            "offsetY": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event161",
+          "ActorName": "Partner",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 34,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraRiverChief",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "Zelda",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraRiverChief",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "ZoraRiverChief",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event42",
+          "ActorName": "Camera",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event44",
+          "ActorName": "Timer",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInSlow"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event44",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "strain_01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 22,
+          "ForkEventIndicies": [
+            19,
+            4,
+            21,
+            98
+          ],
+          "Name": "Event60",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:CalamityByJabuJabu_Coast_010"
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event61",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 40,
+          "NextEventName": "Event17",
+          "Name": "Event62",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 20,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event60",
+          "Name": "Event45",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:CalamityByJabuJabu_Coast_020"
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:CalamityByJabuJabu_Coast_030"
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:CalamityByJabuJabu_Coast_040"
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:CalamityByJabuJabu_Coast_050"
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:CalamityByJabuJabu_Coast_060"
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:CalamityByJabuJabu_Coast_070"
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:CalamityByJabuJabu_Coast_080"
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:CalamityByJabuJabu_Coast_090"
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event27",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 33,
+          "ActorIndex": 2,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event13",
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 97,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event94",
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkZoraSea:ZoraSea006Talk050_020"
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 35,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkZoraSea:ZoraSea006Talk050_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "ZoraSea006",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "name": {
+              "String": "talkFinish"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "ZoraSea006",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "name": {
+              "String": "talkFinish"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 37
+            },
+            {
+              "Value": 1,
+              "EventIndex": 135
+            }
+          ],
+          "ActorName": "ZoraSea006",
+          "Name": "Event16",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkZoraSea:ZoraSea006Talk040_020"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "happy01,wait01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 45,
+          "FlowchartName": "",
+          "EntryPointName": "FadeIn",
+          "NextEventName": "Event32",
+          "Name": "Event17",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 42,
+          "ForkEventIndicies": [
+            12,
+            13,
+            32,
+            102
+          ],
+          "Name": "Event22",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 16,
+          "NextEventName": "Event40",
+          "Name": "Event23",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 44,
+          "ForkEventIndicies": [
+            93,
+            70,
+            31
+          ],
+          "Name": "Event30",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 71,
+          "NextEventName": "Event74",
+          "Name": "Event31",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 46,
+          "ForkEventIndicies": [
+            94,
+            59,
+            24
+          ],
+          "Name": "Event32",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 108,
+          "NextEventName": "Event120",
+          "Name": "Event33",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 48,
+          "ForkEventIndicies": [
+            104,
+            68,
+            30
+          ],
+          "Name": "Event34",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 106,
+          "NextEventName": "Event117",
+          "Name": "Event35",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 50,
+          "ForkEventIndicies": [
+            125,
+            124,
+            118,
+            66,
+            29
+          ],
+          "Name": "Event36",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 67,
+          "NextEventName": "Event70",
+          "Name": "Event37",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 52,
+          "ForkEventIndicies": [
+            89,
+            114,
+            65,
+            28
+          ],
+          "Name": "Event38",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 49,
+          "NextEventName": "Event36",
+          "Name": "Event47",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 54,
+          "ForkEventIndicies": [
+            88,
+            99,
+            63,
+            27
+          ],
+          "Name": "Event48",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 64,
+          "NextEventName": "Event66",
+          "Name": "Event49",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 56,
+          "ForkEventIndicies": [
+            61,
+            26
+          ],
+          "Name": "Event50",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 113,
+          "NextEventName": "Event95",
+          "Name": "Event51",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 58,
+          "ForkEventIndicies": [
+            85,
+            60,
+            25
+          ],
+          "Name": "Event52",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 55,
+          "NextEventName": "Event50",
+          "Name": "Event53",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event54",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_worry_talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_worry_talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event65",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 110,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event122",
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event66",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "frightened01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event67",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event69",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 120,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event169",
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event70",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 105,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event116",
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event72",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event73",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event43",
+          "ActorName": "Partner",
+          "Name": "Event74",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 96,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_worry_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event92",
+          "ActorName": "ZoraSea006",
+          "Name": "Event75",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraSea006",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.8
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event77",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraSea006",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.6
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event78",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 74,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event78",
+          "ActorName": "Timer",
+          "Name": "Event79",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 73,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event77",
+          "ActorName": "Timer",
+          "Name": "Event81",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraSea006",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.3
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event82",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 77,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event82",
+          "ActorName": "Timer",
+          "Name": "Event83",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraRiverChief",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.8
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event84",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraRiverChief",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.6
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event85",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 80,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event85",
+          "ActorName": "Timer",
+          "Name": "Event86",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 79,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event84",
+          "ActorName": "Timer",
+          "Name": "Event87",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 84,
+          "ForkEventIndicies": [
+            78,
+            76,
+            75
+          ],
+          "Name": "Event102",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event103",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "TalkZoraSea006",
+          "Name": "Event104",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 87,
+          "ForkEventIndicies": [
+            90,
+            82,
+            81
+          ],
+          "Name": "Event105",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event106",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "TalkZoraRiverChief",
+          "Name": "Event107",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "TalkZoraSea006",
+          "Name": "Event108",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.3
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event93",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Partner",
+                "Item2": "companion"
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event96",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 43,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.6
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event30",
+          "ActorName": "Partner",
+          "Name": "Event97",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 91,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event96",
+          "ActorName": "Timer",
+          "Name": "Event99",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "TalkZoraRiverChief",
+          "Name": "Event98",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 127,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "strain_01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event162",
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event100",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event92",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event94",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 112,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "NextEventName": "Event127",
+          "ActorName": "ZoraSea006",
+          "Name": "Event109",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event111",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 47,
+          "ActorIndex": 2,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "angle": {
+              "Float": 30
+            },
+            "duration": {
+              "Float": 0.2
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event34",
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event112",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 95,
+          "ActorIndex": 2,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "angle": {
+              "Float": 198.386
+            },
+            "duration": {
+              "Float": 0.6
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event100",
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event114",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 72,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event75",
+          "ActorName": "ZoraSea006",
+          "Name": "Event101",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event68",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event76",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 117,
+          "ActorIndex": 2,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "NextEventName": "Event167",
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event116",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 69,
+          "ActorIndex": 2,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event72",
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event117",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_worry_wait"
+            },
+            "restart": {
+              "Bool": false
+            },
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event119",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 109,
+          "ForkEventIndicies": [
+            62,
+            107
+          ],
+          "Name": "Event120",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 57,
+          "NextEventName": "Event52",
+          "Name": "Event121",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 51,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event38",
+          "ActorName": "ZoraSea006",
+          "Name": "Event122",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 115,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event165",
+          "ActorName": "Timer",
+          "Name": "Event125",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_worry_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event127",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 53,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_worry_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event48",
+          "ActorName": "ZoraSea006",
+          "Name": "Event95",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event128",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 116,
+          "ActorIndex": 2,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event166",
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event165",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraRiverChief",
+          "Name": "Event166",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 101,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event114",
+          "ActorName": "Timer",
+          "Name": "Event167",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 103,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event68",
+          "ActorName": "Timer",
+          "Name": "Event168",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraRiverChief",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event124",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 121,
+          "ForkEventIndicies": [
+            111,
+            129
+          ],
+          "Name": "Event169",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 100,
+          "NextEventName": "Event112",
+          "Name": "Event170",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraRiverChief",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.8
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event64",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ZoraRiverChief",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.6
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event90",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 123,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event90",
+          "ActorName": "Timer",
+          "Name": "Event110",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 122,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event64",
+          "ActorName": "Timer",
+          "Name": "Event123",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 15,
+          "ActorIndex": 9,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0.5
+            },
+            "offsetY": {
+              "Float": 1
+            },
+            "offsetZ": {
+              "Float": 2
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event39",
+          "ActorName": "Partner",
+          "Name": "Event161",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 92,
+          "ActorIndex": 9,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": -1.5
+            },
+            "offsetY": {
+              "Float": 1
+            },
+            "offsetZ": {
+              "Float": 2
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event97",
+          "ActorName": "Partner",
+          "Name": "Event162",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": 10
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_worry_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event163",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 130,
+          "ForkEventIndicies": [
+            128,
+            119
+          ],
+          "Name": "Event164",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 131,
+          "NextEventName": "Event63",
+          "Name": "Event171",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes01,ev_worry_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event63",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "sad"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:CalamityByJabuJabu_Coast_060"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "sad01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "ZoraSea006",
+          "Name": "Event115",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "SEQ_VO_ZORA_W002_2_001"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event129",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 136,
+          "ForkEventIndicies": [
+            39,
+            133
+          ],
+          "Name": "Event130",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 134,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event130",
+          "ActorName": "Player",
+          "Name": "Event132",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event133",
+          "Type": "Join"
+        }
+      ],
+      "EntryPoints": {
+        "CalamityByJabuJabu_Coast": {
+          "SubFlowEventIndices": [
+            23,
+            40,
+            94,
+            85,
+            88,
+            89
+          ],
+          "EventIndex": 23
+        },
+        "FadeIn": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 11
+        },
+        "talk": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 5
+        },
+        "talk020": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 132
+        },
+        "talk030": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 6
+        },
+        "talk040": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 38
+        },
+        "talk050": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 36
+        },
+        "TalkZoraRiverChief": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 86
+        },
+        "TalkZoraSea006": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 83
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

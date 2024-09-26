@@ -1,0 +1,86 @@
+{
+  "FileName": "S_Dungeon012",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "S_Dungeon012": {
+      "Name": "S_Dungeon012",
+      "Actors": [
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "HasItem"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestPieceOfPowersSensor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 1,
+          "FlowchartName": "AreaStartCommon",
+          "EntryPointName": "WalkIn",
+          "NextEventName": "Event1",
+          "Name": "Event0",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": 9
+            },
+            "itemKey": {
+              "String": "WorldGlobePiece"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 2
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event1",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "ActorName": "Hud",
+          "Name": "Event2",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "R001WalkIn": {
+          "SubFlowEventIndices": [
+            0
+          ],
+          "EventIndex": 0
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

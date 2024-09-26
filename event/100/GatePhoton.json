@@ -1,0 +1,832 @@
+{
+  "FileName": "GatePhoton",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "GatePhoton": {
+      "Name": "GatePhoton",
+      "Actors": [
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "GetLastResult"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestLevelJump"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CheckMessgaeFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "GatePhoton",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Talk",
+            "GenericTalkSequenceWithDialog",
+            "AimPlayer",
+            "AimActor",
+            "PlayAnimationNoWait",
+            "LookAtTalker",
+            "PlayAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "String": "Field"
+            },
+            "locator": {
+              "String": "F_SouthernVillage001_003"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/PartnerTalk:ConfirmationGatePhotonUse_010"
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/PartnerTalk:ConfirmationGatePhotonUse_030"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "think"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "Partner",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/PartnerTalk:ConfirmationGatePhotonUse_010"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 18
+            },
+            {
+              "Value": 1,
+              "EventIndex": 2
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event4",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/PartnerTalk:ConfirmationGatePhotonUse_030"
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 23
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event5",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 14,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/PartnerTalk:ConfirmationGatePhotonUse_020"
+            }
+          },
+          "NextEventName": "Event16",
+          "ActorName": "Partner",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 10,
+          "ForkEventIndicies": [
+            8,
+            9,
+            17
+          ],
+          "Name": "Event8",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Partner",
+                "Item2": "companion"
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "NextEventName": "Event7",
+          "Name": "Event11",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GatePhoton",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GatePhoton",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 6,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event6",
+          "ActorName": "Partner",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 16,
+          "ForkEventIndicies": [
+            11,
+            12,
+            13,
+            1
+          ],
+          "Name": "Event17",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 7,
+          "NextEventName": "Event8",
+          "Name": "Event18",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "FlowchartName": "",
+          "EntryPointName": "_1st",
+          "NextEventName": "Event5",
+          "Name": "Event46",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event47",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/PartnerTalk:ConfirmationGatePhotonUse_040"
+            }
+          },
+          "NextEventName": "Event49",
+          "ActorName": "Partner",
+          "Name": "Event48",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 22,
+          "ActorIndex": 6,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GatePhoton",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event50",
+          "ActorName": "Partner",
+          "Name": "Event49",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 6,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "appeal,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event47",
+          "ActorName": "Partner",
+          "Name": "Event50",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 24,
+          "FlowchartName": "",
+          "EntryPointName": "_jump",
+          "NextEventName": "Event2",
+          "Name": "Event51",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "String": "FieldBoundary001"
+            },
+            "locator": {
+              "String": "FB001_Start"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 26,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/PartnerTalk:ConfirmationGatePhotonUse_035"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "think"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event22",
+          "ActorName": "Partner",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 27
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event22",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 0,
+          "FlowchartName": "",
+          "EntryPointName": "_jump",
+          "NextEventName": "Event1",
+          "Name": "Event24",
+          "Type": "Subflow"
+        }
+      ],
+      "EntryPoints": {
+        "_1st": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 15
+        },
+        "_jump": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 20
+        },
+        "FieldBoundary001": {
+          "SubFlowEventIndices": [
+            27
+          ],
+          "EventIndex": 25
+        },
+        "forest": {
+          "SubFlowEventIndices": [
+            18,
+            23
+          ],
+          "EventIndex": 3
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

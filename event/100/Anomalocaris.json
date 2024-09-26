@@ -1,0 +1,3835 @@
+{
+  "FileName": "Anomalocaris",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "Anomalocaris": {
+      "Name": "Anomalocaris",
+      "Actors": [
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ChaseDownWaterSurface",
+            "WarpToActorLinkedPointWithCompassPoint",
+            "PlayAnimation",
+            "SetGravityEnable",
+            "SetVisibility",
+            "WarpToActorLinkedPoint",
+            "AimCompassPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToBesideTargetActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPointWithCompassPoint",
+            "PlayAnimation",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StopZoneBgm",
+            "PlayOneshotSystemSE",
+            "StopAllBGM",
+            "WaitNextBeatSamplePositionAndStopAndPlayBossSeaBgm",
+            "WaitNextBeatSamplePositionAndStopAndPlayBossSeaBridgeBgm",
+            "PlayBGM",
+            "StopZoneBaseAmbience"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayLocationOriginCameraAnimation",
+            "BeginInnerScroll"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "InvokeTimeline",
+            "PreloadTimeline",
+            "SetCanSkip"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ForbidSave",
+            "RequestAutoSave",
+            "RequestWarp",
+            "RequestLevelJump",
+            "UnforbidLaunchApplet",
+            "ForbidLaunchApplet",
+            "SetAllItemsVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Anomalocaris",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "CameraLockoff",
+            "PlayAnimationNoWait",
+            "StartPhaseChange",
+            "EndPhaseChange",
+            "SetVisibility",
+            "PlayMaterialAnimation",
+            "PlayMaterialAnimationJelly",
+            "ErasePond",
+            "PlayMaterialAnimationNoWait",
+            "PlayMaterialAnimationKnife",
+            "ItemDropToActor",
+            "Destroy",
+            "ResetActiveAndPesteActors",
+            "PlayTailorOtherChannelNoWait",
+            "CameraLockon"
+          ],
+          "Queries": [
+            "UnderWater",
+            "LeftRight"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "BubbleCrack",
+          "SecondaryName": "BubbleCrack00",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "BubbleOff"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "BubbleCrack",
+          "SecondaryName": "BubbleCrack01",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "BubbleOff"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "BubbleCrack",
+          "SecondaryName": "BubbleCrack02",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "BubbleOff"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "BubbleCrack",
+          "SecondaryName": "BubbleCrack03",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "BubbleOff"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "ItemHeartContainer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVisibility",
+            "SetGravityAcceleration"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Environment",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StashSaveIntensity"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "BattleChallenge",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetNextLevelAndLocation",
+            "ShowTimer"
+          ],
+          "Queries": [
+            "GetConditionNumber"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "d",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "e",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "f",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "TagEvTailorPlayer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayTailorOtherChannelNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Area",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetRestartPositionToLinkedPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Movie",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Play",
+            "Prepare",
+            "Close"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "a",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "b",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "c",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhotonLiberation",
+          "SecondaryName": "a",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayTailorOtherChannelNoWait",
+            "PlayAnimation",
+            "StopTailorOtherChannel"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhotonLiberation",
+          "SecondaryName": "b",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 84,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event74",
+          "ActorName": "Anomalocaris",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_angry"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Anomalocaris",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 105,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event97",
+          "ActorName": "Anomalocaris",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 166,
+          "ActorIndex": 9,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event178",
+          "ActorName": "Anomalocaris",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event35",
+          "ActorName": "BubbleCrack",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event36",
+          "ActorName": "BubbleCrack",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 12,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event37",
+          "ActorName": "BubbleCrack",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 144,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event164",
+          "ActorName": "BubbleCrack",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 9,
+          "ForkEventIndicies": [
+            23,
+            19,
+            20,
+            37
+          ],
+          "Name": "Event61",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 175,
+          "NextEventName": "Event182",
+          "Name": "Event62",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 222,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event190",
+          "ActorName": "Audio",
+          "Name": "Event53",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 171,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event50",
+          "ActorName": "Player",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 14,
+          "ForkEventIndicies": [
+            2,
+            13
+          ],
+          "Name": "Event37",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "label": {
+              "String": "SE_ENEMY_UZUYOBI_EV_DRAWDOWN"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "NextEventName": "Event14",
+          "Name": "Event70",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            },
+            "direction": {
+              "Int": 1
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event44",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            },
+            "direction": {
+              "Int": 1
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event45",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 18,
+          "ForkEventIndicies": [
+            16,
+            15,
+            22
+          ],
+          "Name": "Event46",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 8,
+          "NextEventName": "Event61",
+          "Name": "Event47",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "location": {
+              "String": "EvB_TriRelease_cam"
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "EvB_TriRelease_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "actor/PartnerPhotonLiberation.bfres"
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 31,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event133",
+          "ActorName": "Timer",
+          "Name": "Event77",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "centerX": {
+              "Float": 9.5
+            },
+            "centerY": {
+              "Float": 10
+            },
+            "centerZ": {
+              "Float": -0.75
+            },
+            "distanceToLookAt": {
+              "Float": 69
+            },
+            "halfSizeX": {
+              "Float": 19.5
+            },
+            "halfSizeY": {
+              "Float": 10
+            },
+            "halfSizeZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event102",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ItemHeartContainer",
+          "Name": "Event68",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 24,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 29.3
+            }
+          },
+          "NextEventName": "Event41",
+          "ActorName": "Timer",
+          "Name": "Event69",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 205,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalW"
+            }
+          },
+          "NextEventName": "Event219",
+          "ActorName": "Fade",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 24,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event125",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 25,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event126",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 26,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event127",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 29,
+          "ForkEventIndicies": [
+            25,
+            26,
+            27,
+            44,
+            45,
+            46
+          ],
+          "Name": "Event128",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 17,
+          "NextEventName": "Event46",
+          "Name": "Event129",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 27,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "channel": {
+              "String": "Down"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 32,
+          "ForkEventIndicies": [
+            30,
+            112,
+            111,
+            110,
+            117,
+            120,
+            123,
+            182,
+            183
+          ],
+          "Name": "Event133",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event134",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 27,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "move_up_00"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event135",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 28,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "move_up_00"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event136",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 36,
+          "ForkEventIndicies": [
+            33,
+            34,
+            39,
+            40,
+            41,
+            47,
+            48,
+            49,
+            43,
+            184
+          ],
+          "Name": "Event137",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event138",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 38,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 8
+            }
+          },
+          "NextEventName": "Event140",
+          "ActorName": "Timer",
+          "Name": "Event139",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 92,
+          "ActorIndex": 27,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "Down"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event140",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 24,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_1"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event143",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 25,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_2"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event144",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 26,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_3"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event145",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_B_TriRelease"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event60",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_B_TriRelease"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event64",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 18,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event141",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 19,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event142",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 20,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event146",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 18,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_4"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event147",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 19,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_5"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event148",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 20,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_6"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event149",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 51,
+          "ForkEventIndicies": [
+            54,
+            52,
+            58,
+            59,
+            147
+          ],
+          "Name": "Event119",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event186",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "filename": {
+              "String": "Anomalocaris"
+            },
+            "rate": {
+              "Float": 1
+            }
+          },
+          "ActorName": "FlowControl",
+          "Name": "Event192",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 180,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "filename": {
+              "String": "Anomalocaris"
+            }
+          },
+          "NextEventName": "Event202",
+          "ActorName": "FlowControl",
+          "Name": "Event193",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Anomalocaris",
+          "Name": "Event194",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 167,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "duration": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event179",
+          "ActorName": "Audio",
+          "Name": "Event195",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "ActorName": "FlowControl",
+          "Name": "Event197",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 50,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "label": {
+              "String": "SE_ENEMY_UZUYOBI_EV_APPEAR"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event119",
+          "ActorName": "Audio",
+          "Name": "Event198",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "appear_main_00"
+            }
+          },
+          "ActorName": "Anomalocaris",
+          "Name": "Event199",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "name": {
+              "String": "appear_jelly_00"
+            }
+          },
+          "ActorName": "Anomalocaris",
+          "Name": "Event200",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 189,
+          "FlowchartName": "",
+          "EntryPointName": "Appear_Common",
+          "NextEventName": "Event210",
+          "Name": "Event79",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 159,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "centerX": {
+              "Float": 546
+            },
+            "centerY": {
+              "Float": -13.25
+            },
+            "centerZ": {
+              "Float": -0.75
+            },
+            "distanceToLookAt": {
+              "Float": 69
+            },
+            "halfSizeX": {
+              "Float": 19.5
+            },
+            "halfSizeY": {
+              "Float": 10
+            },
+            "halfSizeZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event16",
+          "ActorName": "Camera",
+          "Name": "Event81",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 93,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event33",
+          "ActorName": "Anomalocaris",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 172,
+          "ActorIndex": 9,
+          "ActorActionIndex": 7,
+          "NextEventName": "Event120",
+          "ActorName": "Anomalocaris",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 9,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 65
+            },
+            {
+              "Value": 1,
+              "EventIndex": 62
+            }
+          ],
+          "ActorName": "Anomalocaris",
+          "Name": "Event5",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 93,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead_ground"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event33",
+          "ActorName": "Anomalocaris",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 81,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.167
+            }
+          },
+          "NextEventName": "Event71",
+          "ActorName": "Timer",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 68,
+          "ForkEventIndicies": [
+            70,
+            69
+          ],
+          "Name": "Event9",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 66,
+          "NextEventName": "Event8",
+          "Name": "Event10",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.333
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 72,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.667
+            }
+          },
+          "NextEventName": "Event19",
+          "ActorName": "Timer",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "Anomalocaris_dissolve"
+            }
+          },
+          "ActorName": "Anomalocaris",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 74,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event21",
+          "Name": "Event19",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "name": {
+              "String": "Anomalocaris_dissolve"
+            }
+          },
+          "ActorName": "Anomalocaris",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 75,
+          "ForkEventIndicies": [
+            71,
+            73
+          ],
+          "Name": "Event21",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event22",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 170,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvB_AreaBBossDead"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event38",
+          "ActorName": "EventFlags",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "EvB_TouchWorldGlobe",
+          "Name": "Event26",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 76,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event25",
+          "ActorName": "Anomalocaris",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "displacementX": {
+              "Float": 0
+            },
+            "displacementY": {
+              "Float": 0
+            },
+            "displacementZ": {
+              "Float": 0
+            },
+            "linkedItemScatter": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Anomalocaris",
+          "Name": "Event49",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 151,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.667
+            }
+          },
+          "NextEventName": "Event168",
+          "ActorName": "Timer",
+          "Name": "Event51",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 82,
+          "ForkEventIndicies": [
+            90,
+            80
+          ],
+          "Name": "Event71",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 78,
+          "NextEventName": "Event30",
+          "Name": "Event72",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 197,
+          "FlowchartName": "",
+          "EntryPointName": "Appear_Common",
+          "NextEventName": "Event98",
+          "Name": "Event67",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 148,
+          "ActorIndex": 9,
+          "ActorActionIndex": 11,
+          "NextEventName": "Event56",
+          "ActorName": "Anomalocaris",
+          "Name": "Event74",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 17,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 86
+            },
+            {
+              "Value": 2,
+              "EventIndex": 86
+            },
+            {
+              "Value": 3,
+              "EventIndex": 86
+            }
+          ],
+          "ActorName": "BattleChallenge",
+          "Name": "Event78",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 17,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "NextLevelName": {
+              "String": "BC_BossMogriffon"
+            },
+            "NextLocatorName": {
+              "String": "BC_BossMogriffon_Start"
+            }
+          },
+          "ActorName": "BattleChallenge",
+          "Name": "Event80",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 55,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset_02",
+          "NextEventName": "Event195",
+          "Name": "Event82",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 145,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "HitStop",
+          "NextEventName": "Event165",
+          "Name": "Event83",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 210,
+          "ActorIndex": 9,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "aliveCemeteryRevive": {
+              "Bool": false
+            },
+            "cemeteryRevive": {
+              "Bool": false
+            },
+            "child": {
+              "Bool": true
+            },
+            "defeatedThrough": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event220",
+          "ActorName": "Anomalocaris",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "BossExtinction",
+          "Name": "Event84",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 0,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "BossExtinction",
+          "NextEventName": "Event1",
+          "Name": "Event63",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 35,
+          "ActorIndex": 27,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "channel": {
+              "String": "move_up"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event137",
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 63,
+          "ActorIndex": 9,
+          "ActorActionIndex": 13,
+          "Parameters": {
+            "channel": {
+              "String": "PartnerPhoton_Release"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "Anomalocaris",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 95,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event27",
+          "ActorName": "Anomalocaris",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 9,
+          "ActorActionIndex": 7,
+          "NextEventName": "Event29",
+          "ActorName": "Anomalocaris",
+          "Name": "Event27",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 9,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 97
+            },
+            {
+              "Value": 1,
+              "EventIndex": 94
+            }
+          ],
+          "ActorName": "Anomalocaris",
+          "Name": "Event31",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 95,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead_ground"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event27",
+          "ActorName": "Anomalocaris",
+          "Name": "Event48",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 91,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.167
+            }
+          },
+          "NextEventName": "Event63",
+          "ActorName": "Timer",
+          "Name": "Event57",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 146,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "HitStop",
+          "NextEventName": "Event166",
+          "Name": "Event94",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 194,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event215",
+          "ActorName": "Player",
+          "Name": "Event104",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 102,
+          "ForkEventIndicies": [
+            100,
+            103
+          ],
+          "Name": "Event107",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 60,
+          "NextEventName": "Event79",
+          "Name": "Event108",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 30
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": -4.5
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event110",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_angry_reverse"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Anomalocaris",
+          "Name": "Event96",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 9,
+          "ActorQueryIndex": 1,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 104
+            },
+            {
+              "Value": 1,
+              "EventIndex": 1
+            }
+          ],
+          "ActorName": "Anomalocaris",
+          "Name": "Event97",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "ActorName": "GameControl",
+          "Name": "Event99",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 133,
+          "ActorIndex": 24,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_1"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event153",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 134,
+          "ActorIndex": 25,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_2"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event154",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event52",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 135,
+          "ActorIndex": 26,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_3"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event155",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event54",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 127,
+          "ActorIndex": 26,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event130",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 126,
+          "ActorIndex": 25,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event124",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event65",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 125,
+          "ActorIndex": 24,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event123",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event66",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 109,
+          "ActorIndex": 26,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event54",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event73",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 108,
+          "ActorIndex": 25,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event52",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event75",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 107,
+          "ActorIndex": 24,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event43",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event76",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 140,
+          "ActorIndex": 18,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_4"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event160",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event103",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 128,
+          "ActorIndex": 18,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event131",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event106",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 116,
+          "ActorIndex": 18,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event103",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event109",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 141,
+          "ActorIndex": 19,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_5"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event161",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event111",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 129,
+          "ActorIndex": 19,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event132",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event112",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 119,
+          "ActorIndex": 19,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event111",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event114",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 142,
+          "ActorIndex": 20,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_6"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event162",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event115",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 130,
+          "ActorIndex": 20,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event150",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event116",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 122,
+          "ActorIndex": 20,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event115",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event122",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 115,
+          "ActorIndex": 24,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event76",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event123",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 114,
+          "ActorIndex": 25,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event75",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event124",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 113,
+          "ActorIndex": 26,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event73",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event130",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 118,
+          "ActorIndex": 18,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event109",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event131",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 121,
+          "ActorIndex": 19,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event114",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event132",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 124,
+          "ActorIndex": 20,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event122",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event150",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 24,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event151",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 25,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event152",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 131,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.167
+            }
+          },
+          "NextEventName": "Event151",
+          "ActorName": "Timer",
+          "Name": "Event153",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 132,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 5.833
+            }
+          },
+          "NextEventName": "Event152",
+          "ActorName": "Timer",
+          "Name": "Event154",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 136,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2.667
+            }
+          },
+          "NextEventName": "Event156",
+          "ActorName": "Timer",
+          "Name": "Event155",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 26,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event156",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 18,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event157",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 19,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event158",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 20,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event159",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 137,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.833
+            }
+          },
+          "NextEventName": "Event157",
+          "ActorName": "Timer",
+          "Name": "Event160",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 138,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 4.833
+            }
+          },
+          "NextEventName": "Event158",
+          "ActorName": "Timer",
+          "Name": "Event161",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 139,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 4.5
+            }
+          },
+          "NextEventName": "Event159",
+          "ActorName": "Timer",
+          "Name": "Event162",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 67,
+          "ActorIndex": 21,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "channel": {
+              "String": "Anomalocaris_water"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "TagEvTailorPlayer",
+          "Name": "Event163",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 211,
+          "ActorIndex": 21,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "channel": {
+              "String": "Anomalocaris_water"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event85",
+          "ActorName": "TagEvTailorPlayer",
+          "Name": "Event164",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 64,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event5",
+          "ActorName": "Player",
+          "Name": "Event165",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 96,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event31",
+          "ActorName": "Player",
+          "Name": "Event166",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 56,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "NextEventName": "Event197",
+          "ActorName": "Fade",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 85,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event78",
+          "ActorName": "Fade",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 101,
+          "ActorIndex": 15,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "attenuation": {
+              "Float": 0.1
+            },
+            "duration": {
+              "Float": 0.01
+            }
+          },
+          "NextEventName": "Event107",
+          "ActorName": "Environment",
+          "Name": "Event113",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 221,
+          "ActorIndex": 15,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "attenuation": {
+              "Float": 0.1
+            },
+            "duration": {
+              "Float": 0.01
+            }
+          },
+          "NextEventName": "Event105",
+          "ActorName": "Environment",
+          "Name": "Event167",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 79,
+          "ActorIndex": 14,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "gravityAcc": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event49",
+          "ActorName": "ItemHeartContainer",
+          "Name": "Event168",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 154,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "immediate": {
+              "Bool": true
+            },
+            "name": {
+              "String": "Anomalocaris"
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event183",
+          "ActorName": "GameControl",
+          "Name": "Event173",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 152,
+          "ActorIndex": 22,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "pointIndex": {
+              "Int": 0
+            },
+            "stance": {
+              "String": "Ground"
+            }
+          },
+          "NextEventName": "Event173",
+          "ActorName": "Area",
+          "Name": "Event177",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 155,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "FloorChangeCommon",
+          "EntryPointName": "_WarpCommon",
+          "NextEventName": "Event184",
+          "Name": "Event183",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "locator": {
+              "String": "023_BossBattle"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event184",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 150,
+          "ActorIndex": 17,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event167",
+          "ActorName": "BattleChallenge",
+          "Name": "Event95",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "level": {
+              "String": "L_Dungeon002"
+            },
+            "locator": {
+              "String": "Ev_AfterReleasTriTalk"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event174",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 157,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvB_TouchWedge_AreaB"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event174",
+          "ActorName": "EventFlags",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 106,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "L003R023CeilingRock"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event99",
+          "ActorName": "EventFlags",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 23,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "autoClose": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Movie",
+          "Name": "Event100",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 207,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "CutOutW"
+            }
+          },
+          "NextEventName": "Event222",
+          "ActorName": "Fade",
+          "Name": "Event118",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 163,
+          "ForkEventIndicies": [
+            160,
+            204,
+            203
+          ],
+          "Name": "Event170",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 161,
+          "NextEventName": "Event118",
+          "Name": "Event171",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "L003R023CellingRock_BC"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event102",
+          "ActorName": "EventFlags",
+          "Name": "Event172",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "label": {
+              "String": "BGM_BATTLE_BOSS_SEARIVER_BRIDGE"
+            },
+            "stoplabel": {
+              "String": "BGM_BATTLE_BOSS_SEARIVER"
+            }
+          },
+          "NextEventName": "Event55",
+          "ActorName": "Audio",
+          "Name": "Event176",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "label": {
+              "String": "BGM_BATTLE_BOSS_SEARIVER2"
+            },
+            "stoplabel": {
+              "String": "BGM_BATTLE_BOSS_SEARIVER_BRIDGE"
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event178",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 168,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event180",
+          "ActorName": "Player",
+          "Name": "Event179",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 53,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event193",
+          "ActorName": "Partner",
+          "Name": "Event180",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 57,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 6
+            }
+          },
+          "NextEventName": "Event198",
+          "ActorName": "Timer",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 220,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "L_Dungeon002_vortex"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event32",
+          "ActorName": "EventFlags",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "L003R023BubbleCrack1"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event28",
+          "ActorName": "EventFlags",
+          "Name": "Event50",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 143,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "L003R023BubbleCrack2"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event163",
+          "ActorName": "EventFlags",
+          "Name": "Event120",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 77,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "L003R023CeilingRock"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event26",
+          "ActorName": "EventFlags",
+          "Name": "Event121",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "ActorName": "Audio",
+          "Name": "Event181",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 176,
+          "ForkEventIndicies": [
+            177,
+            174
+          ],
+          "Name": "Event182",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 162,
+          "NextEventName": "Event170",
+          "Name": "Event185",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 23,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "filename": {
+              "String": "rd017_EvB_WorldGlobeActivate"
+            }
+          },
+          "ActorName": "Movie",
+          "Name": "Event101",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_EV_REVIVING_AREA"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event191",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_WORLD_REPAIR_SEA"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event201",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 169,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "label": {
+              "String": "SE_ENEMY_UZUYOBI_EV_ZELDA_SWIM"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event23",
+          "ActorName": "Audio",
+          "Name": "Event202",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_B_TriRelease_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event204",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_B_TriRelease_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event205",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 181,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event204",
+          "ActorName": "Partner",
+          "Name": "Event206",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 42,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event60",
+          "ActorName": "Partner",
+          "Name": "Event207",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AngryReset",
+          "Name": "Event208",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 187,
+          "ForkEventIndicies": [
+            165,
+            185
+          ],
+          "Name": "Event209",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event3",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 61,
+          "ActorIndex": 9,
+          "ActorActionIndex": 14,
+          "Parameters": {
+            "maxSpeed": {
+              "Float": 100
+            }
+          },
+          "NextEventName": "Event81",
+          "ActorName": "Anomalocaris",
+          "Name": "Event117",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 192,
+          "ForkEventIndicies": [
+            195,
+            190
+          ],
+          "Name": "Event210",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event211",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event212",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 193,
+          "NextEventName": "Event214",
+          "Name": "Event213",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 188,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_BOSS_SEARIVER"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event117",
+          "ActorName": "Audio",
+          "Name": "Event214",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 2
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event215",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 191,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "direction": {
+              "Int": 3
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event212",
+          "ActorName": "Player",
+          "Name": "Event216",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 164,
+          "ActorIndex": 9,
+          "ActorActionIndex": 14,
+          "Parameters": {
+            "maxSpeed": {
+              "Float": 100
+            }
+          },
+          "NextEventName": "Event172",
+          "ActorName": "Anomalocaris",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 200,
+          "ForkEventIndicies": [
+            202,
+            198
+          ],
+          "Name": "Event98",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event175",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event187",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 201,
+          "NextEventName": "Event189",
+          "Name": "Event188",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 196,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_BOSS_SEARIVER"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event17",
+          "ActorName": "Audio",
+          "Name": "Event189",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 199,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "direction": {
+              "Int": 3
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event187",
+          "ActorName": "Player",
+          "Name": "Event196",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 179,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.95
+            }
+          },
+          "NextEventName": "Event201",
+          "ActorName": "Timer",
+          "Name": "Event217",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 178,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.01667
+            }
+          },
+          "NextEventName": "Event191",
+          "ActorName": "Timer",
+          "Name": "Event218",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 6,
+          "ActorName": "Audio",
+          "Name": "Event219",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 4,
+          "ActorName": "GameControl",
+          "Name": "Event221",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 208,
+          "ForkEventIndicies": [
+            209,
+            206
+          ],
+          "Name": "Event222",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 158,
+          "NextEventName": "Event40",
+          "Name": "Event223",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 23,
+          "ActorActionIndex": 2,
+          "ActorName": "Movie",
+          "Name": "Event169",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 28,
+          "ActorIndex": 8,
+          "ActorActionIndex": 5,
+          "NextEventName": "Event128",
+          "ActorName": "GameControl",
+          "Name": "Event220",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 212,
+          "ForkEventIndicies": [
+            214,
+            213
+          ],
+          "Name": "Event85",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 98,
+          "NextEventName": "Event57",
+          "Name": "Event86",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.333
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event87",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 216,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.667
+            }
+          },
+          "NextEventName": "Event90",
+          "ActorName": "Timer",
+          "Name": "Event88",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "Anomalocaris_dissolve"
+            }
+          },
+          "ActorName": "Anomalocaris",
+          "Name": "Event89",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 218,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event92",
+          "Name": "Event90",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "name": {
+              "String": "Anomalocaris_dissolve"
+            }
+          },
+          "ActorName": "Anomalocaris",
+          "Name": "Event91",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 219,
+          "ForkEventIndicies": [
+            215,
+            217
+          ],
+          "Name": "Event92",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event93",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 173,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "L_Dungeon002_MoveWhirlpoolEnd"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event121",
+          "ActorName": "EventFlags",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 83,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Anomalocaris",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event67",
+          "ActorName": "Player",
+          "Name": "Event105",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 223,
+          "Parameters": {
+            "disappearHorse": {
+              "Bool": true
+            }
+          },
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllResetBossDead",
+          "NextEventName": "Event224",
+          "Name": "Event190",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 89,
+          "ActorIndex": 8,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "GameControl",
+          "Name": "Event224",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Anomalocaris_WellDown": {
+          "SubFlowEventIndices": [
+            154
+          ],
+          "EventIndex": 153
+        },
+        "Appear": {
+          "SubFlowEventIndices": [
+            60
+          ],
+          "EventIndex": 149
+        },
+        "Appear_Common": {
+          "SubFlowEventIndices": [
+            87
+          ],
+          "EventIndex": 87
+        },
+        "BC_Appear": {
+          "SubFlowEventIndices": [
+            83
+          ],
+          "EventIndex": 156
+        },
+        "BC_Dead": {
+          "SubFlowEventIndices": [
+            99,
+            216,
+            91
+          ],
+          "EventIndex": 99
+        },
+        "Dead": {
+          "SubFlowEventIndices": [
+            88,
+            72,
+            90,
+            77
+          ],
+          "EventIndex": 88
+        },
+        "EvB_TouchWorldGlobe": {
+          "SubFlowEventIndices": [
+            222
+          ],
+          "EventIndex": 10
+        },
+        "PhaseChange": {
+          "SubFlowEventIndices": [
+            185
+          ],
+          "EventIndex": 186
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

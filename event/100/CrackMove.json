@@ -1,0 +1,327 @@
+{
+  "FileName": "CrackMove",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "CrackMove": {
+      "Name": "CrackMove",
+      "Actors": [
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestLevelJump"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StopSE",
+            "StopAllBGM"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimationDetail",
+            "AimCompassPoint",
+            "Heal"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartParam"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag",
+            "SetLevelFlag"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "String": "OP_Dungeon"
+            },
+            "locator": {
+              "String": "OPDungeon005Retry"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "colorB": {
+              "Float": 0
+            },
+            "colorG": {
+              "Float": 0
+            },
+            "colorR": {
+              "Float": 0
+            },
+            "mode": {
+              "Int": 1
+            },
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "Fade",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead_crack"
+            },
+            "priority": {
+              "Int": 1
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvPrologue013"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "EventFlags",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 2
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event8",
+          "ActorName": "EventFlags",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "OP_Dungeon_Escaping"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "EventFlags",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "Timer",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.1
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 9,
+          "ForkEventIndicies": [
+            2,
+            7,
+            11
+          ],
+          "Name": "Event6",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 6,
+          "NextEventName": "Event0",
+          "Name": "Event9",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "amount": {
+              "Int": 12
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "Zelda",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 12,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "duration": {
+              "Float": 2
+            },
+            "label": {
+              "String": "SE_AMB_OP_DUNGEON_COLLAPSE"
+            }
+          },
+          "NextEventName": "Event13",
+          "ActorName": "Audio",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "duration": {
+              "Float": 2
+            },
+            "label": {
+              "String": "SE_AMB_OP_DUNGEON2"
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 4
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "Audio",
+          "Name": "Event14",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "CrackMoveGameOver": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 8
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

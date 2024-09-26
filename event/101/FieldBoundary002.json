@@ -1,0 +1,502 @@
+{
+  "FileName": "FieldBoundary002",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "FieldBoundary002": {
+      "Name": "FieldBoundary002",
+      "Actors": [
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor",
+            "Talk",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "DisableAutoMovement",
+            "EnableAutoMovement"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAt2ActorsCenterAsTalker"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "MinisterRight",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "MinisterRight",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "Camera",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "appeal02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 3,
+          "ForkEventIndicies": [
+            1,
+            15
+          ],
+          "Name": "Event13",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 5,
+          "NextEventName": "Event16",
+          "Name": "Event14",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event33",
+          "ActorName": "Partner",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 6,
+          "ForkEventIndicies": [
+            19,
+            4
+          ],
+          "Name": "Event16",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 22,
+          "NextEventName": "Event8",
+          "Name": "Event17",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "MinisterRight",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 9,
+          "ForkEventIndicies": [
+            10,
+            7
+          ],
+          "Name": "Event24",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 17,
+          "NextEventName": "Event38",
+          "Name": "Event25",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 16,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "MinisterRight",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event37",
+          "ActorName": "Partner",
+          "Name": "Event27",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event13",
+          "ActorName": "Partner",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event6",
+          "Name": "Event18",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:BoundaryMinisterRightTalk_020"
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "BoundaryMinisterRightTalk"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaB:BoundaryMinisterRightTalk_010"
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event41",
+          "ActorName": "Partner",
+          "Name": "Event37",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event28",
+          "ActorName": "Partner",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "Look_at_Partner",
+          "Name": "Event39",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event39",
+          "ActorName": "Timer",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.5
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event24",
+          "ActorName": "Partner",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 14,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "NextEventName": "Event34",
+          "ActorName": "Partner",
+          "Name": "Event8",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "BoundaryMinisterRightTalk": {
+          "SubFlowEventIndices": [
+            12,
+            18
+          ],
+          "EventIndex": 12
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

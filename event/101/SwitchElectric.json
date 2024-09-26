@@ -1,0 +1,200 @@
+{
+  "FileName": "SwitchElectric",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "SwitchElectric": {
+      "Name": "SwitchElectric",
+      "Actors": [
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayJingleTimeWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Door",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "DoorOpen",
+            "GenericGimmickSequence"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "SwitchElectric",
+          "SecondaryName": "1",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtGimmick"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "duration": {
+              "Float": 1.68
+            },
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_NAZOTOKI_SEIKAI"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event4",
+          "ActorName": "Door",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "Door",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.2
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "Timer",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.7
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event6",
+          "ActorName": "SwitchElectric",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "Timer",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "Timer",
+          "Name": "Event7",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "SuccessEvent": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 6
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

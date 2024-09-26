@@ -1,0 +1,615 @@
+{
+  "FileName": "DeguZol",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "DeguZol": {
+      "Name": "DeguZol",
+      "Actors": [
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetRestartPositionToActor",
+            "UpdateStrongRespawnPoint",
+            "ForceTurn"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayZoneBGM",
+            "PlayBGM",
+            "PlayJingle"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [
+            "CheckFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestAutoSave",
+            "ForbidSave",
+            "UnforbidSave"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "DeguZol04",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "DeguZol01",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "CameraLockon",
+            "PlayAnimation",
+            "LookAtGimmick"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "DeguZol",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtGimmick",
+            "RoomDoorOpen"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Door",
+          "SecondaryName": "ExitDoor",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtGimmick"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "stopbgm": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event20",
+          "ActorName": "Audio",
+          "Name": "Event44",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "Timer",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_MIDDLE_BOSS1"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "Audio",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvG_DeguZolAppear"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 4
+            },
+            {
+              "Value": 1,
+              "EventIndex": 5
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event8",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvG_DeguZolAppear"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event11",
+          "ActorName": "EventFlags",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.05
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 1
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "DeguZol",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "maxSpeed": {
+              "Float": 100
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "DeguZol01",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvG_DeguZolDead"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 8
+            },
+            {
+              "Value": 1,
+              "EventIndex": 0
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event2",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvG_DeguZolDead"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event44",
+          "ActorName": "EventFlags",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 12,
+          "ForkEventIndicies": [
+            10,
+            11
+          ],
+          "Name": "Event24",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DeguZol01",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.05
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 1
+            },
+            "keep": {
+              "Bool": true
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "DeguZol01",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "NextEventName": "Event6",
+          "Name": "Event27",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 14,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "distance": {
+              "Float": -7.5
+            },
+            "stance": {
+              "String": "Ground"
+            }
+          },
+          "NextEventName": "Event12",
+          "ActorName": "Player",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": true
+            },
+            "name": {
+              "String": "DeguZol"
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event31",
+          "ActorName": "GameControl",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event25",
+          "ActorName": "DeguZol",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "DeguZol",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "MiniBossDoorClose",
+          "NextEventName": "Event8",
+          "Name": "Event21",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 16,
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "PreMiniBoss",
+          "NextEventName": "Event21",
+          "Name": "Event31",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 22,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "DeguZol04",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "MiniBossExtinction",
+          "NextEventName": "Event15",
+          "Name": "Event7",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 25,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event0",
+          "ActorName": "GameControl",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 23,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event17",
+          "ActorName": "GameControl",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_NAZOTOKI_SEIKAI"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "Audio",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 15,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.7
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event16",
+          "ActorName": "Door",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "DeguZol04",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "HitStopCustom",
+          "NextEventName": "Event7",
+          "Name": "Event1",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "ActorName": "Player",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "Player",
+          "Name": "Event18",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Appear": {
+          "SubFlowEventIndices": [
+            17,
+            16
+          ],
+          "EventIndex": 26
+        },
+        "Dead": {
+          "SubFlowEventIndices": [
+            24,
+            18
+          ],
+          "EventIndex": 24
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

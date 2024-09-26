@@ -1,0 +1,5932 @@
+{
+  "FileName": "GoronChief",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "GoronChief": {
+      "Name": "GoronChief",
+      "Actors": [
+        {
+          "Name": "Partner",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToDefaultPosition"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GoronChief",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericTalkSequenceWithDialog",
+            "Talk",
+            "PlayAnimationNoWait",
+            "PlayAnimationEx",
+            "AimDegreeAngle",
+            "PlayAnimation",
+            "SetFacialExpression",
+            "Destroy",
+            "SetInstanceVariableBool",
+            "AimPlayer",
+            "KeepAnimationAfterEvent",
+            "SetDefaultFacialExpression",
+            "GenericTalkSequence",
+            "AimActor",
+            "SetInterestIkEnabled",
+            "SetComponentActive",
+            "SkipAutoTurn",
+            "ResetFacialExpression",
+            "AimActorLinkedPoint",
+            "SetInstanceVariableString",
+            "SetRestartPositionToLinkedPoint"
+          ],
+          "Queries": [
+            "GetInstanceVariableBool"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "GetLastResult"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestLevelJumpInCurrentLevel",
+            "RequestLevelJump"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [
+            "CheckMessgaeFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetProgress"
+          ],
+          "Queries": [
+            "CheckProgress"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Shake",
+            "LookAt2ActorsCenterAsTalker",
+            "Reset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericItemGetSequence",
+            "AddItem",
+            "PlayAnimationNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor",
+            "PlayAnimationNoWait",
+            "PlayAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayOneshotSystemSE",
+            "SetBGMVolume"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk010_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event49",
+          "ActorName": "GoronChief",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk010_020"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk030Again_020"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk070_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "GoronChief",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk070_020"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 29,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk100_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "happy"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event11",
+          "ActorName": "GoronChief",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 262,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk100_020"
+            }
+          },
+          "NextEventName": "Event301",
+          "ActorName": "GoronChief",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk100_030"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk030Again_030"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 194
+            },
+            {
+              "Value": 1,
+              "EventIndex": 205
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event20",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "locator": {
+              "String": "S_Dungeon019_restart"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 14,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "level": {
+              "String": "S_Dungeon020"
+            },
+            "locator": {
+              "String": "VolcanoPointBTroubleClear"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event48",
+          "ActorName": "GameControl",
+          "Name": "Event99",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 12,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutSlowB"
+            }
+          },
+          "NextEventName": "Event99",
+          "ActorName": "Fade",
+          "Name": "Event100",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Volcano_VolcanoPointB"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event48",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 222,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "surprise"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaC:VolcanoPointBTroubleClear_000"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "surprised_st,surprised_lp"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event280",
+          "ActorName": "GoronChief",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaC:VolcanoPointBTroubleTactics_090"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "no,think02"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaC:VolcanoPointBTroubleClear_001"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event60",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "sad"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "GoronChief",
+          "Name": "Event49",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk020_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": false
+            },
+            "selfTalkAnimName": {
+              "String": "think01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event63",
+          "ActorName": "GoronChief",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 255,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk020_020"
+            }
+          },
+          "NextEventName": "Event288",
+          "ActorName": "GoronChief",
+          "Name": "Event62",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event62",
+          "ActorName": "GoronChief",
+          "Name": "Event63",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaC:VolcanoPointATroubleClear_230"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "think01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 83,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "sad"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk050_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "think01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event115",
+          "ActorName": "GoronChief",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 26,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaC:VolcanoPointBTroubleClear_180"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "think01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event8",
+          "ActorName": "GoronChief",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaC:VolcanoPointBTroubleClear_190"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 25,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think02"
+            },
+            "restart": {
+              "Bool": false
+            },
+            "time": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "GoronChief",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaC:GoronChiefFistBump_250"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "happy"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 233,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": false
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk090_005"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event138",
+          "ActorName": "GoronChief",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event15",
+          "ActorName": "GoronChief",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event16",
+          "ActorName": "GoronChief",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 5,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk030_010"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 183
+            },
+            {
+              "Value": 1,
+              "EventIndex": 198
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event75",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk030_010"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event76",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event77",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "angle": {
+              "Float": 150
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event78",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 36,
+          "ForkEventIndicies": [
+            34,
+            11
+          ],
+          "Name": "Event79",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 10,
+          "NextEventName": "Event21",
+          "Name": "Event80",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk030_030"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event81",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk030_020"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event82",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event83",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event84",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk030_040"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event85",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": false
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": false
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "surprise"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano010_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "surprised_st_nostoneslab,surprised_lp_nostoneslab"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_st_nostoneslab,surprised_lp_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event89",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 154,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_ed_nostoneslab,wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event233",
+          "ActorName": "GoronChief",
+          "Name": "Event90",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano010_020"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event88",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano010_030"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event94",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano010_040"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event95",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 124,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano010_050"
+            }
+          },
+          "NextEventName": "Event202",
+          "ActorName": "GoronChief",
+          "Name": "Event98",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano010_060"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event101",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano010_070"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event102",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 138,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "sad"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano010_080"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "no_nostoneslab,think01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event216",
+          "ActorName": "GoronChief",
+          "Name": "Event87",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano010_090"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event91",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 148,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano020_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk_nostoneslab"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event227",
+          "ActorName": "GoronChief",
+          "Name": "Event92",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano020_020"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event106",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes_nostoneslab,wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event110",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano020_030"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event112",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano020_040"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event113",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano020_050"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event114",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano020_095"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "yes_nostoneslab,happy_nostoneslab"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event117",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event119",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano020_080"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event129",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano020_090"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event130",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 235,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Ornament02"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event142",
+          "ActorName": "Player",
+          "Name": "Event132",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 143,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Golem_Valcano010:3211895514"
+            }
+          },
+          "NextEventName": "Event149",
+          "ActorName": "QuestSystem",
+          "Name": "Event109",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 266,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Golem_Valcano010:2216925943"
+            }
+          },
+          "NextEventName": "Event28",
+          "ActorName": "QuestSystem",
+          "Name": "Event116",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event93",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 63,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Ornament02"
+            }
+          },
+          "NextEventName": "Event132",
+          "ActorName": "Player",
+          "Name": "Event140",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes_nostoneslab,think02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event146",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 245,
+          "ActorIndex": 1,
+          "ActorActionIndex": 7,
+          "NextEventName": "Event287",
+          "ActorName": "GoronChief",
+          "Name": "Event151",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event108",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event70",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event97",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 77,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event160",
+          "ActorName": "Player",
+          "Name": "Event124",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk065_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "think02"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event152",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 76,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaC:HelpCarryRock_050"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "think01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event159",
+          "ActorName": "GoronChief",
+          "Name": "Event57",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 31,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "name": {
+              "String": "talk030"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event75",
+          "ActorName": "GoronChief",
+          "Name": "Event159",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "name": {
+              "String": "talk030"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 75
+            },
+            {
+              "Value": 1,
+              "EventIndex": 31
+            }
+          ],
+          "ActorName": "GoronChief",
+          "Name": "Event160",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event161",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 230,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaC:HowToGetToOtherSide_020"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk_stoneslab"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event135",
+          "ActorName": "GoronChief",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaC:HowToGetToOtherSide_030"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 162,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event242",
+          "Name": "Event68",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 10,
+          "ActorName": "GoronChief",
+          "Name": "Event72",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 82,
+          "ActorIndex": 1,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "NextEventName": "Event72",
+          "ActorName": "GoronChief",
+          "Name": "Event115",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 85,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event144",
+          "Name": "Event139",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 238,
+          "ActorIndex": 1,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": false
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event278",
+          "ActorName": "GoronChief",
+          "Name": "Event144",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 243,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event143",
+          "ActorName": "Timer",
+          "Name": "Event147",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Golem_Valcano010:3590350612"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 120
+            },
+            {
+              "Value": 0,
+              "EventIndex": 88
+            },
+            {
+              "Value": 1,
+              "EventIndex": 120
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event148",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 179,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk_hand"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event120",
+          "ActorName": "Player",
+          "Name": "Event153",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 90,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event155",
+          "ActorName": "Timer",
+          "Name": "Event154",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 241,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event284",
+          "ActorName": "Player",
+          "Name": "Event155",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_ed_nostoneslab,wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event156",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 94,
+          "ForkEventIndicies": [
+            95,
+            93,
+            96
+          ],
+          "Name": "Event157",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event158",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 177,
+          "NextEventName": "Event73",
+          "Name": "Event163",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event164",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano010_012"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event165",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no_nostoneslab,talk_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event169",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 99,
+          "ForkEventIndicies": [
+            97,
+            45,
+            66
+          ],
+          "Name": "Event170",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 254,
+          "NextEventName": "Event199",
+          "Name": "Event171",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 101,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "angle": {
+              "Float": 210
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event173",
+          "ActorName": "GoronChief",
+          "Name": "Event172",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 102,
+          "ForkEventIndicies": [
+            68,
+            46,
+            103
+          ],
+          "Name": "Event173",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 256,
+          "NextEventName": "Event289",
+          "Name": "Event174",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event175",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "duration": {
+              "Float": 3
+            },
+            "power": {
+              "Int": 3
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event176",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 113,
+          "ActorIndex": 1,
+          "ActorActionIndex": 13,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event189",
+          "ActorName": "GoronChief",
+          "Name": "Event177",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 107,
+          "ForkEventIndicies": [
+            108,
+            104,
+            109,
+            248,
+            249
+          ],
+          "Name": "Event180",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 250,
+          "NextEventName": "Event293",
+          "Name": "Event181",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 118,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_st_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event194",
+          "ActorName": "GoronChief",
+          "Name": "Event182",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event183",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 251,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event292",
+          "ActorName": "Timer",
+          "Name": "Event184",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano010_032"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event186",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 240,
+          "ActorIndex": 1,
+          "ActorActionIndex": 14,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event283",
+          "ActorName": "GoronChief",
+          "Name": "Event166",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 126,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event188",
+          "ActorName": "Timer",
+          "Name": "Event189",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event190",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 116,
+          "ForkEventIndicies": [
+            114,
+            47,
+            117
+          ],
+          "Name": "Event191",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 122,
+          "NextEventName": "Event200",
+          "Name": "Event192",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event193",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "curl_up_st,wait_curl"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event194",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 257,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "curl_up_ed,wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event294",
+          "ActorName": "GoronChief",
+          "Name": "Event195",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 229,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_ed_nostoneslab,wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event220",
+          "ActorName": "GoronChief",
+          "Name": "Event196",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 48,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no_nostoneslab,think02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event98",
+          "ActorName": "GoronChief",
+          "Name": "Event198",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 121,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "NextEventName": "Event198",
+          "ActorName": "GoronChief",
+          "Name": "Event200",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event201",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 128,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event203",
+          "ActorName": "Timer",
+          "Name": "Event202",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes_nostoneslab,wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event187",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 127,
+          "ForkEventIndicies": [
+            111,
+            125
+          ],
+          "Name": "Event188",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 115,
+          "NextEventName": "Event191",
+          "Name": "Event197",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 129,
+          "ForkEventIndicies": [
+            49,
+            70,
+            123
+          ],
+          "Name": "Event203",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 132,
+          "NextEventName": "Event207",
+          "Name": "Event204",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no_nostoneslab,think02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event205",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event206",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 133,
+          "ForkEventIndicies": [
+            131,
+            50,
+            130
+          ],
+          "Name": "Event207",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 64,
+          "NextEventName": "Event109",
+          "Name": "Event208",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 142,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event134",
+          "Name": "Event209",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "angle": {
+              "Float": 210
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event210",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "angle": {
+              "Float": 210
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event211",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event212",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 139,
+          "ForkEventIndicies": [
+            52,
+            137,
+            140
+          ],
+          "Name": "Event216",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 178,
+          "NextEventName": "Event111",
+          "Name": "Event217",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event218",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 136,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event211",
+          "ActorName": "GoronChief",
+          "Name": "Event219",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 51,
+          "ActorIndex": 1,
+          "ActorActionIndex": 14,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event87",
+          "ActorName": "GoronChief",
+          "Name": "Event134",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 135,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event210",
+          "ActorName": "GoronChief",
+          "Name": "Event149",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Golem_Valcano010:2489119001"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event221",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 69,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutSlowB"
+            }
+          },
+          "NextEventName": "Event151",
+          "ActorName": "Fade",
+          "Name": "Event223",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 147,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event225",
+          "ActorName": "Timer",
+          "Name": "Event224",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 65,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInSlow"
+            }
+          },
+          "NextEventName": "Event116",
+          "ActorName": "Fade",
+          "Name": "Event225",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 149,
+          "ForkEventIndicies": [
+            54,
+            151,
+            150
+          ],
+          "Name": "Event227",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 174,
+          "NextEventName": "Event64",
+          "Name": "Event228",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event229",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event230",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 153,
+          "ForkEventIndicies": [
+            71,
+            43,
+            56
+          ],
+          "Name": "Event231",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 44,
+          "NextEventName": "Event90",
+          "Name": "Event232",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 155,
+          "ForkEventIndicies": [
+            157,
+            57,
+            156
+          ],
+          "Name": "Event233",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 163,
+          "NextEventName": "Event243",
+          "Name": "Event234",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event235",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no_nostoneslab,think02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event236",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 159,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk_hand"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event238",
+          "ActorName": "Player",
+          "Name": "Event237",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 160,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event239",
+          "ActorName": "Timer",
+          "Name": "Event238",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 168,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event249",
+          "ActorName": "Player",
+          "Name": "Event239",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event240",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 53,
+          "ActorIndex": 1,
+          "ActorActionIndex": 14,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event92",
+          "ActorName": "GoronChief",
+          "Name": "Event242",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 164,
+          "ForkEventIndicies": [
+            58,
+            60,
+            55
+          ],
+          "Name": "Event243",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 165,
+          "NextEventName": "Event245",
+          "Name": "Event244",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 167,
+          "ForkEventIndicies": [
+            61,
+            72,
+            166
+          ],
+          "Name": "Event245",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event246",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 170,
+          "NextEventName": "Event251",
+          "Name": "Event247",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 152,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event231",
+          "ActorName": "Timer",
+          "Name": "Event249",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes_nostoneslab,talk_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event250",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 171,
+          "ForkEventIndicies": [
+            62,
+            169
+          ],
+          "Name": "Event251",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 172,
+          "NextEventName": "Event27",
+          "Name": "Event252",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 67,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event140",
+          "ActorName": "GoronChief",
+          "Name": "Event27",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 175,
+          "ForkEventIndicies": [
+            173,
+            161
+          ],
+          "Name": "Event64",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 158,
+          "NextEventName": "Event237",
+          "Name": "Event66",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 112,
+          "ActorIndex": 1,
+          "ActorActionIndex": 15,
+          "Parameters": {
+            "active": {
+              "Bool": true
+            },
+            "name": {
+              "String": "aimControlComp"
+            }
+          },
+          "NextEventName": "Event166",
+          "ActorName": "GoronChief",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 98,
+          "ActorIndex": 1,
+          "ActorActionIndex": 14,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event170",
+          "ActorName": "GoronChief",
+          "Name": "Event73",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 141,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "NextEventName": "Event219",
+          "ActorName": "GoronChief",
+          "Name": "Event111",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 180,
+          "ForkEventIndicies": [
+            91,
+            181
+          ],
+          "Name": "Event120",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 89,
+          "NextEventName": "Event154",
+          "Name": "Event122",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event123",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 73,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event124",
+          "Name": "Event126",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 185,
+          "ForkEventIndicies": [
+            78,
+            32,
+            184
+          ],
+          "Name": "Event61",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event133",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 186,
+          "NextEventName": "Event150",
+          "Name": "Event145",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 187,
+          "ForkEventIndicies": [
+            39,
+            38,
+            212
+          ],
+          "Name": "Event150",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 188,
+          "NextEventName": "Event214",
+          "Name": "Event213",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 189,
+          "ForkEventIndicies": [
+            40,
+            37,
+            213
+          ],
+          "Name": "Event214",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 191,
+          "NextEventName": "Event248",
+          "Name": "Event215",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event222",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 192,
+          "ForkEventIndicies": [
+            190,
+            41
+          ],
+          "Name": "Event248",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 220,
+          "NextEventName": "Event276",
+          "Name": "Event253",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 16,
+          "ActorName": "GoronChief",
+          "Name": "Event254",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 195,
+          "ForkEventIndicies": [
+            33,
+            2,
+            214
+          ],
+          "Name": "Event255",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 216,
+          "NextEventName": "Event272",
+          "Name": "Event256",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk030Again_010"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event162",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 200,
+          "ForkEventIndicies": [
+            197,
+            196,
+            199
+          ],
+          "Name": "Event257",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event258",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 9,
+          "NextEventName": "Event20",
+          "Name": "Event259",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 16,
+          "ActorName": "GoronChief",
+          "Name": "Event261",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk030_030"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event74",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk030_040"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event86",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 206,
+          "ForkEventIndicies": [
+            203,
+            202
+          ],
+          "Name": "Event263",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 208,
+          "NextEventName": "Event266",
+          "Name": "Event264",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event265",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 209,
+          "ForkEventIndicies": [
+            207,
+            204
+          ],
+          "Name": "Event266",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 219,
+          "NextEventName": "Event275",
+          "Name": "Event267",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 201,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "angle": {
+              "Float": 135
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event261",
+          "ActorName": "GoronChief",
+          "Name": "Event262",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 193,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "angle": {
+              "Float": 135
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event254",
+          "ActorName": "GoronChief",
+          "Name": "Event260",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event268",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 17,
+          "ActorName": "GoronChief",
+          "Name": "Event269",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event270",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event271",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 217,
+          "ForkEventIndicies": [
+            215,
+            8,
+            218
+          ],
+          "Name": "Event272",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 35,
+          "NextEventName": "Event79",
+          "Name": "Event273",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 17,
+          "ActorName": "GoronChief",
+          "Name": "Event274",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 210,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event262",
+          "ActorName": "GoronChief",
+          "Name": "Event275",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 211,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event260",
+          "ActorName": "GoronChief",
+          "Name": "Event276",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_ed,happy"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event279",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 223,
+          "ForkEventIndicies": [
+            17,
+            221,
+            225
+          ],
+          "Name": "Event280",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 13,
+          "NextEventName": "Event100",
+          "Name": "Event281",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 228,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event185",
+          "Name": "Event128",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 227,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "STRM_SE_ENEMY_FIRE_GOLEM_ROAR"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event69",
+          "ActorName": "Audio",
+          "Name": "Event67",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 106,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event180",
+          "ActorName": "Timer",
+          "Name": "Event69",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 15,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.75
+            }
+          },
+          "NextEventName": "Event55",
+          "ActorName": "Timer",
+          "Name": "Event185",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 177,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Mc066GC_First"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event73",
+          "ActorName": "EventFlags",
+          "Name": "Event220",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 232,
+          "ForkEventIndicies": [
+            80,
+            231
+          ],
+          "Name": "Event135",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think03"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event136",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event137",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/GeneralTalkGoron:GoronChiefTalk090_010"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event138",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GoronChief",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event141",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 236,
+          "ForkEventIndicies": [
+            237,
+            59
+          ],
+          "Name": "Event142",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 260,
+          "NextEventName": "Event298",
+          "Name": "Event241",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 234,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "avoidPlayer": {
+              "Bool": true
+            },
+            "avoidWall": {
+              "Bool": true
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "position": {
+              "Int": 3
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event141",
+          "ActorName": "Partner",
+          "Name": "Event277",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 239,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event282",
+          "ActorName": "GoronChief",
+          "Name": "Event278",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 176,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event71",
+          "ActorName": "Timer",
+          "Name": "Event282",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 86,
+          "ActorIndex": 1,
+          "ActorActionIndex": 18,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GoronChief",
+                "Item2": ""
+              }
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "pointIndex": {
+              "Int": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event147",
+          "ActorName": "GoronChief",
+          "Name": "Event283",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 92,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event157",
+          "ActorName": "Timer",
+          "Name": "Event284",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "GoronChief",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0.95
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event285",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 244,
+          "ForkEventIndicies": [
+            42,
+            242
+          ],
+          "Name": "Event143",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 87,
+          "NextEventName": "Event148",
+          "Name": "Event286",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 146,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event224",
+          "ActorName": "Camera",
+          "Name": "Event287",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 110,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event184",
+          "ActorName": "Player",
+          "Name": "Event290",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "search"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event302",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 247,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event302",
+          "ActorName": "Timer",
+          "Name": "Event303",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 252,
+          "ActorIndex": 10,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "panic"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event295",
+          "ActorName": "Partner",
+          "Name": "Event291",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 246,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.8
+            }
+          },
+          "NextEventName": "Event290",
+          "ActorName": "Timer",
+          "Name": "Event293",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 119,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event195",
+          "ActorName": "Timer",
+          "Name": "Event292",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 253,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event300",
+          "ActorName": "Timer",
+          "Name": "Event295",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "lookaround,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event300",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 100,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event172",
+          "ActorName": "GoronChief",
+          "Name": "Event199",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 19,
+          "Parameters": {
+            "name": {
+              "String": "idleAnim"
+            },
+            "value": {
+              "String": "think01"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event288",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 226,
+          "ActorIndex": 11,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 0.3
+            },
+            "volume": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event67",
+          "ActorName": "Audio",
+          "Name": "Event289",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 105,
+          "ActorIndex": 11,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 0.3
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event177",
+          "ActorName": "Audio",
+          "Name": "Event294",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaC:Golem_Valcano020_100"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event296",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk_nostoneslab"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event297",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 261,
+          "ForkEventIndicies": [
+            258,
+            259
+          ],
+          "Name": "Event298",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 145,
+          "NextEventName": "Event223",
+          "Name": "Event299",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 30,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "GoronChief",
+          "Name": "Event301",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 265,
+          "ForkEventIndicies": [
+            22,
+            264
+          ],
+          "Name": "Event23",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "VO_GORON_CHIEF_003"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 267,
+          "NextEventName": "Event30",
+          "Name": "Event26",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 20,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "pointIndex": {
+              "Int": 1
+            },
+            "stance": {
+              "String": "Ground"
+            }
+          },
+          "ActorName": "GoronChief",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 16,
+          "ActorName": "GoronChief",
+          "Name": "Event30",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Quest_1": {
+          "SubFlowEventIndices": [
+            84
+          ],
+          "EventIndex": 84
+        },
+        "Quest_2": {
+          "SubFlowEventIndices": [
+            134
+          ],
+          "EventIndex": 134
+        },
+        "Quest_2_5": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 144
+        },
+        "Quest_end": {
+          "SubFlowEventIndices": [
+            81
+          ],
+          "EventIndex": 81
+        },
+        "talk": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 0
+        },
+        "talk020": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 19
+        },
+        "talk030": {
+          "SubFlowEventIndices": [
+            182
+          ],
+          "EventIndex": 182
+        },
+        "talk040": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 263
+        },
+        "talk050": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 23
+        },
+        "talk055": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 16
+        },
+        "talk060": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 24
+        },
+        "talk065": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 74
+        },
+        "talk067": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 79
+        },
+        "talk070": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 3
+        },
+        "talk080": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 27
+        },
+        "talk090": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 28
+        },
+        "talk100": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 5
+        },
+        "VolcanoPointBTroubleClear": {
+          "SubFlowEventIndices": [
+            224
+          ],
+          "EventIndex": 224
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

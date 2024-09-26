@@ -1,0 +1,213 @@
+{
+  "FileName": "SwitchFootLD006",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "SwitchFootLD006": {
+      "Name": "SwitchFootLD006",
+      "Actors": [
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtLocationAsGimmick"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "SnowBallInduce",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayEventMode"
+          ],
+          "Queries": [
+            "EventModeResult"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetMaxDistance",
+            "DefaultMaxDistance"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "Timer",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "ActorName": "SnowBallInduce",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 3,
+              "EventIndex": 3
+            }
+          ],
+          "ActorName": "SnowBallInduce",
+          "Name": "Event1",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "L006R016GimicActivate"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event17",
+          "ActorName": "EventFlags",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "distance": {
+              "Float": 30
+            }
+          },
+          "NextEventName": "Event8",
+          "ActorName": "Audio",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event1",
+          "ActorName": "Audio",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 2
+            },
+            "location": {
+              "String": "SnowBallInduce_016"
+            },
+            "posOffsetX": {
+              "Float": 0
+            },
+            "posOffsetY": {
+              "Float": 0
+            },
+            "posOffsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 8,
+          "ForkEventIndicies": [
+            6,
+            1
+          ],
+          "Name": "Event8",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 5,
+          "NextEventName": "Event6",
+          "Name": "Event9",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "Fence",
+          "EntryPointName": "OpenEvent",
+          "Name": "Event17",
+          "Type": "Subflow"
+        }
+      ],
+      "EntryPoints": {
+        "PushEvent": {
+          "SubFlowEventIndices": [
+            9
+          ],
+          "EventIndex": 0
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

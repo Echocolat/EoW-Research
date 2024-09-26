@@ -1,0 +1,104 @@
+{
+  "FileName": "Dissolve",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "Dissolve": {
+      "Name": "Dissolve",
+      "Actors": [
+        {
+          "Name": "Actor",
+          "SecondaryName": "Dissolve(actor)",
+          "ArgumentName": "actor",
+          "EntryPointIndex": 0,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFaceCullMode",
+            "SetAlphaCutoutEnabled"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Actor",
+          "SecondaryName": "Undissolve(actor)",
+          "ArgumentName": "actor",
+          "EntryPointIndex": 1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFaceCullMode",
+            "SetAlphaCutoutEnabled"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "Actor",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Actor",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "cullMode": {
+              "Int": 2
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "Actor",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "enabled": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Actor",
+          "Name": "Event3",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Dissolve": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 0
+        },
+        "Undissolve": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 2
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

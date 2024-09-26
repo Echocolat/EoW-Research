@@ -1,0 +1,586 @@
+{
+  "FileName": "EnemyLinkAppear",
+  "Version": "0.3.0.0",
+  "Flowcharts": {},
+  "Timelines": {
+    "EnemyLinkAppear": {
+      "Name": "EnemyLinkAppear",
+      "Duration": 690,
+      "Actors": [
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayActorOriginCameraAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "BossBarrier",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "EmitHoldEffect"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EnemyLink",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 3,
+          "Actions": [
+            "PlayAnimation",
+            "AimCompassPoint",
+            "StopTailorOtherChannel",
+            "PlayTailorOtherChannelNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 6,
+          "Actions": [
+            "PlayAnimation",
+            "AimCompassPoint",
+            "SetFacialExpression",
+            "SetCullMode",
+            "DislocateComponentToActor",
+            "Deactivate",
+            "Activate"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 4,
+          "Actions": [
+            "PlayAnimation",
+            "AimCompassPoint",
+            "WarpToActor",
+            "Activate",
+            "Deactivate"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 2,
+          "Actions": [
+            "PlayOneshotSystemSE",
+            "Prepare",
+            "PlayBGM"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Clips": [
+        {
+          "StartTime": 0,
+          "Duration": 650,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": false
+            },
+            "name": {
+              "String": "EnemyLink_appear01_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "actor/Player.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "EnemyLink",
+                "Item2": ""
+              }
+            }
+          }
+        },
+        {
+          "StartTime": 0,
+          "Duration": 590,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_EnemyLinkAppear"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 0,
+          "Duration": 590,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_EnemyLinkAppear"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 0,
+          "Duration": 590,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Unknown": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_EnemyLinkAppear"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        }
+      ],
+      "Oneshots": [
+        {
+          "Time": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "EnemyLink",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_ENEMY_LINK_APPEAR1"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "label": {
+              "String": "BGM_EV_ENEMY_LINK_APPEAR_A"
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "name": {
+              "String": "ZeldaSkeletalModelComp"
+            },
+            "targetActor": {
+              "ActorIdentifier": {
+                "Item1": "EnemyLink",
+                "Item2": ""
+              }
+            }
+          }
+        },
+        {
+          "Time": 1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "label": {
+              "String": "BGM_EV_ENEMY_LINK_APPEAR_B"
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 10,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          }
+        },
+        {
+          "Time": 39,
+          "ActorIndex": 6,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": false
+            },
+            "label": {
+              "String": "BGM_EV_ENEMY_LINK_APPEAR_A"
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 123,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_ENEMY_LINK_APPEAR2"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 218,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          }
+        },
+        {
+          "Time": 325,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "damage"
+            }
+          }
+        },
+        {
+          "Time": 388,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "attack_om"
+            }
+          }
+        },
+        {
+          "Time": 393,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_ENEMY_LINK_APPEAR3"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 400,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "Appear_Aura"
+            },
+            "index": {
+              "Int": -1
+            }
+          }
+        },
+        {
+          "Time": 428,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5
+        },
+        {
+          "Time": 429,
+          "ActorIndex": 5,
+          "ActorActionIndex": 4
+        },
+        {
+          "Time": 431,
+          "ActorIndex": 6,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": false
+            },
+            "label": {
+              "String": "BGM_EV_ENEMY_LINK_APPEAR_B"
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 435,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "channel": {
+              "String": "Appear_Aura"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "Time": 590,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "Time": 630,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          }
+        },
+        {
+          "Time": 690,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0
+        },
+        {
+          "Time": 690,
+          "ActorIndex": 4,
+          "ActorActionIndex": 6
+        },
+        {
+          "Time": 690,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3
+        }
+      ],
+      "Triggers": [
+        {
+          "ClipIndex": 0,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 1,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 2,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 3,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 1,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 2,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 3,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 0,
+          "Type": 2
+        }
+      ],
+      "SubTimelines": [],
+      "Cuts": [
+        {
+          "StartTime": 0,
+          "Name": "cut1"
+        },
+        {
+          "StartTime": 0,
+          "Name": "cut01"
+        }
+      ]
+    }
+  }
+}

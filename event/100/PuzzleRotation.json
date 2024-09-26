@@ -1,0 +1,159 @@
+{
+  "FileName": "PuzzleRotation",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "PuzzleRotation": {
+      "Name": "PuzzleRotation",
+      "Actors": [
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayOutAnim",
+            "PlayInAnim"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PuzzleRotation",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AwaitSolvedEnd"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayJingle"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event2",
+          "ActorName": "Hud",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event6",
+          "ActorName": "Hud",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event4",
+          "ActorName": "PuzzleRotation",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "ActorName": "Hud",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event3",
+          "ActorName": "PuzzleRotation",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_NAZOTOKI_SEIKAI"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event8",
+          "ActorName": "Audio",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "ActorName": "Hud",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.2
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "Timer",
+          "Name": "Event3",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Clear_Inside": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 1
+        },
+        "Clear_Outside": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 0
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

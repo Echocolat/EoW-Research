@@ -1,0 +1,6663 @@
+{
+  "FileName": "HylianMC000",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "HylianMC000": {
+      "Name": "HylianMC000",
+      "Actors": [
+        {
+          "Name": "HylianMC000",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericTalkSequenceWithDialog",
+            "PlayAnimation",
+            "Talk",
+            "PlayAnimationNoWait",
+            "SetFacialExpression",
+            "AimPlayer",
+            "AimToInitialAngle",
+            "AimCompassPoint",
+            "AimActor",
+            "SetInterestIkEnabled",
+            "ResetFacialExpression",
+            "ActiveteLinkedActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToDefaultPosition",
+            "EnableAutoMovement"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ResetFacialExpression",
+            "AddItemAndGenericItemGetSequence"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "AimActor",
+            "PlayAnimation",
+            "AbsorbAllPastedActors",
+            "PlayAnimationNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetProgress"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CheckMessgaeFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ResetSensorEventResetContainsActors"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "DandarmaBullet",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Destroy",
+            "WarpToActorLinkedPoint",
+            "PlayAnimationNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Dandarma",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimationNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "SnowBall",
+          "SecondaryName": "Bring",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Destroy"
+          ],
+          "Queries": [
+            "CheckPasted"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "SnowBall",
+          "SecondaryName": "forDemo",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Deactivate"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianMC000Talk010_030"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "wait06"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianMC000TalkSecretlyClothes_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "wait06"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianMC000Talk010_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain010_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "happy02,wait07"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event123",
+          "ActorName": "HylianMC000",
+          "Name": "Event48",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 32,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain020_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "happy02"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event152",
+          "ActorName": "HylianMC000",
+          "Name": "Event50",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Bring_SnowMountain010:4227461475"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event51",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 109,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Bring_SnowMountain010:3232483662"
+            }
+          },
+          "NextEventName": "Event161",
+          "ActorName": "QuestSystem",
+          "Name": "Event49",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event124",
+          "ActorName": "HylianMC000",
+          "Name": "Event123",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 11,
+          "ForkEventIndicies": [
+            9,
+            10,
+            18
+          ],
+          "Name": "Event124",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain010_020"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event125",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk03"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event126",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 12,
+          "NextEventName": "Event128",
+          "Name": "Event127",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event129",
+          "ActorName": "HylianMC000",
+          "Name": "Event128",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 17,
+          "ForkEventIndicies": [
+            14,
+            15,
+            16
+          ],
+          "Name": "Event129",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain010_030"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event130",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes01,wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event131",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event132",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 19,
+          "NextEventName": "Event135",
+          "Name": "Event133",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event136",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 22,
+          "ForkEventIndicies": [
+            20,
+            21,
+            95
+          ],
+          "Name": "Event135",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain010_040"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event137",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk06"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event138",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 23,
+          "NextEventName": "Event139",
+          "Name": "Event140",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 27,
+          "ForkEventIndicies": [
+            24,
+            25,
+            26
+          ],
+          "Name": "Event139",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain010_050"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event142",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy02,wait07"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event143",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event144",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 28,
+          "NextEventName": "Event147",
+          "Name": "Event145",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 31,
+          "ForkEventIndicies": [
+            29,
+            30,
+            96
+          ],
+          "Name": "Event147",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain010_060"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event148",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event150",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "NextEventName": "Event49",
+          "Name": "Event151",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 34,
+          "ForkEventIndicies": [
+            33,
+            35
+          ],
+          "Name": "Event152",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain020_020"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event153",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 108,
+          "NextEventName": "Event160",
+          "Name": "Event155",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event156",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 118,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": false
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "surprise"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk06"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event169",
+          "ActorName": "HylianMC000",
+          "Name": "Event47",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 38,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event54",
+          "ActorName": "HylianMC000",
+          "Name": "Event53",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 41,
+          "ForkEventIndicies": [
+            39,
+            40
+          ],
+          "Name": "Event54",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_020"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 42,
+          "NextEventName": "Event58",
+          "Name": "Event57",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 94,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event122",
+          "ActorName": "HylianMC000",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 47,
+          "ForkEventIndicies": [
+            44,
+            45,
+            46
+          ],
+          "Name": "Event59",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_030"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event60",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk03"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event61",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event62",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 48,
+          "NextEventName": "Event64",
+          "Name": "Event63",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 49,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event66",
+          "ActorName": "HylianMC000",
+          "Name": "Event64",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 52,
+          "ForkEventIndicies": [
+            50,
+            51,
+            57
+          ],
+          "Name": "Event66",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_040"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event67",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event68",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 91,
+          "NextEventName": "Event110",
+          "Name": "Event69",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 56,
+          "ForkEventIndicies": [
+            54,
+            55
+          ],
+          "Name": "Event77",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_060"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event78",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "angry01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event79",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 58,
+          "NextEventName": "Event65",
+          "Name": "Event81",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event52",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 59,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event80",
+          "ActorName": "HylianMC000",
+          "Name": "Event65",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 62,
+          "ForkEventIndicies": [
+            60,
+            61,
+            69
+          ],
+          "Name": "Event80",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_070"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event82",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "love_cats"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event83",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 63,
+          "NextEventName": "Event85",
+          "Name": "Event84",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 64,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event86",
+          "ActorName": "HylianMC000",
+          "Name": "Event85",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 68,
+          "ForkEventIndicies": [
+            65,
+            66,
+            67
+          ],
+          "Name": "Event86",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_080"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event87",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_st01,surprised_lp01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event88",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event89",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 310,
+          "NextEventName": "Event331",
+          "Name": "Event90",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event92",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 74,
+          "ForkEventIndicies": [
+            71,
+            73
+          ],
+          "Name": "Event93",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_090"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event94",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 93,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "frightened01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event121",
+          "ActorName": "HylianMC000",
+          "Name": "Event95",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event96",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 116,
+          "NextEventName": "Event76",
+          "Name": "Event97",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 78,
+          "ForkEventIndicies": [
+            76,
+            77,
+            84
+          ],
+          "Name": "Event100",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_100"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event101",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes01,wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event102",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 79,
+          "NextEventName": "Event105",
+          "Name": "Event103",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 83,
+          "ForkEventIndicies": [
+            80,
+            81,
+            82
+          ],
+          "Name": "Event105",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_110"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event106",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event107",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event108",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 122,
+          "NextEventName": "Event70",
+          "Name": "Event109",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event111",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 89,
+          "ForkEventIndicies": [
+            86,
+            87,
+            88
+          ],
+          "Name": "Event112",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_130"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event113",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy03"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event114",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event115",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 121,
+          "NextEventName": "Event172",
+          "Name": "Event116",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 85,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_120"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event112",
+          "ActorName": "HylianMC000",
+          "Name": "Event119",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 106,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutSlowB"
+            }
+          },
+          "NextEventName": "Event158",
+          "ActorName": "Fade",
+          "Name": "Event110",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 70,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInSlow"
+            }
+          },
+          "NextEventName": "Event93",
+          "ActorName": "Fade",
+          "Name": "Event120",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 92,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event120",
+          "ActorName": "Timer",
+          "Name": "Event121",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 43,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event59",
+          "ActorName": "HylianMC000",
+          "Name": "Event122",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event48",
+          "Name": "Event72",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event74",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event75",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event91",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 105,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset_SensorQuest",
+          "NextEventName": "Event157",
+          "Name": "Event141",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 300,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "SnowBall",
+                "Item2": "Bring"
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event319",
+          "ActorName": "HylianMC000",
+          "Name": "Event149",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 313,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Dandarma",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event302",
+          "ActorName": "HylianMC000",
+          "Name": "Event146",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 102,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event149",
+          "ActorName": "HylianMC000",
+          "Name": "Event154",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 103,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event146",
+          "ActorName": "HylianMC000",
+          "Name": "Event157",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 107,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event159",
+          "ActorName": "Player",
+          "Name": "Event158",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 217,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event220",
+          "ActorName": "Player",
+          "Name": "Event159",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 99,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait06"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event75",
+          "ActorName": "HylianMC000",
+          "Name": "Event160",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 98,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait06"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event74",
+          "ActorName": "HylianMC000",
+          "Name": "Event161",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait06"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event162",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "ActorName": "Zelda",
+          "Name": "Event163",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 113,
+          "ForkEventIndicies": [
+            111,
+            114
+          ],
+          "Name": "Event164",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 115,
+          "NextEventName": "Event167",
+          "Name": "Event165",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "avoidPlayer": {
+              "Bool": true
+            },
+            "avoidWall": {
+              "Bool": false
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "position": {
+              "Int": 1
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event166",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 90,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event119",
+          "ActorName": "Partner",
+          "Name": "Event167",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 75,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event100",
+          "ActorName": "HylianMC000",
+          "Name": "Event76",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "ActorName": "HylianMC000",
+          "Name": "Event168",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 37,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event53",
+          "ActorName": "HylianMC000",
+          "Name": "Event169",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 120,
+          "ForkEventIndicies": [
+            117,
+            110,
+            100
+          ],
+          "Name": "Event170",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 5,
+          "NextEventName": "Event51",
+          "Name": "Event171",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 119,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event170",
+          "ActorName": "Timer",
+          "Name": "Event172",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 123,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_hand_over"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event98",
+          "ActorName": "Player",
+          "Name": "Event70",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 112,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 8
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SmoothieIngredient05"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event164",
+          "ActorName": "Zelda",
+          "Name": "Event98",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "surprise"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianMC000Talk010_040"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "surprised_st01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianMC000Talk020_020"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianMC000Talk010_010"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 2
+            },
+            {
+              "Value": 1,
+              "EventIndex": 0
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event0",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 128,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianMC000Talk025_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk06"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "HylianMC000",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 129,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "HylianMC000",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 132,
+          "ForkEventIndicies": [
+            130,
+            131,
+            134
+          ],
+          "Name": "Event3",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianMC000Talk025_020"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event6",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 127,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "HylianMC000",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 137,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset_SensorQuest",
+          "NextEventName": "Event12",
+          "Name": "Event9",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 320,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "DandarmaBullet",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event307",
+          "ActorName": "HylianMC000",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 136,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event11",
+          "ActorName": "HylianMC000",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Bring_SnowMountain010:4227461475"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 210,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": false
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "surprise"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk06"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event213",
+          "ActorName": "HylianMC000",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 141,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event16",
+          "ActorName": "HylianMC000",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 144,
+          "ForkEventIndicies": [
+            142,
+            143
+          ],
+          "Name": "Event16",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_020"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 145,
+          "NextEventName": "Event25",
+          "Name": "Event24",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 198,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event201",
+          "ActorName": "HylianMC000",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 150,
+          "ForkEventIndicies": [
+            147,
+            148,
+            149
+          ],
+          "Name": "Event26",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_030"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event27",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk03"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 151,
+          "NextEventName": "Event31",
+          "Name": "Event30",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 152,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event32",
+          "ActorName": "HylianMC000",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 155,
+          "ForkEventIndicies": [
+            153,
+            154,
+            160
+          ],
+          "Name": "Event32",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_040"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 194,
+          "NextEventName": "Event197",
+          "Name": "Event35",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 159,
+          "ForkEventIndicies": [
+            157,
+            158
+          ],
+          "Name": "Event36",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_060"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event37",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "angry01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 161,
+          "NextEventName": "Event42",
+          "Name": "Event40",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 162,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event43",
+          "ActorName": "HylianMC000",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 165,
+          "ForkEventIndicies": [
+            163,
+            164,
+            172
+          ],
+          "Name": "Event43",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_070"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event44",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "love_cats"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event45",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 166,
+          "NextEventName": "Event99",
+          "Name": "Event46",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 167,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event104",
+          "ActorName": "HylianMC000",
+          "Name": "Event99",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 171,
+          "ForkEventIndicies": [
+            168,
+            169,
+            170
+          ],
+          "Name": "Event104",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_080"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event118",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_st01,surprised_lp01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event134",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event173",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 195,
+          "NextEventName": "Event198",
+          "Name": "Event174",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event175",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 177,
+          "ForkEventIndicies": [
+            174,
+            176
+          ],
+          "Name": "Event176",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_090"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event177",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 216,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "frightened01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event219",
+          "ActorName": "HylianMC000",
+          "Name": "Event178",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event179",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 208,
+          "NextEventName": "Event211",
+          "Name": "Event180",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 181,
+          "ForkEventIndicies": [
+            179,
+            180,
+            187
+          ],
+          "Name": "Event181",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_100"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event182",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes01,wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event183",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 182,
+          "NextEventName": "Event185",
+          "Name": "Event184",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 186,
+          "ForkEventIndicies": [
+            183,
+            184,
+            185
+          ],
+          "Name": "Event185",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_110"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event186",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event187",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event188",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 214,
+          "NextEventName": "Event217",
+          "Name": "Event189",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event190",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 192,
+          "ForkEventIndicies": [
+            189,
+            190,
+            191
+          ],
+          "Name": "Event191",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_130"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event192",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy03"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event193",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event194",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 213,
+          "NextEventName": "Event216",
+          "Name": "Event195",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 188,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_120"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event191",
+          "ActorName": "HylianMC000",
+          "Name": "Event196",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 200,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutSlowB"
+            }
+          },
+          "NextEventName": "Event203",
+          "ActorName": "Fade",
+          "Name": "Event197",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 175,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "isExcludeKarakuri": {
+              "Bool": false
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event178",
+          "ActorName": "Player",
+          "Name": "Event198",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 173,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInSlow"
+            }
+          },
+          "NextEventName": "Event176",
+          "ActorName": "Fade",
+          "Name": "Event199",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 196,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event199",
+          "ActorName": "Timer",
+          "Name": "Event200",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 146,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event26",
+          "ActorName": "HylianMC000",
+          "Name": "Event201",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event202",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 201,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event204",
+          "ActorName": "Player",
+          "Name": "Event203",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 156,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event36",
+          "ActorName": "Player",
+          "Name": "Event204",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait06"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event205",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "ActorName": "Zelda",
+          "Name": "Event206",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 205,
+          "ForkEventIndicies": [
+            203,
+            206
+          ],
+          "Name": "Event207",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 207,
+          "NextEventName": "Event210",
+          "Name": "Event208",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "avoidPlayer": {
+              "Bool": true
+            },
+            "avoidWall": {
+              "Bool": false
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "position": {
+              "Int": 1
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event209",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 193,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event196",
+          "ActorName": "Partner",
+          "Name": "Event210",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 178,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event181",
+          "ActorName": "HylianMC000",
+          "Name": "Event211",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "ActorName": "HylianMC000",
+          "Name": "Event212",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 140,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event15",
+          "ActorName": "HylianMC000",
+          "Name": "Event213",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 212,
+          "ForkEventIndicies": [
+            209,
+            202,
+            199
+          ],
+          "Name": "Event214",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 138,
+          "NextEventName": "Event13",
+          "Name": "Event215",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 211,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event214",
+          "ActorName": "Timer",
+          "Name": "Event216",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 215,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_hand_over"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event218",
+          "ActorName": "Player",
+          "Name": "Event217",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 204,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 8
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SmoothieIngredient05"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event207",
+          "ActorName": "Zelda",
+          "Name": "Event218",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 197,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event200",
+          "ActorName": "DandarmaBullet",
+          "Name": "Event219",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 218,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": ""
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event221",
+          "ActorName": "Player",
+          "Name": "Event220",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 53,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event77",
+          "ActorName": "Player",
+          "Name": "Event221",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Bring_SnowMountain010:4227461475"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event222",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 291,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": false
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "surprise"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk06"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event294",
+          "ActorName": "HylianMC000",
+          "Name": "Event223",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 222,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event225",
+          "ActorName": "HylianMC000",
+          "Name": "Event224",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 225,
+          "ForkEventIndicies": [
+            223,
+            224
+          ],
+          "Name": "Event225",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_020"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event226",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event227",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 226,
+          "NextEventName": "Event229",
+          "Name": "Event228",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 279,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event282",
+          "ActorName": "HylianMC000",
+          "Name": "Event229",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 231,
+          "ForkEventIndicies": [
+            228,
+            229,
+            230
+          ],
+          "Name": "Event230",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_030"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event231",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk03"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event232",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event233",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 232,
+          "NextEventName": "Event235",
+          "Name": "Event234",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 233,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event236",
+          "ActorName": "HylianMC000",
+          "Name": "Event235",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 236,
+          "ForkEventIndicies": [
+            234,
+            235,
+            241
+          ],
+          "Name": "Event236",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_040"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event237",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event238",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 275,
+          "NextEventName": "Event278",
+          "Name": "Event239",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 240,
+          "ForkEventIndicies": [
+            238,
+            239
+          ],
+          "Name": "Event240",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_060"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event241",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "angry01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event242",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 242,
+          "NextEventName": "Event245",
+          "Name": "Event243",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event244",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 243,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event246",
+          "ActorName": "HylianMC000",
+          "Name": "Event245",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 246,
+          "ForkEventIndicies": [
+            244,
+            245,
+            253
+          ],
+          "Name": "Event246",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_070"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event247",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "love_cats"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event248",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 247,
+          "NextEventName": "Event250",
+          "Name": "Event249",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 248,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event251",
+          "ActorName": "HylianMC000",
+          "Name": "Event250",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 252,
+          "ForkEventIndicies": [
+            249,
+            250,
+            251
+          ],
+          "Name": "Event251",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_080"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event252",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_st01,surprised_lp01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event253",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event254",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 276,
+          "NextEventName": "Event279",
+          "Name": "Event255",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event256",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 258,
+          "ForkEventIndicies": [
+            255,
+            257
+          ],
+          "Name": "Event257",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_090"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event258",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 278,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "frightened01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event281",
+          "ActorName": "HylianMC000",
+          "Name": "Event259",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "sad"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event260",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 289,
+          "NextEventName": "Event292",
+          "Name": "Event261",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 262,
+          "ForkEventIndicies": [
+            260,
+            261,
+            268
+          ],
+          "Name": "Event262",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_100"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event263",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes01,wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event264",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 263,
+          "NextEventName": "Event266",
+          "Name": "Event265",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 267,
+          "ForkEventIndicies": [
+            264,
+            265,
+            266
+          ],
+          "Name": "Event266",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_110"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event267",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event268",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event269",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 295,
+          "NextEventName": "Event298",
+          "Name": "Event270",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event271",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 273,
+          "ForkEventIndicies": [
+            270,
+            271,
+            272
+          ],
+          "Name": "Event272",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_130"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event273",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy03"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event274",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event275",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 294,
+          "NextEventName": "Event297",
+          "Name": "Event276",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 269,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaG:Bring_SnowMountain030_120"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event272",
+          "ActorName": "HylianMC000",
+          "Name": "Event277",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 281,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutSlowB"
+            }
+          },
+          "NextEventName": "Event284",
+          "ActorName": "Fade",
+          "Name": "Event278",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 256,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "isExcludeKarakuri": {
+              "Bool": false
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event259",
+          "ActorName": "Player",
+          "Name": "Event279",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 254,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInSlow"
+            }
+          },
+          "NextEventName": "Event257",
+          "ActorName": "Fade",
+          "Name": "Event280",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 277,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event280",
+          "ActorName": "Timer",
+          "Name": "Event281",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 227,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event230",
+          "ActorName": "HylianMC000",
+          "Name": "Event282",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event283",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 282,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event285",
+          "ActorName": "Player",
+          "Name": "Event284",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 297,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event300",
+          "ActorName": "Player",
+          "Name": "Event285",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait06"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianMC000",
+          "Name": "Event286",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "ActorName": "Zelda",
+          "Name": "Event287",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 286,
+          "ForkEventIndicies": [
+            284,
+            287
+          ],
+          "Name": "Event288",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 288,
+          "NextEventName": "Event291",
+          "Name": "Event289",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "avoidPlayer": {
+              "Bool": true
+            },
+            "avoidWall": {
+              "Bool": false
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "position": {
+              "Int": 1
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event290",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 274,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event277",
+          "ActorName": "Partner",
+          "Name": "Event291",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 259,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event262",
+          "ActorName": "HylianMC000",
+          "Name": "Event292",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "ActorName": "HylianMC000",
+          "Name": "Event293",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 221,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event224",
+          "ActorName": "HylianMC000",
+          "Name": "Event294",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 293,
+          "ForkEventIndicies": [
+            290,
+            283,
+            280
+          ],
+          "Name": "Event295",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 219,
+          "NextEventName": "Event222",
+          "Name": "Event296",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 292,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event295",
+          "ActorName": "Timer",
+          "Name": "Event297",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 296,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_hand_over"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event299",
+          "ActorName": "Player",
+          "Name": "Event298",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 285,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 8
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SmoothieIngredient05"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event288",
+          "ActorName": "Zelda",
+          "Name": "Event299",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 298,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": ""
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event301",
+          "ActorName": "Player",
+          "Name": "Event300",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 237,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event240",
+          "ActorName": "Player",
+          "Name": "Event301",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 301,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_st01,surprised_lp01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event320",
+          "ActorName": "HylianMC000",
+          "Name": "Event318",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 299,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "NextEventName": "Event318",
+          "ActorName": "HylianMC000",
+          "Name": "Event319",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 302,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event321",
+          "ActorName": "Timer",
+          "Name": "Event320",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 306,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event327",
+          "ActorName": "Fade",
+          "Name": "Event321",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 304,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event323",
+          "ActorName": "Timer",
+          "Name": "Event322",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 36,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "NextEventName": "Event47",
+          "ActorName": "Fade",
+          "Name": "Event323",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 331,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "SnowBall",
+                "Item2": "forDemo"
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event334",
+          "ActorName": "HylianMC000",
+          "Name": "Event325",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 11,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 308
+            },
+            {
+              "Value": 1,
+              "EventIndex": 307
+            }
+          ],
+          "ActorName": "SnowBall",
+          "Name": "Event327",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 311,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "isExcludeKarakuri": {
+              "Bool": false
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event332",
+          "ActorName": "Player",
+          "Name": "Event328",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 307,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event328",
+          "ActorName": "SnowBall",
+          "Name": "Event329",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 305,
+          "ActorIndex": 0,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "index": {
+              "Int": 2
+            }
+          },
+          "NextEventName": "Event325",
+          "ActorName": "HylianMC000",
+          "Name": "Event330",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 72,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event95",
+          "ActorName": "SnowBall",
+          "Name": "Event331",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 309,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "cemeteryRevive": {
+              "Bool": false
+            },
+            "eventReset": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event330",
+          "ActorName": "GameControl",
+          "Name": "Event332",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 314,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_st01,surprised_lp01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event316",
+          "ActorName": "HylianMC000",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 312,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "HylianMC000",
+          "Name": "Event302",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 315,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event326",
+          "ActorName": "Timer",
+          "Name": "Event316",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 316,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event303",
+          "ActorName": "Fade",
+          "Name": "Event326",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 334,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event317",
+          "ActorName": "Dandarma",
+          "Name": "Event303",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 220,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "NextEventName": "Event223",
+          "ActorName": "Fade",
+          "Name": "Event304",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 317,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event304",
+          "ActorName": "Timer",
+          "Name": "Event305",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 321,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprised_st01,surprised_lp01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event308",
+          "ActorName": "HylianMC000",
+          "Name": "Event306",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 319,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "expression": {
+              "String": "surprise"
+            }
+          },
+          "NextEventName": "Event306",
+          "ActorName": "HylianMC000",
+          "Name": "Event307",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 322,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event309",
+          "ActorName": "Timer",
+          "Name": "Event308",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 323,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event310",
+          "ActorName": "Fade",
+          "Name": "Event309",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 326,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event313",
+          "ActorName": "DandarmaBullet",
+          "Name": "Event310",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 139,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "Fade",
+          "Name": "Event311",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 324,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event311",
+          "ActorName": "Timer",
+          "Name": "Event312",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 327,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "pose_copyobject_a"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event314",
+          "ActorName": "DandarmaBullet",
+          "Name": "Event313",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 328,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event315",
+          "ActorName": "Player",
+          "Name": "Event314",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 325,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event312",
+          "ActorName": "Player",
+          "Name": "Event315",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 330,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event333",
+          "ActorName": "Player",
+          "Name": "Event324",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 318,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event305",
+          "ActorName": "Player",
+          "Name": "Event333",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 332,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event335",
+          "ActorName": "Player",
+          "Name": "Event334",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 303,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianMC000",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event322",
+          "ActorName": "Player",
+          "Name": "Event335",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 104,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset_SensorQuest",
+          "NextEventName": "Event154",
+          "Name": "Event117",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 329,
+          "ActorIndex": 10,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait_c"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event324",
+          "ActorName": "Dandarma",
+          "Name": "Event317",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Bring_SnowMountain010_FinishTalk": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 133
+        },
+        "Quest_1": {
+          "SubFlowEventIndices": [
+            97
+          ],
+          "EventIndex": 97
+        },
+        "Quest_10": {
+          "SubFlowEventIndices": [
+            101
+          ],
+          "EventIndex": 101
+        },
+        "Quest_11": {
+          "SubFlowEventIndices": [
+            135
+          ],
+          "EventIndex": 135
+        },
+        "Quest_2": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 4
+        },
+        "Quest_9": {
+          "SubFlowEventIndices": [
+            333
+          ],
+          "EventIndex": 333
+        },
+        "talk": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 126
+        },
+        "talk020": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 125
+        },
+        "talkNo": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 124
+        },
+        "talkSecretlyClothes": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 1
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

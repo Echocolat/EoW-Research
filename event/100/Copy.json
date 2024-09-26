@@ -1,0 +1,2578 @@
+{
+  "FileName": "Copy",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "Copy": {
+      "Name": "Copy",
+      "Actors": [
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestAutoSave",
+            "SetForcedResolution",
+            "ResetForcedResolution"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CompareCopyableActor"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PreloadCopiedActor",
+            "DestroyCopiedActor",
+            "PlayAnimationEx",
+            "PlayAnimation",
+            "AimCompassPoint",
+            "LookAtItemGettingPlayer",
+            "EndCopiedActorsCopiedEffect",
+            "RequestInvincible",
+            "StartAbsorbAllPastedActors",
+            "EndAbsorbAllPastedActors",
+            "PlayTailorOtherChannelNoWait",
+            "SetFacialExpression",
+            "AddItem",
+            "SetEquipmentVisibility",
+            "ResetFacialExpression",
+            "CarryCopiedActor",
+            "LookAtTalker"
+          ],
+          "Queries": [
+            "GetCopyDictionaryCount",
+            "IsCopiedActorEnemy"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Show",
+            "Signal",
+            "ShowCopyActorGetMessage"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayJingle"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayOutAnimLayout",
+            "PlayOutAnim",
+            "PlayInAnim",
+            "PlayInAnimLayout",
+            "RegisterPasteSlot",
+            "ShowOpenDictionaryGuide"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtTalker",
+            "AimPlayer",
+            "DisableAutoMovement",
+            "ResetAim"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericTalkSequenceWithDialog",
+            "Talk",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "DisableAutoMovement",
+            "MoveToTargetActor",
+            "ResetAim",
+            "AimActor",
+            "SetInterestIkEnabled",
+            "WaitMoveDone"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [
+            "CheckFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Reset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AddPasteEnergy",
+            "StopCopiedActorCarryEffect",
+            "ResetCarriedActor",
+            "ResetFacialExpression",
+            "ResetVelocity",
+            "HideTimedAbilityEffect"
+          ],
+          "Queries": [
+            "CheckLife"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventVariables",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVariable"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "TutorialUI",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowModal",
+            "HideInsert"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "BattleChallenge",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "IsBattleChallenging"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Vibration",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StopAllVibration"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 79,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event92",
+          "ActorName": "Zelda",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 131,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event76",
+          "ActorName": "Zelda",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$item_get_st"
+            },
+            "restart": {
+              "Bool": false
+            },
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 89,
+          "ActorIndex": 2,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$item_get_ed"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event30",
+          "ActorName": "Zelda",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 6,
+          "ForkEventIndicies": [
+            4,
+            2,
+            46,
+            35
+          ],
+          "Name": "Event7",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event8",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 9,
+          "ForkEventIndicies": [
+            0,
+            8
+          ],
+          "Name": "Event10",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.7
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 65,
+          "NextEventName": "Event32",
+          "Name": "Event11",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "Timer",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 26,
+          "ActorIndex": 2,
+          "ActorActionIndex": 6,
+          "NextEventName": "Event23",
+          "ActorName": "Zelda",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 41,
+          "Parameters": {
+            "copidActor": {
+              "Argument": "copiedActor"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_FirstCopyGetSequence",
+          "NextEventName": "Event114",
+          "Name": "Event15",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 14,
+          "ActorIndex": 2,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event27",
+          "ActorName": "Zelda",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 117,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event137",
+          "ActorName": "Timer",
+          "Name": "Event27",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 2
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 74
+            },
+            {
+              "Value": 0,
+              "EventIndex": 143
+            },
+            {
+              "Value": 1,
+              "EventIndex": 143
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event12",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": false
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/PartnerTalk:PasteList_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 7,
+          "ActorName": "Zelda",
+          "Name": "Event46",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$wand_all_absorb_lp"
+            },
+            "restart": {
+              "Bool": false
+            },
+            "time": {
+              "Float": 0.7
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 8,
+          "ActorName": "Zelda",
+          "Name": "Event60",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 21,
+          "ForkEventIndicies": [
+            18,
+            22
+          ],
+          "Name": "Event61",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 23,
+          "NextEventName": "Event38",
+          "Name": "Event62",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event60",
+          "ActorName": "Timer",
+          "Name": "Event66",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 24,
+          "ActorIndex": 2,
+          "ActorActionIndex": 9,
+          "NextEventName": "Event47",
+          "ActorName": "Zelda",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$wand_all_absorb_ed"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event47",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:PasteTuto_010"
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event49",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 2,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "channel": {
+              "String": "EneRecovery"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event46",
+          "ActorName": "Zelda",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "value1": {
+              "Argument": "copiedActor"
+            },
+            "value2": {
+              "String": "ChangeLinkSword"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 28
+            },
+            {
+              "Value": 1,
+              "EventIndex": 123
+            }
+          ],
+          "ActorName": "FlowControl",
+          "Name": "Event28",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "PasteLinkGet",
+          "Name": "Event52",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/StoryAreaA:FirstUsePasteLink_E010"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event50",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 125,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvEnemyCopySuccess"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event146",
+          "ActorName": "EventFlags",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 9,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvEnemyCopySuccess"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 103
+            },
+            {
+              "Value": 1,
+              "EventIndex": 92
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event65",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:EnemyCopySuccess_010"
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event68",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 92,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:EnemyCopySuccess_020"
+            }
+          },
+          "NextEventName": "Event54",
+          "ActorName": "Partner",
+          "Name": "Event69",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "expression": {
+              "String": "get"
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 34,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event71",
+          "ActorName": "Timer",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "HeartGauge": {
+              "Bool": true
+            },
+            "ItemSlot": {
+              "Bool": true
+            },
+            "KeyItem": {
+              "Bool": true
+            },
+            "MiniMap": {
+              "Bool": true
+            },
+            "Operate": {
+              "Bool": true
+            },
+            "PasteGauge": {
+              "Bool": true
+            },
+            "PasteSlot": {
+              "Bool": false
+            },
+            "Rupee": {
+              "Bool": true
+            },
+            "TimedAbility": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "Hud",
+          "Name": "Event72",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 44,
+          "ActorIndex": 2,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "NextEventName": "Event43",
+          "ActorName": "Zelda",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 37,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "PasteLinkUnLock"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event22",
+          "ActorName": "EventFlags",
+          "Name": "Event104",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 54,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event79",
+          "ActorName": "Hud",
+          "Name": "Event112",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 58,
+          "ActorIndex": 6,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event85",
+          "ActorName": "Hud",
+          "Name": "Event113",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 84,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "HeartGauge": {
+              "Bool": true
+            },
+            "ItemSlot": {
+              "Bool": true
+            },
+            "KeyItem": {
+              "Bool": true
+            },
+            "MiniMap": {
+              "Bool": true
+            },
+            "Operate": {
+              "Bool": true
+            },
+            "PasteGauge": {
+              "Bool": true
+            },
+            "PasteSlot": {
+              "Bool": true
+            },
+            "Rupee": {
+              "Bool": true
+            },
+            "TimedAbility": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event118",
+          "ActorName": "Hud",
+          "Name": "Event114",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 27,
+          "ActorIndex": 6,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "HeartGauge": {
+              "Bool": true
+            },
+            "ItemSlot": {
+              "Bool": true
+            },
+            "KeyItem": {
+              "Bool": true
+            },
+            "MiniMap": {
+              "Bool": true
+            },
+            "Operate": {
+              "Bool": true
+            },
+            "PasteGauge": {
+              "Bool": true
+            },
+            "PasteSlot": {
+              "Bool": true
+            },
+            "Rupee": {
+              "Bool": true
+            },
+            "TimedAbility": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event28",
+          "ActorName": "Hud",
+          "Name": "Event115",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 45,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/StoryAreaA:PasteLinkGet_E030"
+            }
+          },
+          "NextEventName": "Event73",
+          "ActorName": "Dialog",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 47,
+          "ActorIndex": 2,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Sword"
+            }
+          },
+          "NextEventName": "Event84",
+          "ActorName": "Zelda",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 48,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 60
+            }
+          },
+          "NextEventName": "Event29",
+          "ActorName": "Player",
+          "Name": "Event73",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 13,
+          "Parameters": {
+            "visibility": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event80",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 43,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event41",
+          "ActorName": "Camera",
+          "Name": "Event84",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "HyruleCastle_LuberiHouse:35784108"
+            }
+          },
+          "ActorName": "EventVariables",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 6,
+          "ActorName": "Zelda",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 51,
+          "ForkEventIndicies": [
+            49,
+            52
+          ],
+          "Name": "Event40",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event51",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 1
+            },
+            "name": {
+              "String": "$wand_absorb_ed"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 133,
+          "ActorIndex": 2,
+          "ActorActionIndex": 14,
+          "NextEventName": "Event148",
+          "ActorName": "Zelda",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 55,
+          "ForkEventIndicies": [
+            57,
+            105
+          ],
+          "Name": "Event79",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 40,
+          "NextEventName": "Event113",
+          "Name": "Event81",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event82",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 25,
+          "ActorIndex": 8,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event49",
+          "ActorName": "Partner",
+          "Name": "Event83",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "key": {
+              "String": "FirstPasteModal"
+            }
+          },
+          "ActorName": "TutorialUI",
+          "Name": "Event85",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 60,
+          "ForkEventIndicies": [
+            61,
+            62
+          ],
+          "Name": "Event99",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event100",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_FANFARE_ITEM_GET_SMALL"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event101",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 67,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event33",
+          "ActorName": "Timer",
+          "Name": "Event102",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_showCopyGetMessage",
+          "Name": "Event5",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 130,
+          "ActorIndex": 2,
+          "ActorActionIndex": 15,
+          "NextEventName": "Event75",
+          "ActorName": "Zelda",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 2
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 66
+            },
+            {
+              "Value": 0,
+              "EventIndex": 81
+            },
+            {
+              "Value": 1,
+              "EventIndex": 81
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event32",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 81,
+          "ActorIndex": 6,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event97",
+          "ActorName": "Hud",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 68,
+          "ForkEventIndicies": [
+            63,
+            73
+          ],
+          "Name": "Event33",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event39",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_showCopySetGuide",
+          "Name": "Event44",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "ActorName": "Dialog",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 5,
+          "ActorName": "Hud",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 2
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 70
+            },
+            {
+              "Value": 0,
+              "EventIndex": 71
+            },
+            {
+              "Value": 1,
+              "EventIndex": 71
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event42",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 69,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.033
+            }
+          },
+          "NextEventName": "Event44",
+          "ActorName": "Timer",
+          "Name": "Event78",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 85,
+          "ActorIndex": 13,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event119",
+          "ActorName": "TutorialUI",
+          "Name": "Event91",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 77,
+          "ForkEventIndicies": [
+            76,
+            78
+          ],
+          "Name": "Event13",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 1,
+          "ActorName": "Player",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "NextEventName": "Event1",
+          "Name": "Event25",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.083
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event77",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 80,
+          "ActorIndex": 11,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event93",
+          "ActorName": "Player",
+          "Name": "Event92",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.05
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "Timer",
+          "Name": "Event93",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 121,
+          "ForkEventIndicies": [
+            120,
+            64
+          ],
+          "Name": "Event97",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 8,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event61",
+          "ActorName": "Partner",
+          "Name": "Event96",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 50,
+          "ActorIndex": 8,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event40",
+          "ActorName": "Partner",
+          "Name": "Event105",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 14,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 15
+            }
+          ],
+          "ActorName": "BattleChallenge",
+          "Name": "Event118",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 137,
+          "ActorIndex": 2,
+          "ActorActionIndex": 14,
+          "NextEventName": "Event152",
+          "ActorName": "Zelda",
+          "Name": "Event119",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 128,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event63",
+          "ActorName": "Partner",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": false
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:CopyTuto_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "yes,talk"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event37",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 142,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event158",
+          "ActorName": "Partner",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 2,
+          "ActorActionIndex": 13,
+          "Parameters": {
+            "visibility": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event26",
+          "ActorName": "Zelda",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "TutorialModal_Title_CopyRod_Enemy"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event53",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 90,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "key": {
+              "String": "CopyRod_Enemy"
+            }
+          },
+          "NextEventName": "Event53",
+          "ActorName": "TutorialUI",
+          "Name": "Event74",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 30,
+          "FlowchartName": "",
+          "EntryPointName": "FirstPasteEnemy",
+          "NextEventName": "Event56",
+          "Name": "Event54",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "ActorName": "Dialog",
+          "Name": "Event120",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "Look_at_Partner",
+          "Name": "Event117",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 96,
+          "ForkEventIndicies": [
+            97,
+            99
+          ],
+          "Name": "Event121",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 116,
+          "NextEventName": "Event127",
+          "Name": "Event122",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 94,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event117",
+          "ActorName": "Timer",
+          "Name": "Event123",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Partner",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 1
+            },
+            "distance": {
+              "Float": -0.5
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event124",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 32,
+          "ActorIndex": 8,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event68",
+          "ActorName": "Partner",
+          "Name": "Event125",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event67",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event128",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 3,
+          "ActorName": "Player",
+          "Name": "Event130",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 104,
+          "ForkEventIndicies": [
+            102,
+            101,
+            98,
+            100
+          ],
+          "Name": "Event131",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 95,
+          "NextEventName": "Event121",
+          "Name": "Event132",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 106,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event133",
+          "ActorName": "Timer",
+          "Name": "Event129",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "Look_at_Partner",
+          "Name": "Event133",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 39,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event112",
+          "ActorName": "Timer",
+          "Name": "Event136",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 113,
+          "ActorIndex": 7,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event145",
+          "ActorName": "Partner",
+          "Name": "Event141",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 16,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event48",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 111,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event143",
+          "ActorName": "Partner",
+          "Name": "Event134",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 112,
+          "ForkEventIndicies": [
+            109,
+            114
+          ],
+          "Name": "Event143",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 107,
+          "NextEventName": "Event136",
+          "Name": "Event144",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 110,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event134",
+          "ActorName": "Timer",
+          "Name": "Event145",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 126,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event57",
+          "ActorName": "Timer",
+          "Name": "Event135",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 33,
+          "ActorIndex": 8,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,talk02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event69",
+          "ActorName": "Partner",
+          "Name": "Event126",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 115,
+          "ActorIndex": 8,
+          "ActorActionIndex": 6,
+          "NextEventName": "Event126",
+          "ActorName": "Partner",
+          "Name": "Event127",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event137",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": "attach_object"
+            },
+            "duration": {
+              "Float": 0.3
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event94",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 118,
+          "ActorIndex": 8,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event94",
+          "ActorName": "Partner",
+          "Name": "Event95",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 119,
+          "ActorIndex": 8,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "timeout": {
+              "Float": 3
+            }
+          },
+          "NextEventName": "Event95",
+          "ActorName": "Partner",
+          "Name": "Event98",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 75,
+          "NextEventName": "Event13",
+          "Name": "Event138",
+          "Type": "Join"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 1,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 124
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event139",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 9,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "CopyRod_Enemy_Comp"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 122
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event140",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "EnemyCopySuccess",
+          "Name": "Event142",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "CopyRod_Enemy_Comp"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event146",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 56,
+          "ActorIndex": 7,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event82",
+          "ActorName": "Partner",
+          "Name": "Event57",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 4,
+          "ActorName": "Player",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 42,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "TutorialInsert_PutOut"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event115",
+          "ActorName": "EventFlags",
+          "Name": "Event63",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 108,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "TutorialInsert_PutOut_Clear"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event141",
+          "ActorName": "EventFlags",
+          "Name": "Event64",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 59,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "console": {
+              "Int": 16000900
+            },
+            "handheld": {
+              "Int": 11520648
+            }
+          },
+          "NextEventName": "Event99",
+          "ActorName": "GameControl",
+          "Name": "Event75",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event4",
+          "ActorName": "GameControl",
+          "Name": "Event76",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "Look_at_Partner",
+          "Name": "Event147",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 134,
+          "ForkEventIndicies": [
+            16,
+            135
+          ],
+          "Name": "Event148",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 88,
+          "NextEventName": "Event35",
+          "Name": "Event149",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 132,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event147",
+          "ActorName": "Timer",
+          "Name": "Event150",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "Look_at_Partner",
+          "Name": "Event151",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 138,
+          "ForkEventIndicies": [
+            87,
+            139
+          ],
+          "Name": "Event152",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 86,
+          "NextEventName": "Event20",
+          "Name": "Event153",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 136,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event151",
+          "ActorName": "Timer",
+          "Name": "Event154",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 11,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 145
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event155",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 15,
+          "ActorActionIndex": 0,
+          "ActorName": "Vibration",
+          "Name": "Event156",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 42,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Tutorial_CopyDictionary"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event115",
+          "ActorName": "EventFlags",
+          "Name": "Event158",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 9,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Tutorial_CopyDictionary"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 53
+            },
+            {
+              "Value": 1,
+              "EventIndex": 27
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event45",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 5,
+          "ActorName": "Player",
+          "Name": "Event70",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 146,
+          "ForkEventIndicies": [
+            127,
+            144,
+            141
+          ],
+          "Name": "Event103",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 12,
+          "NextEventName": "Event15",
+          "Name": "Event106",
+          "Type": "Join"
+        }
+      ],
+      "EntryPoints": {
+        "_FirstCopyGetSequence": {
+          "SubFlowEventIndices": [
+            63,
+            69
+          ],
+          "EventIndex": 36
+        },
+        "_showCopyGetMessage": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 93
+        },
+        "_showCopySetGuide": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 72
+        },
+        "Absorbed": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 83
+        },
+        "AllAbsorb": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 82
+        },
+        "Copied": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 10
+        },
+        "CopyGet": {
+          "SubFlowEventIndices": [
+            12,
+            136,
+            28,
+            124,
+            132
+          ],
+          "EventIndex": 140
+        },
+        "EnemyCopySuccess": {
+          "SubFlowEventIndices": [
+            94,
+            92
+          ],
+          "EventIndex": 31
+        },
+        "FirstPaste": {
+          "SubFlowEventIndices": [
+            106
+          ],
+          "EventIndex": 129
+        },
+        "FirstPasteEnemy": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 91
+        },
+        "FirstPasteLink": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 29
+        },
+        "PasteLinkGet": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 38
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

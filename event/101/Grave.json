@@ -1,0 +1,164 @@
+{
+  "FileName": "Grave",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "Grave": {
+      "Name": "Grave",
+      "Actors": [
+        {
+          "Name": "Sync",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SyncReset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Grave",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToTargetActor",
+            "PlayTailorOtherChannelNoWait",
+            "StopTailorOtherChannel"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Grave",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 4
+            },
+            "distance": {
+              "Float": -1.5
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "Grave",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event3",
+          "ActorName": "Sync",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "channel": {
+              "String": "Move"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Grave",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "Move"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "Grave",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.7
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event2",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "GravesyncPullOut": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 1
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

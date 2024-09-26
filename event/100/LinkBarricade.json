@@ -1,0 +1,84 @@
+{
+  "FileName": "LinkBarricade",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "LinkBarricade": {
+      "Name": "LinkBarricade",
+      "Actors": [
+        {
+          "Name": "EventVariables",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVariable"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "HyruleCastle_LuberiHouse:3287624113"
+            }
+          },
+          "ActorName": "EventVariables",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event2",
+          "Name": "Event0",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "TutorialInsert_ChangeLinkSword"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "EventFlags",
+          "Name": "Event2",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "LookLinkBarricade": {
+          "SubFlowEventIndices": [
+            1
+          ],
+          "EventIndex": 1
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

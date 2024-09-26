@@ -1,0 +1,5870 @@
+{
+  "FileName": "GanonPaste",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "GanonPaste": {
+      "Name": "GanonPaste",
+      "Actors": [
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPointWithCompassPoint",
+            "PlayAnimation",
+            "AimActor",
+            "SetInterestIkEnabled"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToBesideTargetActor",
+            "AimCompassPoint",
+            "WarpToActorLinkedPointWithCompassPoint",
+            "EnableAutoMovement",
+            "SetVisibility",
+            "AimActor",
+            "GenericTalkSequenceWithDialog",
+            "Talk",
+            "PlayAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayBGM",
+            "SetBGMVolume",
+            "StopAllBGM",
+            "PlayOneshotSystemSE",
+            "StopSE",
+            "Prepare",
+            "StopZoneBgm",
+            "WaitNextBeatSamplePositionAndStopAndPlayBossGanonBgm",
+            "StopZoneBaseAmbience"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Reset",
+            "LookAt3ActorsCenterAsTalker",
+            "SetShadowMapSettings",
+            "PlayActorOriginCameraAnimation",
+            "Shake"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetCanSkip",
+            "InvokeTimeline",
+            "PreloadTimeline"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestAutoSave",
+            "ForbidSave",
+            "RequestLevelJump",
+            "ForbidLaunchApplet",
+            "UnforbidLaunchApplet"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToCompassPoint",
+            "AimCompassPoint",
+            "PlayAnimation",
+            "MorphTo",
+            "SetShadowDecalEnable",
+            "SetRestartPositionToActor",
+            "SetVisibility",
+            "AimActor"
+          ],
+          "Queries": [
+            "CheckMorph"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetProgress"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventVariables",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVariable"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GanonPaste",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtTalker",
+            "CameraLockon",
+            "RoomDoorClose",
+            "SetCullMode",
+            "CameraLockoff",
+            "PlayAnimation",
+            "PlayTailorOtherChannelNoWait",
+            "Talk",
+            "SetVisibilityTrident",
+            "Activate",
+            "WarpToActorWithCompassPoint",
+            "PlayAnimationNoWait",
+            "PlayMaterialAnimationNoWait",
+            "ItemDropToActor",
+            "Destroy",
+            "SetVisibility",
+            "ResetActiveAndPesteActors",
+            "SetTalkerName"
+          ],
+          "Queries": [
+            "IsDownPose",
+            "GetCurrentTrident"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "ImpostorMinisterLeft",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Deactivate",
+            "SetInterestIkEnabled",
+            "PlayTailorOtherChannelNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "ImpostorMinisterRight",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Deactivate",
+            "SetInterestIkEnabled",
+            "PlayTailorOtherChannelNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "ItemHeartContainer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "ImpostorHyruleKing",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Talk",
+            "PlayAnimation",
+            "Deactivate",
+            "PlayTailorOtherChannelNoWait",
+            "PlayAnimationNoWait",
+            "SetFacialExpression"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Door",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvTecuum",
+          "SecondaryName": "5",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "Activate",
+            "Deactivate",
+            "WarpToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvTecuum",
+          "SecondaryName": "4",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "Activate",
+            "Deactivate",
+            "WarpToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvTecuum",
+          "SecondaryName": "3",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "Activate",
+            "Deactivate",
+            "WarpToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvTecuum",
+          "SecondaryName": "2",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "Activate",
+            "Deactivate",
+            "WarpToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvTecuum",
+          "SecondaryName": "1",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "Activate",
+            "Deactivate",
+            "WarpToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvTecuum",
+          "SecondaryName": "Right",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "Activate",
+            "Deactivate",
+            "WarpToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvTecuum",
+          "SecondaryName": "Left",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "Activate",
+            "Deactivate",
+            "WarpToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvTecuum",
+          "SecondaryName": "King",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "Activate",
+            "Deactivate",
+            "WarpToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "BattleChallenge",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowTimer"
+          ],
+          "Queries": [
+            "GetConditionNumber"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "GanonTrident",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayMaterialAnimationNoWait",
+            "EnableEffectWearHaze"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GanonTridentDetached",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayMaterialAnimationNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GanonTridentPorori",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayMaterialAnimationNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Movie",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Play",
+            "Close",
+            "Prepare"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvBackWallGanon",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetComponentActive"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhotonLiberation",
+          "SecondaryName": "a",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhotonLiberation",
+          "SecondaryName": "b",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "a",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "b",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "c",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "d",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "e",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "f",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "JoinEventIndex": 1,
+          "ForkEventIndicies": [
+            2,
+            40,
+            22
+          ],
+          "Name": "Event12",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 4,
+          "NextEventName": "Event25",
+          "Name": "Event15",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 10
+            },
+            "duration": {
+              "Float": 0.5
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "maxSpeed": {
+              "Float": 100
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event16",
+          "ActorName": "Camera",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "maxSpeed": {
+              "Float": 100
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 110,
+          "ActorIndex": 12,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event9",
+          "ActorName": "GanonPaste",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 101,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_GANON_OP"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event157",
+          "ActorName": "Audio",
+          "Name": "Event87",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 12,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "cullMode": {
+              "Int": 1
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event87",
+          "ActorName": "GanonPaste",
+          "Name": "Event146",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 155,
+          "NextEventName": "Event167",
+          "Name": "Event24",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaHyruleCastle:FindOutHyruleKing_010"
+            }
+          },
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 197,
+          "FlowchartName": "",
+          "EntryPointName": "FindOutHyruleKing",
+          "NextEventName": "Event41",
+          "Name": "Event61",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "customSpeed": {
+              "Float": 0
+            },
+            "direction": {
+              "Int": 2
+            },
+            "distance": {
+              "Float": 2.5
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "Zelda",
+          "Name": "Event64",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 333,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event83",
+          "ActorName": "Audio",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 15,
+          "ActorIndex": 12,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event110",
+          "ActorName": "GanonPaste",
+          "Name": "Event101",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 16,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvE_GanonPasteDead"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event85",
+          "ActorName": "EventFlags",
+          "Name": "Event110",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 247,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Midpoint:2895641642"
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "EventVariables",
+          "Name": "Event85",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "TouchWorldGlobe_HyruleCastle",
+          "Name": "Event100",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.25
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Timer",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": -50
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": -1.2
+            },
+            "offsetY": {
+              "Float": 1.2
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 50
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event8",
+          "ActorName": "Partner",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 1
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "Partner",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_angry"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "channel": {
+              "String": "Aura_Anger"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 24,
+          "ForkEventIndicies": [
+            25,
+            28,
+            29
+          ],
+          "Name": "Event26",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 27,
+          "NextEventName": "Event32",
+          "Name": "Event27",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 10
+            },
+            "duration": {
+              "Float": 0.5
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "maxSpeed": {
+              "Float": 100
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 26,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event31",
+          "ActorName": "Camera",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "roar"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "channel": {
+              "String": "Aura_Anger"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "direction": {
+              "Int": 2
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event48",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "direction": {
+              "Int": 2
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event49",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 33,
+          "ForkEventIndicies": [
+            31,
+            30,
+            289,
+            207,
+            208
+          ],
+          "Name": "Event51",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event52",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event135",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 298,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaHyruleCastle:FindOutHyruleKing_030"
+            }
+          },
+          "NextEventName": "Event84",
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event136",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaHyruleCastle:FindOutHyruleKing_040"
+            }
+          },
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event138",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 254,
+          "ActorIndex": 12,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaHyruleCastle:FindOutHyruleKing_100"
+            }
+          },
+          "NextEventName": "Event261",
+          "ActorName": "GanonPaste",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 275,
+          "ActorIndex": 12,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaHyruleCastle:FindOutHyruleKing_120"
+            }
+          },
+          "NextEventName": "Event315",
+          "ActorName": "GanonPaste",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 332,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalW"
+            }
+          },
+          "NextEventName": "Event328",
+          "ActorName": "Fade",
+          "Name": "Event53",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 12,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 21
+            },
+            {
+              "Value": 1,
+              "EventIndex": 41
+            }
+          ],
+          "ActorName": "GanonPaste",
+          "Name": "Event75",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_angry_Down"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event76",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorMinisterRight",
+                "Item2": ""
+              }
+            },
+            "actor3": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorMinisterLeft",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.05
+            },
+            "distanceOffset": {
+              "Float": 1
+            },
+            "duration": {
+              "Float": 1
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 1
+            },
+            "weight3": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event78",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event82",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 45,
+          "ForkEventIndicies": [
+            42,
+            43,
+            118,
+            119
+          ],
+          "Name": "Event88",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 63,
+          "NextEventName": "Event155",
+          "Name": "Event89",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 277,
+          "NextEventName": "Event316",
+          "Name": "Event77",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 46,
+          "ForkEventIndicies": [
+            249,
+            274
+          ],
+          "Name": "Event90",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 273,
+          "NextEventName": "Event313",
+          "Name": "Event99",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 48,
+          "ForkEventIndicies": [
+            278,
+            50
+          ],
+          "Name": "Event108",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 16,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "order_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event123",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 117,
+          "ForkEventIndicies": [
+            67,
+            116,
+            58
+          ],
+          "Name": "Event127",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 113,
+          "ActorIndex": 16,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event21",
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event140",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 210,
+          "ForkEventIndicies": [
+            66,
+            64,
+            134,
+            135,
+            313,
+            98
+          ],
+          "Name": "Event141",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 126,
+          "ActorIndex": 16,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event54",
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event142",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 128,
+          "ActorIndex": 14,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event70",
+          "ActorName": "ImpostorMinisterRight",
+          "Name": "Event143",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 127,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event69",
+          "ActorName": "ImpostorMinisterLeft",
+          "Name": "Event144",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 56,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.2
+            }
+          },
+          "NextEventName": "Event144",
+          "ActorName": "Timer",
+          "Name": "Event147",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 114,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.3
+            }
+          },
+          "NextEventName": "Event59",
+          "ActorName": "Timer",
+          "Name": "Event148",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 55,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.6
+            }
+          },
+          "NextEventName": "Event143",
+          "ActorName": "Timer",
+          "Name": "Event149",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 54,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event142",
+          "ActorName": "Timer",
+          "Name": "Event150",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 47,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_BossApear_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event90",
+          "ActorName": "Zelda",
+          "Name": "Event152",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 65,
+          "ActorIndex": 9,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "kind": {
+              "Int": 0
+            }
+          },
+          "NextEventName": "Event168",
+          "ActorName": "Zelda",
+          "Name": "Event154",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 9,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "morphKind": {
+              "Int": 0
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 65
+            },
+            {
+              "Value": 0,
+              "EventIndex": 62
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event155",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 17,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Door",
+          "Name": "Event153",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 61,
+          "ActorIndex": 9,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event152",
+          "ActorName": "Zelda",
+          "Name": "Event168",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 151,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "ShadowMapSettings": {
+              "String": "DemoStageCamera"
+            }
+          },
+          "NextEventName": "Event257",
+          "ActorName": "Camera",
+          "Name": "Event170",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "visibility": {
+              "Int": 1
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event171",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 85,
+          "ActorIndex": 25,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_PasteGanonAppear_King"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event208",
+          "ActorName": "EvTecuum",
+          "Name": "Event181",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 86,
+          "ActorIndex": 24,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_PasteGanonAppear_Left"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event209",
+          "ActorName": "EvTecuum",
+          "Name": "Event182",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 87,
+          "ActorIndex": 23,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_PasteGanonAppear_Right"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event210",
+          "ActorName": "EvTecuum",
+          "Name": "Event183",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 88,
+          "ActorIndex": 22,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_PasteGanonAppear_1"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event56",
+          "ActorName": "EvTecuum",
+          "Name": "Event184",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 92,
+          "ActorIndex": 18,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_PasteGanonAppear_5"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event214",
+          "ActorName": "EvTecuum",
+          "Name": "Event185",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 91,
+          "ActorIndex": 19,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_PasteGanonAppear_4"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event213",
+          "ActorName": "EvTecuum",
+          "Name": "Event186",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 90,
+          "ActorIndex": 20,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_PasteGanonAppear_3"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event212",
+          "ActorName": "EvTecuum",
+          "Name": "Event187",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 89,
+          "ActorIndex": 21,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_PasteGanonAppear_2"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event211",
+          "ActorName": "EvTecuum",
+          "Name": "Event188",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "PasteGanonAppear01_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 2
+            },
+            "path": {
+              "String": "actor/GanonPaste.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event189",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 68,
+          "ActorIndex": 25,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event181",
+          "ActorName": "EvTecuum",
+          "Name": "Event199",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 69,
+          "ActorIndex": 24,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event182",
+          "ActorName": "EvTecuum",
+          "Name": "Event201",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 70,
+          "ActorIndex": 23,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event183",
+          "ActorName": "EvTecuum",
+          "Name": "Event202",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 71,
+          "ActorIndex": 22,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event184",
+          "ActorName": "EvTecuum",
+          "Name": "Event203",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 75,
+          "ActorIndex": 21,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event188",
+          "ActorName": "EvTecuum",
+          "Name": "Event204",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 74,
+          "ActorIndex": 20,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event187",
+          "ActorName": "EvTecuum",
+          "Name": "Event205",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 73,
+          "ActorIndex": 19,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event186",
+          "ActorName": "EvTecuum",
+          "Name": "Event206",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 72,
+          "ActorIndex": 18,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event185",
+          "ActorName": "EvTecuum",
+          "Name": "Event207",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 25,
+          "ActorActionIndex": 2,
+          "ActorName": "EvTecuum",
+          "Name": "Event208",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 24,
+          "ActorActionIndex": 2,
+          "ActorName": "EvTecuum",
+          "Name": "Event209",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 23,
+          "ActorActionIndex": 2,
+          "ActorName": "EvTecuum",
+          "Name": "Event210",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 22,
+          "ActorActionIndex": 2,
+          "ActorName": "EvTecuum",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 21,
+          "ActorActionIndex": 2,
+          "ActorName": "EvTecuum",
+          "Name": "Event211",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 20,
+          "ActorActionIndex": 2,
+          "ActorName": "EvTecuum",
+          "Name": "Event212",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 19,
+          "ActorActionIndex": 2,
+          "ActorName": "EvTecuum",
+          "Name": "Event213",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 18,
+          "ActorActionIndex": 2,
+          "ActorName": "EvTecuum",
+          "Name": "Event214",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 129,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.5
+            }
+          },
+          "NextEventName": "Event86",
+          "ActorName": "Timer",
+          "Name": "Event217",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 130,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 4.3
+            }
+          },
+          "NextEventName": "Event137",
+          "ActorName": "Timer",
+          "Name": "Event215",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 131,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 4
+            }
+          },
+          "NextEventName": "Event195",
+          "ActorName": "Timer",
+          "Name": "Event216",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 132,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3
+            }
+          },
+          "NextEventName": "Event196",
+          "ActorName": "Timer",
+          "Name": "Event218",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 133,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.8
+            }
+          },
+          "NextEventName": "Event197",
+          "ActorName": "Timer",
+          "Name": "Event219",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 99,
+          "ForkEventIndicies": [
+            60,
+            57,
+            59,
+            93,
+            94,
+            95,
+            96,
+            97
+          ],
+          "Name": "Event220",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 216,
+          "NextEventName": "Event63",
+          "Name": "Event145",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 103,
+          "ActorIndex": 2,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event160",
+          "ActorName": "Partner",
+          "Name": "Event66",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 100,
+          "ActorIndex": 9,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event66",
+          "ActorName": "Zelda",
+          "Name": "Event157",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 17,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Door",
+          "Name": "Event158",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 104,
+          "ForkEventIndicies": [
+            105,
+            102,
+            136,
+            137,
+            112,
+            144
+          ],
+          "Name": "Event160",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 18,
+          "NextEventName": "Event4",
+          "Name": "Event161",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 106,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event163",
+          "ActorName": "Camera",
+          "Name": "Event162",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "ShadowMapSettings": {
+              "String": "Default"
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event163",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 108,
+          "ActorIndex": 9,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "distance": {
+              "Float": -9
+            },
+            "stance": {
+              "String": "Ground"
+            }
+          },
+          "NextEventName": "Event166",
+          "ActorName": "Zelda",
+          "Name": "Event164",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 194,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": true
+            },
+            "name": {
+              "String": "GanonPaste"
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event236",
+          "ActorName": "GameControl",
+          "Name": "Event166",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 9,
+          "ActorName": "GanonPaste",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 111,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_lookback,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "Zelda",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": 0
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 51,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event127",
+          "ActorName": "Timer",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 115,
+          "ActorIndex": 5,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "duration": {
+              "Float": 0.7
+            },
+            "power": {
+              "Int": 3
+            }
+          },
+          "NextEventName": "Event39",
+          "ActorName": "Camera",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.3
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_trident_fall"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 186,
+          "NextEventName": "Event104",
+          "Name": "Event92",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 13,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ImpostorMinisterLeft",
+          "Name": "Event190",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ImpostorMinisterRight",
+          "Name": "Event191",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 12,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event64",
+          "ActorName": "FlowControl",
+          "Name": "Event230",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "filename": {
+              "String": "PasteGanonAppear"
+            },
+            "rate": {
+              "Float": 1
+            }
+          },
+          "ActorName": "FlowControl",
+          "Name": "Event231",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "filename": {
+              "String": "PasteGanonAppear"
+            }
+          },
+          "ActorName": "FlowControl",
+          "Name": "Event232",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 124,
+          "ForkEventIndicies": [
+            122,
+            125
+          ],
+          "Name": "Event233",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 140,
+          "NextEventName": "Event224",
+          "Name": "Event234",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event235",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 77,
+          "ActorIndex": 25,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 2
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event199",
+          "ActorName": "EvTecuum",
+          "Name": "Event54",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 78,
+          "ActorIndex": 24,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 2
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event201",
+          "ActorName": "EvTecuum",
+          "Name": "Event69",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 79,
+          "ActorIndex": 23,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 2
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event202",
+          "ActorName": "EvTecuum",
+          "Name": "Event70",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 80,
+          "ActorIndex": 22,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 2
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0.25
+            }
+          },
+          "NextEventName": "Event203",
+          "ActorName": "EvTecuum",
+          "Name": "Event86",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 81,
+          "ActorIndex": 21,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 2
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0.25
+            }
+          },
+          "NextEventName": "Event204",
+          "ActorName": "EvTecuum",
+          "Name": "Event137",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 82,
+          "ActorIndex": 20,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 2
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event205",
+          "ActorName": "EvTecuum",
+          "Name": "Event195",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 83,
+          "ActorIndex": 19,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 2
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": -0.25
+            }
+          },
+          "NextEventName": "Event206",
+          "ActorName": "EvTecuum",
+          "Name": "Event196",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 84,
+          "ActorIndex": 18,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 2
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": -0.5
+            }
+          },
+          "NextEventName": "Event207",
+          "ActorName": "EvTecuum",
+          "Name": "Event197",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event198",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event221",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event238",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event239",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event240",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event241",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 141,
+          "ForkEventIndicies": [
+            121,
+            142,
+            138,
+            139,
+            143,
+            316
+          ],
+          "Name": "Event224",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 8,
+          "NextEventName": "Event146",
+          "Name": "Event242",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 17,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Door",
+          "Name": "Event244",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "direction": {
+              "Int": 0
+            },
+            "distance": {
+              "Float": 1
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event249",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "direction": {
+              "Int": 0
+            },
+            "distance": {
+              "Float": 4
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event250",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "channel": {
+              "String": "ev_appear_demo"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event253",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 120,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInSlow"
+            }
+          },
+          "NextEventName": "Event230",
+          "ActorName": "Fade",
+          "Name": "Event159",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 16,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "channel": {
+              "String": "ev_ganon_appear_demo"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event178",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "ev_ganon_appear_demo"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "ImpostorMinisterRight",
+          "Name": "Event254",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 13,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "ev_ganon_appear_demo"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "ImpostorMinisterLeft",
+          "Name": "Event255",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 307,
+          "NextEventName": "Event50",
+          "Name": "Event256",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 150,
+          "ForkEventIndicies": [
+            145,
+            147,
+            149,
+            148
+          ],
+          "Name": "Event257",
+          "Type": "Fork"
+        },
+        {
+          "ActorIndex": 12,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 153
+            },
+            {
+              "Value": 1,
+              "EventIndex": 154
+            }
+          ],
+          "ActorName": "GanonPaste",
+          "Name": "Event72",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_dead_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event169",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_dead_down_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 156,
+          "ActorIndex": 12,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "channel": {
+              "String": "PartnerPhoton_Release"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event200",
+          "ActorName": "GanonPaste",
+          "Name": "Event167",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 157,
+          "ForkEventIndicies": [
+            159,
+            158
+          ],
+          "Name": "Event200",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 209,
+          "NextEventName": "Event128",
+          "Name": "Event267",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.333
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event268",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 183,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.667
+            }
+          },
+          "NextEventName": "Event296",
+          "ActorName": "Timer",
+          "Name": "Event269",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead_dissolve"
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event270",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 160,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event270",
+          "Name": "Event271",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 13,
+          "Parameters": {
+            "displacementX": {
+              "Float": 0
+            },
+            "displacementY": {
+              "Float": 0
+            },
+            "displacementZ": {
+              "Float": 0
+            },
+            "linkedItemScatter": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event272",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 162,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.667
+            }
+          },
+          "NextEventName": "Event272",
+          "ActorName": "Timer",
+          "Name": "Event273",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 165,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.167
+            }
+          },
+          "NextEventName": "Event276",
+          "ActorName": "Timer",
+          "Name": "Event274",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 166,
+          "ForkEventIndicies": [
+            205,
+            163
+          ],
+          "Name": "Event276",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 14,
+          "NextEventName": "Event101",
+          "Name": "Event277",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 9,
+          "ForkEventIndicies": [
+            152,
+            203
+          ],
+          "Name": "Event18",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 169,
+          "ActorIndex": 12,
+          "ActorActionIndex": 14,
+          "NextEventName": "Event103",
+          "ActorName": "GanonPaste",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 26,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [],
+          "ActorName": "BattleChallenge",
+          "Name": "Event103",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 175,
+          "NextEventName": "Event113",
+          "Name": "Event105",
+          "Type": "Join"
+        },
+        {
+          "ActorIndex": 12,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 172
+            },
+            {
+              "Value": 1,
+              "EventIndex": 173
+            }
+          ],
+          "ActorName": "GanonPaste",
+          "Name": "Event106",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_dead_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event107",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_dead_down_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event109",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 170,
+          "ForkEventIndicies": [
+            171,
+            204
+          ],
+          "Name": "Event112",
+          "Type": "Fork"
+        },
+        {
+          "JoinEventIndex": 176,
+          "ForkEventIndicies": [
+            178,
+            177
+          ],
+          "Name": "Event113",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 179,
+          "NextEventName": "Event165",
+          "Name": "Event114",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.333
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event115",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 191,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.667
+            }
+          },
+          "NextEventName": "Event300",
+          "ActorName": "Timer",
+          "Name": "Event116",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 206,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.167
+            }
+          },
+          "NextEventName": "Event19",
+          "ActorName": "Timer",
+          "Name": "Event165",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 168,
+          "ActorIndex": 12,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event23",
+          "ActorName": "GanonPaste",
+          "Name": "Event177",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 27,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead_dissolve_Trident"
+            }
+          },
+          "ActorName": "GanonTrident",
+          "Name": "Event294",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 27,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonTrident",
+          "Name": "Event295",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 185,
+          "ForkEventIndicies": [
+            265,
+            161
+          ],
+          "Name": "Event296",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 181,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonTrident",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event294",
+          "Name": "Event297",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 182,
+          "NextEventName": "Event295",
+          "Name": "Event298",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 53,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event141",
+          "ActorName": "Timer",
+          "Name": "Event104",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead_dissolve"
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event117",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 187,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event117",
+          "Name": "Event118",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 27,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead_dissolve_Trident"
+            }
+          },
+          "ActorName": "GanonTrident",
+          "Name": "Event179",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 27,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonTrident",
+          "Name": "Event299",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 193,
+          "ForkEventIndicies": [
+            266,
+            188
+          ],
+          "Name": "Event300",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 189,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonTrident",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event179",
+          "Name": "Event301",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 190,
+          "NextEventName": "Event299",
+          "Name": "Event302",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 11,
+          "FlowchartName": "",
+          "EntryPointName": "AppearCommon1",
+          "NextEventName": "Event61",
+          "Name": "Event236",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 146,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset_02",
+          "NextEventName": "Event159",
+          "Name": "Event303",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 195,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "duration": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event303",
+          "ActorName": "Audio",
+          "Name": "Event304",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 256,
+          "FlowchartName": "",
+          "EntryPointName": "AppearCommon2",
+          "NextEventName": "Event265",
+          "Name": "Event41",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 199,
+          "FlowchartName": "",
+          "EntryPointName": "AppearCommon1",
+          "NextEventName": "Event279",
+          "Name": "Event180",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "AppearCommon2",
+          "Name": "Event279",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 198,
+          "ActorIndex": 12,
+          "ActorActionIndex": 15,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event180",
+          "ActorName": "GanonPaste",
+          "Name": "Event280",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 200,
+          "ActorIndex": 12,
+          "ActorActionIndex": 9,
+          "NextEventName": "Event280",
+          "ActorName": "GanonPaste",
+          "Name": "Event281",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 201,
+          "ActorIndex": 12,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_before_talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event281",
+          "ActorName": "GanonPaste",
+          "Name": "Event282",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "HitStop",
+          "Name": "Event283",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "HitStop",
+          "Name": "Event111",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "BossExtinction",
+          "Name": "Event275",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 180,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "BossExtinction",
+          "NextEventName": "Event177",
+          "Name": "Event19",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 16,
+          "Parameters": {
+            "aliveCemeteryRevive": {
+              "Bool": false
+            },
+            "cemeteryRevive": {
+              "Bool": false
+            },
+            "child": {
+              "Bool": true
+            },
+            "defeatedThrough": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event80",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 34,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event135",
+          "Name": "Event98",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 164,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Midpoint:3613805900"
+            }
+          },
+          "NextEventName": "Event274",
+          "ActorName": "EventVariables",
+          "Name": "Event128",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 232,
+          "NextEventName": "Event227",
+          "Name": "Event73",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 17,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:Unknown"
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event29",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 213,
+          "ForkEventIndicies": [
+            215,
+            211,
+            212,
+            221
+          ],
+          "Name": "Event36",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_before_talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 220,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event125",
+          "ActorName": "Timer",
+          "Name": "Event63",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_fall_land"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event67",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 15,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event68",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 214,
+          "NextEventName": "Event36",
+          "Name": "Event97",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 219,
+          "ForkEventIndicies": [
+            217,
+            218
+          ],
+          "Name": "Event125",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event139",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 267,
+          "ActorIndex": 2,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": false
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": false
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": false
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaHyruleCastle:FindOutHyruleKing_050"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event308",
+          "ActorName": "Partner",
+          "Name": "Event156",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 222,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event156",
+          "ActorName": "Timer",
+          "Name": "Event175",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaHyruleCastle:FindOutHyruleKing_080"
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event223",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 246,
+          "ActorIndex": 2,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaHyruleCastle:FindOutHyruleKing_080_02"
+            }
+          },
+          "NextEventName": "Event176",
+          "ActorName": "Partner",
+          "Name": "Event174",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 245,
+          "ForkEventIndicies": [
+            225,
+            227,
+            271
+          ],
+          "Name": "Event193",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 241,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event133",
+          "ActorName": "Timer",
+          "Name": "Event194",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event132",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 223,
+          "ActorIndex": 2,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event175",
+          "ActorName": "Partner",
+          "Name": "Event222",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "PasteGanonAppear02_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 1
+            },
+            "path": {
+              "String": "actor/GanonPaste.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event225",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 226,
+          "NextEventName": "Event193",
+          "Name": "Event226",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 231,
+          "ForkEventIndicies": [
+            230,
+            233,
+            228,
+            229,
+            234,
+            235,
+            314
+          ],
+          "Name": "Event227",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 17,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Door",
+          "Name": "Event228",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            },
+            "direction": {
+              "Int": 0
+            },
+            "distance": {
+              "Float": 1
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event237",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 15,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event243",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event245",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 253,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event151",
+          "ActorName": "Timer",
+          "Name": "Event37",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "PasteGanonAppear02_2_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 1
+            },
+            "path": {
+              "String": "actor/GanonPaste.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "ImpostorHyruleKing",
+                "Item2": ""
+              }
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event129",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 17,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Door",
+          "Name": "Event130",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 15,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GanonPaste",
+          "Name": "Event131",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 242,
+          "ForkEventIndicies": [
+            238,
+            239,
+            240,
+            243,
+            244,
+            315
+          ],
+          "Name": "Event133",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event134",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event172",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event173",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 237,
+          "NextEventName": "Event37",
+          "Name": "Event246",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event176",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Midpoint:2223612379"
+            }
+          },
+          "NextEventName": "Event100",
+          "ActorName": "QuestSystem",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 16,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event17",
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 248,
+          "ActorIndex": 16,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "imposter_smile"
+            }
+          },
+          "NextEventName": "Event55",
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event74",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 38,
+          "ActorIndex": 12,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_before_talk_talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event42",
+          "ActorName": "GanonPaste",
+          "Name": "Event264",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 37,
+          "ActorIndex": 12,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_before_talk_talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event35",
+          "ActorName": "GanonPaste",
+          "Name": "Event284",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 255,
+          "ActorIndex": 12,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaHyruleCastle:FindOutHyruleKing_100_02"
+            }
+          },
+          "NextEventName": "Event262",
+          "ActorName": "GanonPaste",
+          "Name": "Event260",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 251,
+          "ActorIndex": 12,
+          "ActorActionIndex": 17,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:Ganon"
+            }
+          },
+          "NextEventName": "Event284",
+          "ActorName": "GanonPaste",
+          "Name": "Event151",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 252,
+          "ActorIndex": 12,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_before_talk_talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event260",
+          "ActorName": "GanonPaste",
+          "Name": "Event261",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 250,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event264",
+          "ActorName": "Timer",
+          "Name": "Event262",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "ActorName": "GameControl",
+          "Name": "Event265",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 29,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead_dissolve_Trident"
+            }
+          },
+          "ActorName": "GanonTridentPorori",
+          "Name": "Event192",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 28,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead_dissolve_Trident"
+            }
+          },
+          "ActorName": "GanonTridentDetached",
+          "Name": "Event287",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 257,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonTridentPorori",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event192",
+          "Name": "Event288",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 258,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonTridentDetached",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event287",
+          "Name": "Event290",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 29,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead_dissolve_Trident"
+            }
+          },
+          "ActorName": "GanonTridentPorori",
+          "Name": "Event289",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 28,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead_dissolve_Trident"
+            }
+          },
+          "ActorName": "GanonTridentDetached",
+          "Name": "Event291",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 261,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonTridentPorori",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event289",
+          "Name": "Event292",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 262,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonTridentDetached",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event291",
+          "Name": "Event293",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 12,
+          "ActorQueryIndex": 1,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 184
+            },
+            {
+              "Value": 1,
+              "EventIndex": 260
+            },
+            {
+              "Value": 2,
+              "EventIndex": 259
+            }
+          ],
+          "ActorName": "GanonPaste",
+          "Name": "Event306",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 12,
+          "ActorQueryIndex": 1,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 192
+            },
+            {
+              "Value": 1,
+              "EventIndex": 264
+            },
+            {
+              "Value": 2,
+              "EventIndex": 263
+            }
+          ],
+          "ActorName": "GanonPaste",
+          "Name": "Event305",
+          "Type": "Switch"
+        },
+        {
+          "JoinEventIndex": 268,
+          "ForkEventIndicies": [
+            224,
+            272
+          ],
+          "Name": "Event308",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 236,
+          "NextEventName": "Event245",
+          "Name": "Event309",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Partner",
+                "Item2": "companion"
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": -1
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event311",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 269,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event311",
+          "ActorName": "Player",
+          "Name": "Event312",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event310",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 270,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.6
+            }
+          },
+          "NextEventName": "Event312",
+          "ActorName": "Timer",
+          "Name": "Event307",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 52,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_GANON_APPEAR_TRIDENT"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event140",
+          "ActorName": "Audio",
+          "Name": "Event313",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_GANON_APPEAR2"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event314",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 312,
+          "ActorIndex": 3,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "duration": {
+              "Float": 2
+            },
+            "label": {
+              "String": "SE_EV_GANON_APPEAR2"
+            }
+          },
+          "NextEventName": "Event229",
+          "ActorName": "Audio",
+          "Name": "Event315",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 49,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaHyruleCastle:FindOutHyruleKing_030_02"
+            }
+          },
+          "NextEventName": "Event108",
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event247",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 35,
+          "ActorIndex": 16,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event136",
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event316",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 36,
+          "ActorIndex": 16,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "imposter_normal"
+            }
+          },
+          "NextEventName": "Event138",
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event259",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 288,
+          "ForkEventIndicies": [
+            280,
+            281,
+            282,
+            283,
+            284,
+            285,
+            286,
+            287
+          ],
+          "Name": "Event329",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 32,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event330",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 33,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event331",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 34,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event332",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 35,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event333",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 36,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event334",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 37,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event335",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 38,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event336",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 39,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GanonPaste",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event337",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 291,
+          "NextEventName": "Event44",
+          "Name": "Event338",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 15,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ItemHeartContainer",
+          "Name": "Event45",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "TriRelease",
+          "Name": "Event43",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 293,
+          "ForkEventIndicies": [
+            290,
+            292,
+            32
+          ],
+          "Name": "Event44",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 39,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 29.3
+            }
+          },
+          "NextEventName": "Event53",
+          "ActorName": "Timer",
+          "Name": "Event46",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 318,
+          "NextEventName": "Event321",
+          "Name": "Event47",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 202,
+          "ActorIndex": 26,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event282",
+          "ActorName": "BattleChallenge",
+          "Name": "Event57",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 276,
+          "ActorIndex": 16,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event247",
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event60",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 16,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event62",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 16,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "expression": {
+              "String": "imposter_angry"
+            }
+          },
+          "ActorName": "ImpostorHyruleKing",
+          "Name": "Event65",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 299,
+          "ForkEventIndicies": [
+            296,
+            300
+          ],
+          "Name": "Event84",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 295,
+          "NextEventName": "Event60",
+          "Name": "Event93",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 297,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event65",
+          "ActorName": "Timer",
+          "Name": "Event94",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "level": {
+              "String": "L_DungeonCastle"
+            },
+            "locator": {
+              "String": "WorldRepair_after"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event124",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 30,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "autoClose": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Movie",
+          "Name": "Event96",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 335,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "CutOutW"
+            }
+          },
+          "NextEventName": "Event339",
+          "ActorName": "Fade",
+          "Name": "Event119",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 30,
+          "ActorActionIndex": 1,
+          "ActorName": "Movie",
+          "Name": "Event120",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 306,
+          "ForkEventIndicies": [
+            302,
+            331,
+            330
+          ],
+          "Name": "Event121",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 303,
+          "NextEventName": "Event119",
+          "Name": "Event122",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 311,
+          "ForkEventIndicies": [
+            76,
+            308
+          ],
+          "Name": "Event50",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 309,
+          "ActorIndex": 3,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "kind": {
+              "Int": 0
+            },
+            "label": {
+              "String": "BGM_OP_GANON_APPEAR"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event248",
+          "ActorName": "Audio",
+          "Name": "Event126",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 310,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 13.53333
+            }
+          },
+          "NextEventName": "Event258",
+          "ActorName": "Timer",
+          "Name": "Event248",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": false
+            },
+            "label": {
+              "String": "BGM_OP_GANON_APPEAR"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event258",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event266",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 109,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "duration": {
+              "Float": 4.5
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "Audio",
+          "Name": "Event229",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 31,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "String": "skeletalModelComp"
+            }
+          },
+          "ActorName": "EvBackWallGanon",
+          "Name": "Event285",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 31,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "active": {
+              "Bool": true
+            },
+            "name": {
+              "String": "skeletalModelComp"
+            }
+          },
+          "ActorName": "EvBackWallGanon",
+          "Name": "Event318",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 31,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "String": "skeletalModelComp"
+            }
+          },
+          "ActorName": "EvBackWallGanon",
+          "Name": "Event319",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 31,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "String": "skeletalModelComp"
+            }
+          },
+          "ActorName": "EvBackWallGanon",
+          "Name": "Event320",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "ActorName": "Audio",
+          "Name": "Event317",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 319,
+          "ForkEventIndicies": [
+            320,
+            317
+          ],
+          "Name": "Event321",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 305,
+          "NextEventName": "Event121",
+          "Name": "Event323",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 30,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "filename": {
+              "String": "rd031_HyruleCastle_WorldGlobe"
+            }
+          },
+          "ActorName": "Movie",
+          "Name": "Event95",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_EV_REVIVING_AREA"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event324",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_WORLD_REPAIR_OTHER"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event325",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "label": {
+              "String": "BGM_BATTLE_GANON_OP2"
+            },
+            "stoplabel": {
+              "String": "BGM_BATTLE_GANON_OP"
+            }
+          },
+          "NextEventName": "Event12",
+          "ActorName": "Audio",
+          "Name": "Event79",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 326,
+          "ForkEventIndicies": [
+            23,
+            325
+          ],
+          "Name": "Event22",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AngryReset",
+          "Name": "Event28",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event81",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 329,
+          "ForkEventIndicies": [
+            323,
+            328
+          ],
+          "Name": "Event91",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AngryReset",
+          "Name": "Event251",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event252",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 322,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.83
+            }
+          },
+          "NextEventName": "Event325",
+          "ActorName": "Timer",
+          "Name": "Event102",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 321,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.01667
+            }
+          },
+          "NextEventName": "Event324",
+          "ActorName": "Timer",
+          "Name": "Event327",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 8,
+          "ActorName": "Audio",
+          "Name": "Event328",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 279,
+          "ActorIndex": 7,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event329",
+          "ActorName": "GameControl",
+          "Name": "Event83",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 4,
+          "ActorName": "GameControl",
+          "Name": "Event326",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 336,
+          "ForkEventIndicies": [
+            304,
+            334
+          ],
+          "Name": "Event339",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 301,
+          "NextEventName": "Event124",
+          "Name": "Event340",
+          "Type": "Join"
+        }
+      ],
+      "EntryPoints": {
+        "Angry": {
+          "SubFlowEventIndices": [
+            328
+          ],
+          "EventIndex": 327
+        },
+        "Appear": {
+          "SubFlowEventIndices": [
+            194,
+            11,
+            197
+          ],
+          "EventIndex": 107
+        },
+        "AppearCommon1": {
+          "SubFlowEventIndices": [
+            195
+          ],
+          "EventIndex": 196
+        },
+        "AppearCommon2": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 123
+        },
+        "BC_Appear": {
+          "SubFlowEventIndices": [
+            198,
+            199
+          ],
+          "EventIndex": 294
+        },
+        "BC_Dead": {
+          "SubFlowEventIndices": [
+            204,
+            192,
+            264,
+            263,
+            188,
+            206
+          ],
+          "EventIndex": 174
+        },
+        "Dead": {
+          "SubFlowEventIndices": [
+            203,
+            184,
+            260,
+            259,
+            161,
+            205,
+            17
+          ],
+          "EventIndex": 167
+        },
+        "FindOutHyruleKing": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 44
+        },
+        "Roar": {
+          "SubFlowEventIndices": [
+            325
+          ],
+          "EventIndex": 324
+        },
+        "TouchWorldGlobe_HyruleCastle": {
+          "SubFlowEventIndices": [
+            290,
+            208
+          ],
+          "EventIndex": 13
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

@@ -1,0 +1,481 @@
+{
+  "FileName": "ItemHeartPiece",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "ItemHeartPiece": {
+      "Name": "ItemHeartPiece",
+      "Actors": [
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Show"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericItemGetSequence",
+            "AddItem"
+          ],
+          "Queries": [
+            "GetHeartPieces"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayInAnimLayout",
+            "PlayInAnimLifeUp"
+          ],
+          "Queries": [
+            "IsHeartIncrease"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Heal"
+          ],
+          "Queries": [
+            "CheckDamage",
+            "CheckLife"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 16,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:HeartPiece"
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "Dialog",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "HeartPiece"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "Zelda",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 15
+            },
+            {
+              "Value": 1,
+              "EventIndex": 15
+            },
+            {
+              "Value": 2,
+              "EventIndex": 15
+            },
+            {
+              "Value": 3,
+              "EventIndex": 5
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event2",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:HeartPieceFull"
+            }
+          },
+          "NextEventName": "Event12",
+          "ActorName": "Dialog",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Argument": "index"
+            },
+            "itemKey": {
+              "String": "HeartPiece"
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "HeartGauge": {
+              "Bool": true
+            },
+            "ItemSlot": {
+              "Bool": false
+            },
+            "KeyItem": {
+              "Bool": false
+            },
+            "MiniMap": {
+              "Bool": false
+            },
+            "Operate": {
+              "Bool": false
+            },
+            "PasteGauge": {
+              "Bool": false
+            },
+            "PasteSlot": {
+              "Bool": false
+            },
+            "Rupee": {
+              "Bool": false
+            },
+            "TimedAbility": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "Hud",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 9
+            },
+            {
+              "Value": 1,
+              "EventIndex": 7
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event12",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 999
+            }
+          },
+          "NextEventName": "Event17",
+          "ActorName": "Player",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event6",
+          "ActorName": "Timer",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 11
+            },
+            {
+              "Value": 1,
+              "EventIndex": 12
+            }
+          ],
+          "ActorName": "Hud",
+          "Name": "Event16",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event16",
+          "ActorName": "Timer",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.15
+            }
+          },
+          "NextEventName": "Event6",
+          "ActorName": "Timer",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event14",
+          "ActorName": "Hud",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "amount": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 1
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event8",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "HeartGauge": {
+              "Bool": true
+            },
+            "ItemSlot": {
+              "Bool": false
+            },
+            "KeyItem": {
+              "Bool": false
+            },
+            "MiniMap": {
+              "Bool": false
+            },
+            "Operate": {
+              "Bool": false
+            },
+            "PasteGauge": {
+              "Bool": false
+            },
+            "PasteSlot": {
+              "Bool": false
+            },
+            "Rupee": {
+              "Bool": false
+            },
+            "TimedAbility": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Hud",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 17
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event10",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 999
+            }
+          },
+          "NextEventName": "Event21",
+          "ActorName": "Player",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 19
+            },
+            {
+              "Value": 1,
+              "EventIndex": 20
+            }
+          ],
+          "ActorName": "Hud",
+          "Name": "Event20",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event20",
+          "ActorName": "Timer",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.15
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event22",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Get": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 14
+        },
+        "Message": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 2
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

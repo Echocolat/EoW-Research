@@ -1,0 +1,338 @@
+{
+  "FileName": "DoorRotation",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "DoorRotation": {
+      "Name": "DoorRotation",
+      "Actors": [
+        {
+          "Name": "DoorRotation",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "TurnRight",
+            "TurnLeft",
+            "PlayTailorOtherChannelNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [
+            "CheckFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayJingle"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AbsorbAllPastedActors"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "angle": {
+              "Float": 90
+            },
+            "timespan": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "DoorRotation",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "angle": {
+              "Float": 90
+            },
+            "timespan": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event13",
+          "ActorName": "DoorRotation",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "Argument": "flag"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "Argument": "flag"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 5
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event9",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_NAZOTOKI_SEIKAI"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event8",
+          "ActorName": "Audio",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.2
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "Timer",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "Argument": "flag"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "Argument": "flag"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 9
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event13",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_NAZOTOKI_SEIKAI"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event12",
+          "ActorName": "Audio",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.2
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "Timer",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "Rotate"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "DoorRotation",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "Rotate"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event6",
+          "ActorName": "DoorRotation",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isExcludeKarakuri": {
+              "Bool": false
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "Player",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isExcludeKarakuri": {
+              "Bool": false
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Player",
+          "Name": "Event2",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "OnTurnLeft": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 13
+        },
+        "OnTurnRight": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 12
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

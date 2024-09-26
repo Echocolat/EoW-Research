@@ -1,0 +1,5692 @@
+{
+  "FileName": "GreatFairy",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "GreatFairy": {
+      "Name": "GreatFairy",
+      "Actors": [
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Show",
+            "SetInt"
+          ],
+          "Queries": [
+            "GetLastResult4",
+            "GetLastResult5"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "GreatFairy",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericTalkSequenceWithDialog",
+            "Talk",
+            "SetFacialExpression",
+            "PlayAnimationNoWait",
+            "PlayAnimation",
+            "LookAtTalker",
+            "Activate",
+            "AimCompassPoint",
+            "SetInterestIkEnabled",
+            "ResetFacialExpression",
+            "ResetAim",
+            "SetInstanceVariableBool",
+            "AimActor"
+          ],
+          "Queries": [
+            "GetInstanceVariableBool"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartParam"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericItemGetSequence",
+            "AddItem",
+            "PayPrice",
+            "AddAccessorySlotEx",
+            "SetInterestIkEnabled",
+            "AimActor",
+            "RemoveItem"
+          ],
+          "Queries": [
+            "GetAccessorySlotExNum",
+            "CheckRupee"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetProgress"
+          ],
+          "Queries": [
+            "GetStatus"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag",
+            "SetLevelFlag"
+          ],
+          "Queries": [
+            "CheckMessgaeFlag",
+            "CheckFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayActorOriginCameraAnimation",
+            "LookAt2ActorsCenterAsTalker"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor",
+            "PlayTailorOtherChannelNoWait",
+            "StopTailorOtherChannel"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimToInitialAngle"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "TagEvTailorPlayer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StopTailorOtherChannel",
+            "PlayTailorOtherChannelNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlaySpecifyLabelRegionBGM",
+            "PlayOneshotSystemSE",
+            "SetRegionBgmVolume"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestAutoSave"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowRupee",
+            "WaitRupeeCount"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetInterestIkEnabled",
+            "AimActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": false
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains010_190"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event51",
+          "ActorName": "GreatFairy",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains010_200"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event49",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event50",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 4,
+          "ForkEventIndicies": [
+            1,
+            2
+          ],
+          "Name": "Event51",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 93,
+          "NextEventName": "Event16",
+          "Name": "Event52",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": false
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains060_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "wait"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event56",
+          "ActorName": "GreatFairy",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains060_020"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event54",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 9,
+          "ForkEventIndicies": [
+            6,
+            7,
+            33
+          ],
+          "Name": "Event56",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 90,
+          "NextEventName": "Event2",
+          "Name": "Event57",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains060_040"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event62",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event63",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 13,
+          "ForkEventIndicies": [
+            10,
+            11,
+            34
+          ],
+          "Name": "Event64",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 14,
+          "NextEventName": "Event66",
+          "Name": "Event65",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains060_050"
+            }
+          },
+          "NextEventName": "Event72",
+          "ActorName": "GreatFairy",
+          "Name": "Event66",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains060_060"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event70",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 18,
+          "ForkEventIndicies": [
+            15,
+            16
+          ],
+          "Name": "Event72",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 21,
+          "NextEventName": "Event76",
+          "Name": "Event73",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains060_080"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event74",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "angry"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event75",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 22,
+          "ForkEventIndicies": [
+            19,
+            20,
+            35,
+            43
+          ],
+          "Name": "Event76",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 279,
+          "NextEventName": "Event261",
+          "Name": "Event77",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": false
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains060_090"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event78",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 25,
+          "ForkEventIndicies": [
+            23,
+            38,
+            170
+          ],
+          "Name": "Event80",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 27,
+          "NextEventName": "Event84",
+          "Name": "Event81",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "scornful_eyes"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event83",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 28,
+          "ForkEventIndicies": [
+            56,
+            26
+          ],
+          "Name": "Event84",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 31,
+          "NextEventName": "Event92",
+          "Name": "Event85",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains060_110"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event90",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "grin"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event91",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 32,
+          "ForkEventIndicies": [
+            29,
+            89,
+            30
+          ],
+          "Name": "Event92",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 100,
+          "NextEventName": "Event14",
+          "Name": "Event93",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "grin"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "big_laugh"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event53",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event102",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "enhance_ed,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event106",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 42,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "colorB": {
+              "Float": 1
+            },
+            "colorG": {
+              "Float": 1
+            },
+            "colorR": {
+              "Float": 1
+            },
+            "mode": {
+              "Int": 1
+            },
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event20",
+          "ActorName": "Fade",
+          "Name": "Event107",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "grin"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event108",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 40,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Ornament16"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event96",
+          "ActorName": "Player",
+          "Name": "Event95",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 281,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Ornament16"
+            }
+          },
+          "NextEventName": "Event288",
+          "ActorName": "Player",
+          "Name": "Event96",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Fairy_HyrulePlains010:3920780572"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event109",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "colorB": {
+              "Float": 1
+            },
+            "colorG": {
+              "Float": 1
+            },
+            "colorR": {
+              "Float": 1
+            },
+            "mode": {
+              "Int": 0
+            },
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event110",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 172,
+          "FlowchartName": "",
+          "EntryPointName": "GreatFairyAppear",
+          "NextEventName": "Event25",
+          "Name": "Event113",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 51,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "NextEventName": "Event122",
+          "ActorName": "GreatFairy",
+          "Name": "Event114",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 44,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "appear"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "GreatFairy",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 119,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": true
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "GreatFairyAppear01_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": true
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "map/GreatFairyFountain.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            }
+          },
+          "NextEventName": "Event238",
+          "ActorName": "Camera",
+          "Name": "Event119",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 87,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event190",
+          "ActorName": "Timer",
+          "Name": "Event120",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": true
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "GreatFairyAppear02_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": true
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "map/GreatFairyFountain.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event121",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 52,
+          "ForkEventIndicies": [
+            116,
+            50,
+            80,
+            81,
+            82,
+            166
+          ],
+          "Name": "Event122",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 167,
+          "NextEventName": "Event125",
+          "Name": "Event123",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 283,
+          "FlowchartName": "",
+          "EntryPointName": "GreatFairyAppear",
+          "NextEventName": "Event292",
+          "Name": "Event115",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 284,
+          "FlowchartName": "",
+          "EntryPointName": "GreatFairyAppear",
+          "NextEventName": "Event293",
+          "Name": "Event117",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Talk_Q1",
+          "Name": "Event147",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 105
+            },
+            {
+              "Value": 2,
+              "EventIndex": 107
+            },
+            {
+              "Value": 3,
+              "EventIndex": 109
+            },
+            {
+              "Value": 4,
+              "EventIndex": 111
+            },
+            {
+              "Value": 5,
+              "EventIndex": 157
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event144",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 59,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_Q1"
+            }
+          },
+          "NextEventName": "Event150",
+          "ActorName": "GreatFairy",
+          "Name": "Event148",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 2
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 60
+            },
+            {
+              "Value": 1,
+              "EventIndex": 258
+            },
+            {
+              "Value": 2,
+              "EventIndex": 233
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event150",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 244,
+          "FlowchartName": "",
+          "EntryPointName": "AccessoryCheck",
+          "NextEventName": "Event171",
+          "Name": "Event149",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 65,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_Q2"
+            }
+          },
+          "NextEventName": "Event156",
+          "ActorName": "GreatFairy",
+          "Name": "Event151",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 72,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_Q3"
+            }
+          },
+          "NextEventName": "Event164",
+          "ActorName": "GreatFairy",
+          "Name": "Event152",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 73,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_Q4"
+            }
+          },
+          "NextEventName": "Event172",
+          "ActorName": "GreatFairy",
+          "Name": "Event153",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 74,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_Q5"
+            }
+          },
+          "NextEventName": "Event180",
+          "ActorName": "GreatFairy",
+          "Name": "Event154",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 4
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 131
+            },
+            {
+              "Value": 1,
+              "EventIndex": 246
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event156",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 151,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_NoRupee"
+            }
+          },
+          "NextEventName": "Event198",
+          "ActorName": "GreatFairy",
+          "Name": "Event157",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "amount": {
+              "Argument": "SlotMoney"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 150
+            },
+            {
+              "Value": 1,
+              "EventIndex": 68
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event160",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 286,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "price": {
+              "Argument": "SlotMoney"
+            }
+          },
+          "NextEventName": "Event295",
+          "ActorName": "Player",
+          "Name": "Event161",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 77,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event162",
+          "ActorName": "Player",
+          "Name": "Event143",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 160,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_LvUp_010"
+            }
+          },
+          "NextEventName": "Event283",
+          "ActorName": "GreatFairy",
+          "Name": "Event146",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "AccessoryLvUpDemo",
+          "Name": "Event163",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 4
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 132
+            },
+            {
+              "Value": 1,
+              "EventIndex": 249
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event164",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 4
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 133
+            },
+            {
+              "Value": 1,
+              "EventIndex": 250
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event172",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 4
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 138
+            },
+            {
+              "Value": 1,
+              "EventIndex": 251
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event180",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 154,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk010_010"
+            }
+          },
+          "NextEventName": "Event274",
+          "ActorName": "GreatFairy",
+          "Name": "Event196",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 277,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "GreatFairyChallenge"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event278",
+          "ActorName": "EventFlags",
+          "Name": "Event197",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 171,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_LvUp_020"
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "Dialog",
+          "Name": "Event162",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 177,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "NextEventName": "Event33",
+          "ActorName": "GreatFairy",
+          "Name": "Event155",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event178",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 79,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 5
+            }
+          },
+          "NextEventName": "Event178",
+          "ActorName": "Timer",
+          "Name": "Event185",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 84,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event188",
+          "ActorName": "Player",
+          "Name": "Event189",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 83,
+          "ActorIndex": 14,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event187",
+          "ActorName": "Partner",
+          "Name": "Event191",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event187",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event188",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event98",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 88,
+          "ForkEventIndicies": [
+            86,
+            85
+          ],
+          "Name": "Event190",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 78,
+          "NextEventName": "Event155",
+          "Name": "Event192",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event87",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 12,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event64",
+          "ActorName": "GreatFairy",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 285,
+          "FlowchartName": "",
+          "EntryPointName": "GreatFairyAppear",
+          "NextEventName": "Event294",
+          "Name": "Event100",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 117,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": false
+            },
+            "cameraLookAt": {
+              "Bool": false
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains010_070"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event131",
+          "ActorName": "GreatFairy",
+          "Name": "Event128",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 92,
+          "ActorIndex": 1,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event128",
+          "ActorName": "GreatFairy",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 273,
+          "ActorIndex": 1,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event249",
+          "ActorName": "GreatFairy",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 1,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "GreatFairy",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 98,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "enhance_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event23",
+          "ActorName": "GreatFairy",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 212,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "enhance_lp"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event132",
+          "ActorName": "GreatFairy",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaPlains:Fairy_HyrulePlains060_120"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 101,
+          "ForkEventIndicies": [
+            99,
+            102,
+            103
+          ],
+          "Name": "Event14",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 112,
+          "NextEventName": "Event208",
+          "Name": "Event104",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event105",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event127",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 215,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 0
+            },
+            "value": {
+              "Argument": "rupee"
+            }
+          },
+          "NextEventName": "Event142",
+          "ActorName": "Dialog",
+          "Name": "Event67",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "slotrupee1",
+          "Name": "Event68",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 179,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 0
+            },
+            "value": {
+              "Argument": "rupee"
+            }
+          },
+          "NextEventName": "Event35",
+          "ActorName": "Dialog",
+          "Name": "Event69",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "slotrupee2",
+          "Name": "Event141",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 180,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 0
+            },
+            "value": {
+              "Argument": "rupee"
+            }
+          },
+          "NextEventName": "Event36",
+          "ActorName": "Dialog",
+          "Name": "Event194",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "slotrupee3",
+          "Name": "Event200",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 181,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 0
+            },
+            "value": {
+              "Argument": "rupee"
+            }
+          },
+          "NextEventName": "Event37",
+          "ActorName": "Dialog",
+          "Name": "Event203",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "slotrupee5",
+          "Name": "Event204",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 41,
+          "ActorIndex": 4,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Ornament26"
+            }
+          },
+          "NextEventName": "Event109",
+          "ActorName": "Player",
+          "Name": "Event208",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 45,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event113",
+          "Name": "Event209",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 113,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event209",
+          "ActorName": "GreatFairy",
+          "Name": "Event211",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 198,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event60",
+          "ActorName": "GreatFairy",
+          "Name": "Event210",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 47,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "channel": {
+              "String": "GreatFairySign02"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "TagEvTailorPlayer",
+          "Name": "Event212",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "TreasureBox",
+          "EntryPointName": "GreatFairy_TreasureBox_A1",
+          "Name": "Event131",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 49,
+          "ActorIndex": 10,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "channel": {
+              "String": "GreatFairySign02"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event120",
+          "ActorName": "TagEvTailorPlayer",
+          "Name": "Event217",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 118,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "channel": {
+              "String": "GreatFairySign"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "NextEventName": "Event217",
+          "ActorName": "TagEvTailorPlayer",
+          "Name": "Event238",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "enhance_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event247",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "enhance_lp"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event250",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "enhance_ed"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event252",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 124,
+          "ForkEventIndicies": [
+            121,
+            125
+          ],
+          "Name": "Event253",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 208,
+          "NextEventName": "Event124",
+          "Name": "Event254",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event255",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 205,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event111",
+          "ActorName": "GreatFairy",
+          "Name": "Event256",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 267,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event244",
+          "ActorName": "Timer",
+          "Name": "Event258",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 218,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyFirstTalk_010"
+            }
+          },
+          "NextEventName": "Event135",
+          "ActorName": "GreatFairy",
+          "Name": "Event259",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Talk_Q",
+          "Name": "Event112",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk010_020"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event263",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 240,
+          "Parameters": {
+            "SlotMoney": {
+              "Argument": "rupee"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "moneycheck",
+          "NextEventName": "Event168",
+          "Name": "Event264",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "SlotMoney": {
+              "Argument": "rupee"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "moneycheck",
+          "Name": "Event165",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "SlotMoney": {
+              "Argument": "rupee"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "moneycheck",
+          "Name": "Event167",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 266,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_LvUp_015"
+            }
+          },
+          "NextEventName": "Event222",
+          "ActorName": "GreatFairy",
+          "Name": "Event173",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 136,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk020_010"
+            }
+          },
+          "NextEventName": "Event176",
+          "ActorName": "GreatFairy",
+          "Name": "Event175",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 137,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk020_020"
+            }
+          },
+          "NextEventName": "Event177",
+          "ActorName": "GreatFairy",
+          "Name": "Event176",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk020_030"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event177",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "SlotMoney": {
+              "Argument": "rupee"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "moneycheck",
+          "Name": "Event179",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 152
+            },
+            {
+              "Value": 2,
+              "EventIndex": 152
+            },
+            {
+              "Value": 3,
+              "EventIndex": 152
+            },
+            {
+              "Value": 4,
+              "EventIndex": 152
+            },
+            {
+              "Value": 5,
+              "EventIndex": 155
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event265",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 2,
+              "EventIndex": 141
+            },
+            {
+              "Value": 3,
+              "EventIndex": 142
+            },
+            {
+              "Value": 4,
+              "EventIndex": 142
+            },
+            {
+              "Value": 5,
+              "EventIndex": 163
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event266",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 282,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_LvUp_025"
+            }
+          },
+          "NextEventName": "Event291",
+          "ActorName": "GreatFairy",
+          "Name": "Event267",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 282,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_LvUp_030"
+            }
+          },
+          "NextEventName": "Event291",
+          "ActorName": "GreatFairy",
+          "Name": "Event268",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 164,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_LvUp_040"
+            }
+          },
+          "NextEventName": "Event287",
+          "ActorName": "GreatFairy",
+          "Name": "Event269",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 282,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_LvUp_045"
+            }
+          },
+          "NextEventName": "Event291",
+          "ActorName": "GreatFairy",
+          "Name": "Event270",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_PayCancel"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event159",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_cansel",
+          "Name": "Event158",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_cansel",
+          "Name": "Event166",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_cansel",
+          "Name": "Event174",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 127,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event258",
+          "ActorName": "GreatFairy",
+          "Name": "Event273",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 66,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "angry"
+            }
+          },
+          "NextEventName": "Event157",
+          "ActorName": "GreatFairy",
+          "Name": "Event182",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 9,
+          "ActorName": "GreatFairy",
+          "Name": "Event198",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 75,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "NextEventName": "Event196",
+          "ActorName": "GreatFairy",
+          "Name": "Event169",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 58,
+          "ActorIndex": 1,
+          "ActorActionIndex": 9,
+          "NextEventName": "Event148",
+          "ActorName": "GreatFairy",
+          "Name": "Event202",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 130,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "grin"
+            }
+          },
+          "NextEventName": "Event263",
+          "ActorName": "GreatFairy",
+          "Name": "Event274",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 135,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "NextEventName": "Event175",
+          "ActorName": "GreatFairy",
+          "Name": "Event275",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 158,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_LvUp_Max"
+            }
+          },
+          "NextEventName": "Event280",
+          "ActorName": "GreatFairy",
+          "Name": "Event276",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 156,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "NextEventName": "Event276",
+          "ActorName": "GreatFairy",
+          "Name": "Event279",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 9,
+          "ActorName": "GreatFairy",
+          "Name": "Event280",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 70,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "big_laugh"
+            }
+          },
+          "NextEventName": "Event146",
+          "ActorName": "GreatFairy",
+          "Name": "Event282",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 134,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "NextEventName": "Event173",
+          "ActorName": "GreatFairy",
+          "Name": "Event283",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 120,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "NextEventName": "Event247",
+          "ActorName": "GreatFairy",
+          "Name": "Event284",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 122,
+          "ActorIndex": 1,
+          "ActorActionIndex": 9,
+          "NextEventName": "Event252",
+          "ActorName": "GreatFairy",
+          "Name": "Event281",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 143,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "NextEventName": "Event269",
+          "ActorName": "GreatFairy",
+          "Name": "Event286",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 144,
+          "ActorIndex": 1,
+          "ActorActionIndex": 9,
+          "NextEventName": "Event270",
+          "ActorName": "GreatFairy",
+          "Name": "Event287",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "BGM_GREAT_FAIRY"
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event289",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 165,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.5
+            }
+          },
+          "NextEventName": "Event289",
+          "ActorName": "Timer",
+          "Name": "Event199",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 275,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.5
+            }
+          },
+          "NextEventName": "Event89",
+          "ActorName": "Timer",
+          "Name": "Event125",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 183,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event8",
+          "Name": "Event12",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 184,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event39",
+          "Name": "Event6",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 140,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event266",
+          "ActorName": "GameControl",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 173,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 5
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event26",
+          "ActorName": "Camera",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 115,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event210",
+          "ActorName": "Timer",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 269,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event245",
+          "ActorName": "Timer",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 96,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event19",
+          "ActorName": "Timer",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 94,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event17",
+          "ActorName": "Timer",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 46,
+          "ActorIndex": 1,
+          "ActorActionIndex": 10,
+          "NextEventName": "Event114",
+          "ActorName": "GreatFairy",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 245,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_BeforePay"
+            }
+          },
+          "NextEventName": "Event170",
+          "ActorName": "GreatFairy",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 247,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_BeforePay"
+            }
+          },
+          "NextEventName": "Event225",
+          "ActorName": "GreatFairy",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 248,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_BeforePay"
+            }
+          },
+          "NextEventName": "Event226",
+          "ActorName": "GreatFairy",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 252,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_BeforePay"
+            }
+          },
+          "NextEventName": "Event233",
+          "ActorName": "GreatFairy",
+          "Name": "Event37",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 54,
+          "ActorIndex": 1,
+          "ActorActionIndex": 10,
+          "NextEventName": "Event117",
+          "ActorName": "GreatFairy",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 182,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event38",
+          "ActorName": "GreatFairy",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 53,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event115",
+          "ActorName": "GreatFairy",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 91,
+          "ActorIndex": 1,
+          "ActorActionIndex": 10,
+          "NextEventName": "Event100",
+          "ActorName": "GreatFairy",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 185,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "GreatFairy",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 186,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event11",
+          "Name": "Event40",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 55,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyAppear_010"
+            }
+          },
+          "NextEventName": "Event147",
+          "ActorName": "GreatFairy",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 225,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyFirstTalk_020"
+            }
+          },
+          "NextEventName": "Event201",
+          "ActorName": "GreatFairy",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 228,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyFirstTalk_030"
+            }
+          },
+          "NextEventName": "Event207",
+          "ActorName": "GreatFairy",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 219,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyFirstTalk_040"
+            }
+          },
+          "NextEventName": "Event181",
+          "ActorName": "GreatFairy",
+          "Name": "Event45",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 220,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyFirstTalk_050"
+            }
+          },
+          "NextEventName": "Event183",
+          "ActorName": "GreatFairy",
+          "Name": "Event46",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 197,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyFirstTalk_Q1"
+            }
+          },
+          "NextEventName": "Event59",
+          "ActorName": "GreatFairy",
+          "Name": "Event44",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 231,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyFirstTalk_Q1_A1_010"
+            }
+          },
+          "NextEventName": "Event213",
+          "ActorName": "GreatFairy",
+          "Name": "Event47",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 236,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyFirstTalk_Q1_A1_020"
+            }
+          },
+          "NextEventName": "Event220",
+          "ActorName": "GreatFairy",
+          "Name": "Event48",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 232,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyFirstTalk_Q1_A1_030"
+            }
+          },
+          "NextEventName": "Event215",
+          "ActorName": "GreatFairy",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 2
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 221
+            },
+            {
+              "Value": 1,
+              "EventIndex": 199
+            },
+            {
+              "Value": 2,
+              "EventIndex": 239
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event59",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyFirstTalk_010"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 272
+            },
+            {
+              "Value": 1,
+              "EventIndex": 201
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event60",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 265,
+          "FlowchartName": "",
+          "EntryPointName": "_justTalk",
+          "NextEventName": "Event243",
+          "Name": "Event79",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 265,
+          "FlowchartName": "",
+          "EntryPointName": "AccessoryCheck",
+          "NextEventName": "Event243",
+          "Name": "Event88",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "name": {
+              "String": "isWelcomeMessage"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 202
+            },
+            {
+              "Value": 1,
+              "EventIndex": 55
+            }
+          ],
+          "ActorName": "GreatFairy",
+          "Name": "Event94",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 188,
+          "ActorIndex": 1,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "name": {
+              "String": "isWelcomeMessage"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event41",
+          "ActorName": "GreatFairy",
+          "Name": "Event61",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 48,
+          "ActorIndex": 11,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_GREAT_FAIRY_APPEAR"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event119",
+          "ActorName": "Audio",
+          "Name": "Event101",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 123,
+          "NextEventName": "Event253",
+          "Name": "Event103",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 204,
+          "ForkEventIndicies": [
+            161,
+            207
+          ],
+          "Name": "Event111",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "channel": {
+              "String": "PlayerGlow_00"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event116",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 206,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2.5
+            }
+          },
+          "NextEventName": "Event116",
+          "ActorName": "Timer",
+          "Name": "Event118",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 211,
+          "ForkEventIndicies": [
+            162,
+            210
+          ],
+          "Name": "Event124",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "PlayerGlow_00"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event126",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 209,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event126",
+          "ActorName": "Timer",
+          "Name": "Event129",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 149,
+          "NextEventName": "Event273",
+          "Name": "Event130",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 213,
+          "ForkEventIndicies": [
+            36,
+            214
+          ],
+          "Name": "Event132",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 280,
+          "NextEventName": "Event262",
+          "Name": "Event133",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 37,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.6
+            }
+          },
+          "NextEventName": "Event107",
+          "ActorName": "Timer",
+          "Name": "Event134",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "symbol": {
+              "String": "GreatFairyFirstTalk"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 245
+            },
+            {
+              "Value": 1,
+              "EventIndex": 178
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event142",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_cansel",
+          "Name": "Event140",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 128,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event259",
+          "ActorName": "GreatFairy",
+          "Name": "Event82",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 223,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event86",
+          "ActorName": "GreatFairy",
+          "Name": "Event135",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 227,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event206",
+          "ActorName": "GreatFairy",
+          "Name": "Event181",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 129,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event112",
+          "ActorName": "GreatFairy",
+          "Name": "Event183",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 194,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event47",
+          "ActorName": "GreatFairy",
+          "Name": "Event184",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 39,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event95",
+          "ActorName": "Timer",
+          "Name": "Event193",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 224,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event195",
+          "ActorName": "GreatFairy",
+          "Name": "Event86",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 189,
+          "ActorIndex": 1,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event42",
+          "ActorName": "GreatFairy",
+          "Name": "Event195",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 190,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "surprize"
+            }
+          },
+          "NextEventName": "Event43",
+          "ActorName": "GreatFairy",
+          "Name": "Event201",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 229,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "NextEventName": "Event214",
+          "ActorName": "GreatFairy",
+          "Name": "Event205",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 230,
+          "ActorIndex": 1,
+          "ActorActionIndex": 9,
+          "NextEventName": "Event137",
+          "ActorName": "GreatFairy",
+          "Name": "Event206",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 226,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event205",
+          "ActorName": "GreatFairy",
+          "Name": "Event207",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 191,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event45",
+          "ActorName": "GreatFairy",
+          "Name": "Event214",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 192,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event46",
+          "ActorName": "GreatFairy",
+          "Name": "Event137",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 234,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "expression": {
+              "String": "smile"
+            }
+          },
+          "NextEventName": "Event186",
+          "ActorName": "GreatFairy",
+          "Name": "Event213",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 235,
+          "ActorIndex": 1,
+          "ActorActionIndex": 9,
+          "NextEventName": "Event219",
+          "ActorName": "GreatFairy",
+          "Name": "Event215",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_talk_Q_end",
+          "Name": "Event218",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 195,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event48",
+          "ActorName": "GreatFairy",
+          "Name": "Event186",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 200,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event88",
+          "ActorName": "GreatFairy",
+          "Name": "Event219",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 196,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event58",
+          "ActorName": "GreatFairy",
+          "Name": "Event220",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyAppear_010_Cancel"
+            }
+          },
+          "ActorName": "GreatFairy",
+          "Name": "Event221",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_talk_Q_end",
+          "Name": "Event138",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 238,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "GreatFairyFirstTalk"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event138",
+          "ActorName": "EventFlags",
+          "Name": "Event145",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "GreatFairyFirstTalk"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event168",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 216,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "GreatFairyFirstTalk"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event140",
+          "ActorName": "EventFlags",
+          "Name": "Event216",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 5,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "questKey": {
+              "String": "Volcano"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 277
+            },
+            {
+              "Value": 1,
+              "EventIndex": 277
+            },
+            {
+              "Value": 2,
+              "EventIndex": 278
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event136",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 277
+            },
+            {
+              "Value": 2,
+              "EventIndex": 277
+            },
+            {
+              "Value": 3,
+              "EventIndex": 277
+            },
+            {
+              "Value": 4,
+              "EventIndex": 242
+            },
+            {
+              "Value": 5,
+              "EventIndex": 242
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event139",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 153,
+          "FlowchartName": "",
+          "EntryPointName": "_TreasureBoxAppearCheck",
+          "NextEventName": "Event202",
+          "Name": "Event171",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 61,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event151",
+          "ActorName": "Hud",
+          "Name": "Event170",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 241,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event216",
+          "ActorName": "Hud",
+          "Name": "Event224",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 62,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event152",
+          "ActorName": "Hud",
+          "Name": "Event225",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 63,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event153",
+          "ActorName": "Hud",
+          "Name": "Event226",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 146,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event158",
+          "ActorName": "Hud",
+          "Name": "Event229",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 147,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event166",
+          "ActorName": "Hud",
+          "Name": "Event231",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 148,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event174",
+          "ActorName": "Hud",
+          "Name": "Event232",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 64,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event154",
+          "ActorName": "Hud",
+          "Name": "Event233",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 71,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event163",
+          "ActorName": "Hud",
+          "Name": "Event234",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 287,
+          "ActorIndex": 13,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event296",
+          "ActorName": "Hud",
+          "Name": "Event223",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 257,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyTalk_Q1_QuestInProgress"
+            }
+          },
+          "NextEventName": "Event235",
+          "ActorName": "GreatFairy",
+          "Name": "Event227",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 255,
+          "ActorIndex": 1,
+          "ActorActionIndex": 9,
+          "NextEventName": "Event227",
+          "ActorName": "GreatFairy",
+          "Name": "Event228",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 2
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 259
+            },
+            {
+              "Value": 1,
+              "EventIndex": 262
+            },
+            {
+              "Value": 2,
+              "EventIndex": 263
+            },
+            {
+              "Value": 3,
+              "EventIndex": 260
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event235",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 244,
+          "FlowchartName": "",
+          "EntryPointName": "_justTalk",
+          "NextEventName": "Event171",
+          "Name": "Event236",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 261,
+          "FlowchartName": "",
+          "EntryPointName": "AccessoryCheck",
+          "NextEventName": "Event240",
+          "Name": "Event237",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_talk_Q_end",
+          "Name": "Event239",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 256,
+          "FlowchartName": "",
+          "EntryPointName": "_TreasureBoxAppearCheck",
+          "NextEventName": "Event228",
+          "Name": "Event240",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 261,
+          "FlowchartName": "",
+          "EntryPointName": "_justTalk",
+          "NextEventName": "Event240",
+          "Name": "Event241",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_Quest_2",
+          "Name": "Event242",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Talk_Q2",
+          "Name": "Event97",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 153,
+          "FlowchartName": "",
+          "EntryPointName": "_TreasureBoxAppearCheck",
+          "NextEventName": "Event202",
+          "Name": "Event243",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 126,
+          "ActorIndex": 11,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "fadeSec": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event256",
+          "ActorName": "Audio",
+          "Name": "Event222",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 69,
+          "ActorIndex": 11,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "fadeSec": {
+              "Float": 2.5
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event143",
+          "ActorName": "Audio",
+          "Name": "Event244",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 264,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaPlane:GreatFairyAppear_010"
+            }
+          },
+          "NextEventName": "Event97",
+          "ActorName": "GreatFairy",
+          "Name": "Event230",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 95,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event18",
+          "ActorName": "GreatFairy",
+          "Name": "Event245",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 203,
+          "ActorIndex": 1,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "name": {
+              "String": "isAppearDemo"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event101",
+          "ActorName": "GreatFairy",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "name": {
+              "String": "isAppearDemo"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 270
+            },
+            {
+              "Value": 1,
+              "EventIndex": 288
+            }
+          ],
+          "ActorName": "GreatFairy",
+          "Name": "Event246",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 217,
+          "ActorIndex": 1,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "name": {
+              "String": "isWelcomeMessage"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event82",
+          "ActorName": "GreatFairy",
+          "Name": "Event248",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "name": {
+              "String": "isWelcomeMessage"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 274
+            },
+            {
+              "Value": 1,
+              "EventIndex": 264
+            }
+          ],
+          "ActorName": "GreatFairy",
+          "Name": "Event249",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 268,
+          "ActorIndex": 1,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "name": {
+              "String": "isWelcomeMessage"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event230",
+          "ActorName": "GreatFairy",
+          "Name": "Event260",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 197
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event89",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event277",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            }
+          },
+          "FlowchartName": "AreaExitCommon",
+          "EntryPointName": "FieldWalkOut",
+          "Name": "Event278",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "symbol": {
+              "String": "EventLuberiLvUpTalk"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 277
+            },
+            {
+              "Value": 1,
+              "EventIndex": 76
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event99",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 97,
+          "ActorIndex": 11,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "fadeSec": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event22",
+          "ActorName": "Audio",
+          "Name": "Event261",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 222,
+          "ActorIndex": 11,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "fadeSec": {
+              "Float": 2.5
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event193",
+          "ActorName": "Audio",
+          "Name": "Event262",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 24,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 5
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event80",
+          "ActorName": "Camera",
+          "Name": "Event288",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 5
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 2
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event291",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 174,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 5
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event28",
+          "ActorName": "Camera",
+          "Name": "Event292",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 175,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 5
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event30",
+          "ActorName": "Camera",
+          "Name": "Event293",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 176,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 5
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event32",
+          "ActorName": "Camera",
+          "Name": "Event294",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 254,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event223",
+          "ActorName": "Hud",
+          "Name": "Event295",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 253,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event234",
+          "ActorName": "Timer",
+          "Name": "Event296",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 293,
+          "ForkEventIndicies": [
+            289,
+            290
+          ],
+          "Name": "Event297",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 291,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event300",
+          "ActorName": "Player",
+          "Name": "Event298",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 292,
+          "ActorIndex": 14,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event301",
+          "ActorName": "Partner",
+          "Name": "Event299",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event300",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event301",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event302",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 299,
+          "ForkEventIndicies": [
+            295,
+            296,
+            300
+          ],
+          "Name": "Event303",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 297,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event306",
+          "ActorName": "Player",
+          "Name": "Event304",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 298,
+          "ActorIndex": 14,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event307",
+          "ActorName": "Partner",
+          "Name": "Event305",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event306",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event307",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 301,
+          "NextEventName": "Event309",
+          "Name": "Event308",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "Name": "Event271",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 302,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "GreatFairy",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 5
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event272",
+          "ActorName": "Camera",
+          "Name": "Event309",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 55,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event147",
+          "ActorName": "GreatFairy",
+          "Name": "Event272",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "_cansel": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 145
+        },
+        "_justTalk": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 139
+        },
+        "_Quest_2": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 0
+        },
+        "_talk_Q_end": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 237
+        },
+        "_TreasureBoxAppearCheck": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 276
+        },
+        "AccessoryCheck": {
+          "SubFlowEventIndices": [
+            105,
+            107,
+            109,
+            111
+          ],
+          "EventIndex": 57
+        },
+        "AccessoryLvUpDemo": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 159
+        },
+        "FieldWalkOut_TreasureBoxAppearCheck": {
+          "SubFlowEventIndices": [
+            277
+          ],
+          "EventIndex": 243
+        },
+        "GreatFairy_TreasureBox": {
+          "SubFlowEventIndices": [
+            187,
+            91,
+            117
+          ],
+          "EventIndex": 187
+        },
+        "GreatFairyAppear": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 271
+        },
+        "moneycheck": {
+          "SubFlowEventIndices": [
+            71
+          ],
+          "EventIndex": 67
+        },
+        "Quest_2": {
+          "SubFlowEventIndices": [
+            169,
+            53,
+            264
+          ],
+          "EventIndex": 169
+        },
+        "Quest_3": {
+          "SubFlowEventIndices": [
+            168,
+            54
+          ],
+          "EventIndex": 168
+        },
+        "slotrupee1": {
+          "SubFlowEventIndices": [
+            131,
+            216
+          ],
+          "EventIndex": 104
+        },
+        "slotrupee2": {
+          "SubFlowEventIndices": [
+            132,
+            146
+          ],
+          "EventIndex": 106
+        },
+        "slotrupee3": {
+          "SubFlowEventIndices": [
+            133,
+            147
+          ],
+          "EventIndex": 108
+        },
+        "slotrupee5": {
+          "SubFlowEventIndices": [
+            138,
+            148
+          ],
+          "EventIndex": 110
+        },
+        "talk": {
+          "SubFlowEventIndices": [
+            113,
+            45,
+            129,
+            55
+          ],
+          "EventIndex": 114
+        },
+        "Talk_Q": {
+          "SubFlowEventIndices": [
+            200,
+            265,
+            60,
+            244,
+            258,
+            233,
+            199,
+            238
+          ],
+          "EventIndex": 193
+        },
+        "Talk_Q1": {
+          "SubFlowEventIndices": [
+            60,
+            244,
+            258,
+            233
+          ],
+          "EventIndex": 153
+        },
+        "Talk_Q2": {
+          "SubFlowEventIndices": [
+            259,
+            261,
+            262,
+            263,
+            260
+          ],
+          "EventIndex": 256
+        },
+        "talk0": {
+          "SubFlowEventIndices": [
+            300,
+            55
+          ],
+          "EventIndex": 294
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

@@ -1,0 +1,902 @@
+{
+  "FileName": "TagBattleChallenge",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "TagBattleChallenge": {
+      "Name": "TagBattleChallenge",
+      "Actors": [
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StopRegionBgm",
+            "StopAllBGM",
+            "PlayBGM",
+            "WaitForEndPlayBgm"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestLevelJump",
+            "ForbidSave",
+            "UnforbidSave"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Show"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "BattleChallenge",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "FinishBattleChallengeScene",
+            "GotoNextLevel",
+            "GiveUpChallenge",
+            "AppryNormalClearTimeToMessage",
+            "GameOverChallenge",
+            "ShowTimer"
+          ],
+          "Queries": [
+            "GetConditionNumber",
+            "IsUnderNormalClearTime",
+            "GetFailureKind"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "StartUi",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowCountDown"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EndUi",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Show"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowGameQuitHelp",
+            "HideGameQuitHelp"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 24,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "minigame/BattleChallenge:ExplainTraining_BattleChallrenge_010"
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "Dialog",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 14,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "FlowchartName": "AreaStartCommon",
+          "EntryPointName": "_InCommon",
+          "NextEventName": "Event19",
+          "Name": "Event7",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Argument": "x"
+            },
+            "offsetZ": {
+              "Argument": "z"
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "String": "BattleChallengeRoom"
+            },
+            "locator": {
+              "String": "BattleChallengeRoom_ReturnSuccess"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "BattleChallenge",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "String": "BattleChallengeRoom"
+            },
+            "locator": {
+              "String": "BattleChallengeRoom_ReturnFailure"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "BattleChallenge",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 34,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event36",
+          "ActorName": "StartUi",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event21",
+          "ActorName": "Fade",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ui/StartGoal:Telop_Finish"
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "EndUi",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 33,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event35",
+          "ActorName": "Fade",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event6",
+          "ActorName": "Fade",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "ActorName": "BattleChallenge",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 24,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "minigame/BattleChallenge:ExplainTraining_BattleChallrenge_020"
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "Dialog",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 24,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "minigame/BattleChallenge:ExplainTraining_BattleChallrenge_030"
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "Dialog",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 29,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "minigame/BattleChallenge:ExplainTraining_BattleChallrenge_040"
+            }
+          },
+          "NextEventName": "Event30",
+          "ActorName": "Dialog",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 11
+            },
+            {
+              "Value": 1,
+              "EventIndex": 12
+            },
+            {
+              "Value": 2,
+              "EventIndex": 12
+            },
+            {
+              "Value": 3,
+              "EventIndex": 12
+            },
+            {
+              "Value": 4,
+              "EventIndex": 0
+            }
+          ],
+          "ActorName": "BattleChallenge",
+          "Name": "Event19",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 29,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "minigame/BattleChallenge:ExplainTraining_BattleChallrenge_050"
+            }
+          },
+          "NextEventName": "Event30",
+          "ActorName": "Dialog",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event15",
+          "ActorName": "Hud",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 26,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event27",
+          "ActorName": "Hud",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event3",
+          "ActorName": "Hud",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 47,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event44",
+          "ActorName": "GameControl",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event11",
+          "ActorName": "GameControl",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event12",
+          "ActorName": "GameControl",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event10",
+          "ActorName": "BattleChallenge",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 15,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "useMinutes": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "BattleChallenge",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "timeSec": {
+              "Float": 60
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 25
+            },
+            {
+              "Value": 1,
+              "EventIndex": 23
+            }
+          ],
+          "ActorName": "BattleChallenge",
+          "Name": "Event24",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "useMinutes": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event18",
+          "ActorName": "BattleChallenge",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 2,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 28
+            },
+            {
+              "Value": 2,
+              "EventIndex": 8
+            },
+            {
+              "Value": 3,
+              "EventIndex": 27
+            },
+            {
+              "Value": 4,
+              "EventIndex": 8
+            }
+          ],
+          "ActorName": "BattleChallenge",
+          "Name": "Event27",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ui/StartGoal:Telop_Finish"
+            }
+          },
+          "NextEventName": "Event16",
+          "ActorName": "EndUi",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event16",
+          "ActorName": "BattleChallenge",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "NextEventName": "Event13",
+          "ActorName": "BattleChallenge",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "fadeSec": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event20",
+          "ActorName": "Audio",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 32,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event34",
+          "ActorName": "Audio",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 16,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_ZENMETSU_END"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "Audio",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event25",
+          "ActorName": "Audio",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 36
+            },
+            {
+              "Value": 4,
+              "EventIndex": 35
+            }
+          ],
+          "ActorName": "BattleChallenge",
+          "Name": "Event36",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_ZENMETSU"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event37",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_ZENMETSU"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 39,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "FlowchartName": "AreaStartCommon",
+          "EntryPointName": "_InCommon",
+          "NextEventName": "Event52",
+          "Name": "Event39",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 43,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "confirmLabel": {
+              "String": "ui/Dialog:Dialog_Quit_BattleChallenge"
+            },
+            "entryName": {
+              "String": "GiveUpChallenge"
+            },
+            "eventFlowName": {
+              "String": "TagBattleChallenge"
+            }
+          },
+          "NextEventName": "Event56",
+          "ActorName": "Hud",
+          "Name": "Event47",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 41,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "NextEventName": "Event54",
+          "ActorName": "BattleChallenge",
+          "Name": "Event52",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 44,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "fadeSec": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event41",
+          "ActorName": "Audio",
+          "Name": "Event53",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 38
+            },
+            {
+              "Value": 4,
+              "EventIndex": 45
+            }
+          ],
+          "ActorName": "BattleChallenge",
+          "Name": "Event54",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_ZENMETSU"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_ZENMETSU"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 37,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "label": {
+              "String": "BGM_BATTLE_ZENMETSU"
+            }
+          },
+          "NextEventName": "Event39",
+          "ActorName": "Audio",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 42,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "confirmLabel": {
+              "String": "ui/Dialog:Dialog_Quit_BattleChallenge"
+            },
+            "entryName": {
+              "String": "GiveUpChallenge"
+            },
+            "eventFlowName": {
+              "String": "TagBattleChallenge"
+            }
+          },
+          "NextEventName": "Event55",
+          "ActorName": "Hud",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 30,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "confirmLabel": {
+              "String": "ui/Dialog:Dialog_Quit_BattleChallenge"
+            },
+            "entryName": {
+              "String": "GiveUpChallenge"
+            },
+            "eventFlowName": {
+              "String": "TagBattleChallenge"
+            }
+          },
+          "NextEventName": "Event31",
+          "ActorName": "Hud",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "Timer",
+          "Name": "Event44",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 40,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event53",
+          "ActorName": "Timer",
+          "Name": "Event45",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "ChallengeFailure": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 17
+        },
+        "ChallengeSuccess": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 31
+        },
+        "GiveUpChallenge": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 22
+        },
+        "NextChallenge": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 10
+        },
+        "RestartChallenge": {
+          "SubFlowEventIndices": [
+            37
+          ],
+          "EventIndex": 48
+        },
+        "RetryChallenge": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 18
+        },
+        "StartChallenge": {
+          "SubFlowEventIndices": [
+            1
+          ],
+          "EventIndex": 46
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

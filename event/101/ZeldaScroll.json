@@ -1,0 +1,254 @@
+{
+  "FileName": "ZeldaScroll",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "ZeldaScroll": {
+      "Name": "ZeldaScroll",
+      "Actors": [
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToCompassPoint",
+            "MoveLadder"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "SwitchCompassPoint"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Sync",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SyncReset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "customSpeed": {
+              "Float": 3.6
+            },
+            "direction": {
+              "Argument": "direction"
+            },
+            "distance": {
+              "Argument": "walkDistance"
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 0.8
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Timer",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "compassPoint": {
+              "Argument": "direction"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 3
+            },
+            {
+              "Value": 1,
+              "EventIndex": 1
+            },
+            {
+              "Value": 2,
+              "EventIndex": 3
+            },
+            {
+              "Value": 3,
+              "EventIndex": 1
+            },
+            {
+              "Value": 4,
+              "EventIndex": 7
+            },
+            {
+              "Value": 5,
+              "EventIndex": 5
+            },
+            {
+              "Value": 6,
+              "EventIndex": 3
+            }
+          ],
+          "ActorName": "FlowControl",
+          "Name": "Event3",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Timer",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "distance": {
+              "Argument": "walkDistance"
+            },
+            "mode": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 0.8
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "Timer",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "distance": {
+              "Argument": "walkDistance"
+            },
+            "mode": {
+              "Int": 2
+            },
+            "timeOut": {
+              "Float": 0.8
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "Timer",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event3",
+          "ActorName": "Sync",
+          "Name": "Event9",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "ZeldaScroll": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 8
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

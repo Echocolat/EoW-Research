@@ -1,0 +1,332 @@
+{
+  "FileName": "DefaultAreaStart",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "DefaultAreaStart": {
+      "Name": "DefaultAreaStart",
+      "Actors": [
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToAdjustedStartupPosition"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [
+            "CheckFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "TutorialUI",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowModal"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "IsDirectStartup",
+            "NeedsAdjustDirectStartupTransform"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Reset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToDefaultPosition"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Yield_"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "Fade",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "FastChangeLink"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "key": {
+              "String": "AfterBreakBarricadeModal"
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "TutorialUI",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "Timer",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "AfterBreakBarricadeModal_Clear"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 5
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event8",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_AfterBreakBarricadeModal",
+          "Name": "Event7",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Ev_ChangeLink"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 4
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event9",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 5,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 0
+            },
+            {
+              "Value": 1,
+              "EventIndex": 12
+            }
+          ],
+          "ActorName": "GameControl",
+          "Name": "Event1",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "avoidWater": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "Player",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 1
+            },
+            "resetPlayerCamera": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Camera",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "avoidPlayer": {
+              "Bool": false
+            },
+            "avoidWall": {
+              "Bool": false
+            },
+            "position": {
+              "Int": 1
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "Partner",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event2",
+          "ActorName": "FlowControl",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 5,
+          "ActorQueryIndex": 1,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 10
+            },
+            {
+              "Value": 1,
+              "EventIndex": 11
+            }
+          ],
+          "ActorName": "GameControl",
+          "Name": "Event12",
+          "Type": "Switch"
+        }
+      ],
+      "EntryPoints": {
+        "_AfterBreakBarricadeModal": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 3
+        },
+        "Default": {
+          "SubFlowEventIndices": [
+            5
+          ],
+          "EventIndex": 7
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

@@ -1,0 +1,348 @@
+{
+  "FileName": "FieldBoundary004",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "FieldBoundary004": {
+      "Name": "FieldBoundary004",
+      "Actors": [
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Talk",
+            "PlayAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "UnforbidSave",
+            "EnableAutoSave",
+            "ForbidWarp"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StopZoneBgm",
+            "PlayZoneBaseAmbience"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetProgress"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventVariables",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVariable"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvC_WorldGlobeActivate"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event37",
+          "ActorName": "EventFlags",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Volcano:1816244391"
+            }
+          },
+          "ActorName": "EventVariables",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Volcano:1816244391"
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "QuestSystem",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "Parameters": {
+            "Key": {
+              "String": "L004"
+            }
+          },
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "PartnerLvelUp",
+          "NextEventName": "Event7",
+          "Name": "Event37",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Timer",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "Parameters": {
+            "Dungeon": {
+              "String": "L004"
+            },
+            "Idx": {
+              "Int": 95
+            }
+          },
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "LD_WorldGlobePieceGet",
+          "NextEventName": "Event18",
+          "Name": "Event7",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 4,
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "LookReturnPartner",
+          "NextEventName": "Event14",
+          "Name": "Event19",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event15",
+          "ActorName": "Audio",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "Timer",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/PartnerTalk:LetsGoBack_010"
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "Partner",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 16,
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "ReleaseofGoddess_Din",
+          "NextEventName": "Event2",
+          "Name": "Event3",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "ActorName": "GameControl",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "ActorName": "GameControl",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 14,
+          "ForkEventIndicies": [
+            11,
+            12
+          ],
+          "Name": "Event10",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 15,
+          "NextEventName": "Event12",
+          "Name": "Event11",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event5",
+          "ActorName": "GameControl",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.5
+            }
+          },
+          "NextEventName": "Event13",
+          "ActorName": "Timer",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "Partner",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event19",
+          "ActorName": "Audio",
+          "Name": "Event15",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "AfterReleasTriTalkAreaC": {
+          "SubFlowEventIndices": [
+            6,
+            3,
+            5,
+            10
+          ],
+          "EventIndex": 7
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

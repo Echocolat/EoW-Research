@@ -1,0 +1,3793 @@
+{
+  "FileName": "AreaExitCommon",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "AreaExitCommon": {
+      "Name": "AreaExitCommon",
+      "Actors": [
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestLevelJump",
+            "SetThroughObstaclesOnMove",
+            "SetResetOverlappedActorsOnMoveDone"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayJingle",
+            "StopAllSE",
+            "PlayOneshotSystemSE",
+            "StopAllBGM",
+            "SetPlayerVolume"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "AimCompassPoint",
+            "SetVisibility",
+            "PlayTailorOtherChannelNoWait",
+            "StopTailorOtherChannel",
+            "LookAtTalker",
+            "SetGravityEnable"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToTargetActor",
+            "MoveLadder",
+            "PlayAnimation",
+            "AimCompassPoint",
+            "PlayMaterialAnimation",
+            "MoveToCompassPoint",
+            "AimActor",
+            "ResetVelocity",
+            "WaitForReady",
+            "SetGravityEnable",
+            "SetCollisionEnabled",
+            "SetVisibility",
+            "AbsorbAllPastedActors",
+            "MorphEnd",
+            "BreakBurrowable",
+            "ResetCarriedActor",
+            "HideBurningEffect",
+            "GetOffVehicle"
+          ],
+          "Queries": [
+            "CheckMorph"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimationNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "BoundaryGate",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayTailorOtherChannelNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Sync",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SyncReset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "HidePartnerGauge"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Area",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "BoundaryGateDoAction",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToBesideTargetActor",
+            "PlayAnimation",
+            "AimCompassPoint",
+            "SetVisibility",
+            "PlayTailorOtherChannelNoWait",
+            "StopTailorOtherChannel",
+            "AimActor",
+            "DisableSyncRodBallFollow"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "JoinEventIndex": 3,
+          "ForkEventIndicies": [
+            1,
+            4
+          ],
+          "Name": "Event0",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event1",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "NextEventName": "Event2",
+          "Name": "Event3",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "SE_OBJ_WARP_FIELD_ON"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 8,
+          "ForkEventIndicies": [
+            6,
+            142,
+            204
+          ],
+          "Name": "Event6",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutFastB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event7",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "NextEventName": "Event8",
+          "Name": "Event9",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Area",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 1
+            },
+            "tolerance": {
+              "Float": 0.1
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "Argument": "fadePreset"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 14,
+          "ForkEventIndicies": [
+            12,
+            15,
+            144
+          ],
+          "Name": "Event4",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event10",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "NextEventName": "Event16",
+          "Name": "Event22",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "distance": {
+              "Float": 3
+            },
+            "mode": {
+              "Int": 2
+            },
+            "timeOut": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 19,
+          "ForkEventIndicies": [
+            17,
+            20,
+            145
+          ],
+          "Name": "Event24",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event25",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "NextEventName": "Event26",
+          "Name": "Event27",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "distance": {
+              "Float": 3
+            },
+            "mode": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalW"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event30",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event44",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 26,
+          "ForkEventIndicies": [
+            24,
+            27,
+            146
+          ],
+          "Name": "Event34",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 23,
+          "NextEventName": "Event38",
+          "Name": "Event35",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_swim_levelout"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 31,
+          "ForkEventIndicies": [
+            29,
+            91
+          ],
+          "Name": "Event37",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutFastB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event39",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 30,
+          "NextEventName": "Event40",
+          "Name": "Event41",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 35,
+          "ForkEventIndicies": [
+            33,
+            86
+          ],
+          "Name": "Event43",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event50",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event51",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 34,
+          "NextEventName": "Event51",
+          "Name": "Event52",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 39,
+          "ForkEventIndicies": [
+            37,
+            68,
+            147
+          ],
+          "Name": "Event54",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event55",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 38,
+          "NextEventName": "Event56",
+          "Name": "Event57",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 43,
+          "ForkEventIndicies": [
+            41,
+            44,
+            148,
+            180
+          ],
+          "Name": "Event59",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event60",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event61",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 42,
+          "NextEventName": "Event61",
+          "Name": "Event62",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_spiralstaircase_levelin_u"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event63",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 48,
+          "ForkEventIndicies": [
+            46,
+            49,
+            149,
+            181
+          ],
+          "Name": "Event64",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event65",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event66",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 47,
+          "NextEventName": "Event66",
+          "Name": "Event67",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_spiralstaircase_levelin_d"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event68",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 53,
+          "ForkEventIndicies": [
+            51,
+            85
+          ],
+          "Name": "Event74",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event75",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event76",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 52,
+          "NextEventName": "Event76",
+          "Name": "Event77",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 56,
+          "NextEventName": "Event82",
+          "Name": "Event81",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event82",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event83",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 55,
+          "ForkEventIndicies": [
+            57,
+            69
+          ],
+          "Name": "Event84",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event87",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 63,
+          "ForkEventIndicies": [
+            61,
+            64,
+            153
+          ],
+          "Name": "Event88",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event89",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event90",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 62,
+          "NextEventName": "Event90",
+          "Name": "Event91",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_ladder_levelin_d"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event92",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 66,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Area",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 1
+            },
+            "tolerance": {
+              "Float": 0.1
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event99",
+          "ActorName": "Player",
+          "Name": "Event98",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 60,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event88",
+          "ActorName": "Player",
+          "Name": "Event99",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Area",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 1
+            },
+            "tolerance": {
+              "Float": 0.1
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Area",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 1
+            },
+            "tolerance": {
+              "Float": 0.1
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "BoundaryGate",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 1
+            },
+            "tolerance": {
+              "Float": 0.1
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event80",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 73,
+          "ForkEventIndicies": [
+            71,
+            93,
+            154
+          ],
+          "Name": "Event112",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutFastB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event113",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event114",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 72,
+          "NextEventName": "Event114",
+          "Name": "Event115",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event122",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event123",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 77,
+          "ForkEventIndicies": [
+            79,
+            78,
+            74
+          ],
+          "Name": "Event124",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 75,
+          "NextEventName": "Event123",
+          "Name": "Event125",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "fade_out"
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event127",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "customSpeed": {
+              "Float": 0
+            },
+            "direction": {
+              "Int": 2
+            },
+            "distance": {
+              "Float": 1
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 1
+            },
+            "tolerance": {
+              "Float": 0.1
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event126",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 83,
+          "ForkEventIndicies": [
+            81,
+            84,
+            155
+          ],
+          "Name": "Event128",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event129",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event130",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 82,
+          "NextEventName": "Event130",
+          "Name": "Event131",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "distance": {
+              "Float": 3
+            },
+            "mode": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event132",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_ladder_levelin_d"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event133",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_ladder_levelin_u"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event134",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 88,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Area",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 1
+            },
+            "tolerance": {
+              "Float": 0.1
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event135",
+          "ActorName": "Player",
+          "Name": "Event79",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 50,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event74",
+          "ActorName": "Player",
+          "Name": "Event135",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 90,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Area",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 1
+            },
+            "tolerance": {
+              "Float": 0.1
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event137",
+          "ActorName": "Player",
+          "Name": "Event136",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 32,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event43",
+          "ActorName": "Player",
+          "Name": "Event137",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Area",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 1
+            },
+            "tolerance": {
+              "Float": 0.1
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 28,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Area",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.1
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event37",
+          "ActorName": "Player",
+          "Name": "Event138",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Area",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 1
+            },
+            "tolerance": {
+              "Float": 0.1
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event139",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 70,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Area",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.1
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event112",
+          "ActorName": "Player",
+          "Name": "Event140",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 96,
+          "ActorIndex": 3,
+          "ActorActionIndex": 7,
+          "NextEventName": "Event141",
+          "ActorName": "Player",
+          "Name": "Event116",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 94,
+          "ActorIndex": 3,
+          "ActorActionIndex": 8,
+          "NextEventName": "Event140",
+          "ActorName": "Player",
+          "Name": "Event141",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 98,
+          "ActorIndex": 3,
+          "ActorActionIndex": 7,
+          "NextEventName": "Event143",
+          "ActorName": "Player",
+          "Name": "Event142",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 92,
+          "ActorIndex": 3,
+          "ActorActionIndex": 8,
+          "NextEventName": "Event138",
+          "ActorName": "Player",
+          "Name": "Event143",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event145",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 141,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "BoundaryGateDoAction",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event70",
+          "ActorName": "Player",
+          "Name": "Event149",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 103,
+          "ForkEventIndicies": [
+            158,
+            179
+          ],
+          "Name": "Event155",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_InBoundaryWorld_jump"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event156",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 156,
+          "NextEventName": "Event235",
+          "Name": "Event160",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 105,
+          "ForkEventIndicies": [
+            164,
+            160
+          ],
+          "Name": "Event161",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 101,
+          "NextEventName": "Event155",
+          "Name": "Event164",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 54,
+          "FlowchartName": "",
+          "EntryPointName": "_jump_boundary",
+          "NextEventName": "Event71",
+          "Name": "Event151",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 1.75
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 113,
+          "ForkEventIndicies": [
+            109,
+            110,
+            130,
+            137
+          ],
+          "Name": "Event15",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 111,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_WarpStart_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event72",
+          "ActorName": "Zelda",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 112,
+          "ActorIndex": 12,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_WarpStart_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event73",
+          "ActorName": "Partner",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_WarpStart_lp"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event72",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_WarpStart_lp"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event73",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 131,
+          "NextEventName": "Event203",
+          "Name": "Event144",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 117,
+          "ForkEventIndicies": [
+            115,
+            116
+          ],
+          "Name": "Event146",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event147",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event148",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 108,
+          "NextEventName": "Event15",
+          "Name": "Event153",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 119,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event188",
+          "ActorName": "Zelda",
+          "Name": "Event187",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event188",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 123,
+          "ActorIndex": 2,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "channel": {
+              "String": "WarpStart_00"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event195",
+          "ActorName": "Zelda",
+          "Name": "Event192",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "channel": {
+              "String": "WarpStart_00"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event193",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 126,
+          "ActorIndex": 2,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "channel": {
+              "String": "WarpStart_01"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event198",
+          "ActorName": "Zelda",
+          "Name": "Event194",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 128,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.833
+            }
+          },
+          "NextEventName": "Event200",
+          "ActorName": "Timer",
+          "Name": "Event195",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 125,
+          "ActorIndex": 2,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "channel": {
+              "String": "WarpStart_00"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "NextEventName": "Event197",
+          "ActorName": "Zelda",
+          "Name": "Event196",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 118,
+          "ActorIndex": 12,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "channel": {
+              "String": "WarpStart_00"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "NextEventName": "Event187",
+          "ActorName": "Partner",
+          "Name": "Event197",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.833
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event198",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 124,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.667
+            }
+          },
+          "NextEventName": "Event196",
+          "ActorName": "Timer",
+          "Name": "Event199",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 129,
+          "ForkEventIndicies": [
+            127,
+            122,
+            201
+          ],
+          "Name": "Event200",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 138,
+          "NextEventName": "Event211",
+          "Name": "Event201",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 121,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event193",
+          "ActorName": "Timer",
+          "Name": "Event202",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 120,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.333
+            }
+          },
+          "NextEventName": "Event192",
+          "ActorName": "Timer",
+          "Name": "Event203",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 133,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event205",
+          "ActorName": "Zelda",
+          "Name": "Event204",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 210,
+          "ActorIndex": 12,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event285",
+          "ActorName": "Partner",
+          "Name": "Event205",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 135,
+          "ForkEventIndicies": [
+            136,
+            107,
+            139
+          ],
+          "Name": "Event206",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 114,
+          "NextEventName": "Event146",
+          "Name": "Event207",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": -2
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event208",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 182,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.7
+            }
+          },
+          "NextEventName": "Event177",
+          "ActorName": "Timer",
+          "Name": "Event210",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 132,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event204",
+          "ActorName": "Fade",
+          "Name": "Event211",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 202,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event277",
+          "Name": "Event214",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 134,
+          "ActorIndex": 2,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event206",
+          "ActorName": "Zelda",
+          "Name": "Event216",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 99,
+          "FlowchartName": "",
+          "EntryPointName": "_jumpout_boundary",
+          "NextEventName": "Event145",
+          "Name": "Event70",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event217",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event218",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event219",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event220",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event221",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event222",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event223",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event224",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event225",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 152,
+          "ForkEventIndicies": [
+            195,
+            150
+          ],
+          "Name": "Event226",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 59,
+          "NextEventName": "Event87",
+          "Name": "Event227",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event228",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event232",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event233",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event235",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 104,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event161",
+          "Name": "Event189",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 159,
+          "ActorIndex": 3,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event236",
+          "ActorName": "Player",
+          "Name": "Event191",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 203,
+          "ActorIndex": 3,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event278",
+          "ActorName": "Player",
+          "Name": "Event236",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "BoundaryGate",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": -2
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event237",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 163,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "BoundaryGate",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 1.75
+            },
+            "offsetZ": {
+              "Float": -1.5
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event243",
+          "ActorName": "Partner",
+          "Name": "Event239",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "BoundaryGate",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": -1.5
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event240",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 169,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "move_down"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event166",
+          "ActorName": "Partner",
+          "Name": "Event243",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "BoundaryGate",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": -2
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event150",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "level": {
+              "Argument": "level"
+            },
+            "locator": {
+              "Argument": "locator"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 165,
+          "FlowchartName": "",
+          "EntryPointName": "_jump_boundary",
+          "NextEventName": "Event13",
+          "Name": "Event20",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 168,
+          "ForkEventIndicies": [
+            102,
+            172,
+            178
+          ],
+          "Name": "Event162",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event163",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 170,
+          "ForkEventIndicies": [
+            162,
+            173,
+            176,
+            199
+          ],
+          "Name": "Event166",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event167",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "channel": {
+              "String": "WarpStart_Crack"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "BoundaryGate",
+          "Name": "Event69",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 171,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.8
+            }
+          },
+          "NextEventName": "Event69",
+          "ActorName": "Timer",
+          "Name": "Event159",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 174,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.6
+            }
+          },
+          "NextEventName": "Event169",
+          "ActorName": "Timer",
+          "Name": "Event168",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "channel": {
+              "String": "WarpStart_Crack"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "BoundaryGate",
+          "Name": "Event169",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event154",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 175,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.767
+            }
+          },
+          "NextEventName": "Event154",
+          "ActorName": "Timer",
+          "Name": "Event165",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event170",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 177,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.9
+            }
+          },
+          "NextEventName": "Event170",
+          "ActorName": "Timer",
+          "Name": "Event172",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 161,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event239",
+          "ActorName": "Timer",
+          "Name": "Event173",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0.2
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event175",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0.2
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event176",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "label": {
+              "String": "SE_SYS_WARP_START_00"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event177",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 10,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllResetAreaChange",
+          "NextEventName": "Event18",
+          "Name": "Event179",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "isExcludeKarakuri": {
+              "Bool": false
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 186,
+          "ForkEventIndicies": [
+            184,
+            187,
+            188,
+            190,
+            191,
+            192,
+            193,
+            194,
+            21,
+            67,
+            143
+          ],
+          "Name": "Event86",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 22,
+          "NextEventName": "Event31",
+          "Name": "Event180",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "ActorName": "Sync",
+          "Name": "Event181",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "morphKind": {
+              "Int": 0
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 189
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event182",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 13,
+          "ActorName": "Player",
+          "Name": "Event183",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 14,
+          "ActorName": "Player",
+          "Name": "Event184",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 15,
+          "ActorName": "Player",
+          "Name": "Event186",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 16,
+          "ActorName": "Player",
+          "Name": "Event190",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 17,
+          "Parameters": {
+            "anim": {
+              "String": "get_off"
+            },
+            "disappear": {
+              "Bool": true
+            },
+            "method": {
+              "Int": 0
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event209",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 7,
+          "ActorName": "Partner",
+          "Name": "Event212",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "fadePreset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_OutCommon",
+          "Name": "Event29",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 87,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllResetAreaChange",
+          "NextEventName": "Event79",
+          "Name": "Event32",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 89,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllResetAreaChange",
+          "NextEventName": "Event136",
+          "Name": "Event85",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "channel": {
+              "String": "GlowKeep"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event274",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 198,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event274",
+          "ActorName": "Timer",
+          "Name": "Event275",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "label": {
+              "String": "SE_SYS_WARP_START_01"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event273",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 200,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event273",
+          "ActorName": "Timer",
+          "Name": "Event276",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 209,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "duration": {
+              "Float": 2.5
+            }
+          },
+          "NextEventName": "Event284",
+          "ActorName": "Audio",
+          "Name": "Event277",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 167,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "duration": {
+              "Float": 2.5
+            }
+          },
+          "NextEventName": "Event162",
+          "ActorName": "Audio",
+          "Name": "Event278",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Area",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.01
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event12",
+          "ActorName": "Player",
+          "Name": "Event279",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 208,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event283",
+          "ActorName": "GameControl",
+          "Name": "Event281",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 205,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event281",
+          "ActorName": "GameControl",
+          "Name": "Event282",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 100,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event149",
+          "ActorName": "Hud",
+          "Name": "Event280",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 65,
+          "ActorIndex": 3,
+          "ActorActionIndex": 7,
+          "NextEventName": "Event98",
+          "ActorName": "Player",
+          "Name": "Event283",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "duration": {
+              "Float": 0.2
+            },
+            "label": {
+              "String": "PLAYER_SE_ENEMY"
+            },
+            "volume": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event284",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "duration": {
+              "Float": 0.2
+            },
+            "label": {
+              "String": "PLAYER_SE_ENEMY"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event285",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "_jump_boundary": {
+          "SubFlowEventIndices": [
+            157
+          ],
+          "EventIndex": 157
+        },
+        "_jumpout_boundary": {
+          "SubFlowEventIndices": [
+            139
+          ],
+          "EventIndex": 140
+        },
+        "_OutCommon": {
+          "SubFlowEventIndices": [
+            183
+          ],
+          "EventIndex": 183
+        },
+        "BoundaryWorldWarpOut": {
+          "SubFlowEventIndices": [
+            57
+          ],
+          "EventIndex": 58
+        },
+        "BoundaryWorldWarpOutDo": {
+          "SubFlowEventIndices": [
+            141
+          ],
+          "EventIndex": 207
+        },
+        "FieldStairDownOut": {
+          "SubFlowEventIndices": [
+            29
+          ],
+          "EventIndex": 97
+        },
+        "FieldWalkOut": {
+          "SubFlowEventIndices": [
+            74
+          ],
+          "EventIndex": 76
+        },
+        "FieldWallLadderDownOut": {
+          "SubFlowEventIndices": [
+            196,
+            51
+          ],
+          "EventIndex": 196
+        },
+        "FieldWallLadderUpOut": {
+          "SubFlowEventIndices": [
+            197,
+            33
+          ],
+          "EventIndex": 197
+        },
+        "LadderDown": {
+          "SubFlowEventIndices": [
+            12
+          ],
+          "EventIndex": 11
+        },
+        "LadderUp": {
+          "SubFlowEventIndices": [
+            17
+          ],
+          "EventIndex": 16
+        },
+        "OverWorldWarpOut": {
+          "SubFlowEventIndices": [
+            106
+          ],
+          "EventIndex": 106
+        },
+        "OverWorldWarpOut0": {
+          "SubFlowEventIndices": [
+            166
+          ],
+          "EventIndex": 166
+        },
+        "StairDownOut": {
+          "SubFlowEventIndices": [
+            71
+          ],
+          "EventIndex": 95
+        },
+        "SwimDownOutTop": {
+          "SubFlowEventIndices": [
+            37
+          ],
+          "EventIndex": 36
+        },
+        "SwimUpOut": {
+          "SubFlowEventIndices": [
+            24
+          ],
+          "EventIndex": 25
+        },
+        "TopLadderDownOut": {
+          "SubFlowEventIndices": [
+            61
+          ],
+          "EventIndex": 206
+        },
+        "WalkOut": {
+          "SubFlowEventIndices": [
+            6
+          ],
+          "EventIndex": 5
+        },
+        "WalkOut_White": {
+          "SubFlowEventIndices": [
+            21
+          ],
+          "EventIndex": 185
+        },
+        "WallStairDownOut": {
+          "SubFlowEventIndices": [
+            46
+          ],
+          "EventIndex": 45
+        },
+        "WallStairUpOut": {
+          "SubFlowEventIndices": [
+            41
+          ],
+          "EventIndex": 40
+        },
+        "WarpOut": {
+          "SubFlowEventIndices": [
+            1
+          ],
+          "EventIndex": 0
+        },
+        "WellDown": {
+          "SubFlowEventIndices": [
+            195
+          ],
+          "EventIndex": 151
+        },
+        "WellLadderUp": {
+          "SubFlowEventIndices": [
+            81
+          ],
+          "EventIndex": 80
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

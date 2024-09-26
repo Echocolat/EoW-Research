@@ -1,0 +1,1795 @@
+{
+  "FileName": "BossCommon",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "BossCommon": {
+      "Name": "BossCommon",
+      "Actors": [
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WaitForReady",
+            "PlayAnimation",
+            "BreakBurrowable",
+            "ResetCarriedActor",
+            "StopBurning",
+            "GetOffVehicle",
+            "MorphEnd"
+          ],
+          "Queries": [
+            "CheckMorph"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StopAllBGM",
+            "StopRegioBGMBeforeMiddleBoss"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetCanSkip"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimationNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ResetFloorAbyss"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToTargetActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Enemy",
+          "SecondaryName": "HitStop(enemy)",
+          "ArgumentName": "enemy",
+          "EntryPointIndex": 0,
+          "CutNumber": 1,
+          "Actions": [
+            "HitStop",
+            "LookAtBoss"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Enemy",
+          "SecondaryName": "BossExtinction(enemy)",
+          "ArgumentName": "enemy",
+          "EntryPointIndex": 1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayTailorOtherChannelNoWait",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Enemy",
+          "SecondaryName": "MiniBossExtinction(enemy)",
+          "ArgumentName": "enemy",
+          "EntryPointIndex": 2,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "PlayTailorOtherChannelEx",
+            "SetVisibility",
+            "ItemDropToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Enemy",
+          "SecondaryName": "MiniBossExtinction2(enemy)",
+          "ArgumentName": "enemy",
+          "EntryPointIndex": 3,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "PlayTailorOtherChannelEx",
+            "SetVisibility",
+            "ItemDropToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Enemy",
+          "SecondaryName": "MiniBossDoorClose(enemy)",
+          "ArgumentName": "enemy",
+          "EntryPointIndex": 4,
+          "CutNumber": 1,
+          "Actions": [
+            "RoomDoorClose"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Enemy",
+          "SecondaryName": "HitStopSmallBoss(enemy)",
+          "ArgumentName": "enemy",
+          "EntryPointIndex": 6,
+          "CutNumber": 1,
+          "Actions": [
+            "HitStop",
+            "LookAtBoss"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Enemy",
+          "SecondaryName": "HitStopBigBoss(enemy)",
+          "ArgumentName": "enemy",
+          "EntryPointIndex": 7,
+          "CutNumber": 1,
+          "Actions": [
+            "HitStop",
+            "LookAtBoss"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Enemy",
+          "SecondaryName": "LanmolaExtinction(enemy)",
+          "ArgumentName": "enemy",
+          "EntryPointIndex": 8,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "PlayTailorOtherChannelEx",
+            "PlayMaterialAnimationNoWait",
+            "SetVisibility",
+            "ItemDropToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Enemy",
+          "SecondaryName": "HitStopNonStopBGM(enemy)",
+          "ArgumentName": "enemy",
+          "EntryPointIndex": 9,
+          "CutNumber": 1,
+          "Actions": [
+            "HitStop",
+            "LookAtBoss"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Enemy",
+          "SecondaryName": "HitStopCustom(enemy)",
+          "ArgumentName": "enemy",
+          "EntryPointIndex": 10,
+          "CutNumber": 1,
+          "Actions": [
+            "HitStop",
+            "LookAtBoss"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Enemy",
+          "SecondaryName": "VolvagiaExtinction(enemy)",
+          "ArgumentName": "enemy",
+          "EntryPointIndex": 11,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayTailorOtherChannelNoWait",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "JoinEventIndex": 1,
+          "ForkEventIndicies": [
+            2,
+            3
+          ],
+          "Name": "Event0",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 5,
+          "NextEventName": "Event8",
+          "Name": "Event1",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "delay": {
+              "Bool": false
+            },
+            "duration": {
+              "Float": -1
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "ActorName": "Player",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "HitStopReset",
+          "NextEventName": "Event4",
+          "Name": "Event8",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "channel": {
+              "String": "Dead_Boss"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "Enemy",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 5.833
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 9,
+          "ForkEventIndicies": [
+            6,
+            10
+          ],
+          "Name": "Event10",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 11,
+          "NextEventName": "Event14",
+          "Name": "Event11",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 12,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2.5
+            }
+          },
+          "NextEventName": "Event13",
+          "ActorName": "Timer",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 97,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event99",
+          "ActorName": "Enemy",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 76,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "ExtinctionReset",
+          "NextEventName": "Event71",
+          "Name": "Event13",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 16,
+          "ForkEventIndicies": [
+            14,
+            15
+          ],
+          "Name": "Event5",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_dead"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "channel": {
+              "String": "Dead_Boss"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            },
+            "time": {
+              "Float": 4
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "NextEventName": "Event21",
+          "Name": "Event18",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "displacementX": {
+              "Float": 0
+            },
+            "displacementY": {
+              "Float": 5
+            },
+            "displacementZ": {
+              "Float": 0
+            },
+            "linkedItemScatter": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 20,
+          "ForkEventIndicies": [
+            19,
+            17,
+            21
+          ],
+          "Name": "Event21",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 38,
+          "NextEventName": "Event48",
+          "Name": "Event23",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 74,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event25",
+          "ActorName": "Timer",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 25,
+          "ForkEventIndicies": [
+            23,
+            24
+          ],
+          "Name": "Event27",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "channel": {
+              "String": "Dead_Boss"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            },
+            "time": {
+              "Float": 4
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 27,
+          "NextEventName": "Event33",
+          "Name": "Event30",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "displacementX": {
+              "Float": 0
+            },
+            "displacementY": {
+              "Float": 5
+            },
+            "displacementZ": {
+              "Float": 0
+            },
+            "linkedItemScatter": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 29,
+          "ForkEventIndicies": [
+            28,
+            26,
+            30
+          ],
+          "Name": "Event33",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 39,
+          "NextEventName": "Event49",
+          "Name": "Event35",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 75,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event37",
+          "ActorName": "Timer",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 107,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event46",
+          "ActorName": "Timer",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "ActorName": "Enemy",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 31,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_lookback"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event39",
+          "ActorName": "Player",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Partner",
+                "Item2": "companion"
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "distance": {
+              "Float": 1
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 36,
+          "ForkEventIndicies": [
+            32,
+            34
+          ],
+          "Name": "Event43",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 33,
+          "NextEventName": "Event41",
+          "Name": "Event44",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 51,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset_03",
+          "NextEventName": "Event32",
+          "Name": "Event47",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event48",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event49",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 41,
+          "ForkEventIndicies": [
+            42,
+            79
+          ],
+          "Name": "Event50",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 71,
+          "NextEventName": "Event56",
+          "Name": "Event51",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "delay": {
+              "Bool": false
+            },
+            "duration": {
+              "Float": -1
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event52",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "ActorName": "Player",
+          "Name": "Event54",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 45,
+          "ForkEventIndicies": [
+            46,
+            80
+          ],
+          "Name": "Event57",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 72,
+          "NextEventName": "Event63",
+          "Name": "Event58",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "delay": {
+              "Bool": false
+            },
+            "duration": {
+              "Float": -1
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "ActorName": "Player",
+          "Name": "Event61",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 40,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "duration": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event50",
+          "ActorName": "Audio",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "duration": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Audio",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 44,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "duration": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event57",
+          "ActorName": "Audio",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "ActorName": "Audio",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event45",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 58,
+          "ForkEventIndicies": [
+            56,
+            57,
+            70
+          ],
+          "Name": "Event62",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event64",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "channel": {
+              "String": "Dead_Boss"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            },
+            "time": {
+              "Float": 4
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event65",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 60,
+          "NextEventName": "Event68",
+          "Name": "Event66",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "displacementX": {
+              "Float": 0
+            },
+            "displacementY": {
+              "Float": 5
+            },
+            "displacementZ": {
+              "Float": 0
+            },
+            "linkedItemScatter": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event67",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 62,
+          "ForkEventIndicies": [
+            61,
+            59,
+            63
+          ],
+          "Name": "Event68",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event69",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 64,
+          "NextEventName": "Event73",
+          "Name": "Event70",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 65,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event74",
+          "ActorName": "Timer",
+          "Name": "Event72",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event73",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event74",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 67,
+          "ForkEventIndicies": [
+            68,
+            81
+          ],
+          "Name": "Event75",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 73,
+          "NextEventName": "Event80",
+          "Name": "Event76",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 15,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "delay": {
+              "Bool": false
+            },
+            "duration": {
+              "Float": -1
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event77",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "ActorName": "Player",
+          "Name": "Event79",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 14,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "dead"
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event81",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 43,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "HitStopReset",
+          "NextEventName": "Event54",
+          "Name": "Event56",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 47,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "HitStopReset",
+          "NextEventName": "Event61",
+          "Name": "Event63",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 69,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "HitStopReset",
+          "NextEventName": "Event79",
+          "Name": "Event80",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 77,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "ExtinctionReset",
+          "NextEventName": "Event82",
+          "Name": "Event25",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 78,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "ExtinctionReset",
+          "NextEventName": "Event83",
+          "Name": "Event37",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 52,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event36",
+          "ActorName": "Timer",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 53,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event45",
+          "ActorName": "Timer",
+          "Name": "Event82",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 54,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event55",
+          "ActorName": "Timer",
+          "Name": "Event83",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": -3
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event53",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 13,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 5
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event60",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 15,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event78",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 83,
+          "ForkEventIndicies": [
+            84,
+            85
+          ],
+          "Name": "Event84",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 87,
+          "NextEventName": "Event89",
+          "Name": "Event85",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "delay": {
+              "Bool": false
+            },
+            "duration": {
+              "Float": -1
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event86",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 16,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": -1
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event87",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "ActorName": "Player",
+          "Name": "Event88",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 86,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "HitStopReset",
+          "NextEventName": "Event88",
+          "Name": "Event89",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 82,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "duration": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event84",
+          "ActorName": "Audio",
+          "Name": "Event90",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 96,
+          "ActorIndex": 17,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "channel": {
+              "String": "Dead_Boss"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event91",
+          "ActorName": "Enemy",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 91,
+          "ForkEventIndicies": [
+            89,
+            92
+          ],
+          "Name": "Event92",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 93,
+          "NextEventName": "Event95",
+          "Name": "Event93",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 98,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2.5
+            }
+          },
+          "NextEventName": "Event100",
+          "ActorName": "Timer",
+          "Name": "Event94",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 17,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Enemy",
+          "Name": "Event95",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "$wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event97",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 94,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event97",
+          "ActorName": "Timer",
+          "Name": "Event98",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 5.3
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event91",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event99",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 99,
+          "ForkEventIndicies": [
+            100,
+            101,
+            102,
+            103,
+            104,
+            106
+          ],
+          "Name": "Event100",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 95,
+          "NextEventName": "Event98",
+          "Name": "Event101",
+          "Type": "Join"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "morphKind": {
+              "Int": 0
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 105
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event102",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "ActorName": "Player",
+          "Name": "Event103",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "ActorName": "Player",
+          "Name": "Event104",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "ActorName": "Player",
+          "Name": "Event105",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "anim": {
+              "String": "get_off"
+            },
+            "disappear": {
+              "Bool": true
+            },
+            "method": {
+              "Int": 0
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event106",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "ActorName": "Player",
+          "Name": "Event107",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "ActorName": "GameControl",
+          "Name": "Event108",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "ActorName": "FlowControl",
+          "Name": "Event46",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "BossExtinction": {
+          "SubFlowEventIndices": [
+            12
+          ],
+          "EventIndex": 8
+        },
+        "HitStop": {
+          "SubFlowEventIndices": [
+            5
+          ],
+          "EventIndex": 49
+        },
+        "HitStopBigBoss": {
+          "SubFlowEventIndices": [
+            72
+          ],
+          "EventIndex": 50
+        },
+        "HitStopCustom": {
+          "SubFlowEventIndices": [
+            87
+          ],
+          "EventIndex": 88
+        },
+        "HitStopNonStopBGM": {
+          "SubFlowEventIndices": [
+            73
+          ],
+          "EventIndex": 66
+        },
+        "HitStopSmallBoss": {
+          "SubFlowEventIndices": [
+            71
+          ],
+          "EventIndex": 48
+        },
+        "LanmolaExtinction": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 55
+        },
+        "MiniBossDoorClose": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 35
+        },
+        "MiniBossExtinction": {
+          "SubFlowEventIndices": [
+            74
+          ],
+          "EventIndex": 13
+        },
+        "MiniBossExtinction2": {
+          "SubFlowEventIndices": [
+            75
+          ],
+          "EventIndex": 22
+        },
+        "PreMiniBoss": {
+          "SubFlowEventIndices": [
+            37
+          ],
+          "EventIndex": 37
+        },
+        "VolvagiaExtinction": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 90
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

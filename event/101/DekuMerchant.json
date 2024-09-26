@@ -1,0 +1,6049 @@
+{
+  "FileName": "DekuMerchant",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "DekuMerchant": {
+      "Name": "DekuMerchant",
+      "Actors": [
+        {
+          "Name": "DekuMerchant",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericTalkSequenceWithDialog",
+            "PlayAnimation",
+            "SetInstanceVariableBool",
+            "Talk",
+            "SetComponentActive",
+            "PlayAnimationNoWait",
+            "LookAtTalker",
+            "SetFacialExpression",
+            "ResetFacialExpression",
+            "AimCompassPoint",
+            "SetTalkerName"
+          ],
+          "Queries": [
+            "GetInstanceVariableBool"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "GetLastResult4"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetProgress"
+          ],
+          "Queries": [
+            "GetStatus",
+            "CheckProgress"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SmoothieGetSequence",
+            "SetSmoothieBottleContent",
+            "AimActor",
+            "WarpToActorLinkedPoint",
+            "ResetFacialExpression",
+            "WaitForReady",
+            "AddItemAndGenericItemGetSequence"
+          ],
+          "Queries": [
+            "HasEmptyDrink"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AddItem",
+            "GenericItemGetSequence",
+            "SetInterestIkEnabled",
+            "AimActor",
+            "RemoveItem",
+            "ReplaceEquipedAccessory"
+          ],
+          "Queries": [
+            "HasSellableItems"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "SmoothieUI",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Destroy",
+            "Show",
+            "ShowPrevSmoothieMenu",
+            "SetMessageTagNewRecipeCount",
+            "WaitClose"
+          ],
+          "Queries": [
+            "GetResult",
+            "GetTotalIngredientCount",
+            "GetMadeRecipeCount"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetCanSkip",
+            "CloseSkippableScope"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [
+            "CheckFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "ShopUI",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowSell"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor",
+            "WarpToDefaultPosition",
+            "AimCompassPoint",
+            "SetInterestIkEnabled"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "EventFlowUiDucking"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:FirstTalk_Q1"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "happy"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "DekuMerchant",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 3
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 166
+            },
+            {
+              "Value": 1,
+              "EventIndex": 169
+            },
+            {
+              "Value": 2,
+              "EventIndex": 170
+            },
+            {
+              "Value": 3,
+              "EventIndex": 18
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event2",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 205,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event235",
+          "ActorName": "SmoothieUI",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "make_lp"
+            },
+            "restart": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "DekuMerchant",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "MakeSmoothie"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:MakeSmoothie_020"
+            }
+          },
+          "NextEventName": "Event8",
+          "ActorName": "DekuMerchant",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "name": {
+              "String": "MakeSmoothie"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 3
+            },
+            {
+              "Value": 1,
+              "EventIndex": 263
+            }
+          ],
+          "ActorName": "DekuMerchant",
+          "Name": "Event10",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "make_ed"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 10,
+          "ForkEventIndicies": [
+            3,
+            5
+          ],
+          "Name": "Event12",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "make_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 12,
+          "NextEventName": "Event16",
+          "Name": "Event14",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 14,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "String": "aimControlComp"
+            }
+          },
+          "NextEventName": "Event19",
+          "ActorName": "DekuMerchant",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "active": {
+              "Bool": true
+            },
+            "name": {
+              "String": "aimControlComp"
+            }
+          },
+          "NextEventName": "Event17",
+          "ActorName": "DekuMerchant",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 149,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:MakeSmoothie_030"
+            }
+          },
+          "NextEventName": "Event70",
+          "ActorName": "DekuMerchant",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 255,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "MakeSmoothie"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event72",
+          "ActorName": "DekuMerchant",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:SmoothieMakeCancel_020"
+            }
+          },
+          "NextEventName": "Event25",
+          "ActorName": "DekuMerchant",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:SmoothieMakeCancel_010"
+            }
+          },
+          "NextEventName": "Event25",
+          "ActorName": "DekuMerchant",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_Finish",
+          "Name": "Event25",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_Cancel",
+          "Name": "Event27",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:SmoothieQuestion_Q1"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "happy"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 241,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event262",
+          "ActorName": "DekuMerchant",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:MakeSmoothie_010"
+            }
+          },
+          "NextEventName": "Event15",
+          "ActorName": "DekuMerchant",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 5,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 26
+            },
+            {
+              "Value": 1,
+              "EventIndex": 25
+            }
+          ],
+          "ActorName": "SmoothieUI",
+          "Name": "Event46",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 276,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event74",
+          "ActorName": "Zelda",
+          "Name": "Event47",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 183,
+          "FlowchartName": "",
+          "EntryPointName": "_Finish",
+          "NextEventName": "Event54",
+          "Name": "Event48",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 27,
+          "FlowchartName": "",
+          "EntryPointName": "_SmoothieMake",
+          "NextEventName": "Event57",
+          "Name": "Event51",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_Cancel",
+          "Name": "Event52",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 23,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event47",
+          "ActorName": "Zelda",
+          "Name": "Event57",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "questKey": {
+              "String": "Jungle"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 232
+            },
+            {
+              "Value": 1,
+              "EventIndex": 232
+            },
+            {
+              "Value": 2,
+              "EventIndex": 201
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event6",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 15,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "sad"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "DekuMerchant",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "questKey": {
+              "String": "Jungle"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 32
+            },
+            {
+              "Value": 1,
+              "EventIndex": 34
+            },
+            {
+              "Value": 2,
+              "EventIndex": 36
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event20",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:DekuMerchantTalk010_010"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 31,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event21",
+          "ActorName": "DekuMerchant",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:DekuMerchantTalk020_010"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 33,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event23",
+          "ActorName": "DekuMerchant",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:DekuMerchantTalk030_010"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 35,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event28",
+          "ActorName": "DekuMerchant",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event38",
+          "ActorName": "FlowControl",
+          "Name": "Event44",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Special_Jungle100:898154198"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 106,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle100_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event66",
+          "ActorName": "DekuMerchant",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 107,
+          "NextEventName": "Event175",
+          "Name": "Event75",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 41,
+          "ForkEventIndicies": [
+            43,
+            44,
+            108
+          ],
+          "Name": "Event76",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle100_040"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event77",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event78",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 42,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event76",
+          "ActorName": "DekuMerchant",
+          "Name": "Event79",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 110,
+          "NextEventName": "Event188",
+          "Name": "Event81",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 46,
+          "ForkEventIndicies": [
+            48,
+            49
+          ],
+          "Name": "Event82",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle100_050"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event83",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "sad"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event84",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 111,
+          "NextEventName": "Event88",
+          "Name": "Event85",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 50,
+          "ForkEventIndicies": [
+            52,
+            109,
+            146
+          ],
+          "Name": "Event86",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle100_060"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event87",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 147,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle110_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event186",
+          "ActorName": "DekuMerchant",
+          "Name": "Event114",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 112,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle120_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event120",
+          "ActorName": "DekuMerchant",
+          "Name": "Event122",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 113,
+          "NextEventName": "Event121",
+          "Name": "Event128",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 55,
+          "ForkEventIndicies": [
+            57,
+            58
+          ],
+          "Name": "Event129",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle120_030"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event130",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event131",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 77,
+          "NextEventName": "Event92",
+          "Name": "Event138",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 59,
+          "ForkEventIndicies": [
+            61,
+            62
+          ],
+          "Name": "Event139",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle120_050"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event140",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event141",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 64,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Ornament09"
+            }
+          },
+          "NextEventName": "Event143",
+          "ActorName": "Player",
+          "Name": "Event142",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 225,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Ornament09"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event135",
+          "ActorName": "Player",
+          "Name": "Event143",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": "sleep"
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle120_070"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "laugh"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event144",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 115,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle120_080"
+            }
+          },
+          "NextEventName": "Event133",
+          "ActorName": "DekuMerchant",
+          "Name": "Event147",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Special_Jungle100:514190613"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event150",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 39,
+          "NextEventName": "Event36",
+          "Name": "Event80",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 68,
+          "ForkEventIndicies": [
+            70,
+            71
+          ],
+          "Name": "Event89",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle100_070"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event90",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event116",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event115",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 72,
+          "ForkEventIndicies": [
+            74,
+            75
+          ],
+          "Name": "Event117",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle110_020"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event118",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event119",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 63,
+          "NextEventName": "Event142",
+          "Name": "Event91",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 76,
+          "ForkEventIndicies": [
+            78,
+            79
+          ],
+          "Name": "Event92",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle120_060"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event93",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event94",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 67,
+          "NextEventName": "Event150",
+          "Name": "Event95",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 80,
+          "ForkEventIndicies": [
+            82,
+            83,
+            84
+          ],
+          "Name": "Event96",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle120_090"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event97",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event98",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event100",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 148,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle130_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event203",
+          "ActorName": "DekuMerchant",
+          "Name": "Event101",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 133,
+          "NextEventName": "Event113",
+          "Name": "Event162",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 86,
+          "ForkEventIndicies": [
+            88,
+            89
+          ],
+          "Name": "Event163",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle140_050"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event164",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "laugh"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event165",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 91,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Ornament10"
+            }
+          },
+          "NextEventName": "Event167",
+          "ActorName": "Player",
+          "Name": "Event166",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 270,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Ornament10"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event106",
+          "ActorName": "Player",
+          "Name": "Event167",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle140_070"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event168",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 136,
+          "NextEventName": "Event155",
+          "Name": "Event169",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 93,
+          "ForkEventIndicies": [
+            95,
+            96
+          ],
+          "Name": "Event170",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle140_080"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event171",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event172",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isFrontFade": {
+              "Bool": false
+            },
+            "isShowTelopInEvent": {
+              "Bool": false
+            },
+            "symbol": {
+              "String": "Special_Jungle100:249202427"
+            }
+          },
+          "ActorName": "QuestSystem",
+          "Name": "Event174",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 134,
+          "NextEventName": "Event151",
+          "Name": "Event176",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 98,
+          "ForkEventIndicies": [
+            100,
+            101
+          ],
+          "Name": "Event177",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle140_060"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event178",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event179",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 97,
+          "NextEventName": "Event174",
+          "Name": "Event180",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 102,
+          "ForkEventIndicies": [
+            104,
+            105
+          ],
+          "Name": "Event181",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle140_090"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event182",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event183",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 143,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event189",
+          "ActorName": "DekuMerchant",
+          "Name": "Event66",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 47,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event82",
+          "ActorName": "DekuMerchant",
+          "Name": "Event175",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event185",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event187",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 51,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event86",
+          "ActorName": "DekuMerchant",
+          "Name": "Event188",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 69,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event89",
+          "ActorName": "DekuMerchant",
+          "Name": "Event88",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 56,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event129",
+          "ActorName": "DekuMerchant",
+          "Name": "Event120",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 114,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event132",
+          "ActorName": "DekuMerchant",
+          "Name": "Event121",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 60,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event139",
+          "ActorName": "DekuMerchant",
+          "Name": "Event132",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 81,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event96",
+          "ActorName": "DekuMerchant",
+          "Name": "Event133",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event148",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 116,
+          "ForkEventIndicies": [
+            118,
+            119
+          ],
+          "Name": "Event190",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle130_020"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event191",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event192",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 125,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle140_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event201",
+          "ActorName": "DekuMerchant",
+          "Name": "Event102",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 126,
+          "NextEventName": "Event202",
+          "Name": "Event197",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 121,
+          "ForkEventIndicies": [
+            123,
+            124
+          ],
+          "Name": "Event198",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle140_030"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event199",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event200",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 122,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event198",
+          "ActorName": "DekuMerchant",
+          "Name": "Event201",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 128,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event108",
+          "ActorName": "DekuMerchant",
+          "Name": "Event202",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 132,
+          "NextEventName": "Event112",
+          "Name": "Event107",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 127,
+          "ForkEventIndicies": [
+            129,
+            130,
+            131
+          ],
+          "Name": "Event108",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle140_040"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event109",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "angry"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event110",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event111",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 87,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event163",
+          "ActorName": "DekuMerchant",
+          "Name": "Event112",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 99,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event177",
+          "ActorName": "DekuMerchant",
+          "Name": "Event113",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 90,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event166",
+          "ActorName": "DekuMerchant",
+          "Name": "Event151",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 94,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event170",
+          "ActorName": "DekuMerchant",
+          "Name": "Event152",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 103,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event181",
+          "ActorName": "DekuMerchant",
+          "Name": "Event155",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "questKey": {
+              "String": "Special_Jungle100"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 243
+            },
+            {
+              "Value": 1,
+              "EventIndex": 138
+            },
+            {
+              "Value": 2,
+              "EventIndex": 243
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event156",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "symbol": {
+              "String": "Special_Jungle100:898154198"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 139
+            },
+            {
+              "Value": 0,
+              "EventIndex": 139
+            },
+            {
+              "Value": 1,
+              "EventIndex": 140
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event157",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Special_Jungle100_040",
+          "Name": "Event158",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "symbol": {
+              "String": "Special_Jungle100:514190613"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 141
+            },
+            {
+              "Value": 0,
+              "EventIndex": 141
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event159",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Special_Jungle100_050",
+          "Name": "Event160",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 45,
+          "NextEventName": "Event79",
+          "Name": "Event184",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 142,
+          "ForkEventIndicies": [
+            144,
+            145
+          ],
+          "Name": "Event189",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "quest/QuestAreaF:Special_Jungle100_030"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event193",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event194",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event195",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 73,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event117",
+          "ActorName": "DekuMerchant",
+          "Name": "Event186",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 117,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event190",
+          "ActorName": "DekuMerchant",
+          "Name": "Event203",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 252,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "DrinkMenu_Open"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event40",
+          "ActorName": "EventFlags",
+          "Name": "Event70",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 5,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "num": {
+              "Int": 2
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 151
+            },
+            {
+              "Value": 1,
+              "EventIndex": 162
+            }
+          ],
+          "ActorName": "SmoothieUI",
+          "Name": "Event73",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 5,
+          "ActorQueryIndex": 2,
+          "Parameters": {
+            "recipeNum": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 153
+            },
+            {
+              "Value": 1,
+              "EventIndex": 204
+            }
+          ],
+          "ActorName": "SmoothieUI",
+          "Name": "Event146",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:NoRecipe_010"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event153",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 235,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event256",
+          "ActorName": "DekuMerchant",
+          "Name": "Event154",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 221,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:NoMaterials_010"
+            }
+          },
+          "NextEventName": "Event126",
+          "ActorName": "DekuMerchant",
+          "Name": "Event173",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_SmoothieFlow",
+          "Name": "Event204",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 206,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "NextEventName": "Event237",
+          "ActorName": "DekuMerchant",
+          "Name": "Event205",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 161,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:SmoothieQuestion_Q1_A2_030"
+            }
+          },
+          "NextEventName": "Event210",
+          "ActorName": "DekuMerchant",
+          "Name": "Event206",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 236,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprise_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event257",
+          "ActorName": "DekuMerchant",
+          "Name": "Event207",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 158,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "expression": {
+              "String": "sleep"
+            }
+          },
+          "NextEventName": "Event207",
+          "ActorName": "DekuMerchant",
+          "Name": "Event208",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 159
+            },
+            {
+              "Value": 1,
+              "EventIndex": 237
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event209",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "DrinkSlot"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event210",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 204
+            },
+            {
+              "Value": 1,
+              "EventIndex": 155
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event211",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:DekuMerchant_NotHaveItem_010"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event213",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 233
+            },
+            {
+              "Value": 1,
+              "EventIndex": 234
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event214",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "choose": {
+              "String": "scenario/DekuMerchantTalk:DekuMerchant_ChooseSell_010"
+            },
+            "confirm": {
+              "String": "scenario/DekuMerchantTalk:DekuMerchantTalk_SellConfirm_010"
+            },
+            "howMany": {
+              "String": "scenario/DekuMerchantTalk:DekuMerchant_HowManySell_010"
+            },
+            "multipleConfirm": {
+              "String": "scenario/DekuMerchantTalk:DekuMerchantTalk_SellConfirm_010"
+            },
+            "sold": {
+              "String": "scenario/DekuMerchantTalk:MakeSmoothie_040"
+            }
+          },
+          "ActorName": "ShopUI",
+          "Name": "Event215",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 167,
+          "FlowchartName": "",
+          "EntryPointName": "_MakeFlow",
+          "NextEventName": "Event42",
+          "Name": "Event5",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "name": {
+              "String": "DrinkSlot"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 168
+            }
+          ],
+          "ActorName": "DekuMerchant",
+          "Name": "Event42",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "talk010",
+          "Name": "Event62",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 168,
+          "FlowchartName": "",
+          "EntryPointName": "_SellFlow",
+          "NextEventName": "Event62",
+          "Name": "Event63",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_DekuMerchantChat",
+          "Name": "Event69",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 239,
+          "NextEventName": "Event260",
+          "Name": "Event217",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 171,
+          "ForkEventIndicies": [
+            173,
+            174,
+            215
+          ],
+          "Name": "Event218",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "DrinkSlot"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event61",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "ReternMake"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event212",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 3
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 176
+            },
+            {
+              "Value": 1,
+              "EventIndex": 178
+            },
+            {
+              "Value": 2,
+              "EventIndex": 184
+            },
+            {
+              "Value": 3,
+              "EventIndex": 179
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event216",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 177,
+          "FlowchartName": "",
+          "EntryPointName": "_MakeFlow",
+          "NextEventName": "Event221",
+          "Name": "Event220",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "name": {
+              "String": "DrinkSlot"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 199
+            }
+          ],
+          "ActorName": "DekuMerchant",
+          "Name": "Event221",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 199,
+          "FlowchartName": "",
+          "EntryPointName": "_SellFlow",
+          "NextEventName": "Event226",
+          "Name": "Event222",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_Cancel",
+          "Name": "Event224",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 192,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "symbol": {
+              "Int": 0
+            }
+          },
+          "NextEventName": "Event65",
+          "ActorName": "SmoothieUI",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 192,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event65",
+          "ActorName": "SmoothieUI",
+          "Name": "Event45",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "name": {
+              "String": "ReternMake"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 180
+            },
+            {
+              "Value": 1,
+              "EventIndex": 181
+            }
+          ],
+          "ActorName": "DekuMerchant",
+          "Name": "Event230",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 203,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "ReternMake"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event233",
+          "ActorName": "DekuMerchant",
+          "Name": "Event54",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_DekuMerchantChat",
+          "Name": "Event31",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "DekuMerchant",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 187,
+          "ForkEventIndicies": [
+            19,
+            185
+          ],
+          "Name": "Event49",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 175,
+          "NextEventName": "Event216",
+          "Name": "Event50",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 219,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event124",
+          "Name": "Event53",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 202,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event227",
+          "Name": "Event58",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "DekuMerchant",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 249,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "DekuMerchant",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event270",
+          "ActorName": "Zelda",
+          "Name": "Event64",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 194,
+          "ForkEventIndicies": [
+            191,
+            193,
+            223
+          ],
+          "Name": "Event65",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "DekuMerchant",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event219",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 231,
+          "NextEventName": "Event252",
+          "Name": "Event223",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 196,
+          "ForkEventIndicies": [
+            198,
+            197
+          ],
+          "Name": "Event228",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 175,
+          "NextEventName": "Event216",
+          "Name": "Event229",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "ActorName": "DekuMerchant",
+          "Name": "Event231",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:SmoothieQuestion_Q1"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "happy"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event232",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "talk010_loop",
+          "Name": "Event226",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 247,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "offset": {
+              "Int": 10
+            },
+            "targetCount": {
+              "Int": 20
+            }
+          },
+          "NextEventName": "Event268",
+          "ActorName": "SmoothieUI",
+          "Name": "Event225",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 16,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "DekuMerchant",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 172,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "NextEventName": "Event218",
+          "ActorName": "DekuMerchant",
+          "Name": "Event227",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_MakeFlow",
+          "Name": "Event233",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 160,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "ReternMake"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event209",
+          "ActorName": "DekuMerchant",
+          "Name": "Event234",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.3
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event235",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 5,
+          "ActorQueryIndex": 2,
+          "Parameters": {
+            "recipeNum": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 150
+            },
+            {
+              "Value": 1,
+              "EventIndex": 212
+            }
+          ],
+          "ActorName": "SmoothieUI",
+          "Name": "Event237",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 5,
+          "ActorQueryIndex": 2,
+          "Parameters": {
+            "recipeNum": {
+              "Int": 10
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 150
+            },
+            {
+              "Value": 1,
+              "EventIndex": 213
+            }
+          ],
+          "ActorName": "SmoothieUI",
+          "Name": "Event238",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 5,
+          "ActorQueryIndex": 2,
+          "Parameters": {
+            "recipeNum": {
+              "Int": 30
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 150
+            },
+            {
+              "Value": 1,
+              "EventIndex": 214
+            }
+          ],
+          "ActorName": "SmoothieUI",
+          "Name": "Event239",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Special_Jungle100_010",
+          "Name": "Event240",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Special_Jungle100_020",
+          "Name": "Event243",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Special_Jungle0100_030",
+          "Name": "Event244",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "symbol": {
+              "String": "Special_Jungle100:898154198"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 209
+            },
+            {
+              "Value": 0,
+              "EventIndex": 207
+            },
+            {
+              "Value": 1,
+              "EventIndex": 207
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event246",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "symbol": {
+              "String": "Special_Jungle100:514190613"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 210
+            },
+            {
+              "Value": 0,
+              "EventIndex": 208
+            },
+            {
+              "Value": 1,
+              "EventIndex": 208
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event247",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "symbol": {
+              "String": "Special_Jungle100:249202427"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 211
+            },
+            {
+              "Value": 0,
+              "EventIndex": 283
+            },
+            {
+              "Value": 1,
+              "EventIndex": 283
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event248",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "NoIngredients"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event103",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "NoIngredients"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event104",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "DrinkSlot"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event105",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "ReternMake"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event123",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 220,
+          "ForkEventIndicies": [
+            217,
+            218,
+            216
+          ],
+          "Name": "Event124",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 238,
+          "NextEventName": "Event259",
+          "Name": "Event125",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 155,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "NoIngredients"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event204",
+          "ActorName": "DekuMerchant",
+          "Name": "Event126",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "name": {
+              "String": "NoIngredients"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 154
+            },
+            {
+              "Value": 1,
+              "EventIndex": 155
+            }
+          ],
+          "ActorName": "DekuMerchant",
+          "Name": "Event127",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 274,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event68",
+          "ActorName": "DekuMerchant",
+          "Name": "Event134",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "DekuMerchant",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": -1.5
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event37",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 226,
+          "ForkEventIndicies": [
+            65,
+            224
+          ],
+          "Name": "Event135",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 66,
+          "NextEventName": "Event147",
+          "Name": "Event136",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "DekuMerchant",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": -1.5
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event137",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 229,
+          "ForkEventIndicies": [
+            92,
+            227
+          ],
+          "Name": "Event196",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 135,
+          "NextEventName": "Event152",
+          "Name": "Event245",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 24,
+          "ActorIndex": 3,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event48",
+          "ActorName": "Zelda",
+          "Name": "Event249",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 273,
+          "ActorIndex": 5,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event67",
+          "ActorName": "SmoothieUI",
+          "Name": "Event252",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "name": {
+              "String": "ReternMake"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 29
+            },
+            {
+              "Value": 1,
+              "EventIndex": 201
+            }
+          ],
+          "ActorName": "DekuMerchant",
+          "Name": "Event253",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 163,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event213",
+          "ActorName": "DekuMerchant",
+          "Name": "Event254",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 165,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event215",
+          "ActorName": "DekuMerchant",
+          "Name": "Event255",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 152,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event153",
+          "ActorName": "DekuMerchant",
+          "Name": "Event256",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 157,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event206",
+          "ActorName": "DekuMerchant",
+          "Name": "Event257",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 222,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event127",
+          "ActorName": "DekuMerchant",
+          "Name": "Event258",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "DekuMerchant",
+          "Name": "Event259",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 186,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event49",
+          "ActorName": "DekuMerchant",
+          "Name": "Event260",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 195,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event228",
+          "ActorName": "DekuMerchant",
+          "Name": "Event261",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event39",
+          "ActorName": "DekuMerchant",
+          "Name": "Event262",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 28,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event6",
+          "ActorName": "DekuMerchant",
+          "Name": "Event263",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 30,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event20",
+          "ActorName": "DekuMerchant",
+          "Name": "Event264",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 40,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event35",
+          "ActorName": "DekuMerchant",
+          "Name": "Event265",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 53,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event114",
+          "ActorName": "DekuMerchant",
+          "Name": "Event266",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 54,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event122",
+          "ActorName": "DekuMerchant",
+          "Name": "Event267",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 85,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event101",
+          "ActorName": "DekuMerchant",
+          "Name": "Event268",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 120,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event102",
+          "ActorName": "DekuMerchant",
+          "Name": "Event269",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 250,
+          "ActorIndex": 3,
+          "ActorActionIndex": 5,
+          "NextEventName": "Event250",
+          "ActorName": "Zelda",
+          "Name": "Event270",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 251,
+          "ActorIndex": 11,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "avoidPlayer": {
+              "Bool": true
+            },
+            "avoidWall": {
+              "Bool": true
+            },
+            "position": {
+              "Int": 2
+            }
+          },
+          "NextEventName": "Event251",
+          "ActorName": "Partner",
+          "Name": "Event250",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event251",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "ActorName": "FlowControl",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 254,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event60",
+          "ActorName": "Player",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "DekuMerchant",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": "n_hara"
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event60",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 256,
+          "ForkEventIndicies": [
+            9,
+            258
+          ],
+          "Name": "Event72",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 8,
+          "NextEventName": "Event12",
+          "Name": "Event149",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 259,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event272",
+          "ActorName": "Timer",
+          "Name": "Event271",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 262,
+          "ForkEventIndicies": [
+            253,
+            260
+          ],
+          "Name": "Event272",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 261,
+          "ActorIndex": 11,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event274",
+          "ActorName": "Partner",
+          "Name": "Event273",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "DekuMerchant",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": "n_hara"
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event274",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event275",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 265,
+          "ForkEventIndicies": [
+            257,
+            264
+          ],
+          "Name": "Event276",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event277",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "NextEventName": "Event11",
+          "Name": "Event278",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 268,
+          "ForkEventIndicies": [
+            190,
+            267
+          ],
+          "Name": "Event279",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "DekuMerchant",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event280",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 230,
+          "NextEventName": "Event249",
+          "Name": "Event281",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 228,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Ornament09"
+            }
+          },
+          "NextEventName": "Event196",
+          "ActorName": "Player",
+          "Name": "Event99",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 269,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "accessoryReplacement": {
+              "Int": 0
+            }
+          },
+          "NextEventName": "Event99",
+          "ActorName": "Player",
+          "Name": "Event106",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 240,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "name": {
+              "String": "DrinkSlot"
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event261",
+          "ActorName": "DekuMerchant",
+          "Name": "Event145",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 182,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isEnable": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_SHOP_SMOOTHIE"
+            }
+          },
+          "NextEventName": "Event230",
+          "ActorName": "Audio",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 22,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "isEnable": {
+              "Bool": false
+            },
+            "label": {
+              "String": "BGM_SHOP_SMOOTHIE"
+            }
+          },
+          "NextEventName": "Event46",
+          "ActorName": "Audio",
+          "Name": "Event67",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event68",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 277,
+          "ForkEventIndicies": [
+            38,
+            275
+          ],
+          "Name": "Event74",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 266,
+          "NextEventName": "Event279",
+          "Name": "Event161",
+          "Type": "Join"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "SmoothieComplete"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 282
+            },
+            {
+              "Value": 1,
+              "EventIndex": 150
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event282",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 290,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "keep": {
+              "Bool": false
+            },
+            "message": {
+              "String": "glossary/Character:DekuMerchant"
+            }
+          },
+          "NextEventName": "Event295",
+          "ActorName": "DekuMerchant",
+          "Name": "Event283",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:SmoothieCompTalk_010"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event284",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "surprise_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event285",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "SmoothieComplete",
+          "Name": "Event286",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 5,
+          "ActorQueryIndex": 2,
+          "Parameters": {
+            "recipeNum": {
+              "Int": 69
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 150
+            },
+            {
+              "Value": 1,
+              "EventIndex": 278
+            }
+          ],
+          "ActorName": "SmoothieUI",
+          "Name": "Event287",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "SmoothieComplete"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event288",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 298,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Int": 10
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SmoothieIngredient15"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event303",
+          "ActorName": "Zelda",
+          "Name": "Event289",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:SmoothieCompTalk_020"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event290",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 307,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:SmoothieCompTalk_030"
+            }
+          },
+          "NextEventName": "Event311",
+          "ActorName": "DekuMerchant",
+          "Name": "Event291",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:SmoothieCompTalk_050"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event293",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:SmoothieCompTalk_060"
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event294",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 291,
+          "ForkEventIndicies": [
+            281,
+            280
+          ],
+          "Name": "Event295",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 292,
+          "NextEventName": "Event297",
+          "Name": "Event296",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 294,
+          "ForkEventIndicies": [
+            293,
+            286
+          ],
+          "Name": "Event297",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "angry"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event298",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 295,
+          "NextEventName": "Event300",
+          "Name": "Event299",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 287,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "laugh"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event291",
+          "ActorName": "DekuMerchant",
+          "Name": "Event300",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/DekuMerchantTalk:SmoothieCompTalk_040"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event301",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "DekuMerchant",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event302",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 299,
+          "ForkEventIndicies": [
+            296,
+            297
+          ],
+          "Name": "Event303",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 300,
+          "NextEventName": "Event304",
+          "Name": "Event292",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 301,
+          "ForkEventIndicies": [
+            302,
+            288
+          ],
+          "Name": "Event304",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 303,
+          "NextEventName": "Event307",
+          "Name": "Event305",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event306",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 304,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event308",
+          "ActorName": "DekuMerchant",
+          "Name": "Event307",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 306,
+          "ForkEventIndicies": [
+            305,
+            289
+          ],
+          "Name": "Event308",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "DekuMerchant",
+          "Name": "Event309",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 284,
+          "NextEventName": "Event288",
+          "Name": "Event310",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 285,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "happy"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event289",
+          "ActorName": "DekuMerchant",
+          "Name": "Event311",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "_Cancel": {
+          "SubFlowEventIndices": [
+            17
+          ],
+          "EventIndex": 242
+        },
+        "_DekuMerchantChat": {
+          "SubFlowEventIndices": [
+            139,
+            141
+          ],
+          "EventIndex": 137
+        },
+        "_Finish": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 2
+        },
+        "_MakeFlow": {
+          "SubFlowEventIndices": [
+            155,
+            209,
+            210,
+            211,
+            282
+          ],
+          "EventIndex": 156
+        },
+        "_SellFlow": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 164
+        },
+        "_SmoothieFlow": {
+          "SubFlowEventIndices": [
+            26,
+            25,
+            24,
+            203
+          ],
+          "EventIndex": 272
+        },
+        "_SmoothieMake": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 37
+        },
+        "FirstTalk": {
+          "SubFlowEventIndices": [
+            188,
+            166,
+            168,
+            169,
+            170,
+            18
+          ],
+          "EventIndex": 188
+        },
+        "SmoothieComplete": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 279
+        },
+        "Special_Jungle0100_030": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 248
+        },
+        "Special_Jungle100_010": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 244
+        },
+        "Special_Jungle100_020": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 246
+        },
+        "Special_Jungle100_040": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 245
+        },
+        "Special_Jungle100_050": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 200
+        },
+        "talk010": {
+          "SubFlowEventIndices": [
+            189,
+            176,
+            199,
+            178,
+            184,
+            179
+          ],
+          "EventIndex": 189
+        },
+        "talk010_loop": {
+          "SubFlowEventIndices": [
+            176,
+            199,
+            178,
+            184,
+            179
+          ],
+          "EventIndex": 271
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

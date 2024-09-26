@@ -1,0 +1,1679 @@
+{
+  "FileName": "HylianF004",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "HylianF004": {
+      "Name": "HylianF004",
+      "Actors": [
+        {
+          "Name": "HylianF004",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "OpenShopUI",
+            "CloseShopUI",
+            "PlayAnimationNoWait",
+            "GenericTalkSequenceWithDialog",
+            "Talk",
+            "LookAtTalker",
+            "AimPlayer",
+            "SetComponentActive",
+            "SetInstanceVariableString",
+            "AimActor",
+            "TalkKeep",
+            "SetFacialExpression",
+            "PlayAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowKeep",
+            "Show"
+          ],
+          "Queries": [
+            "GetLastResult4"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CheckMessgaeFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericItemGetSequence",
+            "AimActor"
+          ],
+          "Queries": [
+            "HasItem"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowRupee"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "ShopUI",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowBuy",
+            "BuyMultiple",
+            "SetItemCount"
+          ],
+          "Queries": [
+            "GetBuyResult",
+            "CanBuy"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAt2ActorsCenterAsTalker"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "Branch"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event27",
+          "ActorName": "Hud",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event26",
+          "ActorName": "HylianF004",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 16,
+          "Parameters": {
+            "Message": {
+              "String": "ShopKeeperTalk:RanchShop_NotBuying_010"
+            },
+            "TalkAnime": {
+              "String": "talk01"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_CancelTalk",
+          "NextEventName": "Event40",
+          "Name": "Event24",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "confirm": {
+              "String": "ShopKeeperTalk:RanchShop_BuyConfirm_010"
+            },
+            "explanation": {
+              "String": "ShopKeeperTalk:RanchShop_Buying_Ranch_010"
+            },
+            "itemKey": {
+              "String": "SmoothieIngredient06"
+            },
+            "multipleConfirm": {
+              "String": "ShopKeeperTalk:RanchShop_BuyConfirm_010"
+            },
+            "price": {
+              "Argument": "price"
+            }
+          },
+          "NextEventName": "Event21",
+          "ActorName": "ShopUI",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 2
+            },
+            {
+              "Value": 1,
+              "EventIndex": 50
+            },
+            {
+              "Value": 2,
+              "EventIndex": 49
+            }
+          ],
+          "ActorName": "ShopUI",
+          "Name": "Event27",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event29",
+          "ActorName": "HylianF004",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event32",
+          "ActorName": "HylianF004",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 14,
+          "Parameters": {
+            "Message": {
+              "String": "ShopKeeperTalk:RanchShop_MoneyNotEnough_010"
+            },
+            "TalkAnime": {
+              "String": "talk01"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_CancelTalk",
+          "NextEventName": "Event38",
+          "Name": "Event30",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 1
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SmoothieIngredient06"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "Argument": "messasgeEntry"
+            }
+          },
+          "NextEventName": "Event33",
+          "ActorName": "Player",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "Message": {
+              "String": "ShopKeeperTalk:RanchShop_ShoppingComp_010"
+            },
+            "TalkAnime": {
+              "String": "talk01"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_GeneralTalk",
+          "Name": "Event33",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "price": {
+              "Argument": "price"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 7
+            },
+            {
+              "Value": 1,
+              "EventIndex": 11
+            }
+          ],
+          "ActorName": "ShopUI",
+          "Name": "Event34",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "itemKey": {
+              "String": "SmoothieIngredient06"
+            },
+            "price": {
+              "Argument": "price"
+            }
+          },
+          "NextEventName": "Event28",
+          "ActorName": "ShopUI",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 99
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SmoothieIngredient06"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 10
+            },
+            {
+              "Value": 1,
+              "EventIndex": 13
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event36",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 15,
+          "Parameters": {
+            "Message": {
+              "String": "ShopKeeperTalk:RanchShop_InventryMax_010"
+            },
+            "TalkAnime": {
+              "String": "talk01"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_CancelTalk",
+          "NextEventName": "Event39",
+          "Name": "Event37",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "ActorName": "HylianF004",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "ActorName": "HylianF004",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 74,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event76",
+          "ActorName": "HylianF004",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "ShopKeeperTalk:RanchShop_BuyCheck_010"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": "talk01"
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 1,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 3
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 1
+            },
+            {
+              "Value": 1,
+              "EventIndex": 19
+            },
+            {
+              "Value": 2,
+              "EventIndex": 20
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event20",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 77,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF004Talk020_010"
+            }
+          },
+          "NextEventName": "Event83",
+          "ActorName": "HylianF004",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 77,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "ShopKeeperTalk:RanchShop_BuyCheckBye_010"
+            }
+          },
+          "NextEventName": "Event83",
+          "ActorName": "HylianF004",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "Argument": "Message"
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianF004",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event44",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event45",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "Argument": "TalkAnime"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event46",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 27,
+          "ForkEventIndicies": [
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "Name": "Event47",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event48",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "Argument": "Message"
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event49",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianF004",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event50",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event51",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "Argument": "TalkAnime"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event52",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 33,
+          "ForkEventIndicies": [
+            28,
+            29,
+            30,
+            31
+          ],
+          "Name": "Event53",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event54",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "String": "Brush"
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 36,
+          "ForkEventIndicies": [
+            17,
+            34
+          ],
+          "Name": "Event1",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 18,
+          "NextEventName": "Event20",
+          "Name": "Event2",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 35,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "name": {
+              "String": "idleAnim"
+            },
+            "value": {
+              "String": "wait01"
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "HylianF004",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:ItemGet_Ingredient06"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 39
+            },
+            {
+              "Value": 1,
+              "EventIndex": 42
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event4",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 40,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:Ingredient06"
+            }
+          },
+          "NextEventName": "Event8",
+          "ActorName": "Dialog",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:Ingredient_Explanation"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:Ingredient06"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 38
+            },
+            {
+              "Value": 1,
+              "EventIndex": 42
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event10",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:Ingredient06"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:ItemGet_Ingredient06"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 44
+            },
+            {
+              "Value": 1,
+              "EventIndex": 47
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event12",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 45,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:ItemGet_Ingredient06"
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "Dialog",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:Ingredient_Explanation"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:Ingredient06"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 43
+            },
+            {
+              "Value": 1,
+              "EventIndex": 47
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event15",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:ItemGet_Ingredient06"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 46,
+          "ActorIndex": 6,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event15",
+          "ActorName": "ShopUI",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 76,
+          "Parameters": {
+            "messasgeEntry": {
+              "String": "HylianF004:RanchMulti"
+            },
+            "price": {
+              "Argument": "price"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_purchase",
+          "NextEventName": "Event79",
+          "Name": "Event18",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 75,
+          "Parameters": {
+            "messasgeEntry": {
+              "String": "HylianF004:RanchSingle"
+            },
+            "price": {
+              "Argument": "price"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_purchase",
+          "NextEventName": "Event78",
+          "Name": "Event25",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 59,
+          "Parameters": {
+            "anime": {
+              "String": "talk01"
+            },
+            "facial": {
+              "String": "normal"
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF004MachineHint_010"
+            },
+            "WindowContinue": {
+              "Bool": false
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_talkTemp",
+          "NextEventName": "Event70",
+          "Name": "Event57",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 66,
+          "Parameters": {
+            "anime": {
+              "String": "yes01,wait01"
+            },
+            "facial": {
+              "String": "sleep"
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF004MachineHint_020"
+            },
+            "WindowContinue": {
+              "Bool": true
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_talkTemp",
+          "NextEventName": "Event55",
+          "Name": "Event58",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event64",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor1": {
+              "ActorIdentifier": {
+                "Item1": "HylianF004",
+                "Item2": ""
+              }
+            },
+            "actor2": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "weight1": {
+              "Float": 1
+            },
+            "weight2": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event65",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 56,
+          "ForkEventIndicies": [
+            54,
+            53,
+            68,
+            78
+          ],
+          "Name": "Event66",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 51,
+          "NextEventName": "Event57",
+          "Name": "Event67",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianF004",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event68",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "HylianF004",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event69",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 60,
+          "ForkEventIndicies": [
+            57,
+            58
+          ],
+          "Name": "Event70",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 52,
+          "NextEventName": "Event58",
+          "Name": "Event71",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "Argument": "message"
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event60",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "Argument": "anime"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event61",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "expression": {
+              "Argument": "facial"
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event62",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 65,
+          "ForkEventIndicies": [
+            70,
+            62,
+            63
+          ],
+          "Name": "Event72",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event73",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 67,
+          "Parameters": {
+            "anime": {
+              "String": "talk01"
+            },
+            "facial": {
+              "String": "normal"
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF004MachineHint_030"
+            },
+            "WindowContinue": {
+              "Bool": true
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_talkTemp",
+          "NextEventName": "Event56",
+          "Name": "Event55",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 73,
+          "Parameters": {
+            "anime": {
+              "String": "yes01,wait01"
+            },
+            "facial": {
+              "String": "smile"
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:HylianF004MachineHint_040"
+            },
+            "WindowContinue": {
+              "Bool": true
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_talkTemp",
+          "NextEventName": "Event74",
+          "Name": "Event56",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "String": "Brush"
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "Argument": "message"
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "value": {
+              "Argument": "WindowContinue"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 69
+            },
+            {
+              "Value": 1,
+              "EventIndex": 61
+            }
+          ],
+          "ActorName": "FlowControl",
+          "Name": "Event75",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 55,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "name": {
+              "String": "idleAnim"
+            },
+            "value": {
+              "String": "wait01"
+            }
+          },
+          "NextEventName": "Event66",
+          "ActorName": "HylianF004",
+          "Name": "Event63",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "name": {
+              "String": "idleAnim"
+            },
+            "value": {
+              "String": "wait14"
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event77",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_talkFinish",
+          "Name": "Event74",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_talkFinish",
+          "Name": "Event76",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_talkFinish",
+          "Name": "Event78",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_talkFinish",
+          "Name": "Event79",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_talkFinish",
+          "Name": "Event83",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait01"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "HylianF004",
+          "Name": "Event80",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 71,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event63",
+          "Name": "Event7",
+          "Type": "Subflow"
+        }
+      ],
+      "EntryPoints": {
+        "_CancelTalk": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 32
+        },
+        "_GeneralTalk": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 26
+        },
+        "_purchase": {
+          "SubFlowEventIndices": [
+            7,
+            9,
+            13
+          ],
+          "EventIndex": 12
+        },
+        "_talkFinish": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 72
+        },
+        "_talkTemp": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 64
+        },
+        "MachineHint": {
+          "SubFlowEventIndices": [
+            79,
+            51,
+            52,
+            66,
+            67,
+            73
+          ],
+          "EventIndex": 79
+        },
+        "Ranch": {
+          "SubFlowEventIndices": [
+            2,
+            74,
+            50,
+            75,
+            49,
+            76,
+            77
+          ],
+          "EventIndex": 37
+        },
+        "RanchMulti": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 48
+        },
+        "RanchSingle": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 41
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

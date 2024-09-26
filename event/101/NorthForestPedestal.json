@@ -1,0 +1,853 @@
+{
+  "FileName": "NorthForestPedestal",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "NorthForestPedestal": {
+      "Name": "NorthForestPedestal",
+      "Actors": [
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "MoveToWithTimeout",
+            "Reset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "NorthForestPedestal",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetActorSwitch",
+            "PlayOnMaterialAnim"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [
+            "CheckFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LoadArea"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Sync",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SyncReset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtGimmick"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayTriangleAnimation",
+            "BeCapturedTriangleToPastedActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "NorthForestRelic",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CheckPasted"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayJingle"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 38,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "switchIndex": {
+              "Int": 0
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event38",
+          "ActorName": "NorthForestPedestal",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event11",
+          "ActorName": "Timer",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 14,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 1
+            },
+            "maxSpeed": {
+              "Float": 0
+            },
+            "targetPositionX": {
+              "Float": 198.75
+            },
+            "targetPositionY": {
+              "Float": 10.5
+            },
+            "targetPositionZ": {
+              "Float": 75
+            },
+            "timeout": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "Camera",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 15,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event15",
+          "ActorName": "Camera",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.3
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "Timer",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 7,
+          "ForkEventIndicies": [
+            4,
+            6
+          ],
+          "Name": "Event5",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutFastB"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "NextEventName": "Event8",
+          "Name": "Event7",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInFast"
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Fade",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.3
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "Timer",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 12,
+          "ForkEventIndicies": [
+            9,
+            11
+          ],
+          "Name": "Event11",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutFastB"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 25,
+          "NextEventName": "Event25",
+          "Name": "Event13",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInFast"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event17",
+          "ActorName": "Sync",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.7
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event23",
+          "ActorName": "Player",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "NorthForestRelic",
+                "Item2": ""
+              }
+            },
+            "animName": {
+              "String": "Triangle_inside"
+            },
+            "blendTime": {
+              "Float": 0.2
+            },
+            "delay": {
+              "Float": 0
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event22",
+          "ActorName": "Partner",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 22,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "NorthForestRelic",
+                "Item2": ""
+              }
+            }
+          },
+          "NextEventName": "Event18",
+          "ActorName": "Partner",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 9,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 21
+            },
+            {
+              "Value": 1,
+              "EventIndex": 18
+            }
+          ],
+          "ActorName": "NorthForestRelic",
+          "Name": "Event23",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 23,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event19",
+          "ActorName": "NorthForestPedestal",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.8
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "Timer",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 24,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.7
+            }
+          },
+          "NextEventName": "Event20",
+          "ActorName": "Timer",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "extentsX": {
+              "Float": 20
+            },
+            "extentsY": {
+              "Float": 10
+            },
+            "extentsZ": {
+              "Float": 20
+            },
+            "location": {
+              "String": "StoneMonument"
+            },
+            "syncLoad": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "GameControl",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_A"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 13
+            },
+            {
+              "Value": 1,
+              "EventIndex": 26
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event25",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_B"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 13
+            },
+            {
+              "Value": 1,
+              "EventIndex": 27
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event31",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_C"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 13
+            },
+            {
+              "Value": 1,
+              "EventIndex": 28
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event26",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_D"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 13
+            },
+            {
+              "Value": 1,
+              "EventIndex": 29
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event27",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_E"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 13
+            },
+            {
+              "Value": 1,
+              "EventIndex": 30
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event28",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_F"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 13
+            },
+            {
+              "Value": 1,
+              "EventIndex": 31
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event29",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_All"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "EventFlags",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_NAZOTOKI_SEIKAI"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "Audio",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_F"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 1
+            },
+            {
+              "Value": 1,
+              "EventIndex": 39
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event33",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_E"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 1
+            },
+            {
+              "Value": 1,
+              "EventIndex": 33
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event34",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_D"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 1
+            },
+            {
+              "Value": 1,
+              "EventIndex": 34
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event35",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_C"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 1
+            },
+            {
+              "Value": 1,
+              "EventIndex": 35
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event36",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_B"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 1
+            },
+            {
+              "Value": 1,
+              "EventIndex": 36
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event37",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "NorthForest_PedestalOn_A"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 1
+            },
+            {
+              "Value": 1,
+              "EventIndex": 37
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event38",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 32,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event32",
+          "ActorName": "Timer",
+          "Name": "Event39",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "RideRelic": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 16
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

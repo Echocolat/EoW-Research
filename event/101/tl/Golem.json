@@ -1,0 +1,661 @@
+{
+  "FileName": "Golem",
+  "Version": "0.3.0.0",
+  "Flowcharts": {},
+  "Timelines": {
+    "Golem": {
+      "Name": "Golem",
+      "Duration": 1142,
+      "Actors": [
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayActorOriginCameraAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 2,
+          "Actions": [
+            "PlayAnimation",
+            "AimCompassPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Door",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GolemCore",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 2,
+          "Actions": [
+            "PlayAnimation",
+            "AimActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Prepare",
+            "PlayBGM"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Golem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 5,
+          "Actions": [
+            "PlayAnimation",
+            "PlayTailorOtherChannel",
+            "ShowUI",
+            "SetVisibility",
+            "PlayTailorOtherChannelNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Clips": [
+        {
+          "StartTime": 0,
+          "Duration": 1142,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": false
+            },
+            "name": {
+              "String": "Golem_appear02_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "actor/Golem.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            }
+          }
+        },
+        {
+          "StartTime": 0,
+          "Duration": 184,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "search"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 184,
+          "Duration": 100,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_BossApear_st"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 289,
+          "Duration": 666,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_BossApear_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 955,
+          "Duration": 187,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_BossApear_battle_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 0,
+          "Duration": 167,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Unknown": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "lookaround"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 167,
+          "Duration": 100,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Unknown": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 0,
+          "Duration": 1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_wait_ground"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 162,
+          "Duration": 778,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_repair"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 940,
+          "Duration": 172,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_bark_lp"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 1112,
+          "Duration": 30,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_bark_ed"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 0,
+          "Duration": 200,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Unknown": 2,
+          "Parameters": {
+            "channel": {
+              "String": "Shaking_Dust"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "StartTime": 930,
+          "Duration": 120,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Unknown": 2,
+          "Parameters": {
+            "channel": {
+              "String": "Radiant_Line"
+            },
+            "index": {
+              "Int": 0
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          }
+        }
+      ],
+      "Oneshots": [
+        {
+          "Time": 0,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 6,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "Time": 1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "kind": {
+              "Int": 0
+            },
+            "label": {
+              "String": "BGM_EV_FOREST_BOSSAPPEAR"
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 60,
+          "ActorIndex": 6,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "channel": {
+              "String": "Omen_Smoke"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "Time": 105,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": false
+            },
+            "label": {
+              "String": "BGM_EV_FOREST_BOSSAPPEAR"
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 167,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 167,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            }
+          }
+        },
+        {
+          "Time": 930,
+          "ActorIndex": 6,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "message": {
+              "String": "glossary/Boss:Enemy_515"
+            },
+            "visible": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "Time": 1021,
+          "ActorIndex": 6,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "message": {
+              "String": "glossary/Boss:Enemy_515"
+            },
+            "visible": {
+              "Bool": false
+            }
+          }
+        }
+      ],
+      "Triggers": [
+        {
+          "ClipIndex": 0,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 1,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 5,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 7,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 11,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 7,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 8,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 5,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 6,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 1,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 2,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 11,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 6,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 2,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 3,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 12,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 8,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 9,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 3,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 4,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 12,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 9,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 10,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 0,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 4,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 10,
+          "Type": 2
+        }
+      ],
+      "SubTimelines": [],
+      "Cuts": [
+        {
+          "StartTime": 0,
+          "Name": "cut1"
+        },
+        {
+          "StartTime": 0,
+          "Name": "cut01"
+        }
+      ]
+    }
+  }
+}

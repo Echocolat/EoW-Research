@@ -1,0 +1,824 @@
+{
+  "FileName": "EV_GoToRevivingWorld",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "EV_GoToRevivingWorld": {
+      "Name": "EV_GoToRevivingWorld",
+      "Actors": [
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "AimCompassPoint",
+            "WarpToActorWithCompassPoint",
+            "SetEquipmentVisibility",
+            "SetShadowDecalEnable"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvLink",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorWithCompassPoint",
+            "PlayAnimation",
+            "Activate",
+            "SetComponentActive"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Triforce",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Activate",
+            "StopTailorOtherChannel"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ForbidLaunchApplet",
+            "UnforbidLaunchApplet"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayLocationOriginCameraAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventVariables",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVariable"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvPartnerPhotonLargeQuantity",
+          "SecondaryName": "Center",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Activate",
+            "PlayAnimationNoWait",
+            "SetCullMode"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EvPartnerPhotonLargeQuantity",
+          "SecondaryName": "Side",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Activate",
+            "PlayAnimationNoWait",
+            "SetCullMode"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayBGM",
+            "PlayOneshotSystemSE"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "AreaStartTag",
+          "SecondaryName": "PartnersGainPower",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorWithCompassPoint",
+            "PlayAnimation",
+            "SetCullMode",
+            "PlayTailorOtherChannelNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 12,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "AreaStartTag",
+                "Item2": "PartnersGainPower"
+              }
+            },
+            "direction": {
+              "Int": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "EvLink",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 9,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "AreaStartTag",
+                "Item2": "PartnersGainPower"
+              }
+            },
+            "direction": {
+              "Int": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 1.19
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "Partner",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 3,
+          "ForkEventIndicies": [
+            10,
+            16,
+            22,
+            6,
+            5,
+            37,
+            24,
+            28
+          ],
+          "Name": "Event9",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 35,
+          "NextEventName": "Event26",
+          "Name": "Event10",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_PartnersGainPower"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "EvLink",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_PartnersGainPower"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_PartnersGainPower"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutSlowW"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 14,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event11",
+          "ActorName": "EvLink",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": true
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "location": {
+              "String": "PartnersGainPower_cam"
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "PartnersGainPower_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "actor/EvLastBossMu_1st_form.bfres"
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "Ev_PartnerSeparate",
+          "EntryPointName": "RevivingWorld",
+          "Name": "Event8",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event21",
+          "ActorName": "Zelda",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 23,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event27",
+          "ActorName": "EvPartnerPhotonLargeQuantity",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event6",
+          "ActorName": "Triforce",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 31,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "LastDungeon:1388816485"
+            }
+          },
+          "NextEventName": "Event36",
+          "ActorName": "EventVariables",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event13",
+          "ActorName": "Timer",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "AreaStartTag",
+                "Item2": "PartnersGainPower"
+              }
+            },
+            "direction": {
+              "Int": 0
+            },
+            "distance": {
+              "Float": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "Zelda",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 36,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "visibility": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event34",
+          "ActorName": "Zelda",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 2,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "String": "PropplayerSword"
+            }
+          },
+          "NextEventName": "Event22",
+          "ActorName": "EvLink",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 2,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "String": "PropplayerShield"
+            }
+          },
+          "NextEventName": "Event19",
+          "ActorName": "EvLink",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 12,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "Partner",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 50
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Timer",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 26,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event30",
+          "ActorName": "EvPartnerPhotonLargeQuantity",
+          "Name": "Event27",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 25,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "PartnersGainPower_cam01_Center"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event29",
+          "ActorName": "EvPartnerPhotonLargeQuantity",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "PartnersGainPower_cam01_Side"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "EvPartnerPhotonLargeQuantity",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 27,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event31",
+          "ActorName": "EvPartnerPhotonLargeQuantity",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "EvPartnerPhotonLargeQuantity",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "channel": {
+              "String": "ac_Keep"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "ActorName": "Triforce",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": false
+            },
+            "label": {
+              "String": "BGM_EV_GO_REVIVNG_WORLD"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_RD054_PARTNERS1"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 32,
+          "ForkEventIndicies": [
+            29,
+            30
+          ],
+          "Name": "Event36",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 17,
+          "NextEventName": "Event20",
+          "Name": "Event37",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 34,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllResetNowait",
+          "NextEventName": "Event3",
+          "Name": "Event38",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 15,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event14",
+          "ActorName": "GameControl",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event8",
+          "ActorName": "GameControl",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event23",
+          "ActorName": "Zelda",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 12,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "channel": {
+              "String": "FaceLight"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event17",
+          "ActorName": "Partner",
+          "Name": "Event25",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "PartnersGainPower": {
+          "SubFlowEventIndices": [
+            33,
+            11
+          ],
+          "EventIndex": 33
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}
