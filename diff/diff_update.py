@@ -8,7 +8,7 @@ def get_hash(file_data):
 
 def get_base_data(rootdir):
 
-    if os.path.isfile(rootdir + '.json'):
+    if os.path.isfile("diff/" + rootdir + '.json'):
 
         with open("diff/" + rootdir + '.json', 'r') as json_file:
             full_data = json.loads(json_file.read())
@@ -48,7 +48,7 @@ def diff_versions(base, new):
         elif base_data[key] != new_data[key]:
             full_data.append({"Status": "Changed", "Path": key, "Hash": new_data[key], "Old Hash": base_data[key]})
 
-    with open("diff/" + 'diff.json', 'w') as json_file:
+    with open("diff/" + f'diff{base}-{new}.json', 'w') as json_file:
         json_file.write(json.dumps(full_data, indent = 2))
 
 diff_versions('100', '101')
