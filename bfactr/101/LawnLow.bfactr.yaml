@@ -1,0 +1,177 @@
+components:
+- 2658375238: 2819408955
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: CollisionComp
+    mParentComponentName: ''
+    mRigidActorType: 2
+    276057241: kodama::GetLawnLow().mLawnBase.mCollisionSphere
+    4255176128: LawnLow
+    3789179658: ''
+    3451919084: ''
+    mIsTriggerCollision: true
+    3357757282: true
+    1680076615: true
+    1483798903: false
+    2175120176: ''
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: 918003174
+  589756810: 0
+  2088943335: ''
+  elements:
+    2074080475: false
+    2597958754: kodama::GetLawnLow().mLawnBase.mActorBase.mDropItem
+    2836559880: LawnLow
+  requirements: null
+- 2658375238: 756072038
+  589756810: 0
+  2088943335: ''
+  elements: {}
+  requirements:
+  - 1278667034: 3759144135
+    elements: {}
+- 2658375238: LifeComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: LifeComp
+    1164678587: kodama::GetLawnLow().mLawnBase.mLife
+    1361889095: LawnLow
+  requirements: null
+- 2658375238: SeComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: SeCom
+    mDummy: 0
+  requirements: null
+- 2658375238: 725215112
+  589756810: 0
+  2088943335: ''
+  elements:
+    mDummy: 0
+  requirements: null
+- 2658375238: 2139602768
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: BurnAtkColComp
+    mParentComponentName: ''
+    284840009: 1
+    3357757282: true
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements:
+  - 1278667034: GeometryBox
+    elements:
+      1849578959: LawnLow
+      3414787091: kodama::GetLawnLow().mGardenerOutputInfo.mBurnAttackCollisionBox
+- 2658375238: 1509668381
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: HotSphereComp
+    mParentComponentName: ''
+    568218804: kodama::GetLawnLow().mGardenerOutputInfo.mHotSphere
+    293431725: LawnLow
+    mIsActivate: true
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: SkeletalModelComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: SkeletalModelCom
+    mParentComponentName: ''
+    mAssetName: LawnLow
+    mModelName: LawnLow
+    4198711610: true
+    1992403994: true
+    517102968: true
+    mIsInstancing: true
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: 808897362
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: TailorPlayerCom
+    1350770463: LawnLow
+    mModelInfo:
+    - mModelAssetName: LawnLow
+      3911444315: ''
+      218648520: SkeletalModelCom
+    2235426953: true
+  requirements: null
+- 2658375238: ReactionReceiver
+  589756810: 0
+  2088943335: ''
+  elements:
+    mReactionType: 1
+    358346846: kodama::GetLawnLow().mLawnBase.mReaction
+    3672138586: LawnLow
+    mLifeComponentName: LifeComp
+  requirements: null
+- 2658375238: 696639476
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: DefenseColComp
+    mParentComponentName: ''
+    mDefenseType: 1
+    2038427211: kodama::GetLawnLow().mLawnBase.mDefenseSphere
+    951505852: LawnLow
+    Player: false
+    1202173614: 4
+    mRegisterReaction: false
+    3357757282: true
+    2315468836: ''
+    1311360933: ''
+    424783641: ''
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: 378517561
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: BurnComp
+    mBurnDefenseCollisionComponentName: DefenseColComp
+    mBurnAttackCollisionComponentName: BurnAtkColComp
+    mHotSphereComponentName: HotSphereComp
+    mTailorPlayerComponentName: TailorPlayerCom
+    899153843: true
+    mIsActivate: true
+  requirements:
+  - 1278667034: GeometryNone
+    elements:
+      1342641724: kodama::GetLawnLow().mGardenerOutputInfo.mBurnObj
+      3485597765: LawnLow
+- 2658375238: 3824773330
+  589756810: 0
+  2088943335: ''
+  elements:
+    2175120176: DefenseColComp
+  requirements: null
+- 2658375238: 2936149620
+  589756810: 0
+  2088943335: ''
+  elements:
+    3768740286: false
+  requirements: null
+name: LawnLow

@@ -1,0 +1,106 @@
+components:
+- 2658375238: SkeletalModelComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: SkeletalModelCom
+    mParentComponentName: ''
+    mAssetName: GanonFirebat
+    mModelName: GanonFirebat
+    4198711610: true
+    1992403994: true
+    517102968: true
+    mIsInstancing: false
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: AnimationControlComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: AnimationCtrlCom
+    mMotionAssetName: GanonFirebat
+    mModelAssetName: GanonFirebat
+    mSkeletalModelComponent: SkeletalModelCom
+    2812242225: true
+  requirements: null
+- 2658375238: 3282830774
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: AttackColComp
+    mParentComponentName: ''
+    mAttackType: 0
+    1155784071: kodama::GetGanonFirebatOp().mAttackCollisoinSphere
+    1664673786: GanonFirebatOp
+    Player: false
+    1202173614: 0
+    mRegisterReaction: true
+    3357757282: true
+    1514473201: ''
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: 2613605397
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: BurnDefColComp
+    mParentComponentName: ''
+    3357757282: true
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements:
+  - 1278667034: GeometrySphere
+    elements:
+      224075790: GanonFirebatOp
+      546673801: kodama::GetGanonFirebatOp().mGardenerOutputInfo.mBurnDefenseCollisionSphere
+- 2658375238: 1509668381
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: HotSphereComp
+    mParentComponentName: ''
+    568218804: kodama::GetGanonFirebatOp().mGardenerOutputInfo.mHotSphere
+    293431725: GanonFirebatOp
+    mIsActivate: true
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: 808897362
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: TailorPlayerCom
+    1350770463: GanonFirebatOp
+    mModelInfo:
+    - mModelAssetName: GanonFirebat
+      3911444315: AnimationCtrlCom
+      218648520: SkeletalModelCom
+    2235426953: true
+  requirements: null
+- 2658375238: 378517561
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: BurnComp
+    mBurnDefenseCollisionComponentName: BurnDefColComp
+    mBurnAttackCollisionComponentName: AttackColComp
+    mHotSphereComponentName: HotSphereComp
+    mTailorPlayerComponentName: TailorPlayerCom
+    899153843: false
+    mIsActivate: true
+  requirements:
+  - 1278667034: GeometryNone
+    elements:
+      1342641724: kodama::GetGanonFirebatOp().mGardenerOutputInfo.mBurnObj
+      3485597765: GanonFirebatOp
+name: GanonFirebatOp

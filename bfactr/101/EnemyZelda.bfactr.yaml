@@ -1,0 +1,276 @@
+components:
+- 2658375238: 878533877
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: CharaCtrlComp
+    mParentComponentName: ''
+    mActorType: 0
+    1842891079: kodama::GetEnemyZelda().mCharacterControl
+    1189116497: EnemyZelda
+    2305312289: 0
+    mGravityEnabled: false
+    3586083088: 1
+    2095570222: 2
+    2175120176: DefenseColComp
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: 780721246
+  589756810: 0
+  2088943335: ''
+  elements: {}
+  requirements: null
+- 2658375238: 756072038
+  589756810: 0
+  2088943335: ''
+  elements: {}
+  requirements:
+  - 1278667034: 4034556592
+    elements: {}
+- 2658375238: LifeComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: LifeComp
+    1164678587: kodama::GetEnemyZelda().mLife
+    1361889095: EnemyZelda
+  requirements: null
+- 2658375238: MessageDelivererComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: MessageDelivererComponent
+  requirements: null
+- 2658375238: 2168881546
+  589756810: 0
+  2088943335: ''
+  elements: {}
+  requirements:
+  - 1278667034: 1972180201
+    elements: {}
+- 2658375238: ShadowDecal
+  589756810: 0
+  2088943335: ''
+  elements:
+    2697663330: true
+    517948143: false
+    1564999505: kodama::GetEnemyZelda().mShadowDecal
+    3449844225: EnemyZelda
+    mShapeType: 0
+    mAssetName: EnemyZelda
+    mModelName: EnemyZelda
+  requirements: null
+- 2658375238: 703753160
+  589756810: 0
+  2088943335: ''
+  elements:
+    mCharacterControllerComponentName: CharaCtrlComp
+  requirements: null
+- 2658375238: 1455765951
+  589756810: 0
+  2088943335: ''
+  elements:
+    mCharacterControllerComponentName: CharaCtrlComp
+  requirements: null
+- 2658375238: SkeletalModelComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: SkeletalModelCom
+    mParentComponentName: ''
+    mAssetName: EnemyZelda
+    mModelName: EnemyZelda
+    4198711610: false
+    1992403994: true
+    517102968: true
+    mIsInstancing: false
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: 1926833348
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: ActorMaterialAnimCom
+    218648520: SkeletalModelCom
+    mAssetName: EnemyZelda
+    2387181045: 3
+    1160781068: true
+    4256387621: true
+    4266573032: false
+    3804471930: false
+  requirements: null
+- 2658375238: 435965885
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: AnimationCtrlCom
+    mMotionAssetName: Zelda
+    mModelAssetName: Zelda
+    mSkeletalModelComponent: SkeletalModelCom
+    246972132: 2
+    2812242225: true
+  requirements: null
+- 2658375238: SkeletalModelComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: SkeletalModelRodCom
+    mParentComponentName: SkeletalModelCom
+    mAssetName: PropplayerCopyRod
+    mModelName: PropplayerCopyRod
+    4198711610: false
+    1992403994: true
+    517102968: true
+    mIsInstancing: false
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: VirtualBoneComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: VirtualBoneCom
+    mAssetName: Zelda
+    218648520: SkeletalModelCom
+  requirements: null
+- 2658375238: 808897362
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: TailorPlayerCom
+    1350770463: EnemyZelda
+    mModelInfo:
+    - mModelAssetName: Zelda
+      3911444315: AnimationCtrlCom
+      218648520: SkeletalModelCom
+    2235426953: true
+  requirements: null
+- 2658375238: 3565733655
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: BattleUnitComp
+    mIsAutoRegister: true
+  requirements: null
+- 2658375238: EventCharacterComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: EventCharaComp
+    3636231356: EnemyZelda
+    mInstanceName: ''
+    3631058243: ''
+    3911444315: AnimationCtrlCom
+  requirements: null
+- 2658375238: LockedOnByPlayerComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: LockedOnByPlayerCom
+    mParentComponentName: ''
+    3298614415: true
+    3686175866: true
+    mPriorityType: 0
+    522991013: 1
+    mVirtualBoneComponentName: VirtualBoneCom
+    2562954987: CenterRT
+    mBattleUnitCompName: BattleUnitComp
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements:
+  - 1278667034: Common
+    elements: {}
+- 2658375238: SyncReceiver
+  589756810: 0
+  2088943335: ''
+  elements:
+    652701914:
+    - ActorMaterialAnimCom
+  requirements:
+  - 1278667034: 2588421441
+    elements: {}
+- 2658375238: CommonCounterInteractor
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: CommonCounterInteractor
+  requirements: null
+- 2658375238: 499416579
+  589756810: 0
+  2088943335: ''
+  elements:
+    2045581212: kodama::GetEnemyZelda().mFindTargetUtility
+    1709237288: EnemyZelda
+    mBattleUnitCompName: BattleUnitComp
+  requirements: null
+- 2658375238: ReactionReceiver
+  589756810: 0
+  2088943335: ''
+  elements:
+    mReactionType: 0
+    358346846: kodama::GetEnemyZelda().mReaction
+    3672138586: EnemyZelda
+    mLifeComponentName: LifeComp
+  requirements: null
+- 2658375238: 186187196
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: DefenseColComp
+    mParentComponentName: ''
+    mDefenseType: 0
+    2265226370: kodama::GetEnemyZelda().mDefense
+    2384942632: EnemyZelda
+    Player: false
+    1202173614: 0
+    mRegisterReaction: true
+    3357757282: true
+    2315468836: ''
+    1311360933: CommonCounterInteractor
+    424783641: ''
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: 4040600982
+  589756810: 0
+  2088943335: ''
+  elements:
+    mFallType: 0
+    1963330590: false
+    mIsPlayMotion: true
+    687049451: false
+    mCollisionComponentName: ''
+  requirements: null
+- 2658375238: 2735015078
+  589756810: 0
+  2088943335: ''
+  elements:
+    763393193: EnemyZelda
+    2760675623: kodama::GetEnemyZelda().mSyncTimelimit
+  requirements:
+  - 1278667034: 958190168
+    elements: {}
+- 2658375238: 2936149620
+  589756810: 0
+  2088943335: ''
+  elements:
+    3768740286: true
+  requirements: null
+- 2658375238: 1975369000
+  589756810: 0
+  2088943335: ''
+  elements: {}
+  requirements: null
+name: EnemyZelda
