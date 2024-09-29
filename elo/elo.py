@@ -166,7 +166,8 @@ def parse_elo(file_data, version):
                 "Z": actor[0][2]
             },
             "Actor name": actor[18],
-            "Actor params": actor[13]
+            "Actor params": actor[13],
+            "Conditions": actor[12]
         })
         #true_output['ZZZActorFullData'].append(actor)
 
