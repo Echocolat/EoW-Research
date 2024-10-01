@@ -8,8 +8,8 @@ with open('Bidouillage events/waypoints.json', 'r') as json_file:
 
 def edit():
 
-    base_event_index = 123
-    base_event_name = 131
+    base_event_index = 331
+    base_event_name = 340
 
     for waypoint in waypoints:
 
@@ -44,7 +44,7 @@ def edit():
         base_event_index += 1
 
         show = {
-                "NextEventIndex": 43,
+                "NextEventIndex": 22,
                 "ActorIndex": 9,
                 "ActorActionIndex": 0,
                 "Parameters": {
@@ -52,64 +52,7 @@ def edit():
                         "String": f"Signboard:{waypoints[waypoint]['mLocation']}"
                     }
                 },
-                "NextEventName": "Event17",
-                "ActorName": "Dialog",
-                "ActorAction": "Show",
-                "Name": f"Event{base_event_name}",
-                "Type": "Action"
-            }
-        
-        base_event_name += 1
-        base_event_index += 1
-        
-        map_warp_base['Flowcharts']['MapWarp']['Events'].append(query)
-        map_warp_base['Flowcharts']['MapWarp']['Events'].append(show)
-
-    base_event_index = 123
-    base_event_name = 131
-
-    for waypoint in waypoints:
-
-        query = {
-                    "ActorIndex": 7,
-                    "ActorQueryIndex": 0,
-                    "Parameters": {
-                        "value1": {
-                            "Argument": "locator"
-                        },
-                        "value2": {
-                            "String": waypoints[waypoint]['mLocation']
-                        }
-                    },
-                    "SwitchCases": [
-                        {
-                            "Value": 0,
-                            "EventIndex": base_event_index + 1
-                        },
-                        {
-                            "Value": 1,
-                            "EventIndex": base_event_index + 2
-                        }
-                    ],
-                    "ActorName": "FlowControl",
-                    "ActorQuery": "CompareString",
-                    "Name": f"Event{base_event_name}",
-                    "Type": "Switch"
-                }
-        
-        base_event_name += 1
-        base_event_index += 1
-
-        show = {
-                "NextEventIndex": 43,
-                "ActorIndex": 9,
-                "ActorActionIndex": 0,
-                "Parameters": {
-                "message": {
-                        "String": f"Signboard:{waypoints[waypoint]['mLocation']}"
-                    }
-                },
-                "NextEventName": "Event17",
+                "NextEventName": "Event71",
                 "ActorName": "Dialog",
                 "ActorAction": "Show",
                 "Name": f"Event{base_event_name}",
