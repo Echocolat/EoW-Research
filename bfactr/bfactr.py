@@ -132,5 +132,7 @@ def parse_all(version):
     for file in file_list:
         dump_yaml(file, f"bfactr/{version}")
 
+    dump_yaml(f"{version}/romfs/region_common/nectar/villa.bfntpj", f"bfntpj/{version}")
+
 parse_all('100')
 parse_all('101')

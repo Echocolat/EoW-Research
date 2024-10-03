@@ -8,4 +8,4 @@ def search(version, string):
                 if string in file_.read():
                     print(os.path.join(subdir, file))
 
-search("100", "ForbidSave")
+search("101", "MapAbyss")

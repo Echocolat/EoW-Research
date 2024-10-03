@@ -165,6 +165,14 @@ def parse_elo(file_data, version):
                 "Y": actor[0][1],
                 "Z": actor[0][2]
             },
+            "Scale": {
+                "Max X": actor[9],
+                "Min X": actor[6],
+                "Max Y": actor[10],
+                "Min Y": actor[7],
+                "Max Z": actor[11],
+                "Min Z": actor[8]
+            },
             "Actor name": actor[18],
             "Actor params": actor[13],
             "Conditions": actor[12]
