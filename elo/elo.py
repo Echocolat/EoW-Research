@@ -8,6 +8,7 @@ import zlib
 import re
 import os
 import json
+import yaml
 
 def roundUp(x):
     return (x+0x10)//0x10*0x10
@@ -177,6 +178,20 @@ def parse_elo(file_data, version):
             "Actor params": actor[13],
             "Conditions": actor[12]
         })
+        if "TreasureBox" in actor[18]:
+            with open(f'gsheet/datasheets/{version}/datasheets/Items.yaml', 'r') as yaml_file:
+                items_data = yaml.load(yaml_file, Loader = yaml.Loader)
+            for item in items_data['contents']:
+                if item['itemID'] == actor[13][1]:
+                    actor_name = item['actorSymbolName']
+                    break
+                    
+            true_output['Actors'][-1]['Treasure Box Data'] = {
+                "Actor ID": actor[13][1],
+                "Actor name": actor_name,
+                "Amount": actor[13][-2]
+            }
+
         #true_output['ZZZActorFullData'].append(actor)
 
     return true_output
