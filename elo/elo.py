@@ -192,6 +192,11 @@ def parse_elo(file_data, version):
                 "Amount": actor[13][-2]
             }
 
+            if true_output['Actors'][-1]['Treasure Box Data']['Actor ID'] == 29:
+                with open(f'gsheet/datasheets/{version}/datasheets/PieceOfPowers.yaml', 'r') as yaml_file:
+                    pieces_data = yaml.load(yaml_file, Loader = yaml.Loader)
+                true_output['Actors'][-1]['Treasure Box Data']['Actor name'] = "ItemWorldGlobePiece x" + str(pieces_data['contents'][true_output['Actors'][-1]['Treasure Box Data']['Actor ID']]['mCount'])
+
         #true_output['ZZZActorFullData'].append(actor)
 
     return true_output
