@@ -1,0 +1,553 @@
+{
+  "FileName": "Respawn",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "Respawn": {
+      "Name": "Respawn",
+      "Actors": [
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayOneshotSystemSE"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ResetActiveAndPesteActors"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RespawnStrong",
+            "Respawn",
+            "RespawnFieldAbyss"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetGravityEnable"
+          ],
+          "Queries": [
+            "CheckMorph",
+            "CheckLife"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Sync",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SyncReset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventVariables",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "IsMin"
+          ],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "ActorName": "GameControl",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event8",
+          "ActorName": "Fade",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event1",
+          "ActorName": "GameControl",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "aliveCemeteryRevive": {
+              "Bool": false
+            },
+            "cemeteryRevive": {
+              "Bool": false
+            },
+            "child": {
+              "Bool": true
+            },
+            "defeatedThrough": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event11",
+          "ActorName": "Zelda",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event6",
+          "Name": "Event7",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "Player",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalW"
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Fade",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "morphKind": {
+              "Int": 0
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 9
+            },
+            {
+              "Value": 0,
+              "EventIndex": 10
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event5",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "VO_ZELDA_EV_106_6"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "Audio",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "VO_SWORD_RESPAWN"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "Audio",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event2",
+          "ActorName": "Sync",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "TagAreaStart": {
+              "String": "HorseRaceRetire"
+            }
+          },
+          "FlowchartName": "HylianF006",
+          "EntryPointName": "_Jump2NPC",
+          "Name": "Event12",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "HorseRaceCheckpoint"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 2
+            },
+            {
+              "Value": 0,
+              "EventIndex": 12
+            }
+          ],
+          "ActorName": "EventVariables",
+          "Name": "Event11",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "amount": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 11
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event13",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 16,
+          "ActorIndex": 2,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event16",
+          "ActorName": "GameControl",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 26,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "aliveCemeteryRevive": {
+              "Bool": false
+            },
+            "cemeteryRevive": {
+              "Bool": false
+            },
+            "child": {
+              "Bool": true
+            },
+            "defeatedThrough": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event26",
+          "ActorName": "Zelda",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event17",
+          "Name": "Event18",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event21",
+          "ActorName": "Player",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalW"
+            }
+          },
+          "NextEventName": "Event19",
+          "ActorName": "Fade",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "morphKind": {
+              "Int": 0
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 22
+            },
+            {
+              "Value": 0,
+              "EventIndex": 23
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event21",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "VO_ZELDA_EV_106_6"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event18",
+          "ActorName": "Audio",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "VO_SWORD_RESPAWN"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event18",
+          "ActorName": "Audio",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event20",
+          "ActorName": "Sync",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "TagAreaStart": {
+              "String": "HorseRaceRetire"
+            }
+          },
+          "FlowchartName": "HylianF006",
+          "EntryPointName": "_Jump2NPC",
+          "Name": "Event25",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "HorseRaceCheckpoint"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 15
+            },
+            {
+              "Value": 0,
+              "EventIndex": 25
+            }
+          ],
+          "ActorName": "EventVariables",
+          "Name": "Event26",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "amount": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 24
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event27",
+          "Type": "Switch"
+        }
+      ],
+      "EntryPoints": {
+        "FieldAbyssRespawn": {
+          "SubFlowEventIndices": [
+            18,
+            25
+          ],
+          "EventIndex": 27
+        },
+        "PassOut": {
+          "SubFlowEventIndices": [
+            5,
+            12
+          ],
+          "EventIndex": 14
+        },
+        "Respawn": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 1
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

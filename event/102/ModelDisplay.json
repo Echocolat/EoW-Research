@@ -1,0 +1,665 @@
+{
+  "FileName": "ModelDisplay",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "ModelDisplay": {
+      "Name": "ModelDisplay",
+      "Actors": [
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "InvokeFlowchart",
+            "PreloadFlowchart"
+          ],
+          "Queries": [
+            "Branch"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Signal"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetForcedResolution",
+            "ResetForcedResolution"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtItemGettingPlayer",
+            "ResetCarriedActor",
+            "PlayAnimationEx",
+            "AimCompassPoint",
+            "ShowDisplayModel",
+            "StopDisplayModelEffect",
+            "PlayItemGetJingle",
+            "CreateDisplayModel",
+            "SetEquipmentVisibility",
+            "SetInterestIkEnabled",
+            "DestroyDisplayModel",
+            "PlayAnimation",
+            "BreakBurrowable"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetInterestIkEnabled",
+            "AimActor",
+            "WaitMoveDone"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.7
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 2,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event5",
+          "ActorName": "Player",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 13,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.05
+            }
+          },
+          "NextEventName": "Event6",
+          "ActorName": "Timer",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "Argument": "raiseStAnim"
+            },
+            "restart": {
+              "Bool": false
+            },
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 6,
+          "ForkEventIndicies": [
+            3,
+            5
+          ],
+          "Name": "Event10",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 30,
+          "NextEventName": "Event18",
+          "Name": "Event9",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 40,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event19",
+          "ActorName": "Player",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 11,
+          "ForkEventIndicies": [
+            22,
+            20
+          ],
+          "Name": "Event24",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "ActorName": "Dialog",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event27",
+          "Type": "Join"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "value": {
+              "Argument": "noEquip"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 27
+            }
+          ],
+          "ActorName": "FlowControl",
+          "Name": "Event28",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 29,
+          "Parameters": {
+            "noEquip": {
+              "Argument": "noEquip"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_SetEquipmentVisibility",
+          "NextEventName": "Event14",
+          "Name": "Event6",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 16,
+          "ForkEventIndicies": [
+            15,
+            17
+          ],
+          "Name": "Event7",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "ActorName": "Player",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "NextEventName": "Event34",
+          "Name": "Event32",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.083
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "value": {
+              "Argument": "keepRaise"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 34
+            }
+          ],
+          "ActorName": "FlowControl",
+          "Name": "Event34",
+          "Type": "Switch"
+        },
+        {
+          "JoinEventIndex": 25,
+          "ForkEventIndicies": [
+            0,
+            26
+          ],
+          "Name": "Event43",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 4,
+          "ActorActionIndex": 6,
+          "NextEventName": "Event26",
+          "ActorName": "Player",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "entryPoint": {
+              "Argument": "messageEntry"
+            },
+            "filename": {
+              "Argument": "messageAsset"
+            }
+          },
+          "ActorName": "FlowControl",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 23,
+          "ForkEventIndicies": [
+            9,
+            24
+          ],
+          "Name": "Event21",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 21,
+          "NextEventName": "Event11",
+          "Name": "Event22",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "filename": {
+              "Argument": "messageAsset"
+            }
+          },
+          "ActorName": "FlowControl",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event40",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 7,
+          "NextEventName": "Event1",
+          "ActorName": "Player",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "visibility": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "visibility": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 4,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "Player",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 38,
+          "ForkEventIndicies": [
+            7,
+            39
+          ],
+          "Name": "Event18",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 41,
+          "ActorIndex": 4,
+          "ActorActionIndex": 10,
+          "NextEventName": "Event38",
+          "ActorName": "Player",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 33,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "Argument": "anim"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event30",
+          "ActorName": "Player",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 35,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event35",
+          "ActorName": "Partner",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "anim": {
+              "Argument": "raiseEdAnim"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "EndCarry",
+          "Name": "Event17",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "_RestoreEquipmentVisibility",
+          "Name": "Event35",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": "attach_object"
+            },
+            "duration": {
+              "Float": 0.3
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 36,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "Partner",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 14,
+          "NextEventName": "Event7",
+          "Name": "Event36",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 37,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "timeout": {
+              "Float": 3
+            }
+          },
+          "NextEventName": "Event16",
+          "ActorName": "Partner",
+          "Name": "Event37",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "console": {
+              "Int": 16000900
+            },
+            "handheld": {
+              "Int": 11520648
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "GameControl",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 32,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event29",
+          "ActorName": "GameControl",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 4,
+          "ActorActionIndex": 12,
+          "NextEventName": "Event43",
+          "ActorName": "Player",
+          "Name": "Event39",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "_RestoreEquipmentVisibility": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 28
+        },
+        "_SetEquipmentVisibility": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 12
+        },
+        "EndCarry": {
+          "SubFlowEventIndices": [
+            35
+          ],
+          "EventIndex": 31
+        },
+        "ModelDisplaySequence": {
+          "SubFlowEventIndices": [
+            13,
+            34
+          ],
+          "EventIndex": 42
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

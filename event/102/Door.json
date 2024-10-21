@@ -1,0 +1,152 @@
+{
+  "FileName": "Door",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "Door": {
+      "Name": "Door",
+      "Actors": [
+        {
+          "Name": "Door",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "DoorOpen",
+            "DoorClose",
+            "GenericGimmickSequence"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Show"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 3,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event4",
+          "ActorName": "Door",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "ActorName": "Door",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 0,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Door",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "System:Locked_DoorLock"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event2",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "System:Locked_DoorBoss"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event5",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Close": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 1
+        },
+        "LockedDoorBoss": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 5
+        },
+        "LockedDoorLock": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 4
+        },
+        "Open": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 2
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

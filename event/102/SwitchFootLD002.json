@@ -1,0 +1,1401 @@
+{
+  "FileName": "SwitchFootLD002",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "SwitchFootLD002": {
+      "Name": "SwitchFootLD002",
+      "Actors": [
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayJingle",
+            "PlayOneshotSystemSE"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayLocationOriginCameraAnimation",
+            "Reset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestAutoSave",
+            "LoadArea"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag",
+            "SetLevelFlag"
+          ],
+          "Queries": [
+            "CountFlags"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Yield_"
+          ],
+          "Queries": [
+            "Branch"
+          ],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 37,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "location": {
+              "String": "004_CameraWall"
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "Argument": "CamAnim"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "map/L_Dungeon002_004.bfres"
+            }
+          },
+          "NextEventName": "Event16",
+          "ActorName": "Camera",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol1": {
+              "String": "L002R007SwitchFoot"
+            },
+            "symbol2": {
+              "String": "L002R010SwitchFoot"
+            },
+            "symbol3": {
+              "String": "L002R014SwitchFoot"
+            },
+            "symbol4": {
+              "String": "L002R016SwitchFoot"
+            },
+            "symbol5": {
+              "String": "L002R004SwitchFoot"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 4
+            },
+            {
+              "Value": 1,
+              "EventIndex": 16
+            },
+            {
+              "Value": 2,
+              "EventIndex": 17
+            },
+            {
+              "Value": 3,
+              "EventIndex": 23
+            },
+            {
+              "Value": 4,
+              "EventIndex": 24
+            },
+            {
+              "Value": 5,
+              "EventIndex": 24
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event4",
+          "Type": "Switch"
+        },
+        {
+          "JoinEventIndex": 3,
+          "ForkEventIndicies": [
+            0,
+            36,
+            25
+          ],
+          "Name": "Event17",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event19",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 18,
+          "Parameters": {
+            "CamAnim": {
+              "String": "GeyserType01_cam"
+            },
+            "Final": {
+              "Bool": false
+            },
+            "Flag": {
+              "Argument": "Flag"
+            },
+            "wait": {
+              "Float": 3
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_SwitchFootLD002_CamAnim",
+          "NextEventName": "Event45",
+          "Name": "Event5",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 13,
+          "Parameters": {
+            "Flag": {
+              "String": "L002R007SwitchFoot"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_SwitchFootLD002_FlagCheck",
+          "NextEventName": "Event31",
+          "Name": "Event6",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "L002R004SwitchFoot4"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 7.1
+            }
+          },
+          "NextEventName": "Event13",
+          "ActorName": "Timer",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 14,
+          "Parameters": {
+            "Flag": {
+              "String": "L002R010SwitchFoot"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_SwitchFootLD002_FlagCheck",
+          "NextEventName": "Event32",
+          "Name": "Event24",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 15,
+          "Parameters": {
+            "Flag": {
+              "String": "L002R014SwitchFoot"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_SwitchFootLD002_FlagCheck",
+          "NextEventName": "Event33",
+          "Name": "Event25",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 21,
+          "Parameters": {
+            "Flag": {
+              "String": "L002R016SwitchFoot"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_SwitchFootLD002_FlagCheck",
+          "NextEventName": "Event46",
+          "Name": "Event26",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 12,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event12",
+          "ActorName": "Camera",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 39,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 40
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event27",
+          "ActorName": "EventFlags",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 43,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 41
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event35",
+          "ActorName": "EventFlags",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 44,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 42
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event36",
+          "ActorName": "EventFlags",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "Parameters": {
+            "CamAnim": {
+              "String": "GeyserType02_cam"
+            },
+            "Final": {
+              "Bool": false
+            },
+            "Flag": {
+              "Argument": "Flag"
+            },
+            "wait": {
+              "Float": 3
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_SwitchFootLD002_CamAnim",
+          "NextEventName": "Event45",
+          "Name": "Event44",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 18,
+          "Parameters": {
+            "CamAnim": {
+              "String": "GeyserType03_cam"
+            },
+            "Final": {
+              "Bool": false
+            },
+            "Flag": {
+              "Argument": "Flag"
+            },
+            "wait": {
+              "Float": 3
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_SwitchFootLD002_CamAnim",
+          "NextEventName": "Event45",
+          "Name": "Event21",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event11",
+          "ActorName": "FlowControl",
+          "Name": "Event45",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event7",
+          "ActorName": "Fade",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 47,
+          "Parameters": {
+            "Flag": {
+              "String": "L002R004SwitchFoot"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_SwitchFootLD002_FlagCheck",
+          "NextEventName": "Event39",
+          "Name": "Event66",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 45,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 43
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event37",
+          "ActorName": "EventFlags",
+          "Name": "Event46",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 18,
+          "Parameters": {
+            "CamAnim": {
+              "String": "GeyserType04_cam"
+            },
+            "Final": {
+              "Bool": false
+            },
+            "Flag": {
+              "Argument": "Flag"
+            },
+            "wait": {
+              "Float": 3.5
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_SwitchFootLD002_CamAnim",
+          "NextEventName": "Event45",
+          "Name": "Event40",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 18,
+          "Parameters": {
+            "CamAnim": {
+              "String": "GeyserType05_cam"
+            },
+            "Final": {
+              "Bool": true
+            },
+            "Flag": {
+              "Argument": "Flag"
+            },
+            "wait": {
+              "Float": 1
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_SwitchFootLD002_CamAnim",
+          "NextEventName": "Event45",
+          "Name": "Event42",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "value": {
+              "Argument": "Final"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 28
+            }
+          ],
+          "ActorName": "FlowControl",
+          "Name": "Event76",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_NAZOTOKI_SEIKAI"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event77",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 26,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 13.5
+            }
+          },
+          "NextEventName": "Event77",
+          "ActorName": "Timer",
+          "Name": "Event78",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 29,
+          "ForkEventIndicies": [
+            27,
+            7,
+            51
+          ],
+          "Name": "Event22",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event34",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "extentsX": {
+              "Float": 10
+            },
+            "extentsY": {
+              "Float": 10
+            },
+            "extentsZ": {
+              "Float": 10
+            },
+            "location": {
+              "String": "004_CameraWall"
+            },
+            "syncLoad": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event52",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 30,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event52",
+          "ActorName": "Fade",
+          "Name": "Event54",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 5,
+          "FlowchartName": "",
+          "EntryPointName": "JumpToR004",
+          "NextEventName": "Event6",
+          "Name": "Event56",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 8,
+          "FlowchartName": "",
+          "EntryPointName": "JumpToR004",
+          "NextEventName": "Event24",
+          "Name": "Event1",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 9,
+          "FlowchartName": "",
+          "EntryPointName": "JumpToR004",
+          "NextEventName": "Event25",
+          "Name": "Event2",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 10,
+          "FlowchartName": "",
+          "EntryPointName": "JumpToR004",
+          "NextEventName": "Event26",
+          "Name": "Event3",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 49,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "NextEventName": "Event47",
+          "ActorName": "Fade",
+          "Name": "Event8",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Argument": "wait"
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 62,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 8
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event58",
+          "ActorName": "EventFlags",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 56,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 8
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event49",
+          "ActorName": "EventFlags",
+          "Name": "Event27",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 63,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 8
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event59",
+          "ActorName": "EventFlags",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 64,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 8
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event60",
+          "ActorName": "EventFlags",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 65,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 8
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event61",
+          "ActorName": "EventFlags",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 58,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 8
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event51",
+          "ActorName": "EventFlags",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 59,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 8
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event53",
+          "ActorName": "EventFlags",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 60,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 8
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event55",
+          "ActorName": "EventFlags",
+          "Name": "Event37",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 61,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 8
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event57",
+          "ActorName": "EventFlags",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 57,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 8
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event50",
+          "ActorName": "EventFlags",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 66,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "Argument": "Flag"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event62",
+          "ActorName": "EventFlags",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 48,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event43",
+          "ActorName": "Timer",
+          "Name": "Event47",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "label": {
+              "String": "SE_OBJ_SEA_SYMBOL_LIGHT_END"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 50,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 7.1
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "Timer",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event48",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 52,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event15",
+          "ActorName": "Timer",
+          "Name": "Event49",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 22,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event10",
+          "ActorName": "Timer",
+          "Name": "Event50",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 53,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event18",
+          "ActorName": "Timer",
+          "Name": "Event51",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 54,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event41",
+          "ActorName": "Timer",
+          "Name": "Event53",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 55,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event48",
+          "ActorName": "Timer",
+          "Name": "Event55",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 100
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event66",
+          "ActorName": "EventFlags",
+          "Name": "Event57",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 32,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 100
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event56",
+          "ActorName": "EventFlags",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 33,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 100
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event1",
+          "ActorName": "EventFlags",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 34,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 100
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "EventFlags",
+          "Name": "Event60",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 35,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 100
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "EventFlags",
+          "Name": "Event61",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 100
+            },
+            "value": {
+              "Bool": false
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event62",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 4,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol1": {
+              "String": "L002R007SwitchFoot"
+            },
+            "symbol2": {
+              "String": "L002R010SwitchFoot"
+            },
+            "symbol3": {
+              "String": "L002R014SwitchFoot"
+            },
+            "symbol4": {
+              "String": "L002R016SwitchFoot"
+            },
+            "symbol5": {
+              "String": "L002R004SwitchFoot"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 46
+            },
+            {
+              "Value": 1,
+              "EventIndex": 68
+            },
+            {
+              "Value": 2,
+              "EventIndex": 68
+            },
+            {
+              "Value": 3,
+              "EventIndex": 68
+            },
+            {
+              "Value": 4,
+              "EventIndex": 68
+            },
+            {
+              "Value": 5,
+              "EventIndex": 68
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event63",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 46,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event38",
+          "ActorName": "Fade",
+          "Name": "Event65",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 67,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event63",
+          "Name": "Event64",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 38,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event20",
+          "Name": "Event67",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 40,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event28",
+          "Name": "Event68",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 41,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event29",
+          "Name": "Event69",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 42,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset_PasteOff02",
+          "NextEventName": "Event30",
+          "Name": "Event70",
+          "Type": "Subflow"
+        }
+      ],
+      "EntryPoints": {
+        "_SwitchFootLD002_CamAnim": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 2
+        },
+        "_SwitchFootLD002_FlagCheck": {
+          "SubFlowEventIndices": [
+            4,
+            16,
+            17,
+            23,
+            24
+          ],
+          "EventIndex": 1
+        },
+        "JumpToR004": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 31
+        },
+        "SwitchBlue": {
+          "SubFlowEventIndices": [
+            71,
+            33,
+            8
+          ],
+          "EventIndex": 71
+        },
+        "SwitchGreen": {
+          "SubFlowEventIndices": [
+            73,
+            35,
+            10
+          ],
+          "EventIndex": 73
+        },
+        "SwitchPurple": {
+          "SubFlowEventIndices": [
+            69,
+            20
+          ],
+          "EventIndex": 69
+        },
+        "SwitchRed": {
+          "SubFlowEventIndices": [
+            70,
+            32,
+            5
+          ],
+          "EventIndex": 70
+        },
+        "SwitchYellow": {
+          "SubFlowEventIndices": [
+            72,
+            34,
+            9
+          ],
+          "EventIndex": 72
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

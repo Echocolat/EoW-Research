@@ -1,0 +1,126 @@
+components:
+- 2658375238: SkeletalModelComponent
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: SkeletalModelCom
+    mParentComponentName: ''
+    mAssetName: PropplayerArrow01
+    mModelName: PropplayerArrow01
+    4198711610: true
+    1992403994: true
+    517102968: true
+    mIsInstancing: false
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: 1926833348
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: ActorMaterialAnimCom
+    218648520: SkeletalModelCom
+    mAssetName: PropplayerArrow01
+    2387181045: 0
+    1160781068: true
+    4256387621: false
+    4266573032: true
+    3804471930: false
+  requirements: null
+- 2658375238: 3282830774
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: AttackColComp
+    mParentComponentName: ''
+    mAttackType: 3
+    1155784071: kodama::GetCompanionLinkArrowNormalLv02().mGardenerOutputInfo.mAttackCollisoinSphere
+    1664673786: CompanionLinkArrowNormalLv02
+    Player: false
+    1202173614: 0
+    mRegisterReaction: true
+    3357757282: true
+    1514473201: ''
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: 2139602768
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: BurnAtkColComp
+    mParentComponentName: ''
+    284840009: 2
+    3357757282: true
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements:
+  - 1278667034: GeometrySphere
+    elements:
+      1350738183: CompanionLinkArrowNormalLv01
+      2679833556: kodama::GetCompanionLinkArrowNormalLv01().mGardenerOutputInfo.mBurnAttackCollisionSphere
+- 2658375238: 2613605397
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: BurnDefColComp
+    mParentComponentName: ''
+    3357757282: true
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements:
+  - 1278667034: GeometrySphere
+    elements:
+      224075790: CompanionLinkArrowNormalLv01
+      546673801: kodama::GetCompanionLinkArrowNormalLv01().mGardenerOutputInfo.mBurnDefenseCollisionSphere
+- 2658375238: 1509668381
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: HotSphereComp
+    mParentComponentName: ''
+    568218804: kodama::GetCompanionLinkArrowNormalLv01().mGardenerOutputInfo.mHotSphere
+    293431725: CompanionLinkArrowNormalLv01
+    mIsActivate: true
+    3787691154: ''
+    mAttackBoneName: ''
+    2614543631: true
+    mAttachElement: 7
+  requirements: null
+- 2658375238: 808897362
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: TailorPlayerCom
+    1350770463: PropplayerArrow
+    mModelInfo:
+    - mModelAssetName: PropplayerArrow01
+      3911444315: ''
+      218648520: SkeletalModelCom
+    2235426953: false
+  requirements: null
+- 2658375238: 378517561
+  589756810: 0
+  2088943335: ''
+  elements:
+    mComponentName: BurnComp
+    mBurnDefenseCollisionComponentName: BurnDefColComp
+    mBurnAttackCollisionComponentName: BurnAtkColComp
+    mHotSphereComponentName: HotSphereComp
+    mTailorPlayerComponentName: TailorPlayerCom
+    899153843: false
+    mIsActivate: true
+  requirements:
+  - 1278667034: GeometryNone
+    elements:
+      1342641724: kodama::GetCompanionLinkArrowNormalLv01().mGardenerOutputInfo.mBurnObj
+      3485597765: CompanionLinkArrowNormalLv01
+name: CompanionLinkArrowNormalLv02

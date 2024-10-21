@@ -1,0 +1,691 @@
+{
+  "FileName": "ChangeLinkSword",
+  "Version": "0.3.0.0",
+  "Flowcharts": {},
+  "Timelines": {
+    "ChangeLinkSword": {
+      "Name": "ChangeLinkSword",
+      "Duration": 1311,
+      "Actors": [
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayActorOriginCameraAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 2,
+          "Actions": [
+            "WarpToActor",
+            "AimPlayer"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "MorphZelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 10,
+          "Actions": [
+            "PlayAnimation",
+            "PlayMaterialAnimation",
+            "SetComponentActive",
+            "Destroy",
+            "Activate",
+            "Deactivate",
+            "SetShapeVisibility",
+            "PlayTailorOtherChannelNoWait",
+            "SetFacialExpression"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 9,
+          "Actions": [
+            "PlayAnimation",
+            "PlayMaterialAnimation",
+            "SetVisibility",
+            "WarpToActor",
+            "MorphTo",
+            "SetEquipmentVisibility",
+            "SetLeftHandItem",
+            "SetRightHandItem",
+            "PlayAnimationNoWait",
+            "AimCompassPoint",
+            "SetFacialExpression"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 2,
+          "Actions": [
+            "PlayOneshotSystemSE",
+            "DisablePlaySeFromTailor",
+            "EnablePlaySeFromTailor",
+            "Prepare",
+            "PlayBGM"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Clips": [
+        {
+          "StartTime": 0,
+          "Duration": 680,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": false
+            },
+            "name": {
+              "String": "TurnIntoALink01_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "map/L_Dungeon001_010.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "MorphZelda",
+                "Item2": ""
+              }
+            }
+          }
+        },
+        {
+          "StartTime": 0,
+          "Duration": 380,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Unknown": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": 0
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_TurnIntoALink_c1"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 300,
+          "Duration": 280,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Unknown": 8,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_TurnIntoALink_c1"
+            }
+          }
+        },
+        {
+          "StartTime": 380,
+          "Duration": 830,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Unknown": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_TurnIntoALink"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 380,
+          "Duration": 200,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Unknown": 7,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_TurnIntoALinkAppear"
+            }
+          }
+        }
+      ],
+      "Oneshots": [
+        {
+          "Time": 0,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 1
+            },
+            "offsetX": {
+              "Float": -20
+            },
+            "offsetY": {
+              "Float": 20
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "active": {
+              "Bool": true
+            },
+            "name": {
+              "String": "itemSkeletalModelComp"
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 4
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "shapeName": {
+              "String": "hood2_low__MI_hood2_Vis"
+            },
+            "visible": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "shapeName": {
+              "String": "bun_low__MI_hair_Vis"
+            },
+            "visible": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "shapeName": {
+              "String": "sideburns_low__MI_hair_Vis"
+            },
+            "visible": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "shapeName": {
+              "String": "face_low__MI_ear_Vis"
+            },
+            "visible": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 3,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "channel": {
+              "String": "TurnIntoALink"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_CHANGE_SWORD_1ST"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "kind": {
+              "Int": 0
+            },
+            "label": {
+              "String": "BGM_EV_GET_SWORD"
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 10,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "MorphZelda",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          }
+        },
+        {
+          "Time": 41,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1
+        },
+        {
+          "Time": 42,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "MorphZelda",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          }
+        },
+        {
+          "Time": 306,
+          "ActorIndex": 3,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "expression": {
+              "String": "damage"
+            }
+          }
+        },
+        {
+          "Time": 377,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "kind": {
+              "Int": 1
+            }
+          }
+        },
+        {
+          "Time": 380,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "String": "itemSkeletalModelComp"
+            }
+          }
+        },
+        {
+          "Time": 380,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "Time": 380,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visibility": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "Time": 380,
+          "ActorIndex": 4,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "item": {
+              "Int": 1
+            }
+          }
+        },
+        {
+          "Time": 380,
+          "ActorIndex": 4,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "item": {
+              "Int": 1
+            }
+          }
+        },
+        {
+          "Time": 757,
+          "ActorIndex": 5,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": false
+            },
+            "label": {
+              "String": "BGM_EV_GET_SWORD"
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 800,
+          "ActorIndex": 3,
+          "ActorActionIndex": 5
+        },
+        {
+          "Time": 1210,
+          "ActorIndex": 4,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            }
+          }
+        },
+        {
+          "Time": 1310,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 1
+            },
+            "offsetX": {
+              "Float": -2
+            },
+            "offsetY": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 1310,
+          "ActorIndex": 2,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 1310,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3
+        },
+        {
+          "Time": 1310,
+          "ActorIndex": 3,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          }
+        },
+        {
+          "Time": 1310,
+          "ActorIndex": 4,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "expression": {
+              "String": "normal"
+            }
+          }
+        },
+        {
+          "Time": 1310,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2
+        }
+      ],
+      "Triggers": [
+        {
+          "ClipIndex": 0,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 1,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 2,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 1,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 3,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 4,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 2,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 4,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 0,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 3,
+          "Type": 2
+        }
+      ],
+      "SubTimelines": [],
+      "Cuts": [
+        {
+          "StartTime": 0,
+          "Name": "cut1"
+        },
+        {
+          "StartTime": 0,
+          "Name": "cut01"
+        }
+      ]
+    }
+  }
+}

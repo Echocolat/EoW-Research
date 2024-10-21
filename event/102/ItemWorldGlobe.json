@@ -1,0 +1,586 @@
+{
+  "FileName": "ItemWorldGlobe",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "ItemWorldGlobe": {
+      "Name": "ItemWorldGlobe",
+      "Actors": [
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Show"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AddItemAndGenericItemGetSequence"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CheckFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetEnabledUpdateEnergyGaugeInEvent",
+            "PlayInAnimLayout",
+            "PlayOutAnimLayout"
+          ],
+          "Queries": [
+            "IsEnergyGaugeIncrease",
+            "IsEnergyGaugeMax"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AddPasteEnergy"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 21,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:WorldGlobePieceCrack"
+            }
+          },
+          "NextEventName": "Event34",
+          "ActorName": "Dialog",
+          "Name": "Event12",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "autoEquip": {
+              "Bool": false
+            },
+            "count": {
+              "Argument": "count"
+            },
+            "index": {
+              "Argument": "index"
+            },
+            "itemKey": {
+              "String": "WorldGlobePiece"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 22,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:WorldGlobePieces"
+            }
+          },
+          "NextEventName": "Event36",
+          "ActorName": "Dialog",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 20,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:WorldGlobePiece"
+            }
+          },
+          "NextEventName": "Event32",
+          "ActorName": "Dialog",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 17,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:WorldGlobePieceBefore"
+            }
+          },
+          "NextEventName": "Event33",
+          "ActorName": "Dialog",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 19,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:WorldGlobePiecesBefore"
+            }
+          },
+          "NextEventName": "Event37",
+          "ActorName": "Dialog",
+          "Name": "Event16",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EventLuberiLvUpTalk"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 4
+            },
+            {
+              "Value": 1,
+              "EventIndex": 3
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event13",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EventLuberiLvUpTalk"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 5
+            },
+            {
+              "Value": 1,
+              "EventIndex": 2
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event15",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 2,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EventLuberiLvUpTalk"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 9
+            },
+            {
+              "Value": 1,
+              "EventIndex": 0
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event17",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "ItemGet:WorldGlobePieceCrackBefore"
+            }
+          },
+          "NextEventName": "Event35",
+          "ActorName": "Dialog",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enableUpdateInEvent": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Hud",
+          "Name": "Event9",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 15,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enableUpdateInEvent": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event25",
+          "ActorName": "Hud",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 23,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enableUpdateInEvent": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event38",
+          "ActorName": "Hud",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 16,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "HeartGauge": {
+              "Bool": false
+            },
+            "ItemSlot": {
+              "Bool": false
+            },
+            "KeyItem": {
+              "Bool": false
+            },
+            "MiniMap": {
+              "Bool": false
+            },
+            "Operate": {
+              "Bool": false
+            },
+            "PasteGauge": {
+              "Bool": true
+            },
+            "PasteSlot": {
+              "Bool": false
+            },
+            "Rupee": {
+              "Bool": false
+            },
+            "TimedAbility": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event26",
+          "ActorName": "Hud",
+          "Name": "Event23",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 15
+            },
+            {
+              "Value": 1,
+              "EventIndex": 24
+            }
+          ],
+          "ActorName": "Hud",
+          "Name": "Event24",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 14,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "Timer",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event21",
+          "ActorName": "Timer",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "PlayGetAnimation",
+          "Name": "Event33",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "PlayGetAnimation",
+          "Name": "Event35",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "PlayGetAnimation",
+          "Name": "Event37",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "PlayGetAnimation",
+          "Name": "Event32",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "PlayGetAnimation",
+          "Name": "Event34",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "PlayGetAnimation",
+          "Name": "Event36",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "HeartGauge": {
+              "Bool": false
+            },
+            "ItemSlot": {
+              "Bool": false
+            },
+            "KeyItem": {
+              "Bool": false
+            },
+            "MiniMap": {
+              "Bool": false
+            },
+            "Operate": {
+              "Bool": false
+            },
+            "PasteGauge": {
+              "Bool": true
+            },
+            "PasteSlot": {
+              "Bool": false
+            },
+            "Rupee": {
+              "Bool": false
+            },
+            "TimedAbility": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Hud",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 25,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event40",
+          "ActorName": "Timer",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 30,
+          "ForkEventIndicies": [
+            12
+          ],
+          "Name": "Event40",
+          "Type": "Fork"
+        },
+        {
+          "ActorIndex": 3,
+          "ActorQueryIndex": 1,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 13
+            }
+          ],
+          "ActorName": "Hud",
+          "Name": "Event41",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 6,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 999
+            }
+          },
+          "NextEventName": "Event13",
+          "ActorName": "Player",
+          "Name": "Event27",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 8,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 999
+            }
+          },
+          "NextEventName": "Event17",
+          "ActorName": "Player",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 7,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "amount": {
+              "Int": 999
+            }
+          },
+          "NextEventName": "Event15",
+          "ActorName": "Player",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "*j25",
+          "Type": "Join"
+        }
+      ],
+      "EntryPoints": {
+        "GetPiece": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 10
+        },
+        "MessagePiece": {
+          "SubFlowEventIndices": [
+            17,
+            20
+          ],
+          "EventIndex": 27
+        },
+        "MessagePiece_many": {
+          "SubFlowEventIndices": [
+            19,
+            22
+          ],
+          "EventIndex": 29
+        },
+        "MessagePieceCrack": {
+          "SubFlowEventIndices": [
+            18,
+            21
+          ],
+          "EventIndex": 28
+        },
+        "PlayGetAnimation": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 26
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

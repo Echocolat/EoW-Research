@@ -1,0 +1,7704 @@
+{
+  "FileName": "LuberiHouseMachine",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "LuberiHouseMachine": {
+      "Name": "LuberiHouseMachine",
+      "Actors": [
+        {
+          "Name": "Dialog",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Show",
+            "SetInt"
+          ],
+          "Queries": [
+            "GetLastResult"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestAutoSave"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "LuberiHouseMachine",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtTalker",
+            "SetComponentActive",
+            "PlayMaterialAnimationNoWait",
+            "PlayAnimation",
+            "PlayTailorOtherChannelNoWait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Luberi",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericTalkSequenceWithDialog",
+            "Talk",
+            "MoveToTargetLinkedPoint",
+            "AimCompassPoint",
+            "AimActorLinkedPoint",
+            "WarpToActor",
+            "MoveToCompassPoint",
+            "SetInterestIkEnabled",
+            "TalkKeep",
+            "PlayAnimationNoWait",
+            "GenericTalkSequence",
+            "AimActor",
+            "PlayAnimation",
+            "LookAtTalker"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayOneshotSystemSE",
+            "SetBGMVolume",
+            "StopAllBGM",
+            "PlayZoneBGM",
+            "SetTimeToRegionBgmPlay",
+            "DisableUiPauseBgmDucking",
+            "EnableUiPauseBgmDucking"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "QuestSystem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CheckProgress"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetSwordLv",
+            "SetBowLv",
+            "SetBombLv",
+            "SetMorphEnergyStrageLv",
+            "AimActorLinkedPoint",
+            "AimActor",
+            "WarpToActorLinkedPoint",
+            "AimCompassPoint",
+            "MoveToTargetLinkedPoint",
+            "PlayAnimation"
+          ],
+          "Queries": [
+            "GetSwordLv",
+            "HaveEnoughForLuberiWork",
+            "GetBowLv",
+            "GetBombLv",
+            "GetMorphEnergyStrageLv"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "GenericItemGetSequence"
+          ],
+          "Queries": [
+            "GetSwordLv",
+            "GetBowLv",
+            "GetBombLv",
+            "GetMorphEnergyStrageLv"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [
+            "CheckFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WaitGrowthCount",
+            "ReflectCurrentNumPieceOfPowers",
+            "SetIsLvUpEnergyGauge",
+            "ShowEnergyGauge",
+            "PlayOutAnimLvUpEnergyGauge",
+            "PlayOutAnim",
+            "SetEnabledUpdateEnergyGaugeInEvent",
+            "ShowGrowthPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "CompareString",
+            "CompareInt"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "AimActor",
+            "AimActorLinkedPoint",
+            "MoveToDefaultPosition"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "TutorialUI",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowModal"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "LuberiSelectionsUI",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "ShowSelection"
+          ],
+          "Queries": [
+            "GetResult"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhotons",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [],
+          "Queries": [
+            "IsCompleteAllPartnerPhotonsReleased"
+          ],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 42
+            },
+            {
+              "Value": 2,
+              "EventIndex": 46
+            },
+            {
+              "Value": 3,
+              "EventIndex": 55
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event659",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 36,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "lv": {
+              "Int": 2
+            }
+          },
+          "NextEventName": "Event735",
+          "ActorName": "Player",
+          "Name": "Event660",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 39,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "lv": {
+              "Int": 3
+            }
+          },
+          "NextEventName": "Event2",
+          "ActorName": "Player",
+          "Name": "Event661",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "luberiWork": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 33
+            },
+            {
+              "Value": 1,
+              "EventIndex": 2
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event662",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "luberiWork": {
+              "Int": 0
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 34
+            },
+            {
+              "Value": 1,
+              "EventIndex": 1
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event663",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 4
+            },
+            {
+              "Value": 1,
+              "EventIndex": 68
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event664",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 3
+            },
+            {
+              "Value": 1,
+              "EventIndex": 69
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event665",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 2,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 142
+            },
+            {
+              "Value": 2,
+              "EventIndex": 45
+            },
+            {
+              "Value": 3,
+              "EventIndex": 54
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event672",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 40,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "lv": {
+              "Int": 2
+            }
+          },
+          "NextEventName": "Event3",
+          "ActorName": "Player",
+          "Name": "Event673",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 41,
+          "ActorIndex": 7,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "lv": {
+              "Int": 3
+            }
+          },
+          "NextEventName": "Event4",
+          "ActorName": "Player",
+          "Name": "Event674",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "luberiWork": {
+              "Int": 3
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 12
+            },
+            {
+              "Value": 1,
+              "EventIndex": 9
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event675",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "luberiWork": {
+              "Int": 2
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 32
+            },
+            {
+              "Value": 1,
+              "EventIndex": 8
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event676",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "notenough",
+          "Name": "Event677",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 11
+            },
+            {
+              "Value": 1,
+              "EventIndex": 71
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event679",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 10
+            },
+            {
+              "Value": 1,
+              "EventIndex": 70
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event680",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 3,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 144
+            },
+            {
+              "Value": 2,
+              "EventIndex": 47
+            },
+            {
+              "Value": 3,
+              "EventIndex": 52
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event691",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 37,
+          "ActorIndex": 7,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "lv": {
+              "Int": 2
+            }
+          },
+          "NextEventName": "Event740",
+          "ActorName": "Player",
+          "Name": "Event692",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 38,
+          "ActorIndex": 7,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "lv": {
+              "Int": 3
+            }
+          },
+          "NextEventName": "Event741",
+          "ActorName": "Player",
+          "Name": "Event693",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "luberiWork": {
+              "Int": 4
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 29
+            },
+            {
+              "Value": 1,
+              "EventIndex": 16
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event694",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 18
+            },
+            {
+              "Value": 1,
+              "EventIndex": 74
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event695",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "luberiWork": {
+              "Int": 5
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 30
+            },
+            {
+              "Value": 1,
+              "EventIndex": 17
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event696",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 20
+            },
+            {
+              "Value": 1,
+              "EventIndex": 146
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event697",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 4,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 147
+            },
+            {
+              "Value": 2,
+              "EventIndex": 155
+            },
+            {
+              "Value": 3,
+              "EventIndex": 44
+            },
+            {
+              "Value": 4,
+              "EventIndex": 53
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event705",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "lv": {
+              "Int": 2
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event706",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "luberiWork": {
+              "Int": 6
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 28
+            },
+            {
+              "Value": 1,
+              "EventIndex": 90
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event708",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 27
+            },
+            {
+              "Value": 1,
+              "EventIndex": 73
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event709",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 24
+            },
+            {
+              "Value": 1,
+              "EventIndex": 72
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event710",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "luberiWork": {
+              "Int": 8
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 31
+            },
+            {
+              "Value": 1,
+              "EventIndex": 306
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event711",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "notenough",
+          "Name": "Event715",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "notenough",
+          "Name": "Event716",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "notenough",
+          "Name": "Event717",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "notenough",
+          "Name": "Event718",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "notenough",
+          "Name": "Event719",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "notenough",
+          "Name": "Event725",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "notenough",
+          "Name": "Event726",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 77,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event78",
+          "ActorName": "Hud",
+          "Name": "Event732",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 287,
+          "Parameters": {
+            "After": {
+              "String": "ItemSword01"
+            },
+            "Before": {
+              "String": "ItemSword"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "makaseyo",
+          "NextEventName": "Event276",
+          "Name": "Event735",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 293,
+          "Parameters": {
+            "After": {
+              "String": "ItemBomb01"
+            },
+            "Before": {
+              "String": "ItemBomb"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "makaseyo",
+          "NextEventName": "Event282",
+          "Name": "Event740",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 278,
+          "Parameters": {
+            "After": {
+              "String": "ItemBomb02"
+            },
+            "Before": {
+              "String": "ItemBomb01"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "makaseyo",
+          "NextEventName": "Event267",
+          "Name": "Event741",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 290,
+          "Parameters": {
+            "After": {
+              "String": "ItemSword02"
+            },
+            "Before": {
+              "String": "ItemSword01"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "makaseyo",
+          "NextEventName": "Event279",
+          "Name": "Event2",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 284,
+          "Parameters": {
+            "After": {
+              "String": "ItemBow01"
+            },
+            "Before": {
+              "String": "ItemBow"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "makaseyo",
+          "NextEventName": "Event273",
+          "Name": "Event3",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 281,
+          "Parameters": {
+            "After": {
+              "String": "ItemBow02"
+            },
+            "Before": {
+              "String": "ItemBow01"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "makaseyo",
+          "NextEventName": "Event270",
+          "Name": "Event4",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 5,
+          "Parameters": {
+            "level": {
+              "Int": 1
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_ShowLinkQuestion",
+          "NextEventName": "Event664",
+          "Name": "Event9",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 354,
+          "ActorIndex": 11,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "isViewAlways": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event333",
+          "ActorName": "Hud",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Midpoint:2478168384"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 59
+            },
+            {
+              "Value": 0,
+              "EventIndex": 156
+            },
+            {
+              "Value": 1,
+              "EventIndex": 156
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event42",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Midpoint:2478168384"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 58
+            },
+            {
+              "Value": 0,
+              "EventIndex": 143
+            },
+            {
+              "Value": 1,
+              "EventIndex": 143
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event50",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Midpoint:2478168384"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 57
+            },
+            {
+              "Value": 0,
+              "EventIndex": 141
+            },
+            {
+              "Value": 1,
+              "EventIndex": 141
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event53",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Midpoint:2478168384"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 60
+            },
+            {
+              "Value": 0,
+              "EventIndex": 145
+            },
+            {
+              "Value": 1,
+              "EventIndex": 145
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event55",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_040"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 360,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_Q1_A1_010"
+            }
+          },
+          "NextEventName": "Event340",
+          "ActorName": "Luberi",
+          "Name": "Event46",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_No_Cost"
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event21",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 63,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_Max"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event27",
+          "ActorName": "Luberi",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "max",
+          "Name": "Event20",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "max",
+          "Name": "Event22",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "max",
+          "Name": "Event23",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "max",
+          "Name": "Event13",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 63,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_No"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event27",
+          "ActorName": "Luberi",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "madadayo",
+          "Name": "Event41",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "madadayo",
+          "Name": "Event52",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "madadayo",
+          "Name": "Event51",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "madadayo",
+          "Name": "Event54",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 262,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_Q1"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event238",
+          "ActorName": "Luberi",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "matakoiyo",
+          "Name": "Event12",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Cancel",
+          "Name": "Event27",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "LvUpTalk",
+          "Name": "Event28",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "LvUpTalk",
+          "Name": "Event59",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "LvUpTalk",
+          "Name": "Event60",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "LvUpTalk",
+          "Name": "Event61",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Cancel",
+          "Name": "Event64",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Cancel",
+          "Name": "Event65",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Cancel",
+          "Name": "Event66",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Cancel",
+          "Name": "Event67",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Cancel",
+          "Name": "Event68",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Cancel",
+          "Name": "Event69",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Cancel",
+          "Name": "Event70",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 76,
+          "ActorIndex": 4,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "LuberiHouseMachine",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "index": {
+              "Int": 1
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event77",
+          "ActorName": "Luberi",
+          "Name": "Event74",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event77",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 78,
+          "ForkEventIndicies": [
+            75,
+            261
+          ],
+          "Name": "Event78",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 83,
+          "NextEventName": "Event73",
+          "Name": "Event79",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "LuberiHouseMachine",
+                "Item2": ""
+              }
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "pointIndex": {
+              "Int": 2
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event80",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 81,
+          "ForkEventIndicies": [
+            107,
+            253,
+            109,
+            103,
+            159
+          ],
+          "Name": "Event82",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 101,
+          "NextEventName": "Event130",
+          "Name": "Event83",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "LuberiHouseMachine",
+                "Item2": ""
+              }
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "pointIndex": {
+              "Int": 2
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event75",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 255,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": -2
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event226",
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event73",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "lv": {
+              "Int": 3
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event87",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "luberiWork": {
+              "Int": 7
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 87
+            },
+            {
+              "Value": 1,
+              "EventIndex": 305
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event88",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 85
+            },
+            {
+              "Value": 1,
+              "EventIndex": 89
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event89",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "notenough",
+          "Name": "Event90",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 379,
+          "FlowchartName": "",
+          "EntryPointName": "GaugeLvUp",
+          "NextEventName": "Event258",
+          "Name": "Event91",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Cancel",
+          "Name": "Event93",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 302,
+          "ActorIndex": 11,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event285",
+          "ActorName": "Hud",
+          "Name": "Event112",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event113",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 364,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SwordLv2"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event345",
+          "ActorName": "Zelda",
+          "Name": "Event121",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 365,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SwordLv3"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "NextEventName": "Event346",
+          "ActorName": "Zelda",
+          "Name": "Event122",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "ArrowLv2"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event123",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "ArrowLv3"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event124",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "BombLv2"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event125",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "BombLv3"
+            },
+            "keepRaise": {
+              "Bool": false
+            },
+            "messageEntry": {
+              "String": ""
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event126",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": true
+            },
+            "name": {
+              "Argument": "Before"
+            }
+          },
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event127",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 375,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "Before"
+            }
+          },
+          "NextEventName": "Event224",
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event128",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": true
+            },
+            "name": {
+              "Argument": "After"
+            }
+          },
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event129",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "After"
+            }
+          },
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event130",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "String": "ItemWorldGlobePiece"
+            }
+          },
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event131",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 104,
+          "ForkEventIndicies": [
+            102,
+            377,
+            378,
+            376
+          ],
+          "Name": "Event132",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 110,
+          "NextEventName": "Event138",
+          "Name": "Event133",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 80,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event82",
+          "ActorName": "Timer",
+          "Name": "Event135",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 98,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.25
+            }
+          },
+          "NextEventName": "Event127",
+          "ActorName": "Timer",
+          "Name": "Event84",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 82,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event75",
+          "ActorName": "Timer",
+          "Name": "Event136",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": true
+            },
+            "name": {
+              "String": "ItemWorldGlobePiece"
+            }
+          },
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event134",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 108,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event134",
+          "ActorName": "Timer",
+          "Name": "Event137",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 12,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "value1": {
+              "Argument": "Type"
+            },
+            "value2": {
+              "String": "Gauge"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 116
+            },
+            {
+              "Value": 1,
+              "EventIndex": 91
+            }
+          ],
+          "ActorName": "FlowControl",
+          "Name": "Event138",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 112
+            },
+            {
+              "Value": 2,
+              "EventIndex": 113
+            },
+            {
+              "Value": 3,
+              "EventIndex": 114
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event16",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "After": {
+              "String": "ItemSword"
+            },
+            "Before": {
+              "String": "ItemSword"
+            },
+            "Type": {
+              "String": "Gauge"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "makaseyo",
+          "Name": "Event140",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "After": {
+              "String": "ItemSword01"
+            },
+            "Before": {
+              "String": "ItemSword01"
+            },
+            "Type": {
+              "String": "Gauge"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "makaseyo",
+          "Name": "Event141",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "After": {
+              "String": "ItemSword02"
+            },
+            "Before": {
+              "String": "ItemSword02"
+            },
+            "Type": {
+              "String": "Gauge"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "makaseyo",
+          "Name": "Event142",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 351,
+          "ActorIndex": 11,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event330",
+          "ActorName": "Hud",
+          "Name": "Event139",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 4,
+          "SwitchCases": [
+            {
+              "Value": 2,
+              "EventIndex": 198
+            },
+            {
+              "Value": 3,
+              "EventIndex": 199
+            },
+            {
+              "Value": 4,
+              "EventIndex": 200
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event145",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_GaugeLv2"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event146",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_GaugeLv4"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event147",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_GaugeLv3"
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event148",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 352,
+          "ActorIndex": 11,
+          "ActorActionIndex": 4,
+          "NextEventName": "Event331",
+          "ActorName": "Hud",
+          "Name": "Event150",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 194,
+          "ActorIndex": 11,
+          "ActorActionIndex": 5,
+          "NextEventName": "Event180",
+          "ActorName": "Hud",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 121,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event5",
+          "ActorName": "Timer",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "After"
+            }
+          },
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 386,
+          "ActorIndex": 14,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "key": {
+              "String": "LinkBombModal"
+            }
+          },
+          "NextEventName": "Event351",
+          "ActorName": "TutorialUI",
+          "Name": "Event86",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 384,
+          "ActorIndex": 14,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "key": {
+              "String": "LinkBowModal"
+            }
+          },
+          "NextEventName": "Event349",
+          "ActorName": "TutorialUI",
+          "Name": "Event18",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Argument": "index"
+            },
+            "value": {
+              "Int": 20
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event25",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Argument": "index"
+            },
+            "value": {
+              "Int": 10
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event97",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 12,
+          "ActorQueryIndex": 1,
+          "Parameters": {
+            "value1": {
+              "Argument": "level"
+            },
+            "value2": {
+              "Int": 2
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 127
+            },
+            {
+              "Value": 0,
+              "EventIndex": 126
+            },
+            {
+              "Value": 1,
+              "EventIndex": 126
+            }
+          ],
+          "ActorName": "FlowControl",
+          "Name": "Event98",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 130
+            },
+            {
+              "Value": 1,
+              "EventIndex": 135
+            },
+            {
+              "Value": 2,
+              "EventIndex": 136
+            },
+            {
+              "Value": 3,
+              "EventIndex": 130
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event96",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 1,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 131
+            },
+            {
+              "Value": 1,
+              "EventIndex": 137
+            },
+            {
+              "Value": 2,
+              "EventIndex": 138
+            },
+            {
+              "Value": 3,
+              "EventIndex": 131
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event99",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 2,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 153
+            },
+            {
+              "Value": 1,
+              "EventIndex": 139
+            },
+            {
+              "Value": 2,
+              "EventIndex": 140
+            },
+            {
+              "Value": 3,
+              "EventIndex": 153
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event100",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 246,
+          "Parameters": {
+            "index": {
+              "Int": 0
+            },
+            "level": {
+              "Argument": "level"
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_InsertLinkLevel",
+          "NextEventName": "Event215",
+          "Name": "Event110",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_Q6"
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event111",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_Q6"
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event115",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 130,
+          "Parameters": {
+            "index": {
+              "Int": 0
+            },
+            "level": {
+              "Int": 1
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_InsertLinkLevel",
+          "NextEventName": "Event99",
+          "Name": "Event117",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 130,
+          "Parameters": {
+            "index": {
+              "Int": 0
+            },
+            "level": {
+              "Int": 2
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_InsertLinkLevel",
+          "NextEventName": "Event99",
+          "Name": "Event101",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 131,
+          "Parameters": {
+            "index": {
+              "Int": 1
+            },
+            "level": {
+              "Int": 1
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_InsertLinkLevel",
+          "NextEventName": "Event100",
+          "Name": "Event102",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 131,
+          "Parameters": {
+            "index": {
+              "Int": 1
+            },
+            "level": {
+              "Int": 2
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_InsertLinkLevel",
+          "NextEventName": "Event100",
+          "Name": "Event103",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 153,
+          "Parameters": {
+            "index": {
+              "Int": 2
+            },
+            "level": {
+              "Int": 1
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_InsertLinkLevel",
+          "NextEventName": "Event31",
+          "Name": "Event104",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 153,
+          "Parameters": {
+            "index": {
+              "Int": 2
+            },
+            "level": {
+              "Int": 2
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_InsertLinkLevel",
+          "NextEventName": "Event31",
+          "Name": "Event105",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 6,
+          "Parameters": {
+            "level": {
+              "Int": 2
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_ShowLinkQuestion",
+          "NextEventName": "Event665",
+          "Name": "Event1",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 13,
+          "Parameters": {
+            "level": {
+              "Int": 1
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_ShowLinkQuestion",
+          "NextEventName": "Event679",
+          "Name": "Event29",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 14,
+          "Parameters": {
+            "level": {
+              "Int": 2
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_ShowLinkQuestion",
+          "NextEventName": "Event680",
+          "Name": "Event8",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 19,
+          "Parameters": {
+            "level": {
+              "Int": 1
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_ShowLinkQuestion",
+          "NextEventName": "Event695",
+          "Name": "Event14",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 21,
+          "Parameters": {
+            "level": {
+              "Int": 2
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_ShowLinkQuestion",
+          "NextEventName": "Event697",
+          "Name": "Event10",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "Cancel",
+          "Name": "Event19",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 26,
+          "FlowchartName": "",
+          "EntryPointName": "_ShowPowerQuestion",
+          "NextEventName": "Event710",
+          "Name": "Event30",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 4,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 149
+            },
+            {
+              "Value": 2,
+              "EventIndex": 150
+            },
+            {
+              "Value": 3,
+              "EventIndex": 151
+            },
+            {
+              "Value": 4,
+              "EventIndex": 151
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event0",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Argument": "index"
+            },
+            "value": {
+              "Int": 5
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Argument": "index"
+            },
+            "value": {
+              "Int": 10
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event33",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Argument": "index"
+            },
+            "value": {
+              "Int": 20
+            }
+          },
+          "ActorName": "Dialog",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 243,
+          "Parameters": {
+            "index": {
+              "Int": 0
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_InsertEnergyLevel",
+          "NextEventName": "Event212",
+          "Name": "Event35",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 154,
+          "Parameters": {
+            "index": {
+              "Int": 4
+            }
+          },
+          "FlowchartName": "",
+          "EntryPointName": "_InsertEnergyLevel",
+          "NextEventName": "Event37",
+          "Name": "Event31",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "LvUpTalk_Q5",
+          "Name": "Event37",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 86,
+          "FlowchartName": "",
+          "EntryPointName": "_ShowPowerQuestion",
+          "NextEventName": "Event89",
+          "Name": "Event7",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 25,
+          "FlowchartName": "",
+          "EntryPointName": "_ShowPowerQuestion",
+          "NextEventName": "Event709",
+          "Name": "Event38",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 158,
+          "ActorIndex": 15,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event40",
+          "ActorName": "LuberiSelectionsUI",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 15,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 0
+            },
+            {
+              "Value": 1,
+              "EventIndex": 7
+            },
+            {
+              "Value": 2,
+              "EventIndex": 15
+            },
+            {
+              "Value": 3,
+              "EventIndex": 22
+            },
+            {
+              "Value": 4,
+              "EventIndex": 62
+            }
+          ],
+          "ActorName": "LuberiSelectionsUI",
+          "Name": "Event40",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "meter"
+            }
+          },
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 249,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EnergyStoneGet"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event218",
+          "ActorName": "EventFlags",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 266,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event92",
+          "ActorName": "Fade",
+          "Name": "Event63",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 371,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_EnergyStone_020"
+            }
+          },
+          "NextEventName": "Event255",
+          "ActorName": "Luberi",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 362,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInNormal"
+            }
+          },
+          "NextEventName": "Event343",
+          "ActorName": "Fade",
+          "Name": "Event72",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 3,
+              "EventIndex": 165
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event44",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 1,
+          "SwitchCases": [
+            {
+              "Value": 3,
+              "EventIndex": 166
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event45",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 2,
+          "SwitchCases": [
+            {
+              "Value": 3,
+              "EventIndex": 167
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event47",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 3,
+          "SwitchCases": [
+            {
+              "Value": 4,
+              "EventIndex": 172
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event48",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 43
+            },
+            {
+              "Value": 1,
+              "EventIndex": 43
+            },
+            {
+              "Value": 2,
+              "EventIndex": 43
+            },
+            {
+              "Value": 3,
+              "EventIndex": 169
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event107",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 1,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 43
+            },
+            {
+              "Value": 1,
+              "EventIndex": 43
+            },
+            {
+              "Value": 2,
+              "EventIndex": 43
+            },
+            {
+              "Value": 3,
+              "EventIndex": 170
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event108",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 2,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 43
+            },
+            {
+              "Value": 1,
+              "EventIndex": 43
+            },
+            {
+              "Value": 2,
+              "EventIndex": 43
+            },
+            {
+              "Value": 3,
+              "EventIndex": 171
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event109",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 8,
+          "ActorQueryIndex": 3,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 43
+            },
+            {
+              "Value": 2,
+              "EventIndex": 43
+            },
+            {
+              "Value": 3,
+              "EventIndex": 43
+            },
+            {
+              "Value": 4,
+              "EventIndex": 356
+            }
+          ],
+          "ActorName": "Zelda",
+          "Name": "Event116",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 16,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 190
+            }
+          ],
+          "ActorName": "PartnerPhotons",
+          "Name": "Event119",
+          "Type": "Switch"
+        },
+        {
+          "JoinEventIndex": 174,
+          "ForkEventIndicies": [
+            180,
+            178
+          ],
+          "Name": "Event155",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 370,
+          "NextEventName": "Event254",
+          "Name": "Event157",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 176,
+          "ActorIndex": 4,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 3
+            },
+            "offsetX": {
+              "Float": -1.975
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event156",
+          "ActorName": "Luberi",
+          "Name": "Event154",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 251,
+          "ActorIndex": 7,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Luberi",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event221",
+          "ActorName": "Player",
+          "Name": "Event156",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 175,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event154",
+          "ActorName": "Timer",
+          "Name": "Event159",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 179,
+          "ActorIndex": 4,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "customSpeed": {
+              "Float": 0
+            },
+            "direction": {
+              "Int": 2
+            },
+            "distance": {
+              "Float": 3
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event152",
+          "ActorName": "Luberi",
+          "Name": "Event149",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "direction": {
+              "Int": 1
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event152",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 163,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event72",
+          "ActorName": "Timer",
+          "Name": "Event160",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 182,
+          "ActorIndex": 7,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "LuberiHouseMachine",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 4
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event158",
+          "ActorName": "Player",
+          "Name": "Event153",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 177,
+          "ActorIndex": 7,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "direction": {
+              "Int": 0
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event159",
+          "ActorName": "Player",
+          "Name": "Event158",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 367,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_PieceComp"
+            }
+          },
+          "NextEventName": "Event348",
+          "ActorName": "Luberi",
+          "Name": "Event62",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 10,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EnergyStoneGet"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 213
+            },
+            {
+              "Value": 1,
+              "EventIndex": 373
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event151",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 16,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 187
+            },
+            {
+              "Value": 1,
+              "EventIndex": 184
+            }
+          ],
+          "ActorName": "PartnerPhotons",
+          "Name": "Event161",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_All_Max"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event162",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 186,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 0
+            },
+            "value": {
+              "Int": 25
+            }
+          },
+          "NextEventName": "Event162",
+          "ActorName": "Dialog",
+          "Name": "Event163",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "OmakeGet",
+          "Name": "Event95",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "OmakeGet",
+          "Name": "Event49",
+          "Type": "Subflow"
+        },
+        {
+          "ActorIndex": 10,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EnergyStoneGet"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 189
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event57",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 226,
+          "ActorIndex": 4,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event178",
+          "ActorName": "Luberi",
+          "Name": "Event106",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 181,
+          "ActorIndex": 4,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event153",
+          "ActorName": "Luberi",
+          "Name": "Event94",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 120,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.5
+            }
+          },
+          "NextEventName": "Event150",
+          "ActorName": "Timer",
+          "Name": "Event170",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 123,
+          "Parameters": {
+            "anim": {
+              "String": "$item_get_ed"
+            }
+          },
+          "FlowchartName": "ModelDisplay",
+          "EntryPointName": "EndCarry",
+          "NextEventName": "Event24",
+          "Name": "Event180",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 115,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event139",
+          "ActorName": "Timer",
+          "Name": "Event181",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 195,
+          "ActorIndex": 7,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "lv": {
+              "Int": 2
+            }
+          },
+          "NextEventName": "Event181",
+          "ActorName": "Player",
+          "Name": "Event171",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Sword"
+            },
+            "keepRaise": {
+              "Bool": true
+            },
+            "messageEntry": {
+              "String": "LuberiHouseMachine:GaugeLv2"
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event182",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 267
+            },
+            {
+              "Value": 2,
+              "EventIndex": 268
+            },
+            {
+              "Value": 3,
+              "EventIndex": 269
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event183",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 270
+            },
+            {
+              "Value": 2,
+              "EventIndex": 271
+            },
+            {
+              "Value": 3,
+              "EventIndex": 272
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event184",
+          "Type": "Switch"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 273
+            },
+            {
+              "Value": 2,
+              "EventIndex": 274
+            },
+            {
+              "Value": 3,
+              "EventIndex": 275
+            }
+          ],
+          "ActorName": "Player",
+          "Name": "Event185",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SwordLv2"
+            },
+            "keepRaise": {
+              "Bool": true
+            },
+            "messageEntry": {
+              "String": "LuberiHouseMachine:GaugeLv2"
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event186",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SwordLv3"
+            },
+            "keepRaise": {
+              "Bool": true
+            },
+            "messageEntry": {
+              "String": "LuberiHouseMachine:GaugeLv2"
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event187",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Sword"
+            },
+            "keepRaise": {
+              "Bool": true
+            },
+            "messageEntry": {
+              "String": "LuberiHouseMachine:GaugeLv3"
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event188",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SwordLv2"
+            },
+            "keepRaise": {
+              "Bool": true
+            },
+            "messageEntry": {
+              "String": "LuberiHouseMachine:GaugeLv3"
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event189",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SwordLv3"
+            },
+            "keepRaise": {
+              "Bool": true
+            },
+            "messageEntry": {
+              "String": "LuberiHouseMachine:GaugeLv3"
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event190",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 195,
+          "ActorIndex": 7,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "lv": {
+              "Int": 3
+            }
+          },
+          "NextEventName": "Event181",
+          "ActorName": "Player",
+          "Name": "Event191",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "Sword"
+            },
+            "keepRaise": {
+              "Bool": true
+            },
+            "messageEntry": {
+              "String": "LuberiHouseMachine:GaugeLv4"
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event192",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SwordLv2"
+            },
+            "keepRaise": {
+              "Bool": true
+            },
+            "messageEntry": {
+              "String": "LuberiHouseMachine:GaugeLv4"
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event193",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "count": {
+              "Int": 0
+            },
+            "index": {
+              "Int": -1
+            },
+            "itemKey": {
+              "String": "SwordLv3"
+            },
+            "keepRaise": {
+              "Bool": true
+            },
+            "messageEntry": {
+              "String": "LuberiHouseMachine:GaugeLv4"
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event194",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 195,
+          "ActorIndex": 7,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "lv": {
+              "Int": 4
+            }
+          },
+          "NextEventName": "Event181",
+          "ActorName": "Player",
+          "Name": "Event195",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 358,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_EnergyStone_011"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": false
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event337",
+          "ActorName": "Luberi",
+          "Name": "Event144",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 374,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_EnergyStone_010"
+            }
+          },
+          "NextEventName": "Event257",
+          "ActorName": "Luberi",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 372,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "index": {
+              "Int": 0
+            },
+            "value": {
+              "Int": 25
+            }
+          },
+          "NextEventName": "Event260",
+          "ActorName": "Dialog",
+          "Name": "Event120",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 212,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_All_Max"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event58",
+          "ActorName": "Luberi",
+          "Name": "Event143",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 0,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "resultOnSkip": {
+              "Int": 1
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 188
+            },
+            {
+              "Value": 1,
+              "EventIndex": 368
+            }
+          ],
+          "ActorName": "Dialog",
+          "Name": "Event164",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 369,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_EnergyStone_012"
+            }
+          },
+          "NextEventName": "Event233",
+          "ActorName": "Luberi",
+          "Name": "Event165",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 382,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event339",
+          "ActorName": "GameControl",
+          "Name": "Event166",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 382,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event339",
+          "ActorName": "GameControl",
+          "Name": "Event167",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 381,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event264",
+          "ActorName": "GameControl",
+          "Name": "Event168",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 381,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event264",
+          "ActorName": "GameControl",
+          "Name": "Event172",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 380,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event263",
+          "ActorName": "GameControl",
+          "Name": "Event173",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 380,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event263",
+          "ActorName": "GameControl",
+          "Name": "Event174",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 88,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event91",
+          "ActorName": "GameControl",
+          "Name": "Event175",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 88,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event91",
+          "ActorName": "GameControl",
+          "Name": "Event176",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 88,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event91",
+          "ActorName": "GameControl",
+          "Name": "Event177",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event178",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 6,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Midpoint:2478168384"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": -1,
+              "EventIndex": 168
+            },
+            {
+              "Value": 0,
+              "EventIndex": 276
+            },
+            {
+              "Value": 1,
+              "EventIndex": 276
+            }
+          ],
+          "ActorName": "QuestSystem",
+          "Name": "Event196",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 229,
+          "ActorIndex": 4,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:LuberiHouseLuberiTalk040_005"
+            }
+          },
+          "NextEventName": "Event198",
+          "ActorName": "Luberi",
+          "Name": "Event197",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 233,
+          "ActorIndex": 4,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/HylianGeneralTalk:LuberiHouseLuberiTalk040_006"
+            }
+          },
+          "NextEventName": "Event202",
+          "ActorName": "Luberi",
+          "Name": "Event198",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "keepTalk": {
+              "Bool": false
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:Luberi_LvUpTalk_HyruleCatsleClear"
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": false
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event199",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event200",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 228,
+          "ActorIndex": 4,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "absorbAllPastedActors": {
+              "Bool": true
+            },
+            "aimFromPlayer": {
+              "Bool": true
+            },
+            "aimToPlayer": {
+              "Bool": true
+            },
+            "cameraLookAt": {
+              "Bool": true
+            },
+            "destroyCarriedActor": {
+              "Bool": true
+            },
+            "destroyProjectiles": {
+              "Bool": true
+            },
+            "disableSyncRodBallFollow": {
+              "Bool": true
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "facial": {
+              "String": ""
+            },
+            "hideItems": {
+              "Bool": true
+            },
+            "isExcludeLocked": {
+              "Bool": false
+            },
+            "keepPersonalSpace": {
+              "Bool": true
+            },
+            "lookAtOffsetX": {
+              "Float": 0
+            },
+            "lookAtOffsetY": {
+              "Float": 0
+            },
+            "lookAtOffsetZ": {
+              "Float": 0
+            },
+            "playerTalkAnim": {
+              "Bool": false
+            },
+            "playerTalkAnimName": {
+              "String": ""
+            },
+            "resetOverlappedActorsOnMoveDone": {
+              "Bool": true
+            },
+            "selfTalkAnim": {
+              "Bool": true
+            },
+            "selfTalkAnimName": {
+              "String": ""
+            },
+            "stopBuffEffect": {
+              "Bool": true
+            },
+            "stopBurnEffect": {
+              "Bool": true
+            },
+            "throughObstaclesOnMove": {
+              "Bool": true
+            },
+            "unburrow": {
+              "Bool": true
+            },
+            "unmorph": {
+              "Bool": true
+            },
+            "unsync": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event197",
+          "ActorName": "Luberi",
+          "Name": "Event201",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 234,
+          "ForkEventIndicies": [
+            230,
+            231
+          ],
+          "Name": "Event202",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 277,
+          "NextEventName": "Event179",
+          "Name": "Event203",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 157,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event39",
+          "ActorName": "Luberi",
+          "Name": "Event204",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event205",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 238,
+          "ForkEventIndicies": [
+            49,
+            236
+          ],
+          "Name": "Event206",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 353,
+          "NextEventName": "Event332",
+          "Name": "Event207",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "no,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event208",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 241,
+          "ForkEventIndicies": [
+            50,
+            239
+          ],
+          "Name": "Event209",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event210",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event211",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 244,
+          "ForkEventIndicies": [
+            134,
+            242
+          ],
+          "Name": "Event212",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event213",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event214",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 247,
+          "ForkEventIndicies": [
+            133,
+            245
+          ],
+          "Name": "Event215",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event216",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "yes,wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event217",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 250,
+          "ForkEventIndicies": [
+            211,
+            248,
+            361
+          ],
+          "Name": "Event218",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 359,
+          "NextEventName": "Event338",
+          "Name": "Event219",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 263,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Luberi",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event239",
+          "ActorName": "Partner",
+          "Name": "Event221",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 257,
+          "ActorIndex": 7,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "LuberiHouseMachine",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "index": {
+              "Int": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event231",
+          "ActorName": "Player",
+          "Name": "Event220",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 252,
+          "ActorIndex": 7,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "LuberiHouseMachine",
+                "Item2": ""
+              }
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "pointIndex": {
+              "Int": 2
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event220",
+          "ActorName": "Player",
+          "Name": "Event223",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_hand_over"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event225",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 256,
+          "ForkEventIndicies": [
+            106,
+            254
+          ],
+          "Name": "Event226",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 105,
+          "NextEventName": "Event135",
+          "Name": "Event227",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 258,
+          "ForkEventIndicies": [
+            79,
+            260
+          ],
+          "Name": "Event231",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event232",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 13,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "LuberiHouseMachine",
+                "Item2": ""
+              }
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "pointIndex": {
+              "Int": 2
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event222",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 259,
+          "ActorIndex": 13,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "avoidPlayer": {
+              "Bool": true
+            },
+            "avoidWall": {
+              "Bool": true
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "position": {
+              "Int": 3
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event222",
+          "ActorName": "Partner",
+          "Name": "Event229",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 265,
+          "ActorIndex": 7,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "LuberiHouseMachine",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "index": {
+              "Int": 3
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event241",
+          "ActorName": "Player",
+          "Name": "Event85",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 235,
+          "ActorIndex": 13,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "LuberiHouseMachine",
+                "Item2": ""
+              }
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "pointIndex": {
+              "Int": 1
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event204",
+          "ActorName": "Partner",
+          "Name": "Event238",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 173,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 7
+            }
+          },
+          "NextEventName": "Event155",
+          "ActorName": "Timer",
+          "Name": "Event239",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 192,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_MAKE_ENERGY_STONE"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event94",
+          "ActorName": "Audio",
+          "Name": "Event240",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "LuberiHouseMachine",
+                "Item2": ""
+              }
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "pointIndex": {
+              "Int": 2
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event241",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 264,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event240",
+          "ActorName": "Timer",
+          "Name": "Event92",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 308,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "Before"
+            }
+          },
+          "NextEventName": "Event296",
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event242",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 312,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "Before"
+            }
+          },
+          "NextEventName": "Event290",
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event243",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 316,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "Before"
+            }
+          },
+          "NextEventName": "Event291",
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event244",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 320,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "Before"
+            }
+          },
+          "NextEventName": "Event292",
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event245",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 324,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "Before"
+            }
+          },
+          "NextEventName": "Event307",
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event246",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 328,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "Before"
+            }
+          },
+          "NextEventName": "Event306",
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event247",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 340,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "Before"
+            }
+          },
+          "NextEventName": "Event319",
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event248",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 336,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "Before"
+            }
+          },
+          "NextEventName": "Event315",
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event250",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 332,
+          "ActorIndex": 3,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "active": {
+              "Bool": false
+            },
+            "name": {
+              "Argument": "Before"
+            }
+          },
+          "NextEventName": "Event249",
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event252",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 10,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "WeaponCapOpenMessage"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 232
+            },
+            {
+              "Value": 1,
+              "EventIndex": 168
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event253",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 168,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "WeaponCapOpenMessage"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event107",
+          "ActorName": "EventFlags",
+          "Name": "Event179",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 280,
+          "ForkEventIndicies": [
+            349,
+            97
+          ],
+          "Name": "Event267",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event268",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 222,
+          "NextEventName": "Event174",
+          "Name": "Event269",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 283,
+          "ForkEventIndicies": [
+            347,
+            95
+          ],
+          "Name": "Event270",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event271",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 220,
+          "NextEventName": "Event172",
+          "Name": "Event272",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 286,
+          "ForkEventIndicies": [
+            346,
+            94
+          ],
+          "Name": "Event273",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event274",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 383,
+          "NextEventName": "Event341",
+          "Name": "Event275",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 289,
+          "ForkEventIndicies": [
+            344,
+            92
+          ],
+          "Name": "Event276",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event277",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 217,
+          "NextEventName": "Event166",
+          "Name": "Event278",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 292,
+          "ForkEventIndicies": [
+            345,
+            93
+          ],
+          "Name": "Event279",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event280",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 218,
+          "NextEventName": "Event167",
+          "Name": "Event281",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 295,
+          "ForkEventIndicies": [
+            348,
+            96
+          ],
+          "Name": "Event282",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event283",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 385,
+          "NextEventName": "Event350",
+          "Name": "Event284",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 298,
+          "ForkEventIndicies": [
+            297,
+            307
+          ],
+          "Name": "Event234",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event256",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 225,
+          "NextEventName": "Event177",
+          "Name": "Event259",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 301,
+          "ForkEventIndicies": [
+            300,
+            84
+          ],
+          "Name": "Event262",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event265",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 224,
+          "NextEventName": "Event176",
+          "Name": "Event266",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 304,
+          "ForkEventIndicies": [
+            350,
+            23
+          ],
+          "Name": "Event285",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event286",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 223,
+          "NextEventName": "Event175",
+          "Name": "Event287",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 299,
+          "ActorIndex": 11,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event262",
+          "ActorName": "Hud",
+          "Name": "Event114",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 296,
+          "ActorIndex": 11,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event234",
+          "ActorName": "Hud",
+          "Name": "Event118",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 7,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "lv": {
+              "Int": 4
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event288",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 309,
+          "ForkEventIndicies": [
+            311,
+            197
+          ],
+          "Name": "Event296",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 196,
+          "NextEventName": "Event171",
+          "Name": "Event297",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event289",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 310,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event289",
+          "ActorName": "Timer",
+          "Name": "Event302",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 313,
+          "ForkEventIndicies": [
+            315,
+            201
+          ],
+          "Name": "Event290",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 196,
+          "NextEventName": "Event171",
+          "Name": "Event298",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event299",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 314,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event299",
+          "ActorName": "Timer",
+          "Name": "Event303",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 317,
+          "ForkEventIndicies": [
+            319,
+            202
+          ],
+          "Name": "Event291",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 196,
+          "NextEventName": "Event171",
+          "Name": "Event300",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event301",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 318,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event301",
+          "ActorName": "Timer",
+          "Name": "Event304",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 321,
+          "ForkEventIndicies": [
+            323,
+            203
+          ],
+          "Name": "Event292",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 206,
+          "NextEventName": "Event191",
+          "Name": "Event293",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event294",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 322,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event294",
+          "ActorName": "Timer",
+          "Name": "Event305",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 325,
+          "ForkEventIndicies": [
+            327,
+            204
+          ],
+          "Name": "Event307",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 206,
+          "NextEventName": "Event191",
+          "Name": "Event308",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event309",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 326,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event309",
+          "ActorName": "Timer",
+          "Name": "Event310",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 329,
+          "ForkEventIndicies": [
+            331,
+            205
+          ],
+          "Name": "Event306",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 206,
+          "NextEventName": "Event191",
+          "Name": "Event311",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event312",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 330,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event312",
+          "ActorName": "Timer",
+          "Name": "Event313",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 333,
+          "ForkEventIndicies": [
+            335,
+            209
+          ],
+          "Name": "Event249",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 210,
+          "NextEventName": "Event195",
+          "Name": "Event251",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event295",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 334,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event295",
+          "ActorName": "Timer",
+          "Name": "Event314",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 337,
+          "ForkEventIndicies": [
+            339,
+            208
+          ],
+          "Name": "Event315",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 210,
+          "NextEventName": "Event195",
+          "Name": "Event316",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event317",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 338,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event317",
+          "ActorName": "Timer",
+          "Name": "Event318",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 341,
+          "ForkEventIndicies": [
+            343,
+            207
+          ],
+          "Name": "Event319",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 210,
+          "NextEventName": "Event195",
+          "Name": "Event320",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event321",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 342,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event321",
+          "ActorName": "Timer",
+          "Name": "Event322",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 288,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event277",
+          "ActorName": "Timer",
+          "Name": "Event323",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 291,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event280",
+          "ActorName": "Timer",
+          "Name": "Event324",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 285,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event274",
+          "ActorName": "Timer",
+          "Name": "Event325",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 282,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event271",
+          "ActorName": "Timer",
+          "Name": "Event326",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 294,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event283",
+          "ActorName": "Timer",
+          "Name": "Event327",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 279,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event268",
+          "ActorName": "Timer",
+          "Name": "Event328",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 303,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.2
+            }
+          },
+          "NextEventName": "Event286",
+          "ActorName": "Timer",
+          "Name": "Event329",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 193,
+          "ActorIndex": 11,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "enableUpdateInEvent": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event170",
+          "ActorName": "Hud",
+          "Name": "Event330",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 122,
+          "ActorIndex": 11,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "enableUpdateInEvent": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event6",
+          "ActorName": "Hud",
+          "Name": "Event331",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 355,
+          "ActorIndex": 11,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "enableUpdateInEvent": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event334",
+          "ActorName": "Hud",
+          "Name": "Event332",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 129,
+          "ActorIndex": 11,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "isViewAlways": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event96",
+          "ActorName": "Hud",
+          "Name": "Event333",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 35,
+          "ActorIndex": 11,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "isViewAlways": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event732",
+          "ActorName": "Hud",
+          "Name": "Event334",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 357,
+          "ActorIndex": 11,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "isViewAlways": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event336",
+          "ActorName": "Hud",
+          "Name": "Event335",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 185,
+          "ActorIndex": 11,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "isViewAlways": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event161",
+          "ActorName": "Hud",
+          "Name": "Event336",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "isViewAlways": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Hud",
+          "Name": "Event337",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 161,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event63",
+          "ActorName": "Hud",
+          "Name": "Event338",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1.5
+            },
+            "volume": {
+              "Float": 0.2
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event340",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "duration": {
+              "Float": 2
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event342",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 363,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "stopbgm": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event344",
+          "ActorName": "Audio",
+          "Name": "Event343",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "waitSec": {
+              "Float": 0.7
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event344",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Linkswordlv2"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event345",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "Linkswordlv3"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "ActorName": "EventFlags",
+          "Name": "Event346",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 183,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event62",
+          "ActorName": "Luberi",
+          "Name": "Event347",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event348",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 216,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event165",
+          "ActorName": "Luberi",
+          "Name": "Event230",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Luberi",
+          "Name": "Event233",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 162,
+          "ActorIndex": 4,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event71",
+          "ActorName": "Luberi",
+          "Name": "Event254",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 191,
+          "ActorIndex": 4,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event106",
+          "ActorName": "Luberi",
+          "Name": "Event255",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 214,
+          "ActorIndex": 4,
+          "ActorActionIndex": 13,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event143",
+          "ActorName": "Luberi",
+          "Name": "Event260",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 366,
+          "ActorIndex": 4,
+          "ActorActionIndex": 13,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event347",
+          "ActorName": "Luberi",
+          "Name": "Event261",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 215,
+          "ActorIndex": 4,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event164",
+          "ActorName": "Luberi",
+          "Name": "Event257",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 100,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event129",
+          "ActorName": "Timer",
+          "Name": "Event224",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "strengthen"
+            },
+            "restart": {
+              "Bool": true
+            }
+          },
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event81",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 99,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3
+            }
+          },
+          "NextEventName": "Event128",
+          "ActorName": "Timer",
+          "Name": "Event228",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 3,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "channel": {
+              "String": "strengthen"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": true
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "LuberiHouseMachine",
+          "Name": "Event235",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 64,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event28",
+          "ActorName": "Audio",
+          "Name": "Event258",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 65,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event59",
+          "ActorName": "Audio",
+          "Name": "Event263",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 66,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event60",
+          "ActorName": "Audio",
+          "Name": "Event264",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 67,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event61",
+          "ActorName": "Audio",
+          "Name": "Event339",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 125,
+          "ActorIndex": 5,
+          "ActorActionIndex": 5,
+          "NextEventName": "Event18",
+          "ActorName": "Audio",
+          "Name": "Event341",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 219,
+          "ActorIndex": 5,
+          "ActorActionIndex": 6,
+          "NextEventName": "Event168",
+          "ActorName": "Audio",
+          "Name": "Event349",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 124,
+          "ActorIndex": 5,
+          "ActorActionIndex": 5,
+          "NextEventName": "Event86",
+          "ActorName": "Audio",
+          "Name": "Event350",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 221,
+          "ActorIndex": 5,
+          "ActorActionIndex": 6,
+          "NextEventName": "Event173",
+          "ActorName": "Audio",
+          "Name": "Event351",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "_InsertEnergyLevel": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 148
+        },
+        "_InsertLinkLevel": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 128
+        },
+        "_ShowLinkQuestion": {
+          "SubFlowEventIndices": [
+            132
+          ],
+          "EventIndex": 132
+        },
+        "_ShowPowerQuestion": {
+          "SubFlowEventIndices": [
+            152
+          ],
+          "EventIndex": 152
+        },
+        "Cancel": {
+          "SubFlowEventIndices": [
+            153,
+            154,
+            139,
+            140,
+            137,
+            138,
+            135,
+            136
+          ],
+          "EventIndex": 129
+        },
+        "GaugeLv2": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 117
+        },
+        "GaugeLv3": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 119
+        },
+        "GaugeLv4": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 118
+        },
+        "GaugeLvUp": {
+          "SubFlowEventIndices": [
+            112,
+            113,
+            114
+          ],
+          "EventIndex": 111
+        },
+        "ItemCheck": {
+          "SubFlowEventIndices": [
+            153,
+            154,
+            139,
+            140,
+            137,
+            138,
+            135,
+            136,
+            188
+          ],
+          "EventIndex": 227
+        },
+        "LvMaxCheck": {
+          "SubFlowEventIndices": [
+            189
+          ],
+          "EventIndex": 164
+        },
+        "LvUpTalk": {
+          "SubFlowEventIndices": [
+            153,
+            154,
+            139,
+            140,
+            137,
+            138,
+            135,
+            136,
+            188
+          ],
+          "EventIndex": 227
+        },
+        "LvUpTalk_Q5": {
+          "SubFlowEventIndices": [
+            42,
+            34,
+            36,
+            67,
+            68,
+            57,
+            141,
+            33,
+            39,
+            69,
+            55,
+            142,
+            32,
+            40,
+            66,
+            71,
+            58,
+            143,
+            12,
+            41,
+            70,
+            54,
+            144,
+            29,
+            37,
+            65,
+            74,
+            60,
+            145,
+            30,
+            38,
+            146,
+            52,
+            147,
+            28,
+            88,
+            64,
+            72,
+            155,
+            87,
+            89,
+            59,
+            156,
+            31,
+            73,
+            53,
+            62
+          ],
+          "EventIndex": 61
+        },
+        "madadayo": {
+          "SubFlowEventIndices": [
+            63
+          ],
+          "EventIndex": 56
+        },
+        "makaseyo": {
+          "SubFlowEventIndices": [
+            194
+          ],
+          "EventIndex": 237
+        },
+        "matakoiyo": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 48
+        },
+        "max": {
+          "SubFlowEventIndices": [
+            63
+          ],
+          "EventIndex": 51
+        },
+        "notenough": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 240
+        },
+        "OmakeGet": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 160
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}

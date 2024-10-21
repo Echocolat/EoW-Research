@@ -1,0 +1,514 @@
+{
+  "FileName": "EnemyLinkBomberDead",
+  "Version": "0.3.0.0",
+  "Flowcharts": {},
+  "Timelines": {
+    "EnemyLinkBomberDead": {
+      "Name": "EnemyLinkBomberDead",
+      "Duration": 750,
+      "Actors": [
+        {
+          "Name": "EnemyLinkBomber",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 4,
+          "Actions": [
+            "PlayAnimation",
+            "PlayMaterialAnimation",
+            "StopTailorOtherChannel",
+            "PlayTailorOtherChannelNoWait",
+            "Deactivate"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "ItemBomb",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 4,
+          "Actions": [
+            "Activate",
+            "SetVisibility",
+            "PlayTailorOtherChannelNoWait",
+            "StopTailorOtherChannel"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayActorOriginCameraAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayOneshotSystemSE"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Clips": [
+        {
+          "StartTime": 0,
+          "Duration": 440,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_EnemyLinkBomDead"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 150,
+          "Duration": 280,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Unknown": 1,
+          "Parameters": {
+            "layer": {
+              "Int": 2
+            },
+            "name": {
+              "String": "enemylink_dissolve"
+            }
+          }
+        },
+        {
+          "StartTime": 0,
+          "Duration": 500,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": false
+            },
+            "name": {
+              "String": "EnemyLink_disappear01_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "/actor/Player.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "EnemyLinkBomber",
+                "Item2": ""
+              }
+            }
+          }
+        },
+        {
+          "StartTime": 500,
+          "Duration": 260,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": false
+            },
+            "name": {
+              "String": "EnemyLink_disappear02_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "/actor/Player.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "EnemyLinkBomber",
+                "Item2": ""
+              }
+            }
+          }
+        },
+        {
+          "StartTime": 0,
+          "Duration": 100,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "StartTime": 0,
+          "Duration": 100,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Unknown": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          }
+        }
+      ],
+      "Oneshots": [
+        {
+          "Time": 0,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "Aura_Anger"
+            },
+            "index": {
+              "Int": -1
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "channel": {
+              "String": "Aura_Normal"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "Time": 0,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_ENEMY_LINK_BOMB_DEAD"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          }
+        },
+        {
+          "Time": 5,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInSlow"
+            }
+          }
+        },
+        {
+          "Time": 280,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "channel": {
+              "String": "Dead_bomb"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "Time": 288,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "Aura_Normal"
+            },
+            "index": {
+              "Int": -1
+            }
+          }
+        },
+        {
+          "Time": 400,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0
+        },
+        {
+          "Time": 400,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 416,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "channel": {
+              "String": "ac_Keep"
+            },
+            "index": {
+              "Int": -1
+            }
+          }
+        },
+        {
+          "Time": 430,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4
+        },
+        {
+          "Time": 430,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          }
+        },
+        {
+          "Time": 430,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "Glitter"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": false
+            }
+          }
+        },
+        {
+          "Time": 430,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "light"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": false
+            }
+          }
+        }
+      ],
+      "Triggers": [
+        {
+          "ClipIndex": 0,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 2,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 4,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 5,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 4,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 5,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 1,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 1,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 0,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 2,
+          "Type": 2
+        },
+        {
+          "ClipIndex": 3,
+          "Type": 1
+        },
+        {
+          "ClipIndex": 3,
+          "Type": 2
+        }
+      ],
+      "SubTimelines": [],
+      "Cuts": [
+        {
+          "StartTime": 0,
+          "Name": "cut1"
+        },
+        {
+          "StartTime": 0,
+          "Name": "cut01"
+        }
+      ]
+    }
+  }
+}

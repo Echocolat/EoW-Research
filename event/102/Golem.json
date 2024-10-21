@@ -1,0 +1,6408 @@
+{
+  "FileName": "Golem",
+  "Version": "0.3.0.0",
+  "Flowcharts": {
+    "Golem": {
+      "Name": "Golem",
+      "Actors": [
+        {
+          "Name": "Golem",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "CameraLockoff",
+            "PlayAnimation",
+            "LookAtGimmick",
+            "WaitDownEnd",
+            "CameraLockon",
+            "SetVisibility",
+            "Deactivate",
+            "ResetActiveAndPesteActors",
+            "Destroy",
+            "ItemDropToActor",
+            "RoomDoorClose",
+            "RoomDoorOpen"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Player",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVisibility",
+            "PlayAnimation",
+            "WarpToActorWithCompassPoint",
+            "MoveToTargetActor",
+            "AimCompassPoint",
+            "SetInterestIkEnabled",
+            "SetRestartPositionToActor",
+            "AimActor",
+            "MoveToCompassPoint",
+            "DestroyCollisionHitActors",
+            "WarpToActorLinkedPointWithCompassPoint",
+            "UpdateStrongRespawnPoint",
+            "ForceTurn"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Timer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Wait"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Hud",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayInAnim"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Talk",
+            "TalkKeep"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Partner",
+          "SecondaryName": "companion",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVisibility",
+            "WarpToActor",
+            "DisableAutoMovement",
+            "AimCompassPoint",
+            "TalkKeep",
+            "Talk",
+            "PlayAnimationEx",
+            "MoveToBesideTargetActor",
+            "PlayAnimationNoWait",
+            "PlayAnimation",
+            "EnableAutoMovement",
+            "AimActor",
+            "AimPlayer",
+            "WarpToActorLinkedPointWithCompassPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Audio",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayBGM",
+            "PlayZoneBGM",
+            "SetBGMVolume",
+            "StopBGM",
+            "PlayOneshotSystemSE",
+            "StopAllBGM",
+            "WaitSamplePositionAndStopAndPlayBossGolemBgm",
+            "PlayJingle",
+            "StopZoneBgm",
+            "StopZoneBaseAmbience"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventFlags",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetFlag"
+          ],
+          "Queries": [
+            "CheckFlag"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "Camera",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Reset",
+            "PlayActorOriginCameraAnimation",
+            "LerpDofSettings",
+            "PlayLocationOriginCameraAnimation",
+            "SetShadowMapSettings"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "FlowControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "InvokeTimeline",
+            "SetCanSkip",
+            "PreloadTimeline"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GolemCore",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVisibility",
+            "Deactivate",
+            "CameraLockon",
+            "CameraLockoff",
+            "PlayAnimationNoWait",
+            "PlayTailorOtherChannelNoWait",
+            "PlayMaterialAnimationNoWait",
+            "SetCullMode",
+            "StopTailorOtherChannel"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "GameControl",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "RequestAutoSave",
+            "ForbidSave",
+            "UnforbidSave",
+            "RequestLevelJump",
+            "ResetSensorEventResetContainsActors",
+            "ForbidLaunchApplet",
+            "UnforbidLaunchApplet",
+            "SetAllItemsVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Zelda",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetShadowDecalEnable",
+            "SetRestartPositionToActor"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "ItemHeartContainer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "EventVariables",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVariable"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Door",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Fade",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "StartPreset"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "BattleChallenge",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "SetNextLevelAndLocation"
+          ],
+          "Queries": [
+            "GetConditionNumber"
+          ],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "e",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "WarpBoss",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "LookAtGimmick"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "Movie",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Play",
+            "Close",
+            "Prepare"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "MinigameTimer",
+          "SecondaryName": "",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "Stop"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhotonLiberation",
+          "SecondaryName": "a",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "WarpToActorLinkedPoint",
+            "PlayTailorOtherChannelNoWait",
+            "StopTailorOtherChannel"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhotonLiberation",
+          "SecondaryName": "b",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "PlayAnimation",
+            "WarpToActorLinkedPoint"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "a",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "b",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "c",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "d",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        },
+        {
+          "Name": "PartnerPhoton",
+          "SecondaryName": "f",
+          "ArgumentName": "",
+          "EntryPointIndex": -1,
+          "CutNumber": 1,
+          "Actions": [
+            "WarpToActorLinkedPoint",
+            "PlayAnimation",
+            "PlayAnimationNoWait",
+            "Activate",
+            "SetCullMode",
+            "SetVisibility"
+          ],
+          "Queries": [],
+          "Parameters": {}
+        }
+      ],
+      "Events": [
+        {
+          "NextEventIndex": 125,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event221",
+          "ActorName": "Golem",
+          "Name": "Event1",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 4,
+          "ForkEventIndicies": [
+            3,
+            2,
+            88
+          ],
+          "Name": "Event18",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event19",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event20",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 99,
+          "NextEventName": "Event5",
+          "Name": "Event21",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 8,
+          "ForkEventIndicies": [
+            6,
+            7
+          ],
+          "Name": "Event61",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_anger"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Golem",
+          "Name": "Event62",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.3
+            },
+            "distanceOffset": {
+              "Float": 4
+            },
+            "duration": {
+              "Float": 1
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Golem",
+          "Name": "Event63",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 9,
+          "NextEventName": "Event66",
+          "Name": "Event64",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 274,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event128",
+          "ActorName": "Camera",
+          "Name": "Event66",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 49,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvAreaA011"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event202",
+          "ActorName": "EventFlags",
+          "Name": "Event59",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 54,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event212",
+          "ActorName": "Player",
+          "Name": "Event41",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 14,
+          "ForkEventIndicies": [
+            13,
+            128
+          ],
+          "Name": "Event2",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "ActorName": "Golem",
+          "Name": "Event42",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 123,
+          "NextEventName": "Event215",
+          "Name": "Event44",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event45",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 279,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "maxSpeed": {
+              "Float": 100
+            }
+          },
+          "NextEventName": "Event196",
+          "ActorName": "Golem",
+          "Name": "Event14",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvAreaA008"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 19
+            },
+            {
+              "Value": 1,
+              "EventIndex": 34
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event70",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 16,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_BOSS_FOREST"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event14",
+          "ActorName": "Audio",
+          "Name": "Event75",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 34,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvAreaA008"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event135",
+          "ActorName": "EventFlags",
+          "Name": "Event80",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 23,
+          "ForkEventIndicies": [
+            21,
+            22
+          ],
+          "Name": "Event81",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_anger"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Golem",
+          "Name": "Event82",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.3
+            },
+            "distanceOffset": {
+              "Float": 4
+            },
+            "duration": {
+              "Float": 1
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Golem",
+          "Name": "Event83",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 24,
+          "NextEventName": "Event86",
+          "Name": "Event84",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 275,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event30",
+          "ActorName": "Camera",
+          "Name": "Event86",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 28,
+          "ForkEventIndicies": [
+            26,
+            27
+          ],
+          "Name": "Event87",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 3,
+          "ActorName": "Golem",
+          "Name": "Event88",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.3
+            },
+            "distanceOffset": {
+              "Float": 4
+            },
+            "duration": {
+              "Float": 1
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Golem",
+          "Name": "Event89",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 129,
+          "NextEventName": "Event231",
+          "Name": "Event92",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event93",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 126,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event228",
+          "ActorName": "Golem",
+          "Name": "Event94",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 310,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event130",
+          "ActorName": "Timer",
+          "Name": "Event102",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 51,
+          "ActorIndex": 5,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "distance": {
+              "Float": 0
+            },
+            "offsetX": {
+              "Float": 1
+            },
+            "offsetY": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event206",
+          "ActorName": "Partner",
+          "Name": "Event116",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 35,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event124",
+          "ActorName": "Golem",
+          "Name": "Event112",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 138,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.05
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 1
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event96",
+          "ActorName": "Golem",
+          "Name": "Event135",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 265,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event12",
+          "ActorName": "GolemCore",
+          "Name": "Event124",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 280,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event39",
+          "ActorName": "Timer",
+          "Name": "Event109",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 38,
+          "ActorIndex": 10,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event145",
+          "ActorName": "GolemCore",
+          "Name": "Event103",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 263,
+          "ActorIndex": 0,
+          "ActorActionIndex": 6,
+          "NextEventName": "Event108",
+          "ActorName": "Golem",
+          "Name": "Event145",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 50,
+          "ActorIndex": 6,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "stopbgm": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event117",
+          "ActorName": "Audio",
+          "Name": "Event151",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 211,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event32",
+          "ActorName": "Partner",
+          "Name": "Event158",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 47,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvAreaA012"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event199",
+          "ActorName": "EventFlags",
+          "Name": "Event162",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 181,
+          "ActorIndex": 6,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event193",
+          "ActorName": "Audio",
+          "Name": "Event163",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 40,
+          "ActorIndex": 6,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event158",
+          "ActorName": "Audio",
+          "Name": "Event164",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 46,
+          "ForkEventIndicies": [
+            344,
+            48,
+            122,
+            182,
+            108
+          ],
+          "Name": "Event170",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "aliveCemeteryRevive": {
+              "Bool": false
+            },
+            "cemeteryRevive": {
+              "Bool": false
+            },
+            "child": {
+              "Bool": true
+            },
+            "defeatedThrough": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Golem",
+          "Name": "Event171",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 41,
+          "NextEventName": "Event162",
+          "Name": "Event172",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 43,
+          "ActorIndex": 14,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "HyruleCastle_LuberiHouse:1290795765"
+            }
+          },
+          "NextEventName": "Event164",
+          "ActorName": "EventVariables",
+          "Name": "Event199",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 45,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event171",
+          "ActorName": "Timer",
+          "Name": "Event201",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "AreaABossDead",
+          "Name": "Event202",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "ActorName": "Golem",
+          "Name": "Event117",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 58,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event223",
+          "ActorName": "Partner",
+          "Name": "Event206",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeInSlow"
+            }
+          },
+          "ActorName": "Fade",
+          "Name": "Event208",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 11,
+          "ActorIndex": 1,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "direction": {
+              "Int": 2
+            },
+            "distance": {
+              "Float": 10
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event41",
+          "ActorName": "Player",
+          "Name": "Event209",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 32,
+          "ActorIndex": 5,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event116",
+          "ActorName": "Partner",
+          "Name": "Event212",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 56,
+          "ActorIndex": 5,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:EnterBossArea_30"
+            }
+          },
+          "NextEventName": "Event220",
+          "ActorName": "Partner",
+          "Name": "Event219",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 306,
+          "ActorIndex": 5,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:EnterBossArea_40"
+            }
+          },
+          "NextEventName": "Event314",
+          "ActorName": "Partner",
+          "Name": "Event220",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Player",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "distance": {
+              "Float": 1.5
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event222",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 59,
+          "ForkEventIndicies": [
+            52,
+            57,
+            85
+          ],
+          "Name": "Event223",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 75,
+          "NextEventName": "Event238",
+          "Name": "Event224",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 81,
+          "FlowchartName": "",
+          "EntryPointName": "EnterBossArea",
+          "NextEventName": "Event247",
+          "Name": "Event225",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:EnterBossArea_10"
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event113",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 63,
+          "ActorIndex": 5,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:EnterBossArea_20"
+            }
+          },
+          "NextEventName": "Event118",
+          "ActorName": "Partner",
+          "Name": "Event114",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            },
+            "time": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event118",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 65,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2
+            }
+          },
+          "NextEventName": "Event127",
+          "ActorName": "Timer",
+          "Name": "Event120",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 77,
+          "ActorIndex": 5,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "think"
+            },
+            "restart": {
+              "Bool": false
+            },
+            "time": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event241",
+          "ActorName": "Partner",
+          "Name": "Event127",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "EnterBossArea_2",
+          "Name": "Event137",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 234,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvAreaA008"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event188",
+          "ActorName": "EventFlags",
+          "Name": "Event7",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 7,
+          "ActorQueryIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvAreaA008"
+            }
+          },
+          "SwitchCases": [
+            {
+              "Value": 0,
+              "EventIndex": 67
+            },
+            {
+              "Value": 1,
+              "EventIndex": 234
+            }
+          ],
+          "ActorName": "EventFlags",
+          "Name": "Event16",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 71,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event136",
+          "ActorName": "Partner",
+          "Name": "Event10",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 64,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event120",
+          "ActorName": "Partner",
+          "Name": "Event106",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 70,
+          "ActorIndex": 5,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Zelda",
+                "Item2": ""
+              }
+            },
+            "customSpeed": {
+              "Float": 0
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": -1
+            },
+            "offsetY": {
+              "Float": 1
+            },
+            "offsetZ": {
+              "Float": -1
+            },
+            "speed": {
+              "Int": 1
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event106",
+          "ActorName": "Partner",
+          "Name": "Event136",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "Golem_appear00_1_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "actor/Golem.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event227",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "Golem_appear00_1_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "actor/Golem.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event235",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 92,
+          "ActorIndex": 1,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event266",
+          "ActorName": "Player",
+          "Name": "Event3",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 76,
+          "ForkEventIndicies": [
+            84,
+            74,
+            90
+          ],
+          "Name": "Event238",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 60,
+          "NextEventName": "Event225",
+          "Name": "Event239",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 78,
+          "ForkEventIndicies": [
+            61,
+            301
+          ],
+          "Name": "Event241",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 79,
+          "NextEventName": "Event245",
+          "Name": "Event242",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 62,
+          "ActorIndex": 5,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "lookaround"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event114",
+          "ActorName": "Partner",
+          "Name": "Event245",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "Golem_appear01_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "actor/Golem.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event123",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 82,
+          "ForkEventIndicies": [
+            87,
+            96,
+            95,
+            324
+          ],
+          "Name": "Event247",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 236,
+          "NextEventName": "Event8",
+          "Name": "Event248",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "lookaround"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event249",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 86,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event256",
+          "ActorName": "Timer",
+          "Name": "Event251",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 72,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "BackCurve": {
+              "Float": 1
+            },
+            "BackRange": {
+              "Float": 1
+            },
+            "BlurRatio": {
+              "Float": 1
+            },
+            "BlurSizeScale": {
+              "Float": 1
+            },
+            "duration": {
+              "Float": 0
+            },
+            "FocalDistance": {
+              "Float": 45
+            },
+            "FocusRange": {
+              "Float": 1
+            },
+            "FrontCurve": {
+              "Float": 1
+            },
+            "FrontRange": {
+              "Float": 1
+            },
+            "kind": {
+              "Int": 7
+            },
+            "noWait": {
+              "Bool": false
+            },
+            "TiltShiftBlurRatio": {
+              "Float": 1
+            },
+            "TiltShiftBlurSizeScale": {
+              "Float": 1
+            },
+            "TiltShiftCenterX": {
+              "Float": 0
+            },
+            "TiltShiftCenterY": {
+              "Float": 0.7
+            },
+            "TiltShiftDofBackBlurFadeWidth": {
+              "Float": 0.05
+            },
+            "TiltShiftDofBackCurve": {
+              "Float": 0.5
+            },
+            "TiltShiftDofBackRange": {
+              "Float": 51
+            },
+            "TiltShiftDofBlurRatio": {
+              "Float": 1
+            },
+            "TiltShiftDofFocalDistance": {
+              "Float": 51
+            },
+            "TiltShiftGamma": {
+              "Float": 2
+            },
+            "TiltShiftNormalX": {
+              "Float": 0
+            },
+            "TiltShiftNormalY": {
+              "Float": 1
+            },
+            "TiltShiftRange": {
+              "Float": 0.18
+            }
+          },
+          "NextEventName": "Event227",
+          "ActorName": "Camera",
+          "Name": "Event234",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 73,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "BackCurve": {
+              "Float": 1
+            },
+            "BackRange": {
+              "Float": 1
+            },
+            "BlurRatio": {
+              "Float": 1
+            },
+            "BlurSizeScale": {
+              "Float": 1
+            },
+            "duration": {
+              "Float": 0
+            },
+            "FocalDistance": {
+              "Float": 45
+            },
+            "FocusRange": {
+              "Float": 1
+            },
+            "FrontCurve": {
+              "Float": 1
+            },
+            "FrontRange": {
+              "Float": 1
+            },
+            "kind": {
+              "Int": 7
+            },
+            "noWait": {
+              "Bool": false
+            },
+            "TiltShiftBlurRatio": {
+              "Float": 1
+            },
+            "TiltShiftBlurSizeScale": {
+              "Float": 1
+            },
+            "TiltShiftCenterX": {
+              "Float": 0
+            },
+            "TiltShiftCenterY": {
+              "Float": 0.7
+            },
+            "TiltShiftDofBackBlurFadeWidth": {
+              "Float": 0.05
+            },
+            "TiltShiftDofBackCurve": {
+              "Float": 0.5
+            },
+            "TiltShiftDofBackRange": {
+              "Float": 51
+            },
+            "TiltShiftDofBlurRatio": {
+              "Float": 1
+            },
+            "TiltShiftDofFocalDistance": {
+              "Float": 51
+            },
+            "TiltShiftGamma": {
+              "Float": 2
+            },
+            "TiltShiftNormalX": {
+              "Float": 0
+            },
+            "TiltShiftNormalY": {
+              "Float": 1
+            },
+            "TiltShiftRange": {
+              "Float": 0.18
+            }
+          },
+          "NextEventName": "Event235",
+          "ActorName": "Camera",
+          "Name": "Event256",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 80,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "BackCurve": {
+              "Float": 1
+            },
+            "BackRange": {
+              "Float": 1
+            },
+            "BlurRatio": {
+              "Float": 1
+            },
+            "BlurSizeScale": {
+              "Float": 1
+            },
+            "duration": {
+              "Float": 0
+            },
+            "FocalDistance": {
+              "Float": 45
+            },
+            "FocusRange": {
+              "Float": 1
+            },
+            "FrontCurve": {
+              "Float": 1
+            },
+            "FrontRange": {
+              "Float": 1
+            },
+            "kind": {
+              "Int": 7
+            },
+            "noWait": {
+              "Bool": false
+            },
+            "TiltShiftBlurRatio": {
+              "Float": 1
+            },
+            "TiltShiftBlurSizeScale": {
+              "Float": 1
+            },
+            "TiltShiftCenterX": {
+              "Float": 0
+            },
+            "TiltShiftCenterY": {
+              "Float": 0.7
+            },
+            "TiltShiftDofBackBlurFadeWidth": {
+              "Float": 0.05
+            },
+            "TiltShiftDofBackCurve": {
+              "Float": 0.5
+            },
+            "TiltShiftDofBackRange": {
+              "Float": 51
+            },
+            "TiltShiftDofBlurRatio": {
+              "Float": 1
+            },
+            "TiltShiftDofFocalDistance": {
+              "Float": 51
+            },
+            "TiltShiftGamma": {
+              "Float": 2
+            },
+            "TiltShiftNormalX": {
+              "Float": 0
+            },
+            "TiltShiftNormalY": {
+              "Float": 1
+            },
+            "TiltShiftRange": {
+              "Float": 0.18
+            }
+          },
+          "NextEventName": "Event123",
+          "ActorName": "Camera",
+          "Name": "Event257",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_wait_ready"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Golem",
+          "Name": "Event210",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "search"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event261",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 93,
+          "ActorIndex": 5,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event267",
+          "ActorName": "Partner",
+          "Name": "Event263",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "lookaround"
+            },
+            "restart": {
+              "Bool": false
+            },
+            "time": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event264",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 94,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event269",
+          "ActorName": "Timer",
+          "Name": "Event266",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 91,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event264",
+          "ActorName": "Timer",
+          "Name": "Event267",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event269",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 83,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event249",
+          "ActorName": "Timer",
+          "Name": "Event265",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 98,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.5
+            }
+          },
+          "NextEventName": "Event246",
+          "ActorName": "Timer",
+          "Name": "Event270",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 89,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event261",
+          "ActorName": "Player",
+          "Name": "Event272",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 97,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event272",
+          "ActorName": "Player",
+          "Name": "Event246",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 100,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "BackCurve": {
+              "Float": 1
+            },
+            "BackRange": {
+              "Float": 1
+            },
+            "BlurRatio": {
+              "Float": 1
+            },
+            "BlurSizeScale": {
+              "Float": 1
+            },
+            "duration": {
+              "Float": 0
+            },
+            "FocalDistance": {
+              "Float": 45
+            },
+            "FocusRange": {
+              "Float": 1
+            },
+            "FrontCurve": {
+              "Float": 1
+            },
+            "FrontRange": {
+              "Float": 1
+            },
+            "kind": {
+              "Int": 7
+            },
+            "noWait": {
+              "Bool": false
+            },
+            "TiltShiftBlurRatio": {
+              "Float": 1
+            },
+            "TiltShiftBlurSizeScale": {
+              "Float": 1
+            },
+            "TiltShiftCenterX": {
+              "Float": 0
+            },
+            "TiltShiftCenterY": {
+              "Float": 0.54
+            },
+            "TiltShiftDofBackBlurFadeWidth": {
+              "Float": 0.05
+            },
+            "TiltShiftDofBackCurve": {
+              "Float": 0.5
+            },
+            "TiltShiftDofBackRange": {
+              "Float": 50
+            },
+            "TiltShiftDofBlurRatio": {
+              "Float": 1
+            },
+            "TiltShiftDofFocalDistance": {
+              "Float": 52
+            },
+            "TiltShiftGamma": {
+              "Float": 2
+            },
+            "TiltShiftNormalX": {
+              "Float": 0
+            },
+            "TiltShiftNormalY": {
+              "Float": 1
+            },
+            "TiltShiftRange": {
+              "Float": 0.43
+            }
+          },
+          "NextEventName": "Event91",
+          "ActorName": "Camera",
+          "Name": "Event5",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 136,
+          "ActorIndex": 8,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "Golem_appear03_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "actor/Golem.bfres"
+            },
+            "target": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            }
+          },
+          "NextEventName": "Event299",
+          "ActorName": "Camera",
+          "Name": "Event91",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            },
+            "label": {
+              "String": "BGM_BATTLE_BOSS_FOREST"
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event119",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 307,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event315",
+          "ActorName": "Player",
+          "Name": "Event289",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 104,
+          "ActorIndex": 1,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "distance": {
+              "Float": -9
+            },
+            "stance": {
+              "String": "Ground"
+            }
+          },
+          "NextEventName": "Event38",
+          "ActorName": "Player",
+          "Name": "Event35",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 302,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": true
+            },
+            "name": {
+              "String": "Golem"
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event240",
+          "ActorName": "GameControl",
+          "Name": "Event38",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "location": {
+              "String": "EvA_TriRelease01_cam"
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "EvA_TriRelease02_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "actor/PartnerPhotonLiberation.bfres"
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event147",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 22,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "move_up_00"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event149",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 23,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "move_up_00"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event153",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 109,
+          "ForkEventIndicies": [
+            106,
+            107,
+            150,
+            151,
+            152,
+            153,
+            154,
+            155
+          ],
+          "Name": "Event165",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event167",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "aspectRatioCtrl": {
+              "Bool": false
+            },
+            "chaseRatio": {
+              "Float": 1
+            },
+            "farClipDistanceCtrl": {
+              "Bool": false
+            },
+            "ignoreRotation": {
+              "Bool": true
+            },
+            "location": {
+              "String": "EvA_TriRelease01_cam"
+            },
+            "lookAtDistanceCtrl": {
+              "Bool": true
+            },
+            "name": {
+              "String": "EvA_TriRelease01_cam"
+            },
+            "nearClipDistanceCtrl": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "path": {
+              "String": "actor/PartnerPhotonLiberation.bfres"
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event182",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 44,
+          "ActorIndex": 4,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:TouchWedge_030"
+            }
+          },
+          "NextEventName": "Event170",
+          "ActorName": "Partner",
+          "Name": "Event154",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 111,
+          "ActorIndex": 4,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "getAttention": {
+              "Bool": false
+            },
+            "message": {
+              "String": "scenario/StoryAreaA:TouchWedge_010"
+            }
+          },
+          "NextEventName": "Event154",
+          "ActorName": "Partner",
+          "Name": "Event152",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 114,
+          "ForkEventIndicies": [
+            110,
+            115,
+            116,
+            337,
+            163
+          ],
+          "Name": "Event183",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 112,
+          "NextEventName": "Event152",
+          "Name": "Event184",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 338,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event287",
+          "ActorName": "Player",
+          "Name": "Event144",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 339,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event288",
+          "ActorName": "Partner",
+          "Name": "Event146",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event186",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event189",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 127,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event229",
+          "ActorName": "Golem",
+          "Name": "Event159",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 119,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "NextEventName": "Event159",
+          "ActorName": "Golem",
+          "Name": "Event161",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 343,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalW"
+            }
+          },
+          "NextEventName": "Event329",
+          "ActorName": "Fade",
+          "Name": "Event166",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 121,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 21.3
+            }
+          },
+          "NextEventName": "Event166",
+          "ActorName": "Timer",
+          "Name": "Event187",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 124,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event43",
+          "ActorName": "Golem",
+          "Name": "Event215",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 15,
+          "ActorIndex": 10,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "maxSpeed": {
+              "Float": 100
+            }
+          },
+          "NextEventName": "Event45",
+          "ActorName": "GolemCore",
+          "Name": "Event43",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 10,
+          "ActorIndex": 10,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event59",
+          "ActorName": "GolemCore",
+          "Name": "Event221",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 37,
+          "ActorIndex": 10,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event103",
+          "ActorName": "GolemCore",
+          "Name": "Event228",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 3,
+          "ActorName": "GolemCore",
+          "Name": "Event229",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.3
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 1
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "Golem",
+          "Name": "Event230",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 130,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event232",
+          "ActorName": "Golem",
+          "Name": "Event231",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 29,
+          "ActorIndex": 10,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "maxSpeed": {
+              "Float": 100
+            }
+          },
+          "NextEventName": "Event93",
+          "ActorName": "GolemCore",
+          "Name": "Event232",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 132,
+          "ActorIndex": 0,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event306",
+          "ActorName": "Golem",
+          "Name": "Event254",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 133,
+          "ActorIndex": 10,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event296",
+          "ActorName": "GolemCore",
+          "Name": "Event306",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 210,
+          "ActorIndex": 0,
+          "ActorActionIndex": 8,
+          "NextEventName": "Event28",
+          "ActorName": "Golem",
+          "Name": "Event296",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 135,
+          "ActorIndex": 1,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event301",
+          "ActorName": "Player",
+          "Name": "Event300",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 102,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.6
+            }
+          },
+          "NextEventName": "Event289",
+          "ActorName": "Timer",
+          "Name": "Event301",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 137,
+          "ForkEventIndicies": [
+            134,
+            277
+          ],
+          "Name": "Event299",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 278,
+          "NextEventName": "Event139",
+          "Name": "Event302",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 18,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_anger"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event75",
+          "ActorName": "Golem",
+          "Name": "Event96",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 22,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event13",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 23,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event17",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 142,
+          "ForkEventIndicies": [
+            143,
+            139,
+            140,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149
+          ],
+          "Name": "Event46",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 113,
+          "NextEventName": "Event183",
+          "Name": "Event47",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 13,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "ItemHeartContainer",
+          "Name": "Event51",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 24,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event52",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 25,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event53",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 26,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event54",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 27,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event56",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 18,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event57",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 28,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event58",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 24,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_1"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event177",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 25,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_2"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event178",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 26,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_3"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event179",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 27,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_4"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event180",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 18,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_5"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event181",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 28,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_wait_6"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event191",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 22,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "Down"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event60",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 290,
+          "ActorIndex": 24,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_1"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event218",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event69",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 291,
+          "ActorIndex": 25,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_2"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event226",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event71",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 292,
+          "ActorIndex": 26,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_3"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event236",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event73",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 284,
+          "ActorIndex": 26,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event150",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event76",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 283,
+          "ActorIndex": 25,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event148",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event77",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 282,
+          "ActorIndex": 24,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event104",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event78",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 164,
+          "ForkEventIndicies": [
+            156,
+            162,
+            161,
+            160,
+            169,
+            172,
+            175
+          ],
+          "Name": "Event121",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event122",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 159,
+          "ActorIndex": 26,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event73",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event125",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 158,
+          "ActorIndex": 25,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event71",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event126",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 157,
+          "ActorIndex": 24,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event69",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event138",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 297,
+          "ActorIndex": 27,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_4"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event273",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event141",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 285,
+          "ActorIndex": 27,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event205",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event142",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 168,
+          "ActorIndex": 27,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event141",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event143",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 298,
+          "ActorIndex": 18,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_5"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event274",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event157",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 286,
+          "ActorIndex": 18,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event207",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event168",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 171,
+          "ActorIndex": 18,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event157",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event169",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 299,
+          "ActorIndex": 28,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease_fall_6"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event279",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event174",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 287,
+          "ActorIndex": 28,
+          "ActorActionIndex": 3,
+          "NextEventName": "Event211",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event175",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 174,
+          "ActorIndex": 28,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event174",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event176",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 184,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event101",
+          "ActorName": "Player",
+          "Name": "Event156",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 183,
+          "ActorIndex": 5,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event68",
+          "ActorName": "Partner",
+          "Name": "Event173",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 180,
+          "ForkEventIndicies": [
+            105,
+            177,
+            178
+          ],
+          "Name": "Event185",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event192",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "",
+          "EntryPointName": "TriRelease",
+          "Name": "Event193",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 262,
+          "ActorIndex": 22,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "channel": {
+              "String": "Down"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "NextEventName": "Event107",
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event105",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event68",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_A_TriRelease"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event101",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 186,
+          "ActorIndex": 10,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_dead"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event338",
+          "ActorName": "GolemCore",
+          "Name": "Event336",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 203,
+          "ActorIndex": 10,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "channel": {
+              "String": "PartnerPhoton_Release"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event353",
+          "ActorName": "GolemCore",
+          "Name": "Event338",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 197,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "GolemCore",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "HitStop",
+          "NextEventName": "Event346",
+          "Name": "Event344",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 185,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "GolemCore",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "HitStopCustom",
+          "NextEventName": "Event336",
+          "Name": "Event345",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "displacementX": {
+              "Float": 0
+            },
+            "displacementY": {
+              "Float": 0
+            },
+            "displacementZ": {
+              "Float": 0
+            },
+            "linkedItemScatter": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Golem",
+          "Name": "Event26",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 189,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.667
+            }
+          },
+          "NextEventName": "Event26",
+          "ActorName": "Timer",
+          "Name": "Event50",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 195,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.167
+            }
+          },
+          "NextEventName": "Event310",
+          "ActorName": "Timer",
+          "Name": "Event111",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 141,
+          "ActorIndex": 0,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "aliveCemeteryRevive": {
+              "Bool": false
+            },
+            "cemeteryRevive": {
+              "Bool": false
+            },
+            "child": {
+              "Bool": true
+            },
+            "defeatedThrough": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event46",
+          "ActorName": "Golem",
+          "Name": "Event308",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 131,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "GolemCore",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "BossExtinction",
+          "NextEventName": "Event254",
+          "Name": "Event25",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "GolemCore",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "BossExtinction",
+          "Name": "Event33",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 196,
+          "ForkEventIndicies": [
+            194,
+            190
+          ],
+          "Name": "Event310",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 0,
+          "NextEventName": "Event1",
+          "Name": "Event311",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 198,
+          "ActorIndex": 10,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_dead"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event348",
+          "ActorName": "GolemCore",
+          "Name": "Event346",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 199,
+          "ForkEventIndicies": [
+            201,
+            200
+          ],
+          "Name": "Event348",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 208,
+          "NextEventName": "Event339",
+          "Name": "Event349",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.333
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event350",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 213,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.667
+            }
+          },
+          "NextEventName": "Event190",
+          "ActorName": "Timer",
+          "Name": "Event351",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 273,
+          "ActorIndex": 10,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "GolemCore_dissolve"
+            }
+          },
+          "NextEventName": "Event79",
+          "ActorName": "GolemCore",
+          "Name": "Event352",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 204,
+          "ForkEventIndicies": [
+            206,
+            205
+          ],
+          "Name": "Event353",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 191,
+          "NextEventName": "Event111",
+          "Name": "Event354",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.333
+            }
+          },
+          "ActorName": "Timer",
+          "Name": "Event355",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 212,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.667
+            }
+          },
+          "NextEventName": "Event134",
+          "ActorName": "Timer",
+          "Name": "Event356",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 272,
+          "ActorIndex": 10,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "GolemCore_dissolve"
+            }
+          },
+          "NextEventName": "Event67",
+          "ActorName": "GolemCore",
+          "Name": "Event357",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 193,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.167
+            }
+          },
+          "NextEventName": "Event25",
+          "ActorName": "Timer",
+          "Name": "Event339",
+          "Type": "Action"
+        },
+        {
+          "ActorIndex": 17,
+          "ActorQueryIndex": 0,
+          "SwitchCases": [
+            {
+              "Value": 1,
+              "EventIndex": 225
+            },
+            {
+              "Value": 2,
+              "EventIndex": 225
+            },
+            {
+              "Value": 3,
+              "EventIndex": 225
+            }
+          ],
+          "ActorName": "BattleChallenge",
+          "Name": "Event27",
+          "Type": "Switch"
+        },
+        {
+          "NextEventIndex": 353,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "FadeOutNormalB"
+            }
+          },
+          "NextEventName": "Event358",
+          "ActorName": "Fade",
+          "Name": "Event28",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 320,
+          "ActorIndex": 14,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "HyruleCastle_LuberiHouse:3666267468"
+            }
+          },
+          "NextEventName": "Event292",
+          "ActorName": "EventVariables",
+          "Name": "Event32",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 207,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GolemCore",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event357",
+          "Name": "Event134",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 202,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "GolemCore",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "Dissolve",
+          "EntryPointName": "Dissolve",
+          "NextEventName": "Event352",
+          "Name": "Event190",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 216,
+          "ForkEventIndicies": [
+            215,
+            218,
+            219,
+            220
+          ],
+          "Name": "Event195",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event198",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 221,
+          "NextEventName": "Event327",
+          "Name": "Event200",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "filename": {
+              "String": "Golem"
+            },
+            "rate": {
+              "Float": 1
+            }
+          },
+          "ActorName": "FlowControl",
+          "Name": "Event284",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Golem",
+          "Name": "Event304",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GolemCore",
+          "Name": "Event305",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "cullMode": {
+              "Int": 0
+            },
+            "enabled": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GolemCore",
+          "Name": "Event326",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 281,
+          "ForkEventIndicies": [
+            223,
+            222
+          ],
+          "Name": "Event327",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "BackCurve": {
+              "Float": 1
+            },
+            "BackRange": {
+              "Float": 1
+            },
+            "BlurRatio": {
+              "Float": 1
+            },
+            "BlurSizeScale": {
+              "Float": 1
+            },
+            "duration": {
+              "Float": 0
+            },
+            "FocalDistance": {
+              "Float": 45
+            },
+            "FocusRange": {
+              "Float": 1
+            },
+            "FrontCurve": {
+              "Float": 1
+            },
+            "FrontRange": {
+              "Float": 1
+            },
+            "kind": {
+              "Int": 7
+            },
+            "noWait": {
+              "Bool": false
+            },
+            "TiltShiftBlurRatio": {
+              "Float": 1
+            },
+            "TiltShiftBlurSizeScale": {
+              "Float": 1
+            },
+            "TiltShiftCenterX": {
+              "Float": 0
+            },
+            "TiltShiftCenterY": {
+              "Float": 0.7
+            },
+            "TiltShiftDofBackBlurFadeWidth": {
+              "Float": 0.05
+            },
+            "TiltShiftDofBackCurve": {
+              "Float": 0.5
+            },
+            "TiltShiftDofBackRange": {
+              "Float": 51
+            },
+            "TiltShiftDofBlurRatio": {
+              "Float": 1
+            },
+            "TiltShiftDofFocalDistance": {
+              "Float": 51
+            },
+            "TiltShiftGamma": {
+              "Float": 2
+            },
+            "TiltShiftNormalX": {
+              "Float": 0
+            },
+            "TiltShiftNormalY": {
+              "Float": 1
+            },
+            "TiltShiftRange": {
+              "Float": 0.18
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event330",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "label": {
+              "String": "SE_ENEMY_GOLEM_APPEAR"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event331",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 235,
+          "ActorIndex": 1,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "customSpeed": {
+              "Float": 0
+            },
+            "direction": {
+              "Int": 2
+            },
+            "distance": {
+              "Float": 2.5
+            },
+            "method": {
+              "Int": 0
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "speed": {
+              "Int": 0
+            },
+            "timeOut": {
+              "Float": 7
+            },
+            "tolerance": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event48",
+          "ActorName": "Player",
+          "Name": "Event276",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 17,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "NextLevelName": {
+              "String": "BC_BossAnomalocaris"
+            },
+            "NextLocatorName": {
+              "String": "BC_BossAnomalocaris_Start"
+            }
+          },
+          "ActorName": "BattleChallenge",
+          "Name": "Event294",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 228,
+          "ActorIndex": 8,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "ShadowMapSettings": {
+              "String": "DemoStageCamera"
+            }
+          },
+          "NextEventName": "Event281",
+          "ActorName": "Camera",
+          "Name": "Event268",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 226,
+          "ActorIndex": 6,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event268",
+          "ActorName": "Audio",
+          "Name": "Event278",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 233,
+          "ActorIndex": 9,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event359",
+          "ActorName": "FlowControl",
+          "Name": "Event281",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Zelda",
+          "Name": "Event303",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 231,
+          "ForkEventIndicies": [
+            229,
+            232
+          ],
+          "Name": "Event342",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event343",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 9,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "filename": {
+              "String": "Golem"
+            }
+          },
+          "ActorName": "FlowControl",
+          "Name": "Event347",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 230,
+          "ActorIndex": 1,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event342",
+          "ActorName": "Player",
+          "Name": "Event359",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 53,
+          "FlowchartName": "",
+          "EntryPointName": "AppearCommon",
+          "NextEventName": "Event209",
+          "Name": "Event188",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 256,
+          "FlowchartName": "",
+          "EntryPointName": "AppearPerformance",
+          "NextEventName": "Event11",
+          "Name": "Event48",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 1,
+          "FlowchartName": "",
+          "EntryPointName": "AppearPerformance",
+          "NextEventName": "Event18",
+          "Name": "Event8",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 250,
+          "ActorIndex": 5,
+          "ActorActionIndex": 10,
+          "NextEventName": "Event277",
+          "ActorName": "Partner",
+          "Name": "Event140",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 240,
+          "ForkEventIndicies": [
+            239,
+            241,
+            249
+          ],
+          "Name": "Event194",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 11,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event216",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 244,
+          "NextEventName": "Event250",
+          "Name": "Event233",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Player",
+          "Name": "Event237",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "cullMode": {
+              "Int": 1
+            },
+            "enabled": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GolemCore",
+          "Name": "Event243",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "ActorName": "GolemCore",
+          "Name": "Event244",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 245,
+          "ForkEventIndicies": [
+            242,
+            243
+          ],
+          "Name": "Event250",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 246,
+          "NextEventName": "Event255",
+          "Name": "Event253",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 237,
+          "ActorIndex": 12,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "enable": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event140",
+          "ActorName": "Zelda",
+          "Name": "Event255",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 248,
+          "ActorIndex": 15,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event271",
+          "ActorName": "Door",
+          "Name": "Event262",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 10,
+          "ActorName": "Golem",
+          "Name": "Event271",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 0,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "maxSpeed": {
+              "Float": 100
+            }
+          },
+          "ActorName": "Golem",
+          "Name": "Event275",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 251,
+          "ForkEventIndicies": [
+            247,
+            252
+          ],
+          "Name": "Event277",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event285",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 253,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event290",
+          "ActorName": "Camera",
+          "Name": "Event286",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 8,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "ShadowMapSettings": {
+              "String": "Default"
+            }
+          },
+          "ActorName": "Camera",
+          "Name": "Event290",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 317,
+          "FlowchartName": "",
+          "EntryPointName": "BattleSetting",
+          "NextEventName": "Event6",
+          "Name": "Event291",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 276,
+          "FlowchartName": "",
+          "EntryPointName": "BattleSetting",
+          "NextEventName": "Event65",
+          "Name": "Event9",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 254,
+          "ActorIndex": 0,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "ev_appear_wait_ready"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event291",
+          "ActorName": "Golem",
+          "Name": "Event11",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 308,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "GolemCore",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "MiniBossExtinction",
+          "NextEventName": "Event97",
+          "Name": "Event49",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 39,
+          "ActorIndex": 8,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "resetPlayerCamera": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event151",
+          "ActorName": "Camera",
+          "Name": "Event24",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_BOSS_FOREST_BRIDGE"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event31",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 261,
+          "ForkEventIndicies": [
+            101,
+            259
+          ],
+          "Name": "Event72",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 5,
+          "NextEventName": "Event61",
+          "Name": "Event74",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 179,
+          "ActorIndex": 22,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "channel": {
+              "String": "move_up"
+            },
+            "index": {
+              "Int": -1
+            },
+            "restart": {
+              "Bool": false
+            },
+            "stopOnSkipped": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event185",
+          "ActorName": "PartnerPhotonLiberation",
+          "Name": "Event107",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 36,
+          "ActorIndex": 0,
+          "ActorActionIndex": 11,
+          "NextEventName": "Event109",
+          "ActorName": "Golem",
+          "Name": "Event108",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 33,
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "PreMiniBoss",
+          "NextEventName": "Event112",
+          "Name": "Event129",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 17,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "MiniBossDoorClose",
+          "NextEventName": "Event70",
+          "Name": "Event12",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 267,
+          "ActorIndex": 12,
+          "ActorActionIndex": 1,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            },
+            "distance": {
+              "Float": -9
+            },
+            "stance": {
+              "String": "Ground"
+            }
+          },
+          "NextEventName": "Event22",
+          "ActorName": "Zelda",
+          "Name": "Event15",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 264,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": true
+            },
+            "name": {
+              "String": "GolemFlameMain"
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event129",
+          "ActorName": "GameControl",
+          "Name": "Event22",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "duration": {
+              "Float": 1
+            },
+            "label": {
+              "String": "BGM_BATTLE_BOSS_FOREST"
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event29",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_BOSS_FOREST_BRIDGE"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event34",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 271,
+          "ForkEventIndicies": [
+            268,
+            269
+          ],
+          "Name": "Event37",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 20,
+          "NextEventName": "Event81",
+          "Name": "Event55",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "channel": {
+              "String": "ac_Keep"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "ActorName": "GolemCore",
+          "Name": "Event67",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 10,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "channel": {
+              "String": "ac_Keep"
+            },
+            "index": {
+              "Int": -1
+            }
+          },
+          "ActorName": "GolemCore",
+          "Name": "Event79",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "label": {
+              "String": "BGM_BATTLE_BOSS_FOREST2"
+            },
+            "stoplabel": {
+              "String": "BGM_BATTLE_BOSS_FOREST_BRIDGE"
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event128",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "label": {
+              "String": "BGM_BATTLE_BOSS_FOREST2"
+            },
+            "stoplabel": {
+              "String": "BGM_BATTLE_BOSS_FOREST_BRIDGE"
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event30",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 1,
+          "ActorName": "GameControl",
+          "Name": "Event65",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 66,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": false
+            },
+            "label": {
+              "String": "BGM_BATTLE_BOSS_FOREST_BRIDGE"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event137",
+          "ActorName": "Audio",
+          "Name": "Event133",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 255,
+          "ActorIndex": 6,
+          "ActorActionIndex": 6,
+          "Parameters": {
+            "label": {
+              "String": "BGM_BATTLE_BOSS_FOREST"
+            },
+            "stoplabel": {
+              "String": "BGM_BATTLE_BOSS_FOREST_BRIDGE"
+            }
+          },
+          "NextEventName": "Event9",
+          "ActorName": "Audio",
+          "Name": "Event139",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 351,
+          "ActorIndex": 11,
+          "ActorActionIndex": 1,
+          "NextEventName": "Event337",
+          "ActorName": "GameControl",
+          "Name": "Event196",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 326,
+          "ActorIndex": 11,
+          "ActorActionIndex": 2,
+          "NextEventName": "Event98",
+          "ActorName": "GameControl",
+          "Name": "Event39",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 217,
+          "NextEventName": "Event284",
+          "Name": "Event100",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 167,
+          "ActorIndex": 24,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event138",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event104",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 166,
+          "ActorIndex": 25,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event126",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event148",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 165,
+          "ActorIndex": 26,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event125",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event150",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 170,
+          "ActorIndex": 27,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event143",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event205",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 173,
+          "ActorIndex": 18,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event169",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event207",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 176,
+          "ActorIndex": 28,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event176",
+          "ActorName": "PartnerPhoton",
+          "Name": "Event211",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 24,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event213",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 25,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event214",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 288,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.167
+            }
+          },
+          "NextEventName": "Event213",
+          "ActorName": "Timer",
+          "Name": "Event218",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 289,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 5.833
+            }
+          },
+          "NextEventName": "Event214",
+          "ActorName": "Timer",
+          "Name": "Event226",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 293,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 2.667
+            }
+          },
+          "NextEventName": "Event252",
+          "ActorName": "Timer",
+          "Name": "Event236",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 26,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event252",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 27,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event258",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 18,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event259",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 28,
+          "ActorActionIndex": 5,
+          "Parameters": {
+            "visible": {
+              "Bool": true
+            }
+          },
+          "ActorName": "PartnerPhoton",
+          "Name": "Event260",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 294,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 3.833
+            }
+          },
+          "NextEventName": "Event258",
+          "ActorName": "Timer",
+          "Name": "Event273",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 295,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 4.833
+            }
+          },
+          "NextEventName": "Event259",
+          "ActorName": "Timer",
+          "Name": "Event274",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 296,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 4.5
+            }
+          },
+          "NextEventName": "Event260",
+          "ActorName": "Timer",
+          "Name": "Event279",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "Look_at_Partner_neck",
+          "Name": "Event90",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 300,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.7
+            }
+          },
+          "NextEventName": "Event90",
+          "ActorName": "Timer",
+          "Name": "Event95",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 68,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllReset",
+          "NextEventName": "Event16",
+          "Name": "Event240",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 305,
+          "ActorIndex": 5,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "boneName": {
+              "String": ""
+            },
+            "duration": {
+              "Float": 0.4
+            },
+            "immediateTurn": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            },
+            "withoutTurn": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event313",
+          "ActorName": "Partner",
+          "Name": "Event0",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 303,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.4
+            }
+          },
+          "NextEventName": "Event0",
+          "ActorName": "Timer",
+          "Name": "Event217",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 55,
+          "ActorIndex": 5,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "talk02"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event219",
+          "ActorName": "Partner",
+          "Name": "Event313",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 5,
+          "ActorActionIndex": 8,
+          "Parameters": {
+            "blendFrame": {
+              "Int": -1
+            },
+            "layer": {
+              "Int": 0
+            },
+            "name": {
+              "String": "wait"
+            },
+            "restart": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Partner",
+          "Name": "Event314",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "GeneralSequence",
+          "EntryPointName": "Look_at_Partner_neck",
+          "Name": "Event315",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 309,
+          "ActorIndex": 19,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "chaseRatio": {
+              "Float": 0.1
+            },
+            "distanceOffset": {
+              "Float": 0
+            },
+            "duration": {
+              "Float": 0.7
+            },
+            "keep": {
+              "Bool": false
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetY": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event110",
+          "ActorName": "WarpBoss",
+          "Name": "Event97",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 31,
+          "ActorIndex": 7,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "symbol": {
+              "String": "EvC_GolemFlameDead"
+            },
+            "value": {
+              "Bool": true
+            }
+          },
+          "NextEventName": "Event102",
+          "ActorName": "EventFlags",
+          "Name": "Event110",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 30,
+          "ActorIndex": 6,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_NAZOTOKI_SEIKAI"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "NextEventName": "Event94",
+          "ActorName": "Audio",
+          "Name": "Event130",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 3,
+          "Parameters": {
+            "level": {
+              "String": "L_Dungeon001"
+            },
+            "locator": {
+              "String": "EV_AfterReleasTriTalk"
+            },
+            "offsetX": {
+              "Float": 0
+            },
+            "offsetZ": {
+              "Float": 0
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event131",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 20,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "autoClose": {
+              "Bool": false
+            }
+          },
+          "ActorName": "Movie",
+          "Name": "Event132",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 346,
+          "ActorIndex": 16,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "preset": {
+              "String": "CutOutW"
+            }
+          },
+          "NextEventName": "Event334",
+          "ActorName": "Fade",
+          "Name": "Event197",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 20,
+          "ActorActionIndex": 1,
+          "ActorName": "Movie",
+          "Name": "Event203",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 316,
+          "ForkEventIndicies": [
+            312,
+            323,
+            327
+          ],
+          "Name": "Event204",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 313,
+          "NextEventName": "Event197",
+          "Name": "Event280",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_BATTLE_BOSS_FOREST"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event6",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "ignoreSkip": {
+              "Bool": true
+            },
+            "label": {
+              "String": "BGM_EV_REVIVING_AREA"
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event282",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 8,
+          "ActorName": "Audio",
+          "Name": "Event283",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 322,
+          "ForkEventIndicies": [
+            321,
+            319
+          ],
+          "Name": "Event292",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 20,
+          "ActorActionIndex": 2,
+          "Parameters": {
+            "filename": {
+              "String": "rd012_EvA_WorldGlobeActivate"
+            }
+          },
+          "ActorName": "Movie",
+          "Name": "Event4",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 315,
+          "NextEventName": "Event204",
+          "Name": "Event293",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 318,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 1.15
+            }
+          },
+          "NextEventName": "Event282",
+          "ActorName": "Timer",
+          "Name": "Event297",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "label": {
+              "String": "SE_ENEMY_GOLEM_APPEAR_RUMBLE_PRE"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event318",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 311,
+          "ActorIndex": 3,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event131",
+          "ActorName": "Hud",
+          "Name": "Event160",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 258,
+          "ActorIndex": 11,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "immediate": {
+              "Bool": false
+            },
+            "name": {
+              "String": ""
+            },
+            "needsStartupEvent": {
+              "Bool": false
+            },
+            "postResetOverwriteCounter": {
+              "Bool": false
+            },
+            "preResetOverwriteCounter": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event24",
+          "ActorName": "GameControl",
+          "Name": "Event98",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 6,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "label": {
+              "String": "SE_EV_WORLD_REPAIR_FOREST_ALL"
+            },
+            "pitch": {
+              "Float": 1
+            },
+            "volume": {
+              "Float": 1
+            }
+          },
+          "ActorName": "Audio",
+          "Name": "Event295",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 257,
+          "Parameters": {
+            "enemy": {
+              "ActorIdentifier": {
+                "Item1": "GolemCore",
+                "Item2": ""
+              }
+            }
+          },
+          "FlowchartName": "BossCommon",
+          "EntryPointName": "HitStopCustom",
+          "NextEventName": "Event49",
+          "Name": "Event23",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AngryReset",
+          "Name": "Event99",
+          "Type": "Subflow"
+        },
+        {
+          "JoinEventIndex": 331,
+          "ForkEventIndicies": [
+            260,
+            329
+          ],
+          "Name": "Event321",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event322",
+          "Type": "Join"
+        },
+        {
+          "JoinEventIndex": 334,
+          "ForkEventIndicies": [
+            270,
+            333
+          ],
+          "Name": "Event319",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": -1,
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AngryReset",
+          "Name": "Event323",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": -1,
+          "Name": "Event324",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 118,
+          "ActorIndex": 1,
+          "ActorActionIndex": 9,
+          "Parameters": {
+            "eventReset": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event189",
+          "ActorName": "Player",
+          "Name": "Event155",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 4,
+          "Parameters": {
+            "cemeteryRevive": {
+              "Bool": false
+            },
+            "eventReset": {
+              "Bool": true
+            }
+          },
+          "ActorName": "GameControl",
+          "Name": "Event325",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 336,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event325",
+          "ActorName": "Timer",
+          "Name": "Event115",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 341,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event40",
+          "ActorName": "Timer",
+          "Name": "Event287",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 340,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event36",
+          "ActorName": "Timer",
+          "Name": "Event288",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 117,
+          "ActorIndex": 5,
+          "ActorActionIndex": 13,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "direction": {
+              "Int": 2
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event186",
+          "ActorName": "Partner",
+          "Name": "Event36",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 342,
+          "ActorIndex": 1,
+          "ActorActionIndex": 10,
+          "Parameters": {
+            "actor": {
+              "ActorIdentifier": {
+                "Item1": "Golem",
+                "Item2": ""
+              }
+            },
+            "direction": {
+              "Int": 2
+            },
+            "index": {
+              "Int": 1
+            },
+            "offsetY": {
+              "Float": 0
+            }
+          },
+          "NextEventName": "Event328",
+          "ActorName": "Player",
+          "Name": "Event40",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 335,
+          "ActorIndex": 2,
+          "ActorActionIndex": 0,
+          "Parameters": {
+            "time": {
+              "Float": 0.1
+            }
+          },
+          "NextEventName": "Event155",
+          "ActorName": "Timer",
+          "Name": "Event328",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 120,
+          "ActorIndex": 6,
+          "ActorActionIndex": 9,
+          "NextEventName": "Event161",
+          "ActorName": "Audio",
+          "Name": "Event329",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 5,
+          "ActorName": "GameControl",
+          "Name": "Event332",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 11,
+          "ActorActionIndex": 6,
+          "ActorName": "GameControl",
+          "Name": "Event333",
+          "Type": "Action"
+        },
+        {
+          "JoinEventIndex": 347,
+          "ForkEventIndicies": [
+            314,
+            345
+          ],
+          "Name": "Event334",
+          "Type": "Fork"
+        },
+        {
+          "NextEventIndex": 325,
+          "NextEventName": "Event160",
+          "Name": "Event335",
+          "Type": "Join"
+        },
+        {
+          "NextEventIndex": 224,
+          "FlowchartName": "",
+          "EntryPointName": "AppearCommon",
+          "NextEventName": "Event276",
+          "Name": "Event341",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 350,
+          "Parameters": {
+            "disappearHorse": {
+              "Bool": true
+            }
+          },
+          "FlowchartName": "EvResetCommon",
+          "EntryPointName": "AllResetBossDead",
+          "NextEventName": "Event320",
+          "Name": "Event85",
+          "Type": "Subflow"
+        },
+        {
+          "NextEventIndex": 192,
+          "ActorIndex": 11,
+          "ActorActionIndex": 7,
+          "Parameters": {
+            "visible": {
+              "Bool": false
+            }
+          },
+          "NextEventName": "Event308",
+          "ActorName": "GameControl",
+          "Name": "Event320",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": -1,
+          "ActorIndex": 1,
+          "ActorActionIndex": 11,
+          "ActorName": "Player",
+          "Name": "Event337",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 266,
+          "ActorIndex": 1,
+          "ActorActionIndex": 12,
+          "Parameters": {
+            "direction": {
+              "Int": 2
+            }
+          },
+          "NextEventName": "Event15",
+          "ActorName": "Player",
+          "Name": "Event340",
+          "Type": "Action"
+        },
+        {
+          "NextEventIndex": 209,
+          "ActorIndex": 21,
+          "ActorActionIndex": 0,
+          "NextEventName": "Event27",
+          "ActorName": "MinigameTimer",
+          "Name": "Event358",
+          "Type": "Action"
+        }
+      ],
+      "EntryPoints": {
+        "Angry": {
+          "SubFlowEventIndices": [
+            329
+          ],
+          "EventIndex": 330
+        },
+        "AngryFlame": {
+          "SubFlowEventIndices": [
+            333
+          ],
+          "EventIndex": 332
+        },
+        "Appear": {
+          "SubFlowEventIndices": [
+            302,
+            234,
+            60,
+            236,
+            307,
+            66,
+            255
+          ],
+          "EventIndex": 103
+        },
+        "AppearCommon": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 227
+        },
+        "AppearFlame": {
+          "SubFlowEventIndices": [
+            264,
+            265
+          ],
+          "EventIndex": 352
+        },
+        "AppearPerformance": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 214
+        },
+        "AreaABossDead": {
+          "SubFlowEventIndices": [
+            181
+          ],
+          "EventIndex": 42
+        },
+        "BattleSetting": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 238
+        },
+        "BC_Appear": {
+          "SubFlowEventIndices": [
+            348,
+            235,
+            254
+          ],
+          "EventIndex": 348
+        },
+        "BC_Dead": {
+          "SubFlowEventIndices": [
+            187,
+            213,
+            193
+          ],
+          "EventIndex": 187
+        },
+        "Dead": {
+          "SubFlowEventIndices": [
+            188,
+            212,
+            194,
+            49
+          ],
+          "EventIndex": 188
+        },
+        "DeadFlame": {
+          "SubFlowEventIndices": [
+            328,
+            257
+          ],
+          "EventIndex": 328
+        },
+        "Down": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 12
+        },
+        "DownFlame": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 25
+        },
+        "EnterBossArea": {
+          "SubFlowEventIndices": [
+            300
+          ],
+          "EventIndex": 69
+        },
+        "EnterBossArea_2": {
+          "SubFlowEventIndices": [],
+          "EventIndex": 304
+        },
+        "TriRelease": {
+          "SubFlowEventIndices": [
+            349
+          ],
+          "EventIndex": 349
+        }
+      }
+    }
+  },
+  "Timelines": {}
+}
