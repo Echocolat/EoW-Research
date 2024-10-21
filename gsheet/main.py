@@ -10,7 +10,7 @@ def list_datasheet(version):
             if file.endswith('.gsheet'):
                 file_list.append(os.path.join(subdir, file))
 
-    print(file_list)
+    #print(file_list)
     return file_list
 
 def oead_to_py(obj):
@@ -59,8 +59,13 @@ def parse_all(version):
     for file in file_list:
         with open(file, 'rb') as data_file:
             datasheet = oead.Bytes(data_file.read())
-        with open(f'gsheet/datasheets/{version}/{file.split("\\")[-2]}/{file.split("\\")[-1].replace('.gsheet', '.yaml')}', 'w') as yaml_file:
-            yaml_file.write(yaml.dump(read_sheet(datasheet), Dumper = yaml.Dumper, indent = 2))
+        if "\\ui" in file:
+            with open(f'gsheet/datasheets/{version}/datasheets/{file.split("\\")[-2]}/{file.split("\\")[-1].replace('.gsheet', '.yaml')}', 'w') as yaml_file:
+                yaml_file.write(yaml.dump(read_sheet(datasheet), Dumper = yaml.Dumper, indent = 2))
+        else:
+            with open(f'gsheet/datasheets/{version}/{file.split("\\")[-2]}/{file.split("\\")[-1].replace('.gsheet', '.yaml')}', 'w') as yaml_file:
+                yaml_file.write(yaml.dump(read_sheet(datasheet), Dumper = yaml.Dumper, indent = 2))
 
-parse_all('100')
-parse_all('101')
+#parse_all('100')
+#parse_all('101')
+parse_all('102')

@@ -215,5 +215,6 @@ def parse_all_elo(version):
             with open(f"elo/{version}/actors/{file.replace('.elo', '.json')}", "w") as json_file:
                 json_file.write(json.dumps(parsed_actors, indent = 2))
 
-parse_all_elo("100")
-parse_all_elo("101")
+#parse_all_elo("100")
+#parse_all_elo("101")
+parse_all_elo('102')

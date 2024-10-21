@@ -37,3 +37,4 @@ def parse_apd(version):
 
 parse_apd('100')
 parse_apd('101')
+parse_apd('102')

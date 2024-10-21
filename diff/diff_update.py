@@ -51,4 +51,5 @@ def diff_versions(base, new):
     with open("diff/" + f'diff{base}-{new}.json', 'w') as json_file:
         json_file.write(json.dumps(full_data, indent = 2))
 
-diff_versions('100', '101')
+#diff_versions('100', '101')
+diff_versions('101', '102')
